@@ -1,1 +1,0 @@
-(G(Q -> ((P -> (!(RandP && RandQ) U S)) U (RandP && RandQ)) || G(P -> (!(RandP && RandQ) U S))))
