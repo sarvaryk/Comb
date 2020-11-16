@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="comb" nsURI="http://www.example.org/comb" nsPrefix="comb">
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceAfter_until_" eSuperTypes="#//PrecedenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> ((!&lt;P> U (&lt;S> || &lt;R>)) || G!&lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: after &lt;Q>, &lt;S> (&lt;S> may not become true) must precede &lt;P> until &lt;R> becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceAfter_until_" eSuperTypes="#//AbsenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> !&lt;P> U (&lt;R> | G(!&lt;P>)))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always false after &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded, but &lt;R> may not ever become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Precedence" abstract="true" eSuperTypes="#//Order"/>
+  <eClassifiers xsi:type="ecore:EClass" name="_until_" eSuperTypes="#//LTLOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> U &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is true until &lt;Q> becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceWithoutParams" abstract="true"
+      eSuperTypes="#//Precedence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LTLOperatorsOneParam" abstract="true"
+      eSuperTypes="#//LTLOperators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityBefore_" eSuperTypes="#//UniversalityOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;Q> -> (&lt;P> U &lt;Q>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true before &lt;Q> (the state in which &lt;Q> becomes true is excluded, but &lt;Q> must eventually become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceBefore_" eSuperTypes="#//PrecedenceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;Q> -> (!&lt;P> U (&lt;S> || &lt;Q>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> does not precede &lt;S> (&lt;S> may not become true) before &lt;Q> (&lt;Q> must eventually become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Absence" abstract="true" eSuperTypes="#//Occurrence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityAfter_" eSuperTypes="#//UniversalityOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> G(&lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true after &lt;Q> (the state in which &lt;Q> becomes true is included) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceAfter_" eSuperTypes="#//BoundedExistneceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;Q> -> (!&lt;Q> U (&lt;Q> &amp;&amp; (!&lt;P> W (&lt;P> W (!&lt;P> W (&lt;P> W G!&lt;P>))))))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true exactly 2 times after &lt;Q> (the state in which &lt;Q> becomes true is included) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceBetween_and_" eSuperTypes="#//BoundedExistenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G((&lt;Q> &amp;&amp; F&lt;R>) -> ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || (!&lt;P> U &lt;R>))))))))))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true exactly 2 times between &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceGlobally_" eSuperTypes="#//BoundedExistenceWithoutParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="(!&lt;P> W (&lt;P> W (!&lt;P> W (&lt;P> W G!&lt;P>))))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true exactly 2 times in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceBefore_" eSuperTypes="#//AbsenceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;Q> -> (!&lt;P> U &lt;Q>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always false before &lt;Q> (the state in which &lt;Q> becomes true is excluded, but &lt;Q> must eventually become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityBetween_and_" eSuperTypes="#//UniversalityTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G((&lt;Q> &amp;&amp; F&lt;R>) -> &lt;P> U &lt;R>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true between &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceTwoParams" abstract="true" eSuperTypes="#//Absence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="R" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceWithourParams" abstract="true"
+      eSuperTypes="#//Existence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistneceOneParam" abstract="true"
+      eSuperTypes="#//BoundedExistence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseAfter_until_" eSuperTypes="#//ResponseTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> ((&lt;P> -> (!&lt;R> U &lt;S>)) U &lt;R>) || G(&lt;P> -> (!&lt;R> U &lt;S>)))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: after &lt;Q>, &lt;P> becomes true and &lt;S> becomes true too until &lt;R> becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LTLOperators" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanOperators" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceAfter_" eSuperTypes="#//PrecedenceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G!&lt;Q> || F(&lt;Q> &amp;&amp; (!&lt;P> U (&lt;S> || G!&lt;P>)))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;S> (&lt;S> may not become true) precedes &lt;P> after &lt;Q> (&lt;Q> may not become true)"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Always_" eSuperTypes="#//LTLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceWithoutParams" abstract="true"
+      eSuperTypes="#//Absence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseBetween_and_" eSuperTypes="#//ResponseTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G((&lt;Q> &amp;&amp; F&lt;R>) -> (&lt;P> -> (!&lt;R> U &lt;S>)) U &lt;R>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> becomes true and &lt;S> becomes true too between &lt;Q> and &lt;R>in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseAfter_" eSuperTypes="#//ResponseOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> G(&lt;P> -> F&lt;S>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: after &lt;Q>, &lt;P> becomes true and eventually &lt;S> becomes true too in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceWithoutParams" abstract="true"
+      eSuperTypes="#//BoundedExistence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceBetween_and_" eSuperTypes="#//PrecedenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G((&lt;Q> &amp;&amp; F&lt;R>) -> (!&lt;P> U (&lt;S> || &lt;R>)))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;S> (&lt;S> may not become true) precedes &lt;P> between &lt;Q> and &lt;R>"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistence" abstract="true" eSuperTypes="#//Occurrence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Order" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="S" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceBetween_and_" eSuperTypes="#//ExistenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G((&lt;Q> &amp;&amp; F&lt;R>) -> (!&lt;R> U &lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true between &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceAfter_until_" eSuperTypes="#//ExistenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> (!&lt;R> U &lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true after &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded, but &lt;R> may not ever become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseBefore_" eSuperTypes="#//ResponseOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="(&lt;P> -> (!&lt;Q> U &lt;S>)) U (&lt;Q> || G(!&lt;Q>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> becomes true and &lt;S> becomes true too before &lt;Q> (&lt;Q> may not become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityTwoParams" abstract="true"
+      eSuperTypes="#//Universality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="R" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="_and_" eSuperTypes="#//BooleanOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> &amp;&amp; &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> and &lt;Q> becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceGlobally_" eSuperTypes="#//AbsenceWithoutParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(!&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always false in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceBetween_and_" eSuperTypes="#//AbsenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G((&lt;Q> &amp;&amp; F&lt;R>) -> !&lt;P> U &lt;R>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always false between &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistneceOneParam" abstract="true" eSuperTypes="#//Existence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="_or_" eSuperTypes="#//BooleanOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> || &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> or &lt;Q> becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Response" abstract="true" eSuperTypes="#//Order"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicElements" abstract="true" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityWithoutParams" abstract="true"
+      eSuperTypes="#//Universality"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceOneParam" abstract="true" eSuperTypes="#//Absence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseWithoutParams" abstract="true"
+      eSuperTypes="#//Response"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceAfter_until_" eSuperTypes="#//BoundedExistenceTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp; !&lt;R>) U (&lt;R> || ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) (&lt;R> || (!&lt;P> W &lt;R>) || G&lt;P>)))))))))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true exactly 2 times after &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded, but &lt;R> may not ever become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceAfter_" eSuperTypes="#//ExistneceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(!&lt;Q>) || F(&lt;Q> &amp;&amp; F&lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true after &lt;Q> (the state in which &lt;Q> becomes true is included) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanOperatorsTwoParams" abstract="true"
+      eSuperTypes="#//BooleanOperators">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanOperatorsOneParam" abstract="true"
+      eSuperTypes="#//BooleanOperators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceTwoParams" abstract="true"
+      eSuperTypes="#//Existence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="R" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Existence" abstract="true" eSuperTypes="#//Occurrence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityAfter_until_" eSuperTypes="#//UniversalityTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> &lt;P> U (&lt;R> || G(&lt;P>)))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true after &lt;Q> (the state in which &lt;Q> becomes true is included) and &lt;R> (the state in which &lt;R> becomes true is excluded, but &lt;R> may not ever become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseGlobally_" eSuperTypes="#//ResponseWithoutParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;P> -> F&lt;S>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> becomes true and eventually &lt;S> becomes true too in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceGlobally_" eSuperTypes="#//ExistenceWithourParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F(&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceBefore_" eSuperTypes="#//BoundedExistneceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;Q> -> ((!&lt;P> &amp;&amp; !&lt;Q>) U (&lt;Q> || ((&lt;P> &amp;&amp; !&lt;Q>) U (&lt;Q> || ((!&lt;P> &amp;&amp; !&lt;Q>) U (&lt;Q> || ((&lt;P> &amp;&amp; !&lt;Q>) U (&lt;Q> | (!&lt;P> U &lt;Q>)))))))))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true exactly 2 times before &lt;Q> (the state in which &lt;Q> becomes true is excluded, but &lt;Q> must eventually become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Eventually_" eSuperTypes="#//LTLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F(&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="_implies_" eSuperTypes="#//BooleanOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="!&lt;P> || &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> becomes true then &lt;Q> becomes true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityGlobally_" eSuperTypes="#//UniversalityWithoutParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceTwoParams" abstract="true"
+      eSuperTypes="#//Precedence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="R" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbsenceAfter_" eSuperTypes="#//AbsenceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G(&lt;Q> -> &lt;(!&lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always false after &lt;Q> (the state in which &lt;Q> becomes true is included) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Universality" abstract="true" eSuperTypes="#//Occurrence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceOneParam" abstract="true"
+      eSuperTypes="#//Precedence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseTwoParams" abstract="true" eSuperTypes="#//Response">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="R" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistenceBefore_" eSuperTypes="#//ExistneceOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;Q> -> (!&lt;Q> U &lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true before &lt;Q> (the state in which &lt;Q> becomes true is excluded, but &lt;Q> must eventually become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Occurrence" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseOneParam" abstract="true" eSuperTypes="#//Response">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UniversalityOneParam" abstract="true"
+      eSuperTypes="#//Universality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceGlobally_" eSuperTypes="#//PrecedenceWithoutParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F&lt;P> -> (!&lt;P> U (&lt;S> &amp;&amp; !&lt;P>))"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;S> always precedes &lt;P> (&lt;P> must eventually become true) in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//BasicElements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="Signals an occurrence of an event or can be &quot;TRUE&quot; if the literal should return always true or &quot;FALSE&quot; if the literal should return always false."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Next_" eSuperTypes="#//LTLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="X(&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> becomes true in the next state in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BoundedExistenceTwoParams" abstract="true"
+      eSuperTypes="#//BoundedExistence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="R" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Not_" eSuperTypes="#//BooleanOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="!&lt;P>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is false in the given sub-expression."/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subtreeInterpretation"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LTLOperatorsTwoParams" abstract="true"
+      eSuperTypes="#//LTLOperators">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventuallyWithin_and_" eSuperTypes="#//MITLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F[&lt;low>, &lt;high>](&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true within &lt;low> and &lt;high> time units in the given sub-expression."/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="L" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="_untilWithin_and_" eSuperTypes="#//MITLOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> U[&lt;low>, &lt;high>] &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is true until &lt;Q> becomes true between &lt;low> and &lt;high> timeunits in the given sub-expression."/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="L" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlwaysWithin_and_" eSuperTypes="#//MITLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G[&lt;low>, &lt;high>](&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true within &lt;low> and &lt;high> time units in the given sub-expression."/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="L" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MITLOperators" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MITLOperatorsOneParam" abstract="true"
+      eSuperTypes="#//MITLOperators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MITLOperatorsTwoParams" abstract="true"
+      eSuperTypes="#//MITLOperators">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comb">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTLOperators" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MTLOperatorsOneParam" abstract="true"
+      eSuperTypes="#//MTLOperators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MTLOperatorsTwoParams" abstract="true"
+      eSuperTypes="#//MTLOperators">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="_untilWithin_" eSuperTypes="#//MTLOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> U[&lt;high>] &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is true until &lt;Q> becomes true within &lt;high> timeunits in the given sub-expression."/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlwaysWithin_" eSuperTypes="#//MTLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G[&lt;high>](&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is always true within &lt;high> time units in the given sub-expression."/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventuallyWithin_" eSuperTypes="#//MTLOperatorsOneParam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="F[&lt;high>](&lt;P>)"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true within &lt;high> time units in the given sub-expression."/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

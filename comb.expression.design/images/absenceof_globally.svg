@@ -1,0 +1,25 @@
+<svg width="160" height="59.99999999999999" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="62" width="162" y="-1" x="-1"/>
+  <g display="none" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="1" x="1" height="125" width="625" id="svg_1"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="5.0173" y1="4.79511" x2="55.0131" y2="4.79511" id="svg_4"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="5.0173" y1="4.79511" x2="5.0173" y2="54.70306" id="svg_5"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="55.0131" y1="4.71109" x2="105.0131" y2="4.71109" id="svg_15"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="155" y1="5.86052" x2="155" y2="55.85249" id="svg_38"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="104.68448" y1="4.71602" x2="155.13974" y2="4.71602" id="svg_40"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="55.44979" y1="54.92941" x2="105.44979" y2="54.92941" id="svg_3"  />
+  <text transform="matrix(1, 0, 0, 0.894832, 0, 15.9894)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="30" id="svg_13" y="27.06351" x="13.59784"   stroke-width="0" stroke="#000" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_14" y="34.17841" x="30.0662"   stroke-width="0" stroke="#000" fill="#000000">Absence of</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_23" y="35.07439" x="121.58001"   stroke-width="0" stroke="#000" fill="#000000">&lt;P&gt;</text>
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="105" y1="4.13638" x2="105" y2="54.12835" id="svg_26"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="6.02448" y1="54.92941" x2="56.02448" y2="54.92941" id="svg_36"  />
+ </g>
+</svg>

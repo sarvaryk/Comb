@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/comb.expression.metamodel/src-gen" creationIcons="false"
+    editDirectory="/comb.expression.metamodel.edit/src-gen" editorDirectory="/comb.expression.metamodel.editor/src-gen"
+    modelPluginID="comb.expression.metamodel" modelName="Comb" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>comb.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Comb" basePackage="comb.expression.metamodel" disposableProviderFactory="true"
+      ecorePackage="comb.ecore#/">
+    <genClasses ecoreClass="comb.ecore#//PrecedenceAfter_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AbsenceAfter_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceAfter_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceAfter_until_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Precedence"/>
+    <genClasses ecoreClass="comb.ecore#//_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_until_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//PrecedenceWithoutParams"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//LTLOperatorsOneParam"/>
+    <genClasses ecoreClass="comb.ecore#//UniversalityBefore_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityBefore_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityBefore_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//PrecedenceBefore_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceBefore_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceBefore_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Absence"/>
+    <genClasses ecoreClass="comb.ecore#//UniversalityAfter_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityAfter_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityAfter_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//BoundedExistenceAfter_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceAfter_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceAfter_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//BoundedExistenceBetween_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceBetween_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceBetween_and_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//BoundedExistenceGlobally_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceGlobally_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceGlobally_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AbsenceBefore_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceBefore_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceBefore_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//UniversalityBetween_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityBetween_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityBetween_and_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//AbsenceTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//AbsenceTwoParams/R"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//AbsenceTwoParams/Q"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//ExistenceWithourParams"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//BoundedExistneceOneParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//BoundedExistneceOneParam/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ResponseAfter_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseAfter_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseAfter_until_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//LTLOperators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//LTLOperators/P"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BooleanOperators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//BooleanOperators/P"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//PrecedenceAfter_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Always_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Always_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Always_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//AbsenceWithoutParams"/>
+    <genClasses ecoreClass="comb.ecore#//ResponseBetween_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseBetween_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseBetween_and_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ResponseAfter_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseAfter_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseAfter_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BoundedExistenceWithoutParams"/>
+    <genClasses ecoreClass="comb.ecore#//PrecedenceBetween_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceBetween_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceBetween_and_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BoundedExistence"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//Order">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Order/P"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Order/S"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ExistenceBetween_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceBetween_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceBetween_and_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ExistenceAfter_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceAfter_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceAfter_until_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ResponseBefore_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseBefore_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseBefore_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//UniversalityTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//UniversalityTwoParams/Q"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//UniversalityTwoParams/R"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_and_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AbsenceGlobally_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceGlobally_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceGlobally_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AbsenceBetween_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceBetween_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceBetween_and_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//ExistneceOneParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ExistneceOneParam/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//_or_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_or_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_or_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Response"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//BasicElements"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//UniversalityWithoutParams"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//AbsenceOneParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//AbsenceOneParam/Q"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//ResponseWithoutParams"/>
+    <genClasses ecoreClass="comb.ecore#//BoundedExistenceAfter_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceAfter_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceAfter_until_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ExistenceAfter_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceAfter_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceAfter_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BooleanOperatorsTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//BooleanOperatorsTwoParams/Q"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BooleanOperatorsOneParam"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//ExistenceTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ExistenceTwoParams/R"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ExistenceTwoParams/Q"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Existence"/>
+    <genClasses ecoreClass="comb.ecore#//UniversalityAfter_until_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityAfter_until_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityAfter_until_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ResponseGlobally_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseGlobally_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ResponseGlobally_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ExistenceGlobally_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceGlobally_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceGlobally_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//BoundedExistenceBefore_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceBefore_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//BoundedExistenceBefore_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Eventually_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Eventually_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Eventually_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//_implies_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_implies_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_implies_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//UniversalityGlobally_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityGlobally_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//UniversalityGlobally_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//PrecedenceTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//PrecedenceTwoParams/Q"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//PrecedenceTwoParams/R"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AbsenceAfter_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceAfter_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AbsenceAfter_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Universality"/>
+    <genClasses image="false" ecoreClass="comb.ecore#//PrecedenceOneParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//PrecedenceOneParam/Q"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//ResponseTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ResponseTwoParams/Q"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ResponseTwoParams/R"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//ExistenceBefore_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceBefore_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceBefore_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Occurrence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Occurrence/P"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//ResponseOneParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ResponseOneParam/Q"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//UniversalityOneParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//UniversalityOneParam/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//PrecedenceGlobally_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceGlobally_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceGlobally_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Literal">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Literal/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Next_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Next_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Next_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BoundedExistenceTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//BoundedExistenceTwoParams/Q"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//BoundedExistenceTwoParams/R"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Not_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Not_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Not_/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/subtreeInterpretation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//LTLOperatorsTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//LTLOperatorsTwoParams/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//EventuallyWithin_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//EventuallyWithin_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//EventuallyWithin_and_/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//EventuallyWithin_and_/L"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//EventuallyWithin_and_/H"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//_untilWithin_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_untilWithin_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_untilWithin_and_/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//_untilWithin_and_/L"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//_untilWithin_and_/H"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AlwaysWithin_and_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AlwaysWithin_and_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AlwaysWithin_and_/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//AlwaysWithin_and_/L"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//AlwaysWithin_and_/H"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//MITLOperators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//MITLOperators/P"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//MITLOperatorsOneParam"/>
+    <genClasses ecoreClass="comb.ecore#//MITLOperatorsTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//MITLOperatorsTwoParams/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Comb">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Comb/element"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//MTLOperators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//MTLOperators/P"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//MTLOperatorsOneParam"/>
+    <genClasses ecoreClass="comb.ecore#//MTLOperatorsTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//MTLOperatorsTwoParams/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//_untilWithin_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_untilWithin_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_untilWithin_/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//_untilWithin_/H"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//AlwaysWithin_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AlwaysWithin_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//AlwaysWithin_/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//AlwaysWithin_/H"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//EventuallyWithin_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//EventuallyWithin_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//EventuallyWithin_/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//EventuallyWithin_/H"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

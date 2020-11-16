@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
+  <element xsi:type="comb:_and_" name="_and_" subtreeInterpretation="((G[.5](((!TRUE) &amp;&amp; Event))) &amp;&amp; (G(Event)))">
+    <P xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" subtreeInterpretation="(G[.5](((!TRUE) &amp;&amp; Event)))">
+      <P xsi:type="comb:_and_" name="_and_" subtreeInterpretation="((!TRUE) &amp;&amp; Event)">
+        <P xsi:type="comb:Not_" name="Not_" subtreeInterpretation="(!TRUE)">
+          <P xsi:type="comb:Literal" name="TRUE"/>
+        </P>
+        <Q xsi:type="comb:Literal" name="Event"/>
+      </P>
+      <H name=".5"/>
+    </P>
+    <Q xsi:type="comb:Always_" name="new Always_" subtreeInterpretation="(G(Event))">
+      <P xsi:type="comb:Literal" name="Event"/>
+    </Q>
+  </element>
+  <element xsi:type="comb:ResponseAfter_until_" name="test" subtreeInterpretation="(G(Q -> ((P -> (!(RandP &amp;&amp; RandQ) U S)) U (RandP &amp;&amp; RandQ)) || G(P -> (!(RandP &amp;&amp; RandQ) U S))))">
+    <P xsi:type="comb:Literal" name="P"/>
+    <S xsi:type="comb:Literal" name="S" subtreeInterpretation="S"/>
+    <Q xsi:type="comb:Literal" name="Q"/>
+    <R xsi:type="comb:_and_" name="_and_" subtreeInterpretation="(RandP &amp;&amp; RandQ)">
+      <P xsi:type="comb:Literal" name="RandP" subtreeInterpretation="RandP"/>
+      <Q xsi:type="comb:Literal" name="RandQ" subtreeInterpretation="RandQ"/>
+    </R>
+  </element>
+</comb:Comb>

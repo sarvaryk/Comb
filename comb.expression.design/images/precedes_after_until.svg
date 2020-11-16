@@ -1,0 +1,40 @@
+<svg width="360" height="59.99999999999999" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="62" width="362" y="-1" x="-1"/>
+  <g display="none" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="1" x="1" height="125" width="625" id="svg_1"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="5.0173" y1="4.79511" x2="55.0131" y2="4.79511" id="svg_4"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="5.0173" y1="4.79511" x2="5.0173" y2="54.70306" id="svg_5"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="55.0131" y1="4.71109" x2="105.0131" y2="4.71109" id="svg_15"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="204.70306" y1="4.71109" x2="254.70306" y2="4.71109" id="svg_19"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="155.0131" y1="4.71109" x2="155.0131" y2="54.70306" id="svg_20"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="304.67657" y1="4.71109" x2="355.13974" y2="4.71109" id="svg_31"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="205.0131" y1="4.71109" x2="205.0131" y2="54.70306" id="svg_32"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="154.00336" y1="4.71109" x2="204.04817" y2="4.71109" id="svg_34"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="255.0131" y1="4.71109" x2="255.0131" y2="54.70306" id="svg_35"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="254.92152" y1="4.71109" x2="304.92152" y2="4.71109" id="svg_37"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="305.0131" y1="4.71109" x2="305.0131" y2="54.70306" id="svg_38"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="104.68448" y1="4.71602" x2="155.13974" y2="4.71602" id="svg_40"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="355.0131" y1="4.71602" x2="355.0131" y2="54.70306" id="svg_41"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="55.44979" y1="54.92941" x2="105.44979" y2="54.92941" id="svg_3"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="154.56501" y1="54.35469" x2="204.56501" y2="54.35469" id="svg_6"  />
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="254.53852" y1="54.35469" x2="305.00169" y2="54.35469" id="svg_7"  />
+  <text transform="matrix(1, 0, 0, 0.894832, 0, 15.9894)" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="30" id="svg_13" y="27.06351" x="13.59784"   stroke-width="0" stroke="#000" fill="#000000"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_14" y="34.17841" x="59.37655"   stroke-width="0" stroke="#000" fill="#000000">precedes</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_16" y="33.91307" x="270.66145"   stroke-width="0" stroke="#000" fill="#000000">until</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_18" y="34.4734" x="170.10796"   stroke-width="0" stroke="#000" fill="#000000">after</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_21" y="35.09125" x="319.23561"   stroke-width="0" stroke="#000" fill="#000000">&lt;R&gt;</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_22" y="35.57474" x="220.43061"   stroke-width="0" stroke="#000" fill="#000000">&lt;Q&gt;</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_23" y="35.07439" x="120.43058"   stroke-width="0" stroke="#000" fill="#000000">&lt;P&gt;</text>
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="55" y1="4.71109" x2="55" y2="54.70306" id="svg_26"  />
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_30" y="35.09125" x="20.38492"   stroke-width="0" stroke="#000" fill="#000000">&lt;S&gt;</text>
+  <line fill="none" stroke="#000" stroke-width="1.5"   x1="105" y1="4.71109" x2="105" y2="54.70306" id="svg_33"  />
+ </g>
+</svg>
