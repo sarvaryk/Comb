@@ -1,16 +1,24 @@
 package comb.expression.design;
 
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
+
 import comb.expression.metamodel.comb.*;
 
 public class Services {
+    private LogicGroup logicGroup;
     
     public String getSubtreeInterpretation(Element abstract_element) {
+    	logicGroup = LogicGroup.LTL;
 		String subtreeInterpretation = subtreeInterpretation(abstract_element, getElementInterpretation(abstract_element));
-    	abstract_element.setSubtreeInterpretation(subtreeInterpretation);
+		setSubtreeInterpretation(abstract_element, subtreeInterpretation);
+		setLogicGroup(abstract_element, logicGroup);
 		return subtreeInterpretation;
 	}
     
     private String subtreeInterpretation(Element abstract_element, String interpretation) {
+    	refreshLogicGroup(abstract_element);
 		switch(abstract_element.getClass().getName()) {
 			case "comb.expression.metamodel.comb.impl.LiteralImpl":
 				Literal literal_element = ((Literal)abstract_element);
@@ -576,4 +584,37 @@ public class Services {
 		}
 		return "<"+abstract_element.getClass().getName()+" NotFoundException>";
 	}
+    
+    private void refreshLogicGroup(Element element) {
+    	if(element instanceof MITLOperators)
+    		logicGroup = LogicGroup.MITL;
+    	else if(element instanceof MTLOperators && logicGroup != LogicGroup.MITL)
+    		logicGroup = LogicGroup.MTL;
+    	else if(logicGroup != LogicGroup.MTL && logicGroup != LogicGroup.MITL)
+    		logicGroup = LogicGroup.LTL;
+    }
+    
+    //source: https://stackoverflow.com/questions/38114267/emf-write-transaction
+    //date of access: 2020.11.16.    
+    private void setSubtreeInterpretation(Element element, String value) {
+        TransactionalEditingDomain domain = TransactionUtil.getEditingDomain(element);
+        domain.getCommandStack().execute(new RecordingCommand(domain) {
+
+            @Override
+            protected void doExecute() {
+                element.setSubtreeInterpretation(value);
+            }
+        });
+    }
+    
+    private void setLogicGroup(Element element, LogicGroup logicGroup) {
+        TransactionalEditingDomain domain = TransactionUtil.getEditingDomain(element);
+        domain.getCommandStack().execute(new RecordingCommand(domain) {
+
+            @Override
+            protected void doExecute() {
+                element.setLogicGroup(logicGroup);
+            }
+        });
+    }
 }
