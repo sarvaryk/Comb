@@ -468,7 +468,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="MTL operators">
+        <toolSections name="MTL / MITL operators">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Always &lt;P> within time interval of [high]" nodeMappings="//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']/@defaultLayer/@nodeMappings[name='ElementNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>

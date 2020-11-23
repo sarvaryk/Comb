@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
-  <element xsi:type="comb:_and_" name="_and_" subtreeInterpretation="(((G(Q -> ((P -> (!(RandP &amp;&amp; RandQ) U S)) U (RandP &amp;&amp; RandQ)) || G(P -> (!(RandP &amp;&amp; RandQ) U S)))) U[1, 0.2] ((G[.5](((!TRUE) &amp;&amp; Event))) &amp;&amp; (G(Event)))) &amp;&amp; (!EventX))" logicGroup="MITL">
-    <P xsi:type="comb:_untilWithin_and_" name="_untilWithin_and_" subtreeInterpretation="((G(Q -> ((P -> (!(RandP &amp;&amp; RandQ) U S)) U (RandP &amp;&amp; RandQ)) || G(P -> (!(RandP &amp;&amp; RandQ) U S)))) U[1, 0.2] ((G[.5](((!TRUE) &amp;&amp; Event))) &amp;&amp; (G(Event))))" logicGroup="MITL">
+  <element xsi:type="comb:_and_" name="_and_" subtreeInterpretation="(((G(Q -> ((P -> (!(RandP &amp;&amp; RandQ) U S)) U (RandP &amp;&amp; RandQ)) || G(P -> (!(RandP &amp;&amp; RandQ) U S)))) U[1, 1.2] ((G[.5](((!TRUE) &amp;&amp; Event))) &amp;&amp; (G(Event)))) &amp;&amp; (!EventX))" logicGroup="MITL">
+    <P xsi:type="comb:_untilWithin_and_" name="_untilWithin_and_" subtreeInterpretation="((G(Q -> ((P -> (!(RandP &amp;&amp; RandQ) U S)) U (RandP &amp;&amp; RandQ)) || G(P -> (!(RandP &amp;&amp; RandQ) U S)))) U[1, 1.2] ((G[.5](((!TRUE) &amp;&amp; Event))) &amp;&amp; (G(Event))))" logicGroup="MITL">
       <P xsi:type="comb:ResponseAfter_until_" name="test" subtreeInterpretation="(G(Q -> ((P -> (!(RandP &amp;&amp; RandQ) U S)) U (RandP &amp;&amp; RandQ)) || G(P -> (!(RandP &amp;&amp; RandQ) U S))))">
         <P xsi:type="comb:Literal" name="P" subtreeInterpretation="P"/>
         <S xsi:type="comb:Literal" name="S" subtreeInterpretation="S"/>
@@ -26,7 +26,7 @@
         </Q>
       </Q>
       <L name="1" subtreeInterpretation="1"/>
-      <H name="0.2" subtreeInterpretation="0.2"/>
+      <H name="1.2" subtreeInterpretation="1.2"/>
     </P>
     <Q xsi:type="comb:Not_" name="Not_" subtreeInterpretation="(!EventX)">
       <P xsi:type="comb:Literal" name="EventX" subtreeInterpretation="EventX"/>
