@@ -71,6 +71,14 @@ public class Services {
 				interpretation = interpretation.replace("<P>", subtreeInterpretation(Not_sub_element, getElementInterpretation(Not_sub_element)));
 				
 				return interpretation;
+			case "comb.expression.metamodel.comb.impl.Next_Impl":
+				Next_ Next_element = ((Next_)abstract_element);
+		    	Element Next_sub_element;
+		    	
+		    	Next_sub_element = Next_element.getP();
+				interpretation = interpretation.replace("<P>", subtreeInterpretation(Next_sub_element, getElementInterpretation(Next_sub_element)));
+				
+				return interpretation;
 			case "comb.expression.metamodel.comb.impl.Always_Impl":
 				Always_ Always_element = ((Always_)abstract_element);
 		    	Element Always_sub_element;
@@ -367,6 +375,8 @@ public class Services {
 		    	
 		    	ResponseGlobally_sub_element = ResponseGlobally_element.getP();
 				interpretation = interpretation.replace("<P>", subtreeInterpretation(ResponseGlobally_sub_element, getElementInterpretation(ResponseGlobally_sub_element)));
+		    	ResponseGlobally_sub_element = ResponseGlobally_element.getS();
+				interpretation = interpretation.replace("<S>", subtreeInterpretation(ResponseGlobally_sub_element, getElementInterpretation(ResponseGlobally_sub_element)));
 				
 				return interpretation;
 			case "comb.expression.metamodel.comb.impl.ResponseBefore_Impl":
@@ -377,6 +387,8 @@ public class Services {
 				interpretation = interpretation.replace("<P>", subtreeInterpretation(ResponseBefore_sub_element, getElementInterpretation(ResponseBefore_sub_element)));
 		    	ResponseBefore_sub_element = ResponseBefore_element.getQ();
 				interpretation = interpretation.replace("<Q>", subtreeInterpretation(ResponseBefore_sub_element, getElementInterpretation(ResponseBefore_sub_element)));
+				ResponseBefore_sub_element = ResponseBefore_element.getS();
+				interpretation = interpretation.replace("<S>", subtreeInterpretation(ResponseBefore_sub_element, getElementInterpretation(ResponseBefore_sub_element)));
 				
 				return interpretation;
 			case "comb.expression.metamodel.comb.impl.ResponseAfter_Impl":
@@ -387,6 +399,8 @@ public class Services {
 				interpretation = interpretation.replace("<P>", subtreeInterpretation(ResponseAfter_sub_element, getElementInterpretation(ResponseAfter_sub_element)));
 				ResponseAfter_sub_element = ResponseAfter_element.getQ();
 				interpretation = interpretation.replace("<Q>", subtreeInterpretation(ResponseAfter_sub_element, getElementInterpretation(ResponseAfter_sub_element)));
+				ResponseAfter_sub_element = ResponseAfter_element.getS();
+				interpretation = interpretation.replace("<S>", subtreeInterpretation(ResponseAfter_sub_element, getElementInterpretation(ResponseAfter_sub_element)));
 				
 				return interpretation;
 			case "comb.expression.metamodel.comb.impl.ResponseBetween_and_Impl":
