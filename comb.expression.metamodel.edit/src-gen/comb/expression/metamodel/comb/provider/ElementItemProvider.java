@@ -55,6 +55,7 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 
 			addNamePropertyDescriptor(object);
 			addSubtreeInterpretationPropertyDescriptor(object);
+			addLogicGroupPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -87,6 +88,22 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 						getString("_UI_PropertyDescriptor_description", "_UI_Element_subtreeInterpretation_feature",
 								"_UI_Element_type"),
 						CombPackage.Literals.ELEMENT__SUBTREE_INTERPRETATION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Logic Group feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLogicGroupPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Element_logicGroup_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Element_logicGroup_feature",
+								"_UI_Element_type"),
+						CombPackage.Literals.ELEMENT__LOGIC_GROUP, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -127,6 +144,7 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 		switch (notification.getFeatureID(Element.class)) {
 		case CombPackage.ELEMENT__NAME:
 		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
+		case CombPackage.ELEMENT__LOGIC_GROUP:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

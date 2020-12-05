@@ -389,6 +389,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="subtreeInterpretation"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logicGroup" lowerBound="1"
+        eType="#//LogicGroup" defaultValueLiteral="LTL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LTLOperatorsTwoParams" abstract="true"
       eSuperTypes="#//LTLOperators">
@@ -480,5 +482,10 @@
         defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true within &lt;high> time units in the given sub-expression."/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LogicGroup">
+    <eLiterals name="LTL"/>
+    <eLiterals name="MTL" value="1"/>
+    <eLiterals name="MITL" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

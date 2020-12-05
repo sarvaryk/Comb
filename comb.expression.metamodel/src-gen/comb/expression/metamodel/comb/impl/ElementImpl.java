@@ -5,6 +5,7 @@ package comb.expression.metamodel.comb.impl;
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Element;
 
+import comb.expression.metamodel.comb.LogicGroup;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getSubtreeInterpretation <em>Subtree Interpretation</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getLogicGroup <em>Logic Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +68,26 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected String subtreeInterpretation = SUBTREE_INTERPRETATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLogicGroup() <em>Logic Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLogicGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final LogicGroup LOGIC_GROUP_EDEFAULT = LogicGroup.LTL;
+
+	/**
+	 * The cached value of the '{@link #getLogicGroup() <em>Logic Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLogicGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected LogicGroup logicGroup = LOGIC_GROUP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,12 +161,38 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
+	public LogicGroup getLogicGroup() {
+		return logicGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLogicGroup(LogicGroup newLogicGroup) {
+		LogicGroup oldLogicGroup = logicGroup;
+		logicGroup = newLogicGroup == null ? LOGIC_GROUP_EDEFAULT : newLogicGroup;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.ELEMENT__LOGIC_GROUP, oldLogicGroup,
+					logicGroup));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case CombPackage.ELEMENT__NAME:
 			return getName();
 		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
 			return getSubtreeInterpretation();
+		case CombPackage.ELEMENT__LOGIC_GROUP:
+			return getLogicGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,6 +210,9 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return;
 		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
 			setSubtreeInterpretation((String) newValue);
+			return;
+		case CombPackage.ELEMENT__LOGIC_GROUP:
+			setLogicGroup((LogicGroup) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,6 +232,9 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
 			setSubtreeInterpretation(SUBTREE_INTERPRETATION_EDEFAULT);
 			return;
+		case CombPackage.ELEMENT__LOGIC_GROUP:
+			setLogicGroup(LOGIC_GROUP_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +252,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
 			return SUBTREE_INTERPRETATION_EDEFAULT == null ? subtreeInterpretation != null
 					: !SUBTREE_INTERPRETATION_EDEFAULT.equals(subtreeInterpretation);
+		case CombPackage.ELEMENT__LOGIC_GROUP:
+			return logicGroup != LOGIC_GROUP_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,6 +273,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		result.append(name);
 		result.append(", subtreeInterpretation: ");
 		result.append(subtreeInterpretation);
+		result.append(", logicGroup: ");
+		result.append(logicGroup);
 		result.append(')');
 		return result.toString();
 	}

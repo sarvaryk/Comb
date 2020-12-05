@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link comb.expression.metamodel.comb.Element#getName <em>Name</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.Element#getSubtreeInterpretation <em>Subtree Interpretation</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.Element#getLogicGroup <em>Logic Group</em>}</li>
  * </ul>
  *
  * @see comb.expression.metamodel.comb.CombPackage#getElement()
@@ -65,5 +66,31 @@ public interface Element extends EObject {
 	 * @generated
 	 */
 	void setSubtreeInterpretation(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Logic Group</b></em>' attribute.
+	 * The default value is <code>"LTL"</code>.
+	 * The literals are from the enumeration {@link comb.expression.metamodel.comb.LogicGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Logic Group</em>' attribute.
+	 * @see comb.expression.metamodel.comb.LogicGroup
+	 * @see #setLogicGroup(LogicGroup)
+	 * @see comb.expression.metamodel.comb.CombPackage#getElement_LogicGroup()
+	 * @model default="LTL" required="true"
+	 * @generated
+	 */
+	LogicGroup getLogicGroup();
+
+	/**
+	 * Sets the value of the '{@link comb.expression.metamodel.comb.Element#getLogicGroup <em>Logic Group</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Logic Group</em>' attribute.
+	 * @see comb.expression.metamodel.comb.LogicGroup
+	 * @see #getLogicGroup()
+	 * @generated
+	 */
+	void setLogicGroup(LogicGroup value);
 
 } // Element

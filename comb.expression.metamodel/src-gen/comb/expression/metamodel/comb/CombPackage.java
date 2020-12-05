@@ -4,6 +4,7 @@ package comb.expression.metamodel.comb;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -85,13 +86,22 @@ public interface CombPackage extends EPackage {
 	int ELEMENT__SUBTREE_INTERPRETATION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT__LOGIC_GROUP = 2;
+
+	/**
 	 * The number of structural features of the '<em>Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_FEATURE_COUNT = 2;
+	int ELEMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Element</em>' class.
@@ -129,6 +139,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ORDER__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -195,6 +214,15 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE__SUBTREE_INTERPRETATION = ORDER__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE__LOGIC_GROUP = ORDER__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -257,6 +285,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = PRECEDENCE__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_TWO_PARAMS__LOGIC_GROUP = PRECEDENCE__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -339,6 +376,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRECEDENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_AFTER_UNTIL___LOGIC_GROUP = PRECEDENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -441,6 +487,15 @@ public interface CombPackage extends EPackage {
 	int OCCURRENCE__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCURRENCE__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -496,6 +551,15 @@ public interface CombPackage extends EPackage {
 	int ABSENCE__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE__LOGIC_GROUP = OCCURRENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -549,6 +613,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = ABSENCE__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_TWO_PARAMS__LOGIC_GROUP = ABSENCE__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -622,6 +695,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_AFTER_UNTIL___LOGIC_GROUP = ABSENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -715,6 +797,15 @@ public interface CombPackage extends EPackage {
 	int LTL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -768,6 +859,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = LTL_OPERATORS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP = LTL_OPERATORS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -832,6 +932,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _UNTIL___SUBTREE_INTERPRETATION = LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _UNTIL___LOGIC_GROUP = LTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -916,6 +1025,15 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = PRECEDENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_WITHOUT_PARAMS__LOGIC_GROUP = PRECEDENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -980,6 +1098,15 @@ public interface CombPackage extends EPackage {
 	int LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = LTL_OPERATORS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_OPERATORS_ONE_PARAM__LOGIC_GROUP = LTL_OPERATORS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1035,6 +1162,15 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY__LOGIC_GROUP = OCCURRENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1088,6 +1224,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATION = UNIVERSALITY__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_ONE_PARAM__LOGIC_GROUP = UNIVERSALITY__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1152,6 +1297,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIVERSALITY_BEFORE___SUBTREE_INTERPRETATION = UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_BEFORE___LOGIC_GROUP = UNIVERSALITY_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1236,6 +1390,15 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATION = PRECEDENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_ONE_PARAM__LOGIC_GROUP = PRECEDENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1307,6 +1470,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRECEDENCE_BEFORE___SUBTREE_INTERPRETATION = PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_BEFORE___LOGIC_GROUP = PRECEDENCE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1400,6 +1572,15 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_AFTER___SUBTREE_INTERPRETATION = UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_AFTER___LOGIC_GROUP = UNIVERSALITY_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1482,6 +1663,15 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE__LOGIC_GROUP = OCCURRENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1535,6 +1725,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTNECE_ONE_PARAM__LOGIC_GROUP = BOUNDED_EXISTENCE__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1599,6 +1798,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDED_EXISTENCE_AFTER___SUBTREE_INTERPRETATION = BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_AFTER___LOGIC_GROUP = BOUNDED_EXISTNECE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1683,6 +1891,15 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_TWO_PARAMS__LOGIC_GROUP = BOUNDED_EXISTENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1754,6 +1971,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDED_EXISTENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_BETWEEN_AND___LOGIC_GROUP = BOUNDED_EXISTENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1847,6 +2073,15 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_WITHOUT_PARAMS__LOGIC_GROUP = BOUNDED_EXISTENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1900,6 +2135,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDED_EXISTENCE_GLOBALLY___SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_GLOBALLY___LOGIC_GROUP = BOUNDED_EXISTENCE_WITHOUT_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -1975,6 +2219,15 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATION = ABSENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_ONE_PARAM__LOGIC_GROUP = ABSENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2037,6 +2290,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_BEFORE___SUBTREE_INTERPRETATION = ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_BEFORE___LOGIC_GROUP = ABSENCE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2121,6 +2383,15 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATION = UNIVERSALITY__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_TWO_PARAMS__LOGIC_GROUP = UNIVERSALITY__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2192,6 +2463,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIVERSALITY_BETWEEN_AND___SUBTREE_INTERPRETATION = UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_BETWEEN_AND___LOGIC_GROUP = UNIVERSALITY_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2285,6 +2565,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE__LOGIC_GROUP = OCCURRENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2340,6 +2629,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_WITHOUR_PARAMS__SUBTREE_INTERPRETATION = EXISTENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_WITHOUR_PARAMS__LOGIC_GROUP = EXISTENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2393,6 +2691,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE__SUBTREE_INTERPRETATION = ORDER__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE__LOGIC_GROUP = ORDER__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2457,6 +2764,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATION = RESPONSE__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_TWO_PARAMS__LOGIC_GROUP = RESPONSE__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2539,6 +2855,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_AFTER_UNTIL___SUBTREE_INTERPRETATION = RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_AFTER_UNTIL___LOGIC_GROUP = RESPONSE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2641,6 +2966,15 @@ public interface CombPackage extends EPackage {
 	int BOOLEAN_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2694,6 +3028,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRECEDENCE_AFTER___SUBTREE_INTERPRETATION = PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_AFTER___LOGIC_GROUP = PRECEDENCE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2787,6 +3130,15 @@ public interface CombPackage extends EPackage {
 	int ALWAYS___SUBTREE_INTERPRETATION = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALWAYS___LOGIC_GROUP = LTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2860,6 +3212,15 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = ABSENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_WITHOUT_PARAMS__LOGIC_GROUP = ABSENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2913,6 +3274,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_BETWEEN_AND___SUBTREE_INTERPRETATION = RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_BETWEEN_AND___LOGIC_GROUP = RESPONSE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3015,6 +3385,15 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATION = RESPONSE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_ONE_PARAM__LOGIC_GROUP = RESPONSE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3086,6 +3465,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_AFTER___SUBTREE_INTERPRETATION = RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_AFTER___LOGIC_GROUP = RESPONSE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3177,6 +3565,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRECEDENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_BETWEEN_AND___LOGIC_GROUP = PRECEDENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3279,6 +3676,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = EXISTENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_TWO_PARAMS__LOGIC_GROUP = EXISTENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3350,6 +3756,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXISTENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_BETWEEN_AND___LOGIC_GROUP = EXISTENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3443,6 +3858,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_AFTER_UNTIL___LOGIC_GROUP = EXISTENCE_TWO_PARAMS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3532,6 +3956,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_BEFORE___SUBTREE_INTERPRETATION = RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_BEFORE___LOGIC_GROUP = RESPONSE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3625,6 +4058,15 @@ public interface CombPackage extends EPackage {
 	int BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_OPERATORS_TWO_PARAMS__LOGIC_GROUP = BOOLEAN_OPERATORS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3687,6 +4129,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _AND___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _AND___LOGIC_GROUP = BOOLEAN_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3771,6 +4222,15 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_GLOBALLY___SUBTREE_INTERPRETATION = ABSENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_GLOBALLY___LOGIC_GROUP = ABSENCE_WITHOUT_PARAMS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3842,6 +4302,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_BETWEEN_AND___LOGIC_GROUP = ABSENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -3935,6 +4404,15 @@ public interface CombPackage extends EPackage {
 	int EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION = EXISTENCE__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTNECE_ONE_PARAM__LOGIC_GROUP = EXISTENCE__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3997,6 +4475,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _OR___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _OR___LOGIC_GROUP = BOOLEAN_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4081,6 +4568,15 @@ public interface CombPackage extends EPackage {
 	int BASIC_ELEMENTS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_ELEMENTS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
 	 * The number of structural features of the '<em>Basic Elements</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4125,6 +4621,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIVERSALITY_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = UNIVERSALITY__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_WITHOUT_PARAMS__LOGIC_GROUP = UNIVERSALITY__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4180,6 +4685,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = RESPONSE__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_WITHOUT_PARAMS__LOGIC_GROUP = RESPONSE__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4244,6 +4758,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDED_EXISTENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_AFTER_UNTIL___LOGIC_GROUP = BOUNDED_EXISTENCE_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4337,6 +4860,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_AFTER___SUBTREE_INTERPRETATION = EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_AFTER___LOGIC_GROUP = EXISTNECE_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4419,6 +4951,15 @@ public interface CombPackage extends EPackage {
 	int BOOLEAN_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_OPERATORS_ONE_PARAM__LOGIC_GROUP = BOOLEAN_OPERATORS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4472,6 +5013,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int UNIVERSALITY_AFTER_UNTIL___SUBTREE_INTERPRETATION = UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_AFTER_UNTIL___LOGIC_GROUP = UNIVERSALITY_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4565,6 +5115,15 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_GLOBALLY___SUBTREE_INTERPRETATION = RESPONSE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESPONSE_GLOBALLY___LOGIC_GROUP = RESPONSE_WITHOUT_PARAMS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4647,6 +5206,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_GLOBALLY___SUBTREE_INTERPRETATION = EXISTENCE_WITHOUR_PARAMS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_GLOBALLY___LOGIC_GROUP = EXISTENCE_WITHOUR_PARAMS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4718,6 +5286,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOUNDED_EXISTENCE_BEFORE___SUBTREE_INTERPRETATION = BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOUNDED_EXISTENCE_BEFORE___LOGIC_GROUP = BOUNDED_EXISTNECE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4802,6 +5379,15 @@ public interface CombPackage extends EPackage {
 	int EVENTUALLY___SUBTREE_INTERPRETATION = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENTUALLY___LOGIC_GROUP = LTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4873,6 +5459,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _IMPLIES___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _IMPLIES___LOGIC_GROUP = BOOLEAN_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -4957,6 +5552,15 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_GLOBALLY___SUBTREE_INTERPRETATION = UNIVERSALITY_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIVERSALITY_GLOBALLY___LOGIC_GROUP = UNIVERSALITY_WITHOUT_PARAMS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5028,6 +5632,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_AFTER___SUBTREE_INTERPRETATION = ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSENCE_AFTER___LOGIC_GROUP = ABSENCE_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -5112,6 +5725,15 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_BEFORE___SUBTREE_INTERPRETATION = EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTENCE_BEFORE___LOGIC_GROUP = EXISTNECE_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5192,6 +5814,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRECEDENCE_GLOBALLY___SUBTREE_INTERPRETATION = PRECEDENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRECEDENCE_GLOBALLY___LOGIC_GROUP = PRECEDENCE_WITHOUT_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -5276,6 +5907,15 @@ public interface CombPackage extends EPackage {
 	int LITERAL__SUBTREE_INTERPRETATION = BASIC_ELEMENTS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL__LOGIC_GROUP = BASIC_ELEMENTS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5329,6 +5969,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int NEXT___SUBTREE_INTERPRETATION = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEXT___LOGIC_GROUP = LTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -5404,6 +6053,15 @@ public interface CombPackage extends EPackage {
 	int NOT___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOT___LOGIC_GROUP = BOOLEAN_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5477,6 +6135,15 @@ public interface CombPackage extends EPackage {
 	int MITL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5532,6 +6199,15 @@ public interface CombPackage extends EPackage {
 	int MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = MITL_OPERATORS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITL_OPERATORS_ONE_PARAM__LOGIC_GROUP = MITL_OPERATORS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5585,6 +6261,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int EVENTUALLY_WITHIN_AND___SUBTREE_INTERPRETATION = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENTUALLY_WITHIN_AND___LOGIC_GROUP = MITL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -5678,6 +6363,15 @@ public interface CombPackage extends EPackage {
 	int MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = MITL_OPERATORS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITL_OPERATORS_TWO_PARAMS__LOGIC_GROUP = MITL_OPERATORS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5740,6 +6434,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _UNTIL_WITHIN_AND___SUBTREE_INTERPRETATION = MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _UNTIL_WITHIN_AND___LOGIC_GROUP = MITL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -5840,6 +6543,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALWAYS_WITHIN_AND___SUBTREE_INTERPRETATION = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALWAYS_WITHIN_AND___LOGIC_GROUP = MITL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -5970,6 +6682,15 @@ public interface CombPackage extends EPackage {
 	int MTL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6025,6 +6746,15 @@ public interface CombPackage extends EPackage {
 	int MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = MTL_OPERATORS__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTL_OPERATORS_ONE_PARAM__LOGIC_GROUP = MTL_OPERATORS__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6078,6 +6808,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = MTL_OPERATORS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP = MTL_OPERATORS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -6142,6 +6881,15 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _UNTIL_WITHIN___SUBTREE_INTERPRETATION = MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _UNTIL_WITHIN___LOGIC_GROUP = MTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -6235,6 +6983,15 @@ public interface CombPackage extends EPackage {
 	int ALWAYS_WITHIN___SUBTREE_INTERPRETATION = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALWAYS_WITHIN___LOGIC_GROUP = MTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6317,6 +7074,15 @@ public interface CombPackage extends EPackage {
 	int EVENTUALLY_WITHIN___SUBTREE_INTERPRETATION = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
 
 	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENTUALLY_WITHIN___LOGIC_GROUP = MTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+
+	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6369,6 +7135,16 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int EVENTUALLY_WITHIN__OPERATION_COUNT = MTL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.LogicGroup
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
+	 * @generated
+	 */
+	int LOGIC_GROUP = 86;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -8224,6 +9000,17 @@ public interface CombPackage extends EPackage {
 	EAttribute getElement_SubtreeInterpretation();
 
 	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Element#getLogicGroup <em>Logic Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Logic Group</em>'.
+	 * @see comb.expression.metamodel.comb.Element#getLogicGroup()
+	 * @see #getElement()
+	 * @generated
+	 */
+	EAttribute getElement_LogicGroup();
+
+	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.LTLOperatorsTwoParams <em>LTL Operators Two Params</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8659,6 +9446,16 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEventuallyWithin__H();
+
+	/**
+	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Logic Group</em>'.
+	 * @see comb.expression.metamodel.comb.LogicGroup
+	 * @generated
+	 */
+	EEnum getLogicGroup();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -10233,6 +11030,14 @@ public interface CombPackage extends EPackage {
 		EAttribute ELEMENT__SUBTREE_INTERPRETATION = eINSTANCE.getElement_SubtreeInterpretation();
 
 		/**
+		 * The meta object literal for the '<em><b>Logic Group</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENT__LOGIC_GROUP = eINSTANCE.getElement_LogicGroup();
+
+		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.LTLOperatorsTwoParamsImpl <em>LTL Operators Two Params</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10587,6 +11392,16 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVENTUALLY_WITHIN___H = eINSTANCE.getEventuallyWithin__H();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.LogicGroup
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
+		 * @generated
+		 */
+		EEnum LOGIC_GROUP = eINSTANCE.getLogicGroup();
 
 	}
 

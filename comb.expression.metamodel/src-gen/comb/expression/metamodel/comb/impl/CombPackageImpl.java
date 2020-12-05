@@ -47,6 +47,7 @@ import comb.expression.metamodel.comb.LTLOperators;
 import comb.expression.metamodel.comb.LTLOperatorsOneParam;
 import comb.expression.metamodel.comb.LTLOperatorsTwoParams;
 import comb.expression.metamodel.comb.Literal;
+import comb.expression.metamodel.comb.LogicGroup;
 import comb.expression.metamodel.comb.MITLOperators;
 import comb.expression.metamodel.comb.MITLOperatorsOneParam;
 import comb.expression.metamodel.comb.MITLOperatorsTwoParams;
@@ -93,6 +94,7 @@ import comb.expression.metamodel.comb._until_;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -706,6 +708,13 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	private EClass eventuallyWithin_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum logicGroupEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -2527,6 +2536,16 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getElement_LogicGroup() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getLTLOperatorsTwoParams() {
 		return ltlOperatorsTwoParamsEClass;
 	}
@@ -2937,6 +2956,16 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getLogicGroup() {
+		return logicGroupEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CombFactory getCombFactory() {
 		return (CombFactory) getEFactoryInstance();
 	}
@@ -3207,6 +3236,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__NAME);
 		createEAttribute(elementEClass, ELEMENT__SUBTREE_INTERPRETATION);
+		createEAttribute(elementEClass, ELEMENT__LOGIC_GROUP);
 
 		ltlOperatorsTwoParamsEClass = createEClass(LTL_OPERATORS_TWO_PARAMS);
 		createEReference(ltlOperatorsTwoParamsEClass, LTL_OPERATORS_TWO_PARAMS__Q);
@@ -3262,6 +3292,9 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		createEAttribute(eventuallyWithin_EClass, EVENTUALLY_WITHIN___INTERPRETATION);
 		createEAttribute(eventuallyWithin_EClass, EVENTUALLY_WITHIN___DESCRIPTION);
 		createEReference(eventuallyWithin_EClass, EVENTUALLY_WITHIN___H);
+
+		// Create enums
+		logicGroupEEnum = createEEnum(LOGIC_GROUP);
 	}
 
 	/**
@@ -3930,6 +3963,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEAttribute(getElement_SubtreeInterpretation(), ecorePackage.getEString(), "subtreeInterpretation", null, 1,
 				1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElement_LogicGroup(), this.getLogicGroup(), "logicGroup", "LTL", 1, 1, Element.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ltlOperatorsTwoParamsEClass, LTLOperatorsTwoParams.class, "LTLOperatorsTwoParams", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4058,6 +4093,12 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEReference(getEventuallyWithin__H(), this.getLiteral(), null, "H", null, 1, 1, EventuallyWithin_.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.MTL);
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -10,6 +10,11 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Comb" basePackage="comb.expression.metamodel" disposableProviderFactory="true"
       ecorePackage="comb.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="comb.ecore#//LogicGroup">
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LTL"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MTL"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MITL"/>
+    </genEnums>
     <genClasses ecoreClass="comb.ecore#//PrecedenceAfter_until_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/interpretation"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/description"/>
@@ -241,6 +246,7 @@
     <genClasses image="false" ecoreClass="comb.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/subtreeInterpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/logicGroup"/>
     </genClasses>
     <genClasses image="false" ecoreClass="comb.ecore#//LTLOperatorsTwoParams">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//LTLOperatorsTwoParams/Q"/>

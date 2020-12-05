@@ -43,7 +43,10 @@ public class GenerateCombExpression {
 		final IFile taskExceptionFile = project.getFile(packagePath.append(elementName + "_CombExpression.txt"));
 		if(!taskExceptionFile.exists()) {
 			System.out.println("Creating comb expression file...");
-			taskExceptionFile.create(new ByteArrayInputStream(element.getSubtreeInterpretation().getBytes()), true, progressMonitor);
+			
+			String content = element.getSubtreeInterpretation() + "\n" + element.getLogicGroup();
+			
+			taskExceptionFile.create(new ByteArrayInputStream(content.getBytes()), true, progressMonitor);
 		}
 		else {
 			System.out.println("Comb expression file already exists...");
