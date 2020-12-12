@@ -23,7 +23,7 @@ public class Services {
 			case "comb.expression.metamodel.comb.impl.LiteralImpl":
 				Literal literal_element = ((Literal)abstract_element);
 
-				if(interpretation.contains("<P>"))
+				/*if(interpretation.contains("<P>"))
 					return interpretation.replace("<P>", literal_element.getName());
 				else if(interpretation.contains("<Q>"))
 					return interpretation.replace("<Q>", literal_element.getName());
@@ -31,17 +31,34 @@ public class Services {
 					return interpretation.replace("<low>", literal_element.getName());
 				else if(interpretation.contains("<high>"))
 					return interpretation.replace("<high>", literal_element.getName());
-				else
+				else*/
 					return literal_element.getName();
+			//Ha a kiválasztott operátor típusa megegyezik az alábbi operátortípussal
 			case "comb.expression.metamodel.comb.impl._and_Impl":
+				//Átalakítjuk a kapott általános absztrakt elemet a konkrét típusra
 				_and_ _and_element = ((_and_)abstract_element);
+				//Létrehozunk egy olyan változót,
+				//amely ideiglenesen tárolja az elem egyes operandusait
 		    	Element _and_sub_element;
 		    	
+				//A következõ blokk az operátor minden operandusára elvégzendõ
+				//Az elõbb létrehozott változó értékének megadjuk 
+		    	//a jelenleg vizsgált operandust
 		    	_and_sub_element = _and_element.getP();
+				//A vizsgált elem interpretációjában a vizsgált operandus 
+				//lecserélésre kerül a vizsgált operandus valódi értékére,
+				//majd az algoritmus folytatódik az operandus kifejtésével
 				interpretation = interpretation.replace("<P>", subtreeInterpretation(_and_sub_element, getElementInterpretation(_and_sub_element)));
+				//Az elõbb létrehozott változó értékének megadjuk 
+		    	//a jelenleg vizsgált operandust
 				_and_sub_element = _and_element.getQ();
+				//A vizsgált elem interpretációjában a vizsgált operandus 
+				//lecserélésre kerül a vizsgált operandus valódi értékére,
+				//majd az algoritmus folytatódik az operandus kifejtésével
 				interpretation = interpretation.replace("<Q>", subtreeInterpretation(_and_sub_element, getElementInterpretation(_and_sub_element)));
 				
+				//Amennyiben az adott elem minden operandusának minden rész-eleme 
+				//kifejtésre került, akkor visszatér az adott rész-fával
 				return interpretation;
 			case "comb.expression.metamodel.comb.impl._or_Impl":
 				_or_ _or_element = ((_or_)abstract_element);
@@ -509,7 +526,9 @@ public class Services {
     	switch(abstract_element.getClass().getName()) {
 			case "comb.expression.metamodel.comb.impl.LiteralImpl":
 				return ((Literal)abstract_element).getName();
+			//Ha a kiválasztott operátor típusa megegyezik az alábbi operátortípussal...
 			case "comb.expression.metamodel.comb.impl._and_Impl":
+				//Visszatér az adott elem interpretációjával
 				return "("+((_and_)abstract_element).getInterpretation()+")";
 			case "comb.expression.metamodel.comb.impl._or_Impl":
 		    	return "("+((_or_)abstract_element).getInterpretation()+")";
