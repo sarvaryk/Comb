@@ -11,4 +11,17 @@
       <S xsi:type="comb:Literal" name="Response" subtreeInterpretation="Response"/>
     </Q>
   </element>
+  <element xsi:type="comb:AlwaysWithin_and_" name="STL_speed" subtreeInterpretation="(G[0, 11.2]((speed &lt;= 54)))" logicGroup="STL">
+    <P xsi:type="comb:_lessThanOrEqual_" name="_lessThanOrEqual_" subtreeInterpretation="(speed &lt;= 54)" logicGroup="STL">
+      <P name="speed" subtreeInterpretation="speed"/>
+      <Q name="54" subtreeInterpretation="54"/>
+    </P>
+    <L name="0" subtreeInterpretation="0"/>
+    <H name="11.2" subtreeInterpretation="11.2"/>
+  </element>
+  <element xsi:type="comb:AlwaysWithin_and_" name="MITL_speed" subtreeInterpretation="(G[0, 11.2](safeSpeed))" logicGroup="MITL">
+    <P xsi:type="comb:Literal" name="safeSpeed" subtreeInterpretation="safeSpeed"/>
+    <L name="0" subtreeInterpretation="0"/>
+    <H name="11.2" subtreeInterpretation="11.2"/>
+  </element>
 </comb:Comb>

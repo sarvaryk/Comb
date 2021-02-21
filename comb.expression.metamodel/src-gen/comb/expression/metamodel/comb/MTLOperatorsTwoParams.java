@@ -19,7 +19,6 @@ package comb.expression.metamodel.comb;
  * @generated
  */
 public interface MTLOperatorsTwoParams extends MTLOperators {
-
 	/**
 	 * Returns the value of the '<em><b>Q</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -41,4 +40,5 @@ public interface MTLOperatorsTwoParams extends MTLOperators {
 	 * @generated
 	 */
 	void setQ(Element value);
+
 } // MTLOperatorsTwoParams

@@ -4,8 +4,8 @@ package comb.expression.metamodel.comb.impl;
 
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Element;
-
 import comb.expression.metamodel.comb.LogicGroup;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

@@ -4,7 +4,6 @@ package comb.expression.metamodel.comb.impl;
 
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Literal;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -29,7 +28,7 @@ public class LiteralImpl extends BasicElementsImpl implements Literal {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = "Signals an occurrence of an event or can be \"TRUE\" if the literal should return always true or \"FALSE\" if the literal should return always false.";
+	protected static final String DESCRIPTION_EDEFAULT = "Signals an occurrence of an event or can be \"TRUE\" if the literal should return always true or \"FALSE\" if the literal should return always false. Literals can also represent numerical values and comparators.";
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.

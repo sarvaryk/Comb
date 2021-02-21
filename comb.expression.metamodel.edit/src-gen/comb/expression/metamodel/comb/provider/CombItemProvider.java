@@ -284,6 +284,21 @@ public class CombItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.COMB__ELEMENT,
 				CombFactory.eINSTANCE.createEventuallyWithin_()));
+
+		newChildDescriptors.add(
+				createChildParameter(CombPackage.Literals.COMB__ELEMENT, CombFactory.eINSTANCE.create_lessThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.COMB__ELEMENT,
+				CombFactory.eINSTANCE.create_lessThanOrEqual_()));
+
+		newChildDescriptors
+				.add(createChildParameter(CombPackage.Literals.COMB__ELEMENT, CombFactory.eINSTANCE.create_equal_()));
+
+		newChildDescriptors.add(
+				createChildParameter(CombPackage.Literals.COMB__ELEMENT, CombFactory.eINSTANCE.create_greaterThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.COMB__ELEMENT,
+				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
 	}
 
 	/**

@@ -7,8 +7,8 @@ import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Element;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -66,6 +66,58 @@ public abstract class BoundedExistenceTwoParamsImpl extends BoundedExistenceImpl
 	@Override
 	protected EClass eStaticClass() {
 		return CombPackage.Literals.BOUNDED_EXISTENCE_TWO_PARAMS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Element getQ() {
+		return q;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetQ(Element newQ, NotificationChain msgs) {
+		Element oldQ = q;
+		q = newQ;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, oldQ, newQ);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQ(Element newQ) {
+		if (newQ != q) {
+			NotificationChain msgs = null;
+			if (q != null)
+				msgs = ((InternalEObject) q).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, null, msgs);
+			if (newQ != null)
+				msgs = ((InternalEObject) newQ).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, null, msgs);
+			msgs = basicSetQ(newQ, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, newQ,
+					newQ));
 	}
 
 	/**
@@ -134,58 +186,6 @@ public abstract class BoundedExistenceTwoParamsImpl extends BoundedExistenceImpl
 			return basicSetR(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Element getQ() {
-		return q;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetQ(Element newQ, NotificationChain msgs) {
-		Element oldQ = q;
-		q = newQ;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, oldQ, newQ);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setQ(Element newQ) {
-		if (newQ != q) {
-			NotificationChain msgs = null;
-			if (q != null)
-				msgs = ((InternalEObject) q).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, null, msgs);
-			if (newQ != null)
-				msgs = ((InternalEObject) newQ).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, null, msgs);
-			msgs = basicSetQ(newQ, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.BOUNDED_EXISTENCE_TWO_PARAMS__Q, newQ,
-					newQ));
 	}
 
 	/**

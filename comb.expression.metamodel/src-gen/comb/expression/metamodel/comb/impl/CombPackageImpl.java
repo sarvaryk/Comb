@@ -67,6 +67,7 @@ import comb.expression.metamodel.comb.PrecedenceGlobally_;
 import comb.expression.metamodel.comb.PrecedenceOneParam;
 import comb.expression.metamodel.comb.PrecedenceTwoParams;
 import comb.expression.metamodel.comb.PrecedenceWithoutParams;
+import comb.expression.metamodel.comb.Relation;
 import comb.expression.metamodel.comb.Response;
 import comb.expression.metamodel.comb.ResponseAfter_;
 import comb.expression.metamodel.comb.ResponseAfter_until_;
@@ -76,6 +77,7 @@ import comb.expression.metamodel.comb.ResponseGlobally_;
 import comb.expression.metamodel.comb.ResponseOneParam;
 import comb.expression.metamodel.comb.ResponseTwoParams;
 import comb.expression.metamodel.comb.ResponseWithoutParams;
+import comb.expression.metamodel.comb.STLOperators;
 import comb.expression.metamodel.comb.Universality;
 import comb.expression.metamodel.comb.UniversalityAfter_;
 import comb.expression.metamodel.comb.UniversalityAfter_until_;
@@ -86,7 +88,12 @@ import comb.expression.metamodel.comb.UniversalityOneParam;
 import comb.expression.metamodel.comb.UniversalityTwoParams;
 import comb.expression.metamodel.comb.UniversalityWithoutParams;
 import comb.expression.metamodel.comb._and_;
+import comb.expression.metamodel.comb._equal_;
+import comb.expression.metamodel.comb._greaterThanOrEqual_;
+import comb.expression.metamodel.comb._greaterThan_;
 import comb.expression.metamodel.comb._implies_;
+import comb.expression.metamodel.comb._lessThanOrEqual_;
+import comb.expression.metamodel.comb._lessThan_;
 import comb.expression.metamodel.comb._or_;
 import comb.expression.metamodel.comb._untilWithin_;
 import comb.expression.metamodel.comb._untilWithin_and_;
@@ -708,6 +715,55 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	private EClass eventuallyWithin_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass relationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass _lessThan_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass _lessThanOrEqual_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass _equal_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass _greaterThan_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass _greaterThanOrEqual_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stlOperatorsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1596,8 +1652,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getUniversalityTwoParams_R() {
-		return (EReference) universalityTwoParamsEClass.getEStructuralFeatures().get(1);
+	public EReference getUniversalityTwoParams_Q() {
+		return (EReference) universalityTwoParamsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1606,8 +1662,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getUniversalityTwoParams_Q() {
-		return (EReference) universalityTwoParamsEClass.getEStructuralFeatures().get(0);
+	public EReference getUniversalityTwoParams_R() {
+		return (EReference) universalityTwoParamsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2166,8 +2222,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPrecedenceTwoParams_R() {
-		return (EReference) precedenceTwoParamsEClass.getEStructuralFeatures().get(1);
+	public EReference getPrecedenceTwoParams_Q() {
+		return (EReference) precedenceTwoParamsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2176,8 +2232,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPrecedenceTwoParams_Q() {
-		return (EReference) precedenceTwoParamsEClass.getEStructuralFeatures().get(0);
+	public EReference getPrecedenceTwoParams_R() {
+		return (EReference) precedenceTwoParamsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2256,8 +2312,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponseTwoParams_R() {
-		return (EReference) responseTwoParamsEClass.getEStructuralFeatures().get(1);
+	public EReference getResponseTwoParams_Q() {
+		return (EReference) responseTwoParamsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2266,8 +2322,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponseTwoParams_Q() {
-		return (EReference) responseTwoParamsEClass.getEStructuralFeatures().get(0);
+	public EReference getResponseTwoParams_R() {
+		return (EReference) responseTwoParamsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2456,8 +2512,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBoundedExistenceTwoParams_R() {
-		return (EReference) boundedExistenceTwoParamsEClass.getEStructuralFeatures().get(1);
+	public EReference getBoundedExistenceTwoParams_Q() {
+		return (EReference) boundedExistenceTwoParamsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2466,8 +2522,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBoundedExistenceTwoParams_Q() {
-		return (EReference) boundedExistenceTwoParamsEClass.getEStructuralFeatures().get(0);
+	public EReference getBoundedExistenceTwoParams_R() {
+		return (EReference) boundedExistenceTwoParamsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2956,6 +3012,196 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getRelation() {
+		return relationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRelation_P() {
+		return (EReference) relationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRelation_Q() {
+		return (EReference) relationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass get_lessThan_() {
+		return _lessThan_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_lessThan__Description() {
+		return (EAttribute) _lessThan_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_lessThan__Interpretation() {
+		return (EAttribute) _lessThan_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass get_lessThanOrEqual_() {
+		return _lessThanOrEqual_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_lessThanOrEqual__Interpretation() {
+		return (EAttribute) _lessThanOrEqual_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_lessThanOrEqual__Description() {
+		return (EAttribute) _lessThanOrEqual_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass get_equal_() {
+		return _equal_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_equal__Description() {
+		return (EAttribute) _equal_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_equal__Interpretation() {
+		return (EAttribute) _equal_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass get_greaterThan_() {
+		return _greaterThan_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_greaterThan__Description() {
+		return (EAttribute) _greaterThan_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_greaterThan__Interpretation() {
+		return (EAttribute) _greaterThan_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass get_greaterThanOrEqual_() {
+		return _greaterThanOrEqual_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_greaterThanOrEqual__Description() {
+		return (EAttribute) _greaterThanOrEqual_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_greaterThanOrEqual__Interpretation() {
+		return (EAttribute) _greaterThanOrEqual_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSTLOperators() {
+		return stlOperatorsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getLogicGroup() {
 		return logicGroupEEnum;
 	}
@@ -3293,6 +3539,32 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		createEAttribute(eventuallyWithin_EClass, EVENTUALLY_WITHIN___DESCRIPTION);
 		createEReference(eventuallyWithin_EClass, EVENTUALLY_WITHIN___H);
 
+		relationEClass = createEClass(RELATION);
+		createEReference(relationEClass, RELATION__P);
+		createEReference(relationEClass, RELATION__Q);
+
+		_lessThan_EClass = createEClass(_LESS_THAN_);
+		createEAttribute(_lessThan_EClass, _LESS_THAN___DESCRIPTION);
+		createEAttribute(_lessThan_EClass, _LESS_THAN___INTERPRETATION);
+
+		_lessThanOrEqual_EClass = createEClass(_LESS_THAN_OR_EQUAL_);
+		createEAttribute(_lessThanOrEqual_EClass, _LESS_THAN_OR_EQUAL___INTERPRETATION);
+		createEAttribute(_lessThanOrEqual_EClass, _LESS_THAN_OR_EQUAL___DESCRIPTION);
+
+		_equal_EClass = createEClass(_EQUAL_);
+		createEAttribute(_equal_EClass, _EQUAL___DESCRIPTION);
+		createEAttribute(_equal_EClass, _EQUAL___INTERPRETATION);
+
+		_greaterThan_EClass = createEClass(_GREATER_THAN_);
+		createEAttribute(_greaterThan_EClass, _GREATER_THAN___DESCRIPTION);
+		createEAttribute(_greaterThan_EClass, _GREATER_THAN___INTERPRETATION);
+
+		_greaterThanOrEqual_EClass = createEClass(_GREATER_THAN_OR_EQUAL_);
+		createEAttribute(_greaterThanOrEqual_EClass, _GREATER_THAN_OR_EQUAL___DESCRIPTION);
+		createEAttribute(_greaterThanOrEqual_EClass, _GREATER_THAN_OR_EQUAL___INTERPRETATION);
+
+		stlOperatorsEClass = createEClass(STL_OPERATORS);
+
 		// Create enums
 		logicGroupEEnum = createEEnum(LOGIC_GROUP);
 	}
@@ -3410,6 +3682,13 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		_untilWithin_EClass.getESuperTypes().add(this.getMTLOperatorsTwoParams());
 		alwaysWithin_EClass.getESuperTypes().add(this.getMTLOperatorsOneParam());
 		eventuallyWithin_EClass.getESuperTypes().add(this.getMTLOperatorsOneParam());
+		relationEClass.getESuperTypes().add(this.getSTLOperators());
+		_lessThan_EClass.getESuperTypes().add(this.getRelation());
+		_lessThanOrEqual_EClass.getESuperTypes().add(this.getRelation());
+		_equal_EClass.getESuperTypes().add(this.getRelation());
+		_greaterThan_EClass.getESuperTypes().add(this.getRelation());
+		_greaterThanOrEqual_EClass.getESuperTypes().add(this.getRelation());
+		stlOperatorsEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(precedenceAfter_until_EClass, PrecedenceAfter_until_.class, "PrecedenceAfter_until_", !IS_ABSTRACT,
@@ -3927,7 +4206,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLiteral_Description(), ecorePackage.getEString(), "description",
-				"Signals an occurrence of an event or can be \"TRUE\" if the literal should return always true or \"FALSE\" if the literal should return always false.",
+				"Signals an occurrence of an event or can be \"TRUE\" if the literal should return always true or \"FALSE\" if the literal should return always false. Literals can also represent numerical values and comparators.",
 				1, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -4094,11 +4373,72 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(relationEClass, Relation.class, "Relation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRelation_P(), this.getLiteral(), null, "P", null, 1, 1, Relation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getRelation_Q(), this.getLiteral(), null, "Q", null, 1, 1, Relation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(_lessThan_EClass, _lessThan_.class, "_lessThan_", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(get_lessThan__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: <P> is less than (<) <Q>", 1, 1,
+				_lessThan_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(get_lessThan__Interpretation(), ecorePackage.getEString(), "interpretation", "<P> < <Q>", 1, 1,
+				_lessThan_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(_lessThanOrEqual_EClass, _lessThanOrEqual_.class, "_lessThanOrEqual_", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(get_lessThanOrEqual__Interpretation(), ecorePackage.getEString(), "interpretation", "<P> <= <Q>",
+				1, 1, _lessThanOrEqual_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(get_lessThanOrEqual__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: <P> is less than or equal to (<=) <Q>", 1, 1,
+				_lessThanOrEqual_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(_equal_EClass, _equal_.class, "_equal_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(get_equal__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: <P> is less equal to (=) <Q>", 1, 1,
+				_equal_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(get_equal__Interpretation(), ecorePackage.getEString(), "interpretation", "<P> = <Q>", 1, 1,
+				_equal_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(_greaterThan_EClass, _greaterThan_.class, "_greaterThan_", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(get_greaterThan__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: <P> is greater than (>) <Q>", 1, 1,
+				_greaterThan_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(get_greaterThan__Interpretation(), ecorePackage.getEString(), "interpretation", "<P> > <Q>", 1,
+				1, _greaterThan_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(_greaterThanOrEqual_EClass, _greaterThanOrEqual_.class, "_greaterThanOrEqual_", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(get_greaterThanOrEqual__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: <P> is greater than or equal to (>=) <Q>", 1,
+				1, _greaterThanOrEqual_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(get_greaterThanOrEqual__Interpretation(), ecorePackage.getEString(), "interpretation",
+				"<P> >= <Q>", 1, 1, _greaterThanOrEqual_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stlOperatorsEClass, STLOperators.class, "STLOperators", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.STL);
 
 		// Create resource
 		createResource(eNS_URI);

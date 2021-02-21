@@ -7137,6 +7137,589 @@ public interface CombPackage extends EPackage {
 	int EVENTUALLY_WITHIN__OPERATION_COUNT = MTL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.STLOperatorsImpl <em>STL Operators</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.STLOperatorsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTLOperators()
+	 * @generated
+	 */
+	int STL_OPERATORS = 92;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STL_OPERATORS__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
+	 * The number of structural features of the '<em>STL Operators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STL_OPERATORS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>STL Operators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STL_OPERATORS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.RelationImpl <em>Relation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.RelationImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getRelation()
+	 * @generated
+	 */
+	int RELATION = 86;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__NAME = STL_OPERATORS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__SUBTREE_INTERPRETATION = STL_OPERATORS__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__LOGIC_GROUP = STL_OPERATORS__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__P = STL_OPERATORS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__Q = STL_OPERATORS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_FEATURE_COUNT = STL_OPERATORS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION_OPERATION_COUNT = STL_OPERATORS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._lessThan_Impl <em>less Than </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._lessThan_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_lessThan_()
+	 * @generated
+	 */
+	int _LESS_THAN_ = 87;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___NAME = RELATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___LOGIC_GROUP = RELATION__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___P = RELATION__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___Q = RELATION__Q;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>less Than </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN__FEATURE_COUNT = RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>less Than </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN__OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl <em>less Than Or Equal </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_lessThanOrEqual_()
+	 * @generated
+	 */
+	int _LESS_THAN_OR_EQUAL_ = 88;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___NAME = RELATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___LOGIC_GROUP = RELATION__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___P = RELATION__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___Q = RELATION__Q;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>less Than Or Equal </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL__FEATURE_COUNT = RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>less Than Or Equal </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN_OR_EQUAL__OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._equal_Impl <em>equal </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._equal_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_equal_()
+	 * @generated
+	 */
+	int _EQUAL_ = 89;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___NAME = RELATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___LOGIC_GROUP = RELATION__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___P = RELATION__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___Q = RELATION__Q;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>equal </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL__FEATURE_COUNT = RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>equal </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL__OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._greaterThan_Impl <em>greater Than </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._greaterThan_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_greaterThan_()
+	 * @generated
+	 */
+	int _GREATER_THAN_ = 90;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___NAME = RELATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___LOGIC_GROUP = RELATION__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___P = RELATION__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___Q = RELATION__Q;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>greater Than </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN__FEATURE_COUNT = RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>greater Than </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN__OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl <em>greater Than Or Equal </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_greaterThanOrEqual_()
+	 * @generated
+	 */
+	int _GREATER_THAN_OR_EQUAL_ = 91;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___NAME = RELATION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___LOGIC_GROUP = RELATION__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___P = RELATION__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___Q = RELATION__Q;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>greater Than Or Equal </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL__FEATURE_COUNT = RELATION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>greater Than Or Equal </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL__OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7144,7 +7727,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
 	 * @generated
 	 */
-	int LOGIC_GROUP = 86;
+	int LOGIC_GROUP = 93;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -8004,17 +8587,6 @@ public interface CombPackage extends EPackage {
 	EClass getUniversalityTwoParams();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.UniversalityTwoParams#getR <em>R</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>R</em>'.
-	 * @see comb.expression.metamodel.comb.UniversalityTwoParams#getR()
-	 * @see #getUniversalityTwoParams()
-	 * @generated
-	 */
-	EReference getUniversalityTwoParams_R();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.UniversalityTwoParams#getQ <em>Q</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8024,6 +8596,17 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUniversalityTwoParams_Q();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.UniversalityTwoParams#getR <em>R</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>R</em>'.
+	 * @see comb.expression.metamodel.comb.UniversalityTwoParams#getR()
+	 * @see #getUniversalityTwoParams()
+	 * @generated
+	 */
+	EReference getUniversalityTwoParams_R();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._and_ <em>and </em>}'.
@@ -8607,17 +9190,6 @@ public interface CombPackage extends EPackage {
 	EClass getPrecedenceTwoParams();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.PrecedenceTwoParams#getR <em>R</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>R</em>'.
-	 * @see comb.expression.metamodel.comb.PrecedenceTwoParams#getR()
-	 * @see #getPrecedenceTwoParams()
-	 * @generated
-	 */
-	EReference getPrecedenceTwoParams_R();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.PrecedenceTwoParams#getQ <em>Q</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8627,6 +9199,17 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrecedenceTwoParams_Q();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.PrecedenceTwoParams#getR <em>R</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>R</em>'.
+	 * @see comb.expression.metamodel.comb.PrecedenceTwoParams#getR()
+	 * @see #getPrecedenceTwoParams()
+	 * @generated
+	 */
+	EReference getPrecedenceTwoParams_R();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.AbsenceAfter_ <em>Absence After </em>}'.
@@ -8702,17 +9285,6 @@ public interface CombPackage extends EPackage {
 	EClass getResponseTwoParams();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.ResponseTwoParams#getR <em>R</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>R</em>'.
-	 * @see comb.expression.metamodel.comb.ResponseTwoParams#getR()
-	 * @see #getResponseTwoParams()
-	 * @generated
-	 */
-	EReference getResponseTwoParams_R();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.ResponseTwoParams#getQ <em>Q</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8722,6 +9294,17 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResponseTwoParams_Q();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.ResponseTwoParams#getR <em>R</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>R</em>'.
+	 * @see comb.expression.metamodel.comb.ResponseTwoParams#getR()
+	 * @see #getResponseTwoParams()
+	 * @generated
+	 */
+	EReference getResponseTwoParams_R();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.ExistenceBefore_ <em>Existence Before </em>}'.
@@ -8914,17 +9497,6 @@ public interface CombPackage extends EPackage {
 	EClass getBoundedExistenceTwoParams();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.BoundedExistenceTwoParams#getR <em>R</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>R</em>'.
-	 * @see comb.expression.metamodel.comb.BoundedExistenceTwoParams#getR()
-	 * @see #getBoundedExistenceTwoParams()
-	 * @generated
-	 */
-	EReference getBoundedExistenceTwoParams_R();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.BoundedExistenceTwoParams#getQ <em>Q</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8934,6 +9506,17 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBoundedExistenceTwoParams_Q();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.BoundedExistenceTwoParams#getR <em>R</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>R</em>'.
+	 * @see comb.expression.metamodel.comb.BoundedExistenceTwoParams#getR()
+	 * @see #getBoundedExistenceTwoParams()
+	 * @generated
+	 */
+	EReference getBoundedExistenceTwoParams_R();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Not_ <em>Not </em>}'.
@@ -9446,6 +10029,208 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEventuallyWithin__H();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Relation <em>Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relation</em>'.
+	 * @see comb.expression.metamodel.comb.Relation
+	 * @generated
+	 */
+	EClass getRelation();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Relation#getP <em>P</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>P</em>'.
+	 * @see comb.expression.metamodel.comb.Relation#getP()
+	 * @see #getRelation()
+	 * @generated
+	 */
+	EReference getRelation_P();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Relation#getQ <em>Q</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Q</em>'.
+	 * @see comb.expression.metamodel.comb.Relation#getQ()
+	 * @see #getRelation()
+	 * @generated
+	 */
+	EReference getRelation_Q();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._lessThan_ <em>less Than </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>less Than </em>'.
+	 * @see comb.expression.metamodel.comb._lessThan_
+	 * @generated
+	 */
+	EClass get_lessThan_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThan_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._lessThan_#getDescription()
+	 * @see #get_lessThan_()
+	 * @generated
+	 */
+	EAttribute get_lessThan__Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThan_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb._lessThan_#getInterpretation()
+	 * @see #get_lessThan_()
+	 * @generated
+	 */
+	EAttribute get_lessThan__Interpretation();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._lessThanOrEqual_ <em>less Than Or Equal </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>less Than Or Equal </em>'.
+	 * @see comb.expression.metamodel.comb._lessThanOrEqual_
+	 * @generated
+	 */
+	EClass get_lessThanOrEqual_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThanOrEqual_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb._lessThanOrEqual_#getInterpretation()
+	 * @see #get_lessThanOrEqual_()
+	 * @generated
+	 */
+	EAttribute get_lessThanOrEqual__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThanOrEqual_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._lessThanOrEqual_#getDescription()
+	 * @see #get_lessThanOrEqual_()
+	 * @generated
+	 */
+	EAttribute get_lessThanOrEqual__Description();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._equal_ <em>equal </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>equal </em>'.
+	 * @see comb.expression.metamodel.comb._equal_
+	 * @generated
+	 */
+	EClass get_equal_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._equal_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._equal_#getDescription()
+	 * @see #get_equal_()
+	 * @generated
+	 */
+	EAttribute get_equal__Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._equal_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb._equal_#getInterpretation()
+	 * @see #get_equal_()
+	 * @generated
+	 */
+	EAttribute get_equal__Interpretation();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._greaterThan_ <em>greater Than </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>greater Than </em>'.
+	 * @see comb.expression.metamodel.comb._greaterThan_
+	 * @generated
+	 */
+	EClass get_greaterThan_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThan_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._greaterThan_#getDescription()
+	 * @see #get_greaterThan_()
+	 * @generated
+	 */
+	EAttribute get_greaterThan__Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThan_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb._greaterThan_#getInterpretation()
+	 * @see #get_greaterThan_()
+	 * @generated
+	 */
+	EAttribute get_greaterThan__Interpretation();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._greaterThanOrEqual_ <em>greater Than Or Equal </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>greater Than Or Equal </em>'.
+	 * @see comb.expression.metamodel.comb._greaterThanOrEqual_
+	 * @generated
+	 */
+	EClass get_greaterThanOrEqual_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThanOrEqual_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._greaterThanOrEqual_#getDescription()
+	 * @see #get_greaterThanOrEqual_()
+	 * @generated
+	 */
+	EAttribute get_greaterThanOrEqual__Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThanOrEqual_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb._greaterThanOrEqual_#getInterpretation()
+	 * @see #get_greaterThanOrEqual_()
+	 * @generated
+	 */
+	EAttribute get_greaterThanOrEqual__Interpretation();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.STLOperators <em>STL Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>STL Operators</em>'.
+	 * @see comb.expression.metamodel.comb.STLOperators
+	 * @generated
+	 */
+	EClass getSTLOperators();
 
 	/**
 	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}'.
@@ -10200,20 +10985,20 @@ public interface CombPackage extends EPackage {
 		EClass UNIVERSALITY_TWO_PARAMS = eINSTANCE.getUniversalityTwoParams();
 
 		/**
-		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UNIVERSALITY_TWO_PARAMS__R = eINSTANCE.getUniversalityTwoParams_R();
-
-		/**
 		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference UNIVERSALITY_TWO_PARAMS__Q = eINSTANCE.getUniversalityTwoParams_Q();
+
+		/**
+		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIVERSALITY_TWO_PARAMS__R = eINSTANCE.getUniversalityTwoParams_R();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._and_Impl <em>and </em>}' class.
@@ -10706,20 +11491,20 @@ public interface CombPackage extends EPackage {
 		EClass PRECEDENCE_TWO_PARAMS = eINSTANCE.getPrecedenceTwoParams();
 
 		/**
-		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRECEDENCE_TWO_PARAMS__R = eINSTANCE.getPrecedenceTwoParams_R();
-
-		/**
 		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference PRECEDENCE_TWO_PARAMS__Q = eINSTANCE.getPrecedenceTwoParams_Q();
+
+		/**
+		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRECEDENCE_TWO_PARAMS__R = eINSTANCE.getPrecedenceTwoParams_R();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.AbsenceAfter_Impl <em>Absence After </em>}' class.
@@ -10786,20 +11571,20 @@ public interface CombPackage extends EPackage {
 		EClass RESPONSE_TWO_PARAMS = eINSTANCE.getResponseTwoParams();
 
 		/**
-		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESPONSE_TWO_PARAMS__R = eINSTANCE.getResponseTwoParams_R();
-
-		/**
 		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference RESPONSE_TWO_PARAMS__Q = eINSTANCE.getResponseTwoParams_Q();
+
+		/**
+		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESPONSE_TWO_PARAMS__R = eINSTANCE.getResponseTwoParams_R();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.ExistenceBefore_Impl <em>Existence Before </em>}' class.
@@ -10962,20 +11747,20 @@ public interface CombPackage extends EPackage {
 		EClass BOUNDED_EXISTENCE_TWO_PARAMS = eINSTANCE.getBoundedExistenceTwoParams();
 
 		/**
-		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BOUNDED_EXISTENCE_TWO_PARAMS__R = eINSTANCE.getBoundedExistenceTwoParams_R();
-
-		/**
 		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference BOUNDED_EXISTENCE_TWO_PARAMS__Q = eINSTANCE.getBoundedExistenceTwoParams_Q();
+
+		/**
+		 * The meta object literal for the '<em><b>R</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOUNDED_EXISTENCE_TWO_PARAMS__R = eINSTANCE.getBoundedExistenceTwoParams_R();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.Not_Impl <em>Not </em>}' class.
@@ -11392,6 +12177,172 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVENTUALLY_WITHIN___H = eINSTANCE.getEventuallyWithin__H();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.RelationImpl <em>Relation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.RelationImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getRelation()
+		 * @generated
+		 */
+		EClass RELATION = eINSTANCE.getRelation();
+
+		/**
+		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION__P = eINSTANCE.getRelation_P();
+
+		/**
+		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATION__Q = eINSTANCE.getRelation_Q();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._lessThan_Impl <em>less Than </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl._lessThan_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_lessThan_()
+		 * @generated
+		 */
+		EClass _LESS_THAN_ = eINSTANCE.get_lessThan_();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _LESS_THAN___DESCRIPTION = eINSTANCE.get_lessThan__Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _LESS_THAN___INTERPRETATION = eINSTANCE.get_lessThan__Interpretation();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl <em>less Than Or Equal </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_lessThanOrEqual_()
+		 * @generated
+		 */
+		EClass _LESS_THAN_OR_EQUAL_ = eINSTANCE.get_lessThanOrEqual_();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _LESS_THAN_OR_EQUAL___INTERPRETATION = eINSTANCE.get_lessThanOrEqual__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _LESS_THAN_OR_EQUAL___DESCRIPTION = eINSTANCE.get_lessThanOrEqual__Description();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._equal_Impl <em>equal </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl._equal_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_equal_()
+		 * @generated
+		 */
+		EClass _EQUAL_ = eINSTANCE.get_equal_();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _EQUAL___DESCRIPTION = eINSTANCE.get_equal__Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _EQUAL___INTERPRETATION = eINSTANCE.get_equal__Interpretation();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._greaterThan_Impl <em>greater Than </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl._greaterThan_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_greaterThan_()
+		 * @generated
+		 */
+		EClass _GREATER_THAN_ = eINSTANCE.get_greaterThan_();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _GREATER_THAN___DESCRIPTION = eINSTANCE.get_greaterThan__Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _GREATER_THAN___INTERPRETATION = eINSTANCE.get_greaterThan__Interpretation();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl <em>greater Than Or Equal </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_greaterThanOrEqual_()
+		 * @generated
+		 */
+		EClass _GREATER_THAN_OR_EQUAL_ = eINSTANCE.get_greaterThanOrEqual_();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _GREATER_THAN_OR_EQUAL___DESCRIPTION = eINSTANCE.get_greaterThanOrEqual__Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _GREATER_THAN_OR_EQUAL___INTERPRETATION = eINSTANCE.get_greaterThanOrEqual__Interpretation();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.STLOperatorsImpl <em>STL Operators</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.STLOperatorsImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTLOperators()
+		 * @generated
+		 */
+		EClass STL_OPERATORS = eINSTANCE.getSTLOperators();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.

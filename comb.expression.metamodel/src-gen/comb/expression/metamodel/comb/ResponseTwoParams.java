@@ -21,28 +21,6 @@ package comb.expression.metamodel.comb;
  */
 public interface ResponseTwoParams extends Response {
 	/**
-	 * Returns the value of the '<em><b>R</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>R</em>' containment reference.
-	 * @see #setR(Element)
-	 * @see comb.expression.metamodel.comb.CombPackage#getResponseTwoParams_R()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Element getR();
-
-	/**
-	 * Sets the value of the '{@link comb.expression.metamodel.comb.ResponseTwoParams#getR <em>R</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>R</em>' containment reference.
-	 * @see #getR()
-	 * @generated
-	 */
-	void setR(Element value);
-
-	/**
 	 * Returns the value of the '<em><b>Q</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,5 +41,27 @@ public interface ResponseTwoParams extends Response {
 	 * @generated
 	 */
 	void setQ(Element value);
+
+	/**
+	 * Returns the value of the '<em><b>R</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>R</em>' containment reference.
+	 * @see #setR(Element)
+	 * @see comb.expression.metamodel.comb.CombPackage#getResponseTwoParams_R()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Element getR();
+
+	/**
+	 * Sets the value of the '{@link comb.expression.metamodel.comb.ResponseTwoParams#getR <em>R</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>R</em>' containment reference.
+	 * @see #getR()
+	 * @generated
+	 */
+	void setR(Element value);
 
 } // ResponseTwoParams

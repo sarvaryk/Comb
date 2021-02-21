@@ -497,6 +497,41 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseRelation(Relation object) {
+			return createRelationAdapter();
+		}
+
+		@Override
+		public Adapter case_lessThan_(_lessThan_ object) {
+			return create_lessThan_Adapter();
+		}
+
+		@Override
+		public Adapter case_lessThanOrEqual_(_lessThanOrEqual_ object) {
+			return create_lessThanOrEqual_Adapter();
+		}
+
+		@Override
+		public Adapter case_equal_(_equal_ object) {
+			return create_equal_Adapter();
+		}
+
+		@Override
+		public Adapter case_greaterThan_(_greaterThan_ object) {
+			return create_greaterThan_Adapter();
+		}
+
+		@Override
+		public Adapter case_greaterThanOrEqual_(_greaterThanOrEqual_ object) {
+			return create_greaterThanOrEqual_Adapter();
+		}
+
+		@Override
+		public Adapter caseSTLOperators(STLOperators object) {
+			return createSTLOperatorsAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1716,6 +1751,104 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEventuallyWithin_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.Relation <em>Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.Relation
+	 * @generated
+	 */
+	public Adapter createRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb._lessThan_ <em>less Than </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb._lessThan_
+	 * @generated
+	 */
+	public Adapter create_lessThan_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb._lessThanOrEqual_ <em>less Than Or Equal </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb._lessThanOrEqual_
+	 * @generated
+	 */
+	public Adapter create_lessThanOrEqual_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb._equal_ <em>equal </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb._equal_
+	 * @generated
+	 */
+	public Adapter create_equal_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb._greaterThan_ <em>greater Than </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb._greaterThan_
+	 * @generated
+	 */
+	public Adapter create_greaterThan_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb._greaterThanOrEqual_ <em>greater Than Or Equal </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb._greaterThanOrEqual_
+	 * @generated
+	 */
+	public Adapter create_greaterThanOrEqual_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.STLOperators <em>STL Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.STLOperators
+	 * @generated
+	 */
+	public Adapter createSTLOperatorsAdapter() {
 		return null;
 	}
 

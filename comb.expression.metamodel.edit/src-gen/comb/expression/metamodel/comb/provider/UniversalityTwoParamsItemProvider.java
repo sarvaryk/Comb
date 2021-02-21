@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -268,6 +269,21 @@ public class UniversalityTwoParamsItemProvider extends UniversalityItemProvider 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.createEventuallyWithin_()));
 
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_lessThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_lessThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_equal_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_greaterThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
 				CombFactory.eINSTANCE.createPrecedenceAfter_until_()));
 
@@ -402,6 +418,21 @@ public class UniversalityTwoParamsItemProvider extends UniversalityItemProvider 
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
 				CombFactory.eINSTANCE.createEventuallyWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.create_lessThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.create_lessThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.create_equal_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.create_greaterThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
 	}
 
 	/**

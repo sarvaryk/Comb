@@ -1131,6 +1131,121 @@ public class CombItemProviderAdapterFactory extends CombAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb._lessThan_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected _lessThan_ItemProvider _lessThan_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb._lessThan_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter create_lessThan_Adapter() {
+		if (_lessThan_ItemProvider == null) {
+			_lessThan_ItemProvider = new _lessThan_ItemProvider(this);
+		}
+
+		return _lessThan_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb._lessThanOrEqual_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected _lessThanOrEqual_ItemProvider _lessThanOrEqual_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb._lessThanOrEqual_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter create_lessThanOrEqual_Adapter() {
+		if (_lessThanOrEqual_ItemProvider == null) {
+			_lessThanOrEqual_ItemProvider = new _lessThanOrEqual_ItemProvider(this);
+		}
+
+		return _lessThanOrEqual_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb._equal_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected _equal_ItemProvider _equal_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb._equal_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter create_equal_Adapter() {
+		if (_equal_ItemProvider == null) {
+			_equal_ItemProvider = new _equal_ItemProvider(this);
+		}
+
+		return _equal_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb._greaterThan_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected _greaterThan_ItemProvider _greaterThan_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb._greaterThan_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter create_greaterThan_Adapter() {
+		if (_greaterThan_ItemProvider == null) {
+			_greaterThan_ItemProvider = new _greaterThan_ItemProvider(this);
+		}
+
+		return _greaterThan_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb._greaterThanOrEqual_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected _greaterThanOrEqual_ItemProvider _greaterThanOrEqual_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb._greaterThanOrEqual_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter create_greaterThanOrEqual_Adapter() {
+		if (_greaterThanOrEqual_ItemProvider == null) {
+			_greaterThanOrEqual_ItemProvider = new _greaterThanOrEqual_ItemProvider(this);
+		}
+
+		return _greaterThanOrEqual_ItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1327,6 +1442,16 @@ public class CombItemProviderAdapterFactory extends CombAdapterFactory
 			alwaysWithin_ItemProvider.dispose();
 		if (eventuallyWithin_ItemProvider != null)
 			eventuallyWithin_ItemProvider.dispose();
+		if (_lessThan_ItemProvider != null)
+			_lessThan_ItemProvider.dispose();
+		if (_lessThanOrEqual_ItemProvider != null)
+			_lessThanOrEqual_ItemProvider.dispose();
+		if (_equal_ItemProvider != null)
+			_equal_ItemProvider.dispose();
+		if (_greaterThan_ItemProvider != null)
+			_greaterThan_ItemProvider.dispose();
+		if (_greaterThanOrEqual_ItemProvider != null)
+			_greaterThanOrEqual_ItemProvider.dispose();
 	}
 
 }

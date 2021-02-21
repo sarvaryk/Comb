@@ -88,6 +88,56 @@ public class Services {
 				interpretation = interpretation.replace("<P>", subtreeInterpretation(Not_sub_element, getElementInterpretation(Not_sub_element)));
 				
 				return interpretation;
+			case "comb.expression.metamodel.comb.impl._lessThan_Impl":
+				_lessThan_ _lessThan_element = ((_lessThan_)abstract_element);
+		    	Element _lessThan_sub_element;
+		    	
+		    	_lessThan_sub_element = _lessThan_element.getP();
+				interpretation = interpretation.replace("<P>", subtreeInterpretation(_lessThan_sub_element, getElementInterpretation(_lessThan_sub_element)));
+				_lessThan_sub_element = _lessThan_element.getQ();
+				interpretation = interpretation.replace("<Q>", subtreeInterpretation(_lessThan_sub_element, getElementInterpretation(_lessThan_sub_element)));
+				
+				return interpretation;
+			case "comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl":
+				_lessThanOrEqual_ _lessThanOrEqual_element = ((_lessThanOrEqual_)abstract_element);
+		    	Element _lessThanOrEqual_sub_element;
+		    	
+		    	_lessThanOrEqual_sub_element = _lessThanOrEqual_element.getP();
+				interpretation = interpretation.replace("<P>", subtreeInterpretation(_lessThanOrEqual_sub_element, getElementInterpretation(_lessThanOrEqual_sub_element)));
+				_lessThanOrEqual_sub_element = _lessThanOrEqual_element.getQ();
+				interpretation = interpretation.replace("<Q>", subtreeInterpretation(_lessThanOrEqual_sub_element, getElementInterpretation(_lessThanOrEqual_sub_element)));
+				
+				return interpretation;
+			case "comb.expression.metamodel.comb.impl._equal_Impl":
+				_equal_ _equal_element = ((_equal_)abstract_element);
+		    	Element _equal_sub_element;
+		    	
+		    	_equal_sub_element = _equal_element.getP();
+				interpretation = interpretation.replace("<P>", subtreeInterpretation(_equal_sub_element, getElementInterpretation(_equal_sub_element)));
+				_equal_sub_element = _equal_element.getQ();
+				interpretation = interpretation.replace("<Q>", subtreeInterpretation(_equal_sub_element, getElementInterpretation(_equal_sub_element)));
+				
+				return interpretation;
+			case "comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl":
+				_greaterThanOrEqual_ _greaterThanOrEqual_element = ((_greaterThanOrEqual_)abstract_element);
+		    	Element _greaterThanOrEqual_sub_element;
+		    	
+		    	_greaterThanOrEqual_sub_element = _greaterThanOrEqual_element.getP();
+				interpretation = interpretation.replace("<P>", subtreeInterpretation(_greaterThanOrEqual_sub_element, getElementInterpretation(_greaterThanOrEqual_sub_element)));
+				_greaterThanOrEqual_sub_element = _greaterThanOrEqual_element.getQ();
+				interpretation = interpretation.replace("<Q>", subtreeInterpretation(_greaterThanOrEqual_sub_element, getElementInterpretation(_greaterThanOrEqual_sub_element)));
+				
+				return interpretation;
+			case "comb.expression.metamodel.comb.impl._greaterThan_Impl":
+				_greaterThan_ _greaterThan_element = ((_greaterThan_)abstract_element);
+		    	Element _greaterThan_sub_element;
+		    	
+		    	_greaterThan_sub_element = _greaterThan_element.getP();
+				interpretation = interpretation.replace("<P>", subtreeInterpretation(_greaterThan_sub_element, getElementInterpretation(_greaterThan_sub_element)));
+				_greaterThan_sub_element = _greaterThan_element.getQ();
+				interpretation = interpretation.replace("<Q>", subtreeInterpretation(_greaterThan_sub_element, getElementInterpretation(_greaterThan_sub_element)));
+				
+				return interpretation;
 			case "comb.expression.metamodel.comb.impl.Next_Impl":
 				Next_ Next_element = ((Next_)abstract_element);
 		    	Element Next_sub_element;
@@ -536,6 +586,16 @@ public class Services {
 		    	return "("+((_implies_)abstract_element).getInterpretation()+")";
 			case "comb.expression.metamodel.comb.impl.Not_Impl":
 		    	return "("+((Not_)abstract_element).getInterpretation()+")";
+			case "comb.expression.metamodel.comb.impl._lessThan_Impl":
+		    	return "("+((_lessThan_)abstract_element).getInterpretation()+")";
+			case "comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl":
+		    	return "("+((_lessThanOrEqual_)abstract_element).getInterpretation()+")";
+			case "comb.expression.metamodel.comb.impl._equal_Impl":
+		    	return "("+((_equal_)abstract_element).getInterpretation()+")";
+			case "comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl":
+		    	return "("+((_greaterThanOrEqual_)abstract_element).getInterpretation()+")";
+			case "comb.expression.metamodel.comb.impl._greaterThan_Impl":
+		    	return "("+((_greaterThan_)abstract_element).getInterpretation()+")";
 			case "comb.expression.metamodel.comb.impl.Always_Impl":
 				return "("+((Always_)abstract_element).getInterpretation()+")";
 			case "comb.expression.metamodel.comb.impl.Eventually_Impl":
@@ -619,11 +679,13 @@ public class Services {
 	}
     
     private void refreshLogicGroup(Element element) {
-    	if(element instanceof MITLOperators)
+    	if(element instanceof STLOperators && LogicGroup.STL.getValue() > logicGroup.getValue())
+    		logicGroup = LogicGroup.STL;
+    	else if(element instanceof MITLOperators && LogicGroup.MITL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.MITL;
-    	else if(element instanceof MTLOperators && logicGroup != LogicGroup.MITL)
+    	else if(element instanceof MTLOperators && LogicGroup.MTL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.MTL;
-    	else if(logicGroup != LogicGroup.MTL && logicGroup != LogicGroup.MITL)
+    	else if(element instanceof LTLOperators && LogicGroup.LTL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.LTL;
     }
     

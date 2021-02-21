@@ -1174,6 +1174,91 @@ public class CombSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case CombPackage.RELATION: {
+			Relation relation = (Relation) theEObject;
+			T result = caseRelation(relation);
+			if (result == null)
+				result = caseSTLOperators(relation);
+			if (result == null)
+				result = caseElement(relation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage._LESS_THAN_: {
+			_lessThan_ _lessThan_ = (_lessThan_) theEObject;
+			T result = case_lessThan_(_lessThan_);
+			if (result == null)
+				result = caseRelation(_lessThan_);
+			if (result == null)
+				result = caseSTLOperators(_lessThan_);
+			if (result == null)
+				result = caseElement(_lessThan_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage._LESS_THAN_OR_EQUAL_: {
+			_lessThanOrEqual_ _lessThanOrEqual_ = (_lessThanOrEqual_) theEObject;
+			T result = case_lessThanOrEqual_(_lessThanOrEqual_);
+			if (result == null)
+				result = caseRelation(_lessThanOrEqual_);
+			if (result == null)
+				result = caseSTLOperators(_lessThanOrEqual_);
+			if (result == null)
+				result = caseElement(_lessThanOrEqual_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage._EQUAL_: {
+			_equal_ _equal_ = (_equal_) theEObject;
+			T result = case_equal_(_equal_);
+			if (result == null)
+				result = caseRelation(_equal_);
+			if (result == null)
+				result = caseSTLOperators(_equal_);
+			if (result == null)
+				result = caseElement(_equal_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage._GREATER_THAN_: {
+			_greaterThan_ _greaterThan_ = (_greaterThan_) theEObject;
+			T result = case_greaterThan_(_greaterThan_);
+			if (result == null)
+				result = caseRelation(_greaterThan_);
+			if (result == null)
+				result = caseSTLOperators(_greaterThan_);
+			if (result == null)
+				result = caseElement(_greaterThan_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage._GREATER_THAN_OR_EQUAL_: {
+			_greaterThanOrEqual_ _greaterThanOrEqual_ = (_greaterThanOrEqual_) theEObject;
+			T result = case_greaterThanOrEqual_(_greaterThanOrEqual_);
+			if (result == null)
+				result = caseRelation(_greaterThanOrEqual_);
+			if (result == null)
+				result = caseSTLOperators(_greaterThanOrEqual_);
+			if (result == null)
+				result = caseElement(_greaterThanOrEqual_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.STL_OPERATORS: {
+			STLOperators stlOperators = (STLOperators) theEObject;
+			T result = caseSTLOperators(stlOperators);
+			if (result == null)
+				result = caseElement(stlOperators);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -2466,6 +2551,111 @@ public class CombSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEventuallyWithin_(EventuallyWithin_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRelation(Relation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>less Than </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>less Than </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T case_lessThan_(_lessThan_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>less Than Or Equal </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>less Than Or Equal </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T case_lessThanOrEqual_(_lessThanOrEqual_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>equal </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>equal </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T case_equal_(_equal_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>greater Than </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>greater Than </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T case_greaterThan_(_greaterThan_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>greater Than Or Equal </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>greater Than Or Equal </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T case_greaterThanOrEqual_(_greaterThanOrEqual_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>STL Operators</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>STL Operators</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSTLOperators(STLOperators object) {
 		return null;
 	}
 

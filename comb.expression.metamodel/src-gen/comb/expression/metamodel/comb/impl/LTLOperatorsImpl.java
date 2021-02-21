@@ -5,9 +5,10 @@ package comb.expression.metamodel.comb.impl;
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Element;
 import comb.expression.metamodel.comb.LTLOperators;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 

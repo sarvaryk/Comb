@@ -46,7 +46,17 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MITL(2, "MITL", "MITL");
+	MITL(2, "MITL", "MITL"),
+
+	/**
+	 * The '<em><b>STL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #STL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	STL(3, "STL", "STL");
 
 	/**
 	 * The '<em><b>LTL</b></em>' literal value.
@@ -82,12 +92,23 @@ public enum LogicGroup implements Enumerator {
 	public static final int MITL_VALUE = 2;
 
 	/**
+	 * The '<em><b>STL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #STL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int STL_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Logic Group</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LTL, MTL, MITL, };
+	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LTL, MTL, MITL, STL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Logic Group</b></em>' enumerators.
@@ -149,6 +170,8 @@ public enum LogicGroup implements Enumerator {
 			return MTL;
 		case MITL_VALUE:
 			return MITL;
+		case STL_VALUE:
+			return STL;
 		}
 		return null;
 	}

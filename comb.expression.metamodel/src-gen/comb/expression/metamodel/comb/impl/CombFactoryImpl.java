@@ -148,6 +148,16 @@ public class CombFactoryImpl extends EFactoryImpl implements CombFactory {
 			return createAlwaysWithin_();
 		case CombPackage.EVENTUALLY_WITHIN_:
 			return createEventuallyWithin_();
+		case CombPackage._LESS_THAN_:
+			return create_lessThan_();
+		case CombPackage._LESS_THAN_OR_EQUAL_:
+			return create_lessThanOrEqual_();
+		case CombPackage._EQUAL_:
+			return create_equal_();
+		case CombPackage._GREATER_THAN_:
+			return create_greaterThan_();
+		case CombPackage._GREATER_THAN_OR_EQUAL_:
+			return create_greaterThanOrEqual_();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -687,6 +697,61 @@ public class CombFactoryImpl extends EFactoryImpl implements CombFactory {
 	public EventuallyWithin_ createEventuallyWithin_() {
 		EventuallyWithin_Impl eventuallyWithin_ = new EventuallyWithin_Impl();
 		return eventuallyWithin_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public _lessThan_ create_lessThan_() {
+		_lessThan_Impl _lessThan_ = new _lessThan_Impl();
+		return _lessThan_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public _lessThanOrEqual_ create_lessThanOrEqual_() {
+		_lessThanOrEqual_Impl _lessThanOrEqual_ = new _lessThanOrEqual_Impl();
+		return _lessThanOrEqual_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public _equal_ create_equal_() {
+		_equal_Impl _equal_ = new _equal_Impl();
+		return _equal_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public _greaterThan_ create_greaterThan_() {
+		_greaterThan_Impl _greaterThan_ = new _greaterThan_Impl();
+		return _greaterThan_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public _greaterThanOrEqual_ create_greaterThanOrEqual_() {
+		_greaterThanOrEqual_Impl _greaterThanOrEqual_ = new _greaterThanOrEqual_Impl();
+		return _greaterThanOrEqual_;
 	}
 
 	/**

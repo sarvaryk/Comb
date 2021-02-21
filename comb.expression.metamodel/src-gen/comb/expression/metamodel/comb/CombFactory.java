@@ -436,6 +436,51 @@ public interface CombFactory extends EFactory {
 	EventuallyWithin_ createEventuallyWithin_();
 
 	/**
+	 * Returns a new object of class '<em>less Than </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>less Than </em>'.
+	 * @generated
+	 */
+	_lessThan_ create_lessThan_();
+
+	/**
+	 * Returns a new object of class '<em>less Than Or Equal </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>less Than Or Equal </em>'.
+	 * @generated
+	 */
+	_lessThanOrEqual_ create_lessThanOrEqual_();
+
+	/**
+	 * Returns a new object of class '<em>equal </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>equal </em>'.
+	 * @generated
+	 */
+	_equal_ create_equal_();
+
+	/**
+	 * Returns a new object of class '<em>greater Than </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>greater Than </em>'.
+	 * @generated
+	 */
+	_greaterThan_ create_greaterThan_();
+
+	/**
+	 * Returns a new object of class '<em>greater Than Or Equal </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>greater Than Or Equal </em>'.
+	 * @generated
+	 */
+	_greaterThanOrEqual_ create_greaterThanOrEqual_();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -4,6 +4,7 @@ package comb.expression.metamodel.comb.impl;
 
 import comb.expression.metamodel.comb.BasicElements;
 import comb.expression.metamodel.comb.CombPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

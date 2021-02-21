@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -276,6 +277,21 @@ public class MTLOperatorsTwoParamsItemProvider extends MTLOperatorsItemProvider 
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.createEventuallyWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_lessThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_lessThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_equal_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_greaterThan_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
 	}
 
 	/**
