@@ -10,7 +10,7 @@ public class Services {
     private LogicGroup logicGroup;
     
     public String getSubtreeInterpretation(Element abstract_element) {
-    	logicGroup = LogicGroup.LTL;
+    	logicGroup = LogicGroup.LITERAL;
 		String subtreeInterpretation = subtreeInterpretation(abstract_element, getElementInterpretation(abstract_element));
 		setSubtreeInterpretation(abstract_element, subtreeInterpretation);
 		setLogicGroup(abstract_element, logicGroup);
@@ -21,6 +21,7 @@ public class Services {
     	refreshLogicGroup(abstract_element);
 		switch(abstract_element.getClass().getName()) {
 			case "comb.expression.metamodel.comb.impl.LiteralImpl":
+			case "comb.expression.metamodel.comb.impl.STLLiteralImpl":
 				Literal literal_element = ((Literal)abstract_element);
 
 				/*if(interpretation.contains("<P>"))
@@ -687,6 +688,8 @@ public class Services {
     		logicGroup = LogicGroup.MTL;
     	else if(element instanceof LTLOperators && LogicGroup.LTL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.LTL;
+    	else if(element instanceof Literal && LogicGroup.LITERAL.getValue() > logicGroup.getValue())
+    		logicGroup = LogicGroup.LITERAL;
     }
     
     //source: https://stackoverflow.com/questions/38114267/emf-write-transaction

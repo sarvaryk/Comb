@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
-  <element xsi:type="comb:_and_" name="_and_" subtreeInterpretation="((F[1, 5](Request)) &amp;&amp; (G(Request -> FResponse)))" logicGroup="MITL">
-    <P xsi:type="comb:EventuallyWithin_and_" name="EventuallyWithin_and_" subtreeInterpretation="(F[1, 5](Request))" logicGroup="MITL">
-      <P xsi:type="comb:Literal" name="Request" subtreeInterpretation="Request"/>
-      <L name="1" subtreeInterpretation="1"/>
-      <H name="5" subtreeInterpretation="5"/>
+  <element xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" subtreeInterpretation="(G[10.5]((speed &lt; 55)))" logicGroup="STL">
+    <P xsi:type="comb:_lessThan_" name="_lessThan_" subtreeInterpretation="(speed &lt; 55)" logicGroup="STL">
+      <P name="speed" subtreeInterpretation="speed" logicGroup="LITERAL"/>
+      <Q name="55" subtreeInterpretation="55" logicGroup="LITERAL"/>
     </P>
-    <Q xsi:type="comb:ResponseGlobally_" name="new ResponseGlobally_" subtreeInterpretation="(G(Request -> FResponse))">
-      <P xsi:type="comb:Literal" name="Request" subtreeInterpretation="Request"/>
-      <S xsi:type="comb:Literal" name="Response" subtreeInterpretation="Response"/>
-    </Q>
+    <H name="10.5" subtreeInterpretation="10.5"/>
   </element>
-  <element xsi:type="comb:AlwaysWithin_and_" name="STL_speed" subtreeInterpretation="(G[0, 11.2]((speed &lt;= 54)))" logicGroup="STL">
-    <P xsi:type="comb:_lessThanOrEqual_" name="_lessThanOrEqual_" subtreeInterpretation="(speed &lt;= 54)" logicGroup="STL">
-      <P name="speed" subtreeInterpretation="speed"/>
-      <Q name="54" subtreeInterpretation="54"/>
-    </P>
-    <L name="0" subtreeInterpretation="0"/>
-    <H name="11.2" subtreeInterpretation="11.2"/>
-  </element>
-  <element xsi:type="comb:AlwaysWithin_and_" name="MITL_speed" subtreeInterpretation="(G[0, 11.2](safeSpeed))" logicGroup="MITL">
-    <P xsi:type="comb:Literal" name="safeSpeed" subtreeInterpretation="safeSpeed"/>
-    <L name="0" subtreeInterpretation="0"/>
-    <H name="11.2" subtreeInterpretation="11.2"/>
+  <element xsi:type="comb:AlwaysWithin_" name="newlyExported" subtreeInterpretation="(G[10.5](speed))" logicGroup="MTL">
+    <P xsi:type="comb:Literal" name="speed" subtreeInterpretation="speed" logicGroup="LITERAL"/>
+    <H name="10.5" subtreeInterpretation="10.5" logicGroup="LITERAL"/>
   </element>
 </comb:Comb>

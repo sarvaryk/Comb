@@ -1,11 +1,16 @@
 package comb.generator.action;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
+
 import comb.expression.metamodel.comb.impl.ElementImpl;
 
 public class GenerateCombExpressionHandler extends AbstractHandler {
@@ -16,12 +21,17 @@ public class GenerateCombExpressionHandler extends AbstractHandler {
 		final Object firstElement = selection.getFirstElement();
 		
 		final ElementImpl element = (ElementImpl)firstElement;
-		
-		final GenerateCombExpression generator = new GenerateCombExpression();
+
 		try {
-			generator.generate(element);
+			final String filePath = CombExpressionUtils.getTargetFilePath("Extract temporal logic as:");;
+
+			List<String> content = new ArrayList<>();
+			content.add(element.getSubtreeInterpretation());
+			content.add(element.getLogicGroup().toString());
+			
+			CombExpressionUtils.create(filePath, content);
 		} 
-		catch (CoreException e) {
+		catch (CoreException | IOException e) {
 			e.printStackTrace();
 			throw new ExecutionException("Error", e);
 		}

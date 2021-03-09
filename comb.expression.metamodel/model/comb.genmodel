@@ -11,6 +11,7 @@
   <genPackages prefix="Comb" basePackage="comb.expression.metamodel" disposableProviderFactory="true"
       ecorePackage="comb.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="comb.ecore#//LogicGroup">
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LITERAL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LTL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MTL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MITL"/>

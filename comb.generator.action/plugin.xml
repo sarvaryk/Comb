@@ -1,22 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-    <extension
-     point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.GenerateCombExpression" name="Generate comb expression"/>
+    <extension point="org.eclipse.ui.commands">
+      <command id="comb.generator.action.GenerateCombExpression" name="Extract temporal logic"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
       <handler class="comb.generator.action.GenerateCombExpressionHandler" commandId="comb.generator.action.GenerateCombExpression"/>
     </extension>
+    
+    <extension point="org.eclipse.ui.commands">
+      <command id="comb.generator.action.ImportCombElement" name="Import Comb element"/>
+    </extension>
+    <extension point="org.eclipse.ui.handlers">
+      <handler class="comb.generator.action.ImportCombElementHandler" commandId="comb.generator.action.ImportCombElement"/>
+    </extension>
+    <extension point="org.eclipse.ui.commands">
+      <command id="comb.generator.action.ImportCombFile" name="Import Comb file"/>
+    </extension>
+    <extension point="org.eclipse.ui.handlers">
+      <handler class="comb.generator.action.ImportCombFileHandler" commandId="comb.generator.action.ImportCombFile"/>
+    </extension>
+    
+    <extension point="org.eclipse.ui.commands">
+      <command id="comb.generator.action.ExportCombElement" name="Export Comb element"/>
+    </extension>
+    <extension point="org.eclipse.ui.handlers">
+      <handler class="comb.generator.action.ExportCombElementHandler" commandId="comb.generator.action.ExportCombElement"/>
+    </extension>
+    <extension point="org.eclipse.ui.commands">
+      <command id="comb.generator.action.ExportCombFile" name="Export Comb file"/>
+    </extension>
+    <extension point="org.eclipse.ui.handlers">
+      <handler class="comb.generator.action.ExportCombFileHandler" commandId="comb.generator.action.ExportCombFile"/>
+    </extension>
+    
     <extension point="org.eclipse.ui.menus">
     <menuContribution allPopups="false" locationURI="popup:org.eclipse.sirius.ui.tools.views.model.explorer#PopupMenu?after=additions">
     <menu label="Comb generator" id="comb-menu-model">     	
-	    <command commandId="comb.generator.action.GenerateCombExpression" label="Generate" style="push">
+	    <command commandId="comb.generator.action.GenerateCombExpression" label="Extract temporal logic" style="push">
 	    	<visibleWhen checkEnabled="false">
               <iterate>
                  <adapt
                        type="comb.expression.metamodel.comb.Element">
                  </adapt>
+              </iterate>
+            </visibleWhen>
+	    </command>
+	    <command commandId="comb.generator.action.ImportCombElement" label="Import" style="push">
+	    	<visibleWhen checkEnabled="false">
+              <iterate>
+                 <adapt
+                       type="comb.expression.metamodel.comb.Element">
+                 </adapt>
+              </iterate>
+            </visibleWhen>
+	    </command>
+	    <command commandId="comb.generator.action.ImportCombFile" label="Import" style="push">
+	    	<visibleWhen checkEnabled="false">
+              <iterate>
+                 <test
+				       property="org.eclipse.core.resources.name"
+				       value="*.comb">
+				 </test>
+              </iterate>
+            </visibleWhen>
+	    </command>
+	    <command commandId="comb.generator.action.ExportCombElement" label="Export" style="push">
+	    	<visibleWhen checkEnabled="false">
+              <iterate>
+                 <adapt
+                       type="comb.expression.metamodel.comb.Element">
+                 </adapt>
+              </iterate>
+            </visibleWhen>
+	    </command>
+	    <command commandId="comb.generator.action.ExportCombFile" label="Export" style="push">
+	    	<visibleWhen checkEnabled="false">
+              <iterate>
+                 <test
+				       property="org.eclipse.core.resources.name"
+				       value="*.comb">
+				 </test>
               </iterate>
             </visibleWhen>
 	    </command>

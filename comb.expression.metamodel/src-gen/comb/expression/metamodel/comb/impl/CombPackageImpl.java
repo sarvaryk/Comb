@@ -4435,6 +4435,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.LITERAL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);

@@ -19,14 +19,23 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum LogicGroup implements Enumerator {
 	/**
-	 * The '<em><b>LTL</b></em>' literal object.
+	 * The '<em><b>LITERAL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LTL_VALUE
+	 * @see #LITERAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LTL(0, "LTL", "LTL"),
+	LITERAL(0, "LITERAL", "LITERAL"),
+	/**
+	* The '<em><b>LTL</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #LTL_VALUE
+	* @generated
+	* @ordered
+	*/
+	LTL(1, "LTL", "LTL"),
 
 	/**
 	 * The '<em><b>MTL</b></em>' literal object.
@@ -36,7 +45,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MTL(1, "MTL", "MTL"),
+	MTL(2, "MTL", "MTL"),
 
 	/**
 	 * The '<em><b>MITL</b></em>' literal object.
@@ -46,7 +55,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MITL(2, "MITL", "MITL"),
+	MITL(3, "MITL", "MITL"),
 
 	/**
 	 * The '<em><b>STL</b></em>' literal object.
@@ -56,7 +65,18 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STL(3, "STL", "STL");
+	STL(4, "STL", "STL");
+
+	/**
+	 * The '<em><b>LITERAL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LITERAL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LITERAL_VALUE = 0;
 
 	/**
 	 * The '<em><b>LTL</b></em>' literal value.
@@ -67,7 +87,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LTL_VALUE = 0;
+	public static final int LTL_VALUE = 1;
 
 	/**
 	 * The '<em><b>MTL</b></em>' literal value.
@@ -78,7 +98,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MTL_VALUE = 1;
+	public static final int MTL_VALUE = 2;
 
 	/**
 	 * The '<em><b>MITL</b></em>' literal value.
@@ -89,7 +109,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MITL_VALUE = 2;
+	public static final int MITL_VALUE = 3;
 
 	/**
 	 * The '<em><b>STL</b></em>' literal value.
@@ -100,7 +120,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STL_VALUE = 3;
+	public static final int STL_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>Logic Group</b></em>' enumerators.
@@ -108,7 +128,7 @@ public enum LogicGroup implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LTL, MTL, MITL, STL, };
+	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LITERAL, LTL, MTL, MITL, STL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Logic Group</b></em>' enumerators.
@@ -164,6 +184,8 @@ public enum LogicGroup implements Enumerator {
 	 */
 	public static LogicGroup get(int value) {
 		switch (value) {
+		case LITERAL_VALUE:
+			return LITERAL;
 		case LTL_VALUE:
 			return LTL;
 		case MTL_VALUE:

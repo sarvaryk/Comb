@@ -484,10 +484,11 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LogicGroup">
-    <eLiterals name="LTL"/>
-    <eLiterals name="MTL" value="1"/>
-    <eLiterals name="MITL" value="2"/>
-    <eLiterals name="STL" value="3"/>
+    <eLiterals name="LITERAL"/>
+    <eLiterals name="LTL" value="1"/>
+    <eLiterals name="MTL" value="2"/>
+    <eLiterals name="MITL" value="3"/>
+    <eLiterals name="STL" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation" abstract="true" eSuperTypes="#//STLOperators">
     <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Literal"
