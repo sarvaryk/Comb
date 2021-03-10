@@ -32,7 +32,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_JdumkCMrEeu_Hc-ap4TZnw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/comb.expression.design/description/comb.odesign#//@ownedViewpoints[name='CombViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_uapisH3rEeuKXb98l8g0gg" name="new CombDiagramDescription" repPath="#_uaQhIH3rEeuKXb98l8g0gg" changeId="bfe98090-407e-4f56-a4f2-21ef63026171">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_uapisH3rEeuKXb98l8g0gg" name="new CombDiagramDescription" repPath="#_uaQhIH3rEeuKXb98l8g0gg" changeId="56aa15b6-986b-4f4e-b41d-496249192a9e">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/comb.expression.design/description/comb.odesign#//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']"/>
         <target xmi:type="comb:Comb" href="My.comb#/"/>
       </ownedRepresentationDescriptors>
@@ -2039,7 +2039,7 @@
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_P_ZVoX31EeuBaN85lJt2_w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_P_ZVon31EeuBaN85lJt2_w" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_P_ZVo331EeuBaN85lJt2_w" points="[0, 0, 51, 60]$[-51, -60, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_P_ZVo331EeuBaN85lJt2_w" points="[0, 0, 55, 60]$[-55, -60, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P_Z8sH31EeuBaN85lJt2_w" id="(0.5,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P_Z8sX31EeuBaN85lJt2_w" id="(0.5,1.0)"/>
         </edges>
@@ -2093,7 +2093,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_xeOwo4ApEeuWP5-55lDJwA" type="4001" element="_xa8zMIApEeuWP5-55lDJwA" source="_uatNEH3rEeuKXb98l8g0gg" target="_vLyM4IApEeuWP5-55lDJwA">
           <children xmi:type="notation:Node" xmi:id="_xePXsIApEeuWP5-55lDJwA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xePXsYApEeuWP5-55lDJwA" x="2" y="-9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xePXsYApEeuWP5-55lDJwA" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_xePXsoApEeuWP5-55lDJwA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xePXs4ApEeuWP5-55lDJwA" x="-2" y="11"/>
@@ -2103,9 +2103,9 @@
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_xeOwpIApEeuWP5-55lDJwA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_xeOwpYApEeuWP5-55lDJwA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xeOwpoApEeuWP5-55lDJwA" points="[0, 0, 24, -60]$[-24, 60, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xePXtoApEeuWP5-55lDJwA" id="(0.225,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xePXt4ApEeuWP5-55lDJwA" id="(0.4931506849315068,0.0)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xeOwpoApEeuWP5-55lDJwA" points="[0, 0, -56, 60]$[56, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xePXtoApEeuWP5-55lDJwA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xePXt4ApEeuWP5-55lDJwA" id="(0.4931506849315068,1.0)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>

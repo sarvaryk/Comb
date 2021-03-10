@@ -11,8 +11,11 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.emf.common.CommonPlugin;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
+
 import comb.expression.metamodel.comb.impl.ElementImpl;
 
 public class ExportCombElementHandler extends AbstractHandler {
@@ -21,13 +24,13 @@ public class ExportCombElementHandler extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		final IStructuredSelection selection = (IStructuredSelection) HandlerUtil.getCurrentSelection(event);
 		final Object firstElement = selection.getFirstElement();
-		
 		final ElementImpl element = (ElementImpl)firstElement;
 		
 		try {
-			final String fileName = CombExpressionUtils.getTargetFilePath("Export as:");
+			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):").replace("/", "//");
 			
-			File file = new File(CombExpressionUtils.getTargetFilePath("(TODO: TEMP) Export from:")); 
+			URI resolvedFile = CommonPlugin.resolve(element.eResource().getURI());
+			File file = new File(resolvedFile.toFileString()); 
 			Scanner sc = new Scanner(file); 
 			
 			//TODO: DO NOT HARDCODE STUFF?

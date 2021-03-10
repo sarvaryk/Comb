@@ -7,8 +7,6 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IWorkspaceRoot;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -21,15 +19,12 @@ public class ImportCombFileHandler extends AbstractHandler {
 		final IFile file = (IFile)firstElement;
 		
 		try {			
-			String overwriteFileOnPathString = CombExpressionUtils.getTargetFilePath("Import to (path):");
-			String fileName2 = CombExpressionUtils.getTargetFilePath("(TODO: TEMP) Import from (path):");
+			String overwriteFileOnPathString = CombExpressionUtils.getTargetFilePath("Import to (path):").replace("/", "//");
 			
 			List<String> contentToOverwrite = CombExpressionUtils.readTextFile(overwriteFileOnPathString);
 			String lastLineOfContentToOverwrite = contentToOverwrite.remove(contentToOverwrite.size()-1);
 			
-			//final IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-			//String path = root.getFile(file.getFullPath()).getFullPath().toOSString();
-			List<String> contentToWrite = CombExpressionUtils.readTextFile(fileName2);
+			List<String> contentToWrite = CombExpressionUtils.readTextFile(file.getLocation().toOSString());
 			contentToWrite.remove(contentToWrite.size()-1);
 			contentToWrite.remove(1);
 			contentToWrite.remove(0);

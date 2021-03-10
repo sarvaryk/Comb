@@ -6,6 +6,8 @@ import java.util.List;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.emf.common.CommonPlugin;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 import comb.expression.metamodel.comb.impl.ElementImpl;
@@ -19,14 +21,13 @@ public class ImportCombElementHandler extends AbstractHandler {
 		final ElementImpl element = (ElementImpl)firstElement;
 
 		try {
-			String overwriteFileOnPathString = CombExpressionUtils.getTargetFilePath("Import to (path):");
-			String fileName2 = CombExpressionUtils.getTargetFilePath("(TODO: TEMP) Import from (path):");
+			String overwriteFileOnPathString = CombExpressionUtils.getTargetFilePath("Import to (path):").replace("/", "//");
 			
 			List<String> contentToOverwrite = CombExpressionUtils.readTextFile(overwriteFileOnPathString);
 			String lastLineOfContentToOverwrite = contentToOverwrite.remove(contentToOverwrite.size()-1);
 			
-			//List<String> contentToWrite = CombExpressionUtils.readTextFile(element.eResource().getURI().path());
-			List<String> contentToWrite = CombExpressionUtils.readTextFile(fileName2);
+			URI resolvedFile = CommonPlugin.resolve(element.eResource().getURI());
+			List<String> contentToWrite = CombExpressionUtils.readTextFile(resolvedFile.toFileString());
 			contentToWrite.remove(contentToWrite.size()-1);
 			contentToWrite.remove(1);
 			contentToWrite.remove(0);
