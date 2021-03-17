@@ -4,6 +4,7 @@ package comb.expression.metamodel.comb.impl;
 
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Element;
+import comb.expression.metamodel.comb.Literal;
 import comb.expression.metamodel.comb.LogicGroup;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -29,6 +30,69 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public abstract class ElementImpl extends MinimalEObjectImpl.Container implements Element {
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public Element getP() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public Element getQ() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public Element getR() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public Element getS() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public Literal getH() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public Literal getL() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	public String getInterpretation() {
+		return null;
+	}
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

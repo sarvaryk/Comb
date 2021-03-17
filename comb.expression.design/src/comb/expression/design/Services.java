@@ -5,35 +5,61 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 
 import comb.expression.metamodel.comb.*;
+import comb.expression.metamodel.comb.impl.ElementImpl;
 
 public class Services {
     private LogicGroup logicGroup;
     
     public String getSubtreeInterpretation(Element abstract_element) {
     	logicGroup = LogicGroup.LITERAL;
-		String subtreeInterpretation = subtreeInterpretation(abstract_element, getElementInterpretation(abstract_element));
+    	ElementImpl abstract_ElementImpl = ((ElementImpl)abstract_element);
+    	
+		String subtreeInterpretation = subtreeInterpretation(abstract_ElementImpl, getElementInterpretation(abstract_ElementImpl));
 		setSubtreeInterpretation(abstract_element, subtreeInterpretation);
 		setLogicGroup(abstract_element, logicGroup);
 		return subtreeInterpretation;
 	}
     
-    private String subtreeInterpretation(Element abstract_element, String interpretation) {
+    private String subtreeInterpretation(ElementImpl abstract_elementImpl, String interpretation) {
+    	refreshLogicGroup(abstract_elementImpl);
+
+    	ElementImpl abstract_elementImpl_sub_element;
+    	
+    	//Amennyiben a jelenleg vizsgált operátornak van adott típusú operandusa,
+    	if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getP())) != null)
+			//A vizsgált elem interpretációjában a vizsgált operandus 
+			//lecserélésre kerül a vizsgált operandus valódi értékére,
+			//majd az algoritmus folytatódik az operandus kifejtésével
+			interpretation = interpretation.replace("<P>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getQ())) != null)
+			interpretation = interpretation.replace("<Q>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getR())) != null)
+			interpretation = interpretation.replace("<R>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getS())) != null)
+			interpretation = interpretation.replace("<S>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getL())) != null)
+			interpretation = interpretation.replace("<low>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getH())) != null)
+			interpretation = interpretation.replace("<high>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+		
+		return interpretation;
+    }
+    
+    private String getElementInterpretation(ElementImpl abstract_element) {
+    	switch(abstract_element.getClass().getName()) {
+			case "comb.expression.metamodel.comb.impl.LiteralImpl":
+				return abstract_element.getName();
+			default:
+				return "("+abstract_element.getInterpretation()+")";
+    	}
+    }
+    
+   /* private String subtreeInterpretation(Element abstract_element, String interpretation) {
     	refreshLogicGroup(abstract_element);
 		switch(abstract_element.getClass().getName()) {
 			case "comb.expression.metamodel.comb.impl.LiteralImpl":
-			case "comb.expression.metamodel.comb.impl.STLLiteralImpl":
 				Literal literal_element = ((Literal)abstract_element);
-
-				/*if(interpretation.contains("<P>"))
-					return interpretation.replace("<P>", literal_element.getName());
-				else if(interpretation.contains("<Q>"))
-					return interpretation.replace("<Q>", literal_element.getName());
-				else if(interpretation.contains("<low>"))
-					return interpretation.replace("<low>", literal_element.getName());
-				else if(interpretation.contains("<high>"))
-					return interpretation.replace("<high>", literal_element.getName());
-				else*/
-					return literal_element.getName();
+				return literal_element.getName();
 			//Ha a kiválasztott operátor típusa megegyezik az alábbi operátortípussal
 			case "comb.expression.metamodel.comb.impl._and_Impl":
 				//Átalakítjuk a kapott általános absztrakt elemet a konkrét típusra
@@ -571,9 +597,9 @@ public class Services {
 				return interpretation;
 		}
 		return "<"+abstract_element.getClass().getName()+" NotFoundException>";
-	}
+	}*/
     
-    private String getElementInterpretation(Element abstract_element) {
+    /*private String getElementInterpretation(Element abstract_element) {
     	switch(abstract_element.getClass().getName()) {
 			case "comb.expression.metamodel.comb.impl.LiteralImpl":
 				return ((Literal)abstract_element).getName();
@@ -677,7 +703,7 @@ public class Services {
 		    	return "("+((_untilWithin_and_)abstract_element).getInterpretation()+")";
 		}
 		return "<"+abstract_element.getClass().getName()+" NotFoundException>";
-	}
+	}*/
     
     private void refreshLogicGroup(Element element) {
     	if(element instanceof STLOperators && LogicGroup.STL.getValue() > logicGroup.getValue())
