@@ -1,12 +1,12 @@
 ID;LTL;MTL;MITL;STL
 ALWAYS;[];-;-;-
 EVENTUALLY;<>;-;-;-
-UNTIL;-;-;-;-
+UNTIL;U;-;-;-
 NEXT;-;-;-;-
-AND;and;-;-;-
-OR;or;-;-;-
-IMPLIES;imply;-;-;-
-NOT;not;-;-;-
+AND;&&;-;-;-
+OR;||;-;-;-
+IMPLIES;->;-;-;-
+NOT;!;-;-;-
 LESS_THAN;-;-;-;-
 LESS_THAN_OR_EQUAL;-;-;-;-
 EQUAL;-;-;-;-

@@ -523,6 +523,8 @@
     <eLiterals name="Comb"/>
     <eLiterals name="Spot" value="1"/>
     <eLiterals name="Uppaal" value="2"/>
+    <eLiterals name="NuSMV" value="3"/>
+    <eLiterals name="Spin" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LTLPatternMappings" abstract="true"
       eSuperTypes="#//Element #//LTLOperators"/>

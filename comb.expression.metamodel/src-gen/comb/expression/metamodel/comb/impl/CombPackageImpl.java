@@ -4448,6 +4448,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		addEEnumLiteral(supportedOutputEEnum, SupportedOutput.COMB);
 		addEEnumLiteral(supportedOutputEEnum, SupportedOutput.SPOT);
 		addEEnumLiteral(supportedOutputEEnum, SupportedOutput.UPPAAL);
+		addEEnumLiteral(supportedOutputEEnum, SupportedOutput.NU_SMV);
+		addEEnumLiteral(supportedOutputEEnum, SupportedOutput.SPIN);
 
 		// Create resource
 		createResource(eNS_URI);

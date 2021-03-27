@@ -44,7 +44,25 @@ public enum SupportedOutput implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UPPAAL(2, "Uppaal", "Uppaal");
+	UPPAAL(2, "Uppaal", "Uppaal"),
+	/**
+	* The '<em><b>Nu SMV</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #NU_SMV_VALUE
+	* @generated
+	* @ordered
+	*/
+	NU_SMV(3, "NuSMV", "NuSMV"),
+	/**
+	* The '<em><b>Spin</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #SPIN_VALUE
+	* @generated
+	* @ordered
+	*/
+	SPIN(4, "Spin", "Spin");
 
 	/**
 	 * The '<em><b>Comb</b></em>' literal value.
@@ -80,12 +98,34 @@ public enum SupportedOutput implements Enumerator {
 	public static final int UPPAAL_VALUE = 2;
 
 	/**
+	 * The '<em><b>Nu SMV</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NU_SMV
+	 * @model name="NuSMV"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NU_SMV_VALUE = 3;
+
+	/**
+	 * The '<em><b>Spin</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SPIN
+	 * @model name="Spin"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SPIN_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Supported Output</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final SupportedOutput[] VALUES_ARRAY = new SupportedOutput[] { COMB, SPOT, UPPAAL, };
+	private static final SupportedOutput[] VALUES_ARRAY = new SupportedOutput[] { COMB, SPOT, UPPAAL, NU_SMV, SPIN, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Supported Output</b></em>' enumerators.
@@ -147,6 +187,10 @@ public enum SupportedOutput implements Enumerator {
 			return SPOT;
 		case UPPAAL_VALUE:
 			return UPPAAL;
+		case NU_SMV_VALUE:
+			return NU_SMV;
+		case SPIN_VALUE:
+			return SPIN;
 		}
 		return null;
 	}

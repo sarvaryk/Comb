@@ -24,7 +24,8 @@ import comb.expression.metamodel.comb.SupportedOutput;
 import comb.expression.metamodel.comb.impl.LiteralImpl;
 
 public class Services {
-	private static String NOT_SUPPORTED_OPERAND_MESSAGE = "<Not all operands are supported for this output type>";
+	private static String NOT_SUPPORTED_OPERATOR = "-";
+	private static String NOT_SUPPORTED_OPERATOR_MESSAGE = "<Not all operands are supported for this output type>";
 	
     public String refreshAttributes(final Element element) {   	
     	final LogicGroup logicGroup = getSubtreeLogicGroup(element, getElementLogicGroupIfHigher(element, LogicGroup.LITERAL));
@@ -45,8 +46,8 @@ public class Services {
 	    interpretations = generateSubtreeInterpretation(element.getH(), "<high>", interpretations);
 	    
 	    for(int i = 0; i < interpretations.size(); i++) {
-	    	if(interpretations.get(i).contains(NOT_SUPPORTED_OPERAND_MESSAGE))
-	    		interpretations.set(i, NOT_SUPPORTED_OPERAND_MESSAGE);
+	    	if(interpretations.get(i).contains(NOT_SUPPORTED_OPERATOR_MESSAGE))
+	    		interpretations.set(i, NOT_SUPPORTED_OPERATOR_MESSAGE);
 	    	else {
 		    	interpretations.set(i, interpretations.get(i).replace("<low>", "0"));
 		    	interpretations.set(i, interpretations.get(i).replace("<high>", "-1"));
@@ -93,7 +94,7 @@ public class Services {
 				
 				for(int j = 0; j < oldOperators.size(); j++) {
 					String oldOperator = oldOperators.get(j)[oldOperatorColumnIndex];
-					if(interpretation.contains(oldOperator) && !oldOperator.equals("-")) {
+					if(interpretation.contains(oldOperator) && !oldOperator.equals(NOT_SUPPORTED_OPERATOR)) {
 						String oldOperatorID = oldOperators.get(j)[0];
 						int newOperatorRowIndex;
 						for(newOperatorRowIndex = 0; newOperatorRowIndex < newOperators.size(); newOperatorRowIndex++) {
@@ -102,9 +103,9 @@ public class Services {
 						}
 						
 						String newOperator = newOperators.get(newOperatorRowIndex)[newOperatorColumnIndex];
-						interpretation = (!newOperator.equals("-")) ? interpretation.replace(oldOperator, newOperator) : NOT_SUPPORTED_OPERAND_MESSAGE; 
+						interpretation = (!newOperator.equals(NOT_SUPPORTED_OPERATOR)) ? interpretation.replace(oldOperator, newOperator) : NOT_SUPPORTED_OPERATOR_MESSAGE; 
 						
-						if(!(element instanceof LTLPatternMappings) || interpretation.equals(NOT_SUPPORTED_OPERAND_MESSAGE))
+						if(!(element instanceof LTLPatternMappings) || interpretation.equals(NOT_SUPPORTED_OPERATOR_MESSAGE))
 							break;
 					}
 				}

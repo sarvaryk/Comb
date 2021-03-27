@@ -21,6 +21,8 @@
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Comb"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Spot"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Uppaal"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/NuSMV"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Spin"/>
     </genEnums>
     <genClasses ecoreClass="comb.ecore#//PrecedenceAfter_until_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/interpretation"/>
