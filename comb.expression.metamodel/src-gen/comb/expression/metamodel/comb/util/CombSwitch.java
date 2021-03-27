@@ -76,6 +76,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(precedenceAfter_until_);
 			if (result == null)
+				result = caseLTLPatternMappings(precedenceAfter_until_);
+			if (result == null)
+				result = caseLTLOperators(precedenceAfter_until_);
+			if (result == null)
 				result = caseElement(precedenceAfter_until_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -91,6 +95,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceAfter_until_);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceAfter_until_);
+			if (result == null)
+				result = caseLTLOperators(absenceAfter_until_);
+			if (result == null)
 				result = caseElement(absenceAfter_until_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -101,6 +109,10 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = casePrecedence(precedence);
 			if (result == null)
 				result = caseOrder(precedence);
+			if (result == null)
+				result = caseLTLPatternMappings(precedence);
+			if (result == null)
+				result = caseLTLOperators(precedence);
 			if (result == null)
 				result = caseElement(precedence);
 			if (result == null)
@@ -128,6 +140,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(precedenceWithoutParams);
 			if (result == null)
+				result = caseLTLPatternMappings(precedenceWithoutParams);
+			if (result == null)
+				result = caseLTLOperators(precedenceWithoutParams);
+			if (result == null)
 				result = caseElement(precedenceWithoutParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -154,6 +170,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityBefore_);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityBefore_);
+			if (result == null)
+				result = caseLTLOperators(universalityBefore_);
+			if (result == null)
 				result = caseElement(universalityBefore_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -169,6 +189,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(precedenceBefore_);
 			if (result == null)
+				result = caseLTLPatternMappings(precedenceBefore_);
+			if (result == null)
+				result = caseLTLOperators(precedenceBefore_);
+			if (result == null)
 				result = caseElement(precedenceBefore_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -179,6 +203,10 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = caseAbsence(absence);
 			if (result == null)
 				result = caseOccurrence(absence);
+			if (result == null)
+				result = caseLTLPatternMappings(absence);
+			if (result == null)
+				result = caseLTLOperators(absence);
 			if (result == null)
 				result = caseElement(absence);
 			if (result == null)
@@ -195,6 +223,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityAfter_);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityAfter_);
+			if (result == null)
+				result = caseLTLOperators(universalityAfter_);
+			if (result == null)
 				result = caseElement(universalityAfter_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -209,6 +241,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBoundedExistence(boundedExistenceAfter_);
 			if (result == null)
 				result = caseOccurrence(boundedExistenceAfter_);
+			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceAfter_);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceAfter_);
 			if (result == null)
 				result = caseElement(boundedExistenceAfter_);
 			if (result == null)
@@ -225,6 +261,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(boundedExistenceBetween_and_);
 			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceBetween_and_);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceBetween_and_);
+			if (result == null)
 				result = caseElement(boundedExistenceBetween_and_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -239,6 +279,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBoundedExistence(boundedExistenceGlobally_);
 			if (result == null)
 				result = caseOccurrence(boundedExistenceGlobally_);
+			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceGlobally_);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceGlobally_);
 			if (result == null)
 				result = caseElement(boundedExistenceGlobally_);
 			if (result == null)
@@ -255,6 +299,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceBefore_);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceBefore_);
+			if (result == null)
+				result = caseLTLOperators(absenceBefore_);
+			if (result == null)
 				result = caseElement(absenceBefore_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -270,6 +318,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityBetween_and_);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityBetween_and_);
+			if (result == null)
+				result = caseLTLOperators(universalityBetween_and_);
+			if (result == null)
 				result = caseElement(universalityBetween_and_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -282,6 +334,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseAbsence(absenceTwoParams);
 			if (result == null)
 				result = caseOccurrence(absenceTwoParams);
+			if (result == null)
+				result = caseLTLPatternMappings(absenceTwoParams);
+			if (result == null)
+				result = caseLTLOperators(absenceTwoParams);
 			if (result == null)
 				result = caseElement(absenceTwoParams);
 			if (result == null)
@@ -296,6 +352,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(existenceWithourParams);
 			if (result == null)
+				result = caseLTLPatternMappings(existenceWithourParams);
+			if (result == null)
+				result = caseLTLOperators(existenceWithourParams);
+			if (result == null)
 				result = caseElement(existenceWithourParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -308,6 +368,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBoundedExistence(boundedExistneceOneParam);
 			if (result == null)
 				result = caseOccurrence(boundedExistneceOneParam);
+			if (result == null)
+				result = caseLTLPatternMappings(boundedExistneceOneParam);
+			if (result == null)
+				result = caseLTLOperators(boundedExistneceOneParam);
 			if (result == null)
 				result = caseElement(boundedExistneceOneParam);
 			if (result == null)
@@ -323,6 +387,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseResponse(responseAfter_until_);
 			if (result == null)
 				result = caseOrder(responseAfter_until_);
+			if (result == null)
+				result = caseLTLPatternMappings(responseAfter_until_);
+			if (result == null)
+				result = caseLTLOperators(responseAfter_until_);
 			if (result == null)
 				result = caseElement(responseAfter_until_);
 			if (result == null)
@@ -342,6 +410,8 @@ public class CombSwitch<T> extends Switch<T> {
 			BooleanOperators booleanOperators = (BooleanOperators) theEObject;
 			T result = caseBooleanOperators(booleanOperators);
 			if (result == null)
+				result = caseLTLOperators(booleanOperators);
+			if (result == null)
 				result = caseElement(booleanOperators);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -356,6 +426,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = casePrecedence(precedenceAfter_);
 			if (result == null)
 				result = caseOrder(precedenceAfter_);
+			if (result == null)
+				result = caseLTLPatternMappings(precedenceAfter_);
+			if (result == null)
+				result = caseLTLOperators(precedenceAfter_);
 			if (result == null)
 				result = caseElement(precedenceAfter_);
 			if (result == null)
@@ -383,6 +457,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceWithoutParams);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceWithoutParams);
+			if (result == null)
+				result = caseLTLOperators(absenceWithoutParams);
+			if (result == null)
 				result = caseElement(absenceWithoutParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -397,6 +475,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseResponse(responseBetween_and_);
 			if (result == null)
 				result = caseOrder(responseBetween_and_);
+			if (result == null)
+				result = caseLTLPatternMappings(responseBetween_and_);
+			if (result == null)
+				result = caseLTLOperators(responseBetween_and_);
 			if (result == null)
 				result = caseElement(responseBetween_and_);
 			if (result == null)
@@ -413,6 +495,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(responseAfter_);
 			if (result == null)
+				result = caseLTLPatternMappings(responseAfter_);
+			if (result == null)
+				result = caseLTLOperators(responseAfter_);
+			if (result == null)
 				result = caseElement(responseAfter_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -425,6 +511,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBoundedExistence(boundedExistenceWithoutParams);
 			if (result == null)
 				result = caseOccurrence(boundedExistenceWithoutParams);
+			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceWithoutParams);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceWithoutParams);
 			if (result == null)
 				result = caseElement(boundedExistenceWithoutParams);
 			if (result == null)
@@ -441,6 +531,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(precedenceBetween_and_);
 			if (result == null)
+				result = caseLTLPatternMappings(precedenceBetween_and_);
+			if (result == null)
+				result = caseLTLOperators(precedenceBetween_and_);
+			if (result == null)
 				result = caseElement(precedenceBetween_and_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -452,6 +546,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(boundedExistence);
 			if (result == null)
+				result = caseLTLPatternMappings(boundedExistence);
+			if (result == null)
+				result = caseLTLOperators(boundedExistence);
+			if (result == null)
 				result = caseElement(boundedExistence);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -460,6 +558,10 @@ public class CombSwitch<T> extends Switch<T> {
 		case CombPackage.ORDER: {
 			Order order = (Order) theEObject;
 			T result = caseOrder(order);
+			if (result == null)
+				result = caseLTLPatternMappings(order);
+			if (result == null)
+				result = caseLTLOperators(order);
 			if (result == null)
 				result = caseElement(order);
 			if (result == null)
@@ -476,6 +578,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(existenceBetween_and_);
 			if (result == null)
+				result = caseLTLPatternMappings(existenceBetween_and_);
+			if (result == null)
+				result = caseLTLOperators(existenceBetween_and_);
+			if (result == null)
 				result = caseElement(existenceBetween_and_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -490,6 +596,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseExistence(existenceAfter_until_);
 			if (result == null)
 				result = caseOccurrence(existenceAfter_until_);
+			if (result == null)
+				result = caseLTLPatternMappings(existenceAfter_until_);
+			if (result == null)
+				result = caseLTLOperators(existenceAfter_until_);
 			if (result == null)
 				result = caseElement(existenceAfter_until_);
 			if (result == null)
@@ -506,6 +616,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(responseBefore_);
 			if (result == null)
+				result = caseLTLPatternMappings(responseBefore_);
+			if (result == null)
+				result = caseLTLOperators(responseBefore_);
+			if (result == null)
 				result = caseElement(responseBefore_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -519,6 +633,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityTwoParams);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityTwoParams);
+			if (result == null)
+				result = caseLTLOperators(universalityTwoParams);
+			if (result == null)
 				result = caseElement(universalityTwoParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -531,6 +649,8 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBooleanOperatorsTwoParams(_and_);
 			if (result == null)
 				result = caseBooleanOperators(_and_);
+			if (result == null)
+				result = caseLTLOperators(_and_);
 			if (result == null)
 				result = caseElement(_and_);
 			if (result == null)
@@ -547,6 +667,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceGlobally_);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceGlobally_);
+			if (result == null)
+				result = caseLTLOperators(absenceGlobally_);
+			if (result == null)
 				result = caseElement(absenceGlobally_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -562,6 +686,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceBetween_and_);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceBetween_and_);
+			if (result == null)
+				result = caseLTLOperators(absenceBetween_and_);
+			if (result == null)
 				result = caseElement(absenceBetween_and_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -574,6 +702,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseExistence(existneceOneParam);
 			if (result == null)
 				result = caseOccurrence(existneceOneParam);
+			if (result == null)
+				result = caseLTLPatternMappings(existneceOneParam);
+			if (result == null)
+				result = caseLTLOperators(existneceOneParam);
 			if (result == null)
 				result = caseElement(existneceOneParam);
 			if (result == null)
@@ -588,6 +720,8 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseBooleanOperators(_or_);
 			if (result == null)
+				result = caseLTLOperators(_or_);
+			if (result == null)
 				result = caseElement(_or_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -598,6 +732,10 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = caseResponse(response);
 			if (result == null)
 				result = caseOrder(response);
+			if (result == null)
+				result = caseLTLPatternMappings(response);
+			if (result == null)
+				result = caseLTLOperators(response);
 			if (result == null)
 				result = caseElement(response);
 			if (result == null)
@@ -621,6 +759,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityWithoutParams);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityWithoutParams);
+			if (result == null)
+				result = caseLTLOperators(universalityWithoutParams);
+			if (result == null)
 				result = caseElement(universalityWithoutParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -634,6 +776,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceOneParam);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceOneParam);
+			if (result == null)
+				result = caseLTLOperators(absenceOneParam);
+			if (result == null)
 				result = caseElement(absenceOneParam);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -646,6 +792,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseResponse(responseWithoutParams);
 			if (result == null)
 				result = caseOrder(responseWithoutParams);
+			if (result == null)
+				result = caseLTLPatternMappings(responseWithoutParams);
+			if (result == null)
+				result = caseLTLOperators(responseWithoutParams);
 			if (result == null)
 				result = caseElement(responseWithoutParams);
 			if (result == null)
@@ -662,6 +812,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(boundedExistenceAfter_until_);
 			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceAfter_until_);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceAfter_until_);
+			if (result == null)
 				result = caseElement(boundedExistenceAfter_until_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -677,6 +831,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(existenceAfter_);
 			if (result == null)
+				result = caseLTLPatternMappings(existenceAfter_);
+			if (result == null)
+				result = caseLTLOperators(existenceAfter_);
+			if (result == null)
 				result = caseElement(existenceAfter_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -688,6 +846,8 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseBooleanOperators(booleanOperatorsTwoParams);
 			if (result == null)
+				result = caseLTLOperators(booleanOperatorsTwoParams);
+			if (result == null)
 				result = caseElement(booleanOperatorsTwoParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -698,6 +858,8 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = caseBooleanOperatorsOneParam(booleanOperatorsOneParam);
 			if (result == null)
 				result = caseBooleanOperators(booleanOperatorsOneParam);
+			if (result == null)
+				result = caseLTLOperators(booleanOperatorsOneParam);
 			if (result == null)
 				result = caseElement(booleanOperatorsOneParam);
 			if (result == null)
@@ -712,6 +874,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(existenceTwoParams);
 			if (result == null)
+				result = caseLTLPatternMappings(existenceTwoParams);
+			if (result == null)
+				result = caseLTLOperators(existenceTwoParams);
+			if (result == null)
 				result = caseElement(existenceTwoParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -722,6 +888,10 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = caseExistence(existence);
 			if (result == null)
 				result = caseOccurrence(existence);
+			if (result == null)
+				result = caseLTLPatternMappings(existence);
+			if (result == null)
+				result = caseLTLOperators(existence);
 			if (result == null)
 				result = caseElement(existence);
 			if (result == null)
@@ -738,6 +908,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityAfter_until_);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityAfter_until_);
+			if (result == null)
+				result = caseLTLOperators(universalityAfter_until_);
+			if (result == null)
 				result = caseElement(universalityAfter_until_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -752,6 +926,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseResponse(responseGlobally_);
 			if (result == null)
 				result = caseOrder(responseGlobally_);
+			if (result == null)
+				result = caseLTLPatternMappings(responseGlobally_);
+			if (result == null)
+				result = caseLTLOperators(responseGlobally_);
 			if (result == null)
 				result = caseElement(responseGlobally_);
 			if (result == null)
@@ -768,6 +946,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(existenceGlobally_);
 			if (result == null)
+				result = caseLTLPatternMappings(existenceGlobally_);
+			if (result == null)
+				result = caseLTLOperators(existenceGlobally_);
+			if (result == null)
 				result = caseElement(existenceGlobally_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -782,6 +964,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBoundedExistence(boundedExistenceBefore_);
 			if (result == null)
 				result = caseOccurrence(boundedExistenceBefore_);
+			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceBefore_);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceBefore_);
 			if (result == null)
 				result = caseElement(boundedExistenceBefore_);
 			if (result == null)
@@ -809,6 +995,8 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseBooleanOperators(_implies_);
 			if (result == null)
+				result = caseLTLOperators(_implies_);
+			if (result == null)
 				result = caseElement(_implies_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -824,6 +1012,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(universalityGlobally_);
 			if (result == null)
+				result = caseLTLPatternMappings(universalityGlobally_);
+			if (result == null)
+				result = caseLTLOperators(universalityGlobally_);
+			if (result == null)
 				result = caseElement(universalityGlobally_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -836,6 +1028,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = casePrecedence(precedenceTwoParams);
 			if (result == null)
 				result = caseOrder(precedenceTwoParams);
+			if (result == null)
+				result = caseLTLPatternMappings(precedenceTwoParams);
+			if (result == null)
+				result = caseLTLOperators(precedenceTwoParams);
 			if (result == null)
 				result = caseElement(precedenceTwoParams);
 			if (result == null)
@@ -852,6 +1048,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(absenceAfter_);
 			if (result == null)
+				result = caseLTLPatternMappings(absenceAfter_);
+			if (result == null)
+				result = caseLTLOperators(absenceAfter_);
+			if (result == null)
 				result = caseElement(absenceAfter_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -862,6 +1062,10 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = caseUniversality(universality);
 			if (result == null)
 				result = caseOccurrence(universality);
+			if (result == null)
+				result = caseLTLPatternMappings(universality);
+			if (result == null)
+				result = caseLTLOperators(universality);
 			if (result == null)
 				result = caseElement(universality);
 			if (result == null)
@@ -876,6 +1080,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(precedenceOneParam);
 			if (result == null)
+				result = caseLTLPatternMappings(precedenceOneParam);
+			if (result == null)
+				result = caseLTLOperators(precedenceOneParam);
+			if (result == null)
 				result = caseElement(precedenceOneParam);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -888,6 +1096,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseResponse(responseTwoParams);
 			if (result == null)
 				result = caseOrder(responseTwoParams);
+			if (result == null)
+				result = caseLTLPatternMappings(responseTwoParams);
+			if (result == null)
+				result = caseLTLOperators(responseTwoParams);
 			if (result == null)
 				result = caseElement(responseTwoParams);
 			if (result == null)
@@ -904,6 +1116,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(existenceBefore_);
 			if (result == null)
+				result = caseLTLPatternMappings(existenceBefore_);
+			if (result == null)
+				result = caseLTLOperators(existenceBefore_);
+			if (result == null)
 				result = caseElement(existenceBefore_);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -912,6 +1128,10 @@ public class CombSwitch<T> extends Switch<T> {
 		case CombPackage.OCCURRENCE: {
 			Occurrence occurrence = (Occurrence) theEObject;
 			T result = caseOccurrence(occurrence);
+			if (result == null)
+				result = caseLTLPatternMappings(occurrence);
+			if (result == null)
+				result = caseLTLOperators(occurrence);
 			if (result == null)
 				result = caseElement(occurrence);
 			if (result == null)
@@ -926,6 +1146,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOrder(responseOneParam);
 			if (result == null)
+				result = caseLTLPatternMappings(responseOneParam);
+			if (result == null)
+				result = caseLTLOperators(responseOneParam);
+			if (result == null)
 				result = caseElement(responseOneParam);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -938,6 +1162,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseUniversality(universalityOneParam);
 			if (result == null)
 				result = caseOccurrence(universalityOneParam);
+			if (result == null)
+				result = caseLTLPatternMappings(universalityOneParam);
+			if (result == null)
+				result = caseLTLOperators(universalityOneParam);
 			if (result == null)
 				result = caseElement(universalityOneParam);
 			if (result == null)
@@ -953,6 +1181,10 @@ public class CombSwitch<T> extends Switch<T> {
 				result = casePrecedence(precedenceGlobally_);
 			if (result == null)
 				result = caseOrder(precedenceGlobally_);
+			if (result == null)
+				result = caseLTLPatternMappings(precedenceGlobally_);
+			if (result == null)
+				result = caseLTLOperators(precedenceGlobally_);
 			if (result == null)
 				result = caseElement(precedenceGlobally_);
 			if (result == null)
@@ -991,6 +1223,10 @@ public class CombSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseOccurrence(boundedExistenceTwoParams);
 			if (result == null)
+				result = caseLTLPatternMappings(boundedExistenceTwoParams);
+			if (result == null)
+				result = caseLTLOperators(boundedExistenceTwoParams);
+			if (result == null)
 				result = caseElement(boundedExistenceTwoParams);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -1003,6 +1239,8 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseBooleanOperatorsOneParam(not_);
 			if (result == null)
 				result = caseBooleanOperators(not_);
+			if (result == null)
+				result = caseLTLOperators(not_);
 			if (result == null)
 				result = caseElement(not_);
 			if (result == null)
@@ -1255,6 +1493,17 @@ public class CombSwitch<T> extends Switch<T> {
 			T result = caseSTLOperators(stlOperators);
 			if (result == null)
 				result = caseElement(stlOperators);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.LTL_PATTERN_MAPPINGS: {
+			LTLPatternMappings ltlPatternMappings = (LTLPatternMappings) theEObject;
+			T result = caseLTLPatternMappings(ltlPatternMappings);
+			if (result == null)
+				result = caseLTLOperators(ltlPatternMappings);
+			if (result == null)
+				result = caseElement(ltlPatternMappings);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2656,6 +2905,21 @@ public class CombSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSTLOperators(STLOperators object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LTL Pattern Mappings</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LTL Pattern Mappings</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLTLPatternMappings(LTLPatternMappings object) {
 		return null;
 	}
 

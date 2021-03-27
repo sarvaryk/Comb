@@ -1,0 +1,14 @@
+ID;LTL;MTL;MITL;STL
+ALWAYS;G;G[<high>];G[<low>, <high>];G[<low>, <high>]
+EVENTUALLY;F;F[<high>];F[<low>, <high>];F[<low>, <high>]
+UNTIL;U;U[<high>];U[<low>, <high>];U[<low>, <high>]
+NEXT;N;-;-;-
+AND;&&;&&;&&;&&
+OR;||;||;||;||
+IMPLIES;->;->;->;->
+NOT;!;!;!;!
+LESS_THAN;-;-;-;<
+LESS_THAN_OR_EQUAL;-;-;-;<=
+EQUAL;-;-;-;=
+MORE_THAN_OR_EQUAL;-;-;-;>
+MORE_THAN;-;-;-;>=

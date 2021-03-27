@@ -28,13 +28,13 @@ public enum LogicGroup implements Enumerator {
 	 */
 	LITERAL(0, "LITERAL", "LITERAL"),
 	/**
-	* The '<em><b>LTL</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>LTL</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #LTL_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #LTL_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	LTL(1, "LTL", "LTL"),
 
 	/**

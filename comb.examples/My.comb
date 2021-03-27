@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
-  <element xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" subtreeInterpretation="(G[10.5]((speed &lt; 55)))" logicGroup="STL">
-    <P xsi:type="comb:_lessThan_" name="_lessThan_" subtreeInterpretation="(speed &lt; 55)" logicGroup="STL">
-      <P name="speed" subtreeInterpretation="speed" logicGroup="LITERAL"/>
-      <Q name="55" subtreeInterpretation="55" logicGroup="LITERAL"/>
+  <element xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" logicGroup="STL">
+    <subtreeInterpretations>Comb: G[0, 10.5](speed &lt; 55)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:_lessThan_" name="_lessThan_" logicGroup="STL">
+      <subtreeInterpretations>Comb: speed &lt; 55</subtreeInterpretations>
+      <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <P name="speed">
+        <subtreeInterpretations>Comb: speed</subtreeInterpretations>
+        <subtreeInterpretations>Spot: speed</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: speed</subtreeInterpretations>
+      </P>
+      <Q name="55">
+        <subtreeInterpretations>Comb: 55</subtreeInterpretations>
+        <subtreeInterpretations>Spot: 55</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: 55</subtreeInterpretations>
+      </Q>
     </P>
-    <H name="10.5" subtreeInterpretation="10.5"/>
+    <H name="10.5">
+      <subtreeInterpretations>Comb: 10.5</subtreeInterpretations>
+      <subtreeInterpretations>Spot: 10.5</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: 10.5</subtreeInterpretations>
+    </H>
   </element>
-  <element xsi:type="comb:AlwaysWithin_" name="newlyExported" subtreeInterpretation="(G[10.5](speed))" logicGroup="MTL">
-    <P xsi:type="comb:Literal" name="speed" subtreeInterpretation="speed" logicGroup="LITERAL"/>
-    <H name="10.5" subtreeInterpretation="10.5" logicGroup="LITERAL"/>
+  <element xsi:type="comb:BoundedExistenceBetween_and_" name="new BoundedExistenceBetween_and_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G((is30 &amp;&amp; Fis50) -> ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || (!is40 U is50))))))))))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G((is30 &amp;&amp; Fis50) -> ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || (!is40 U is50))))))))))</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="is40">
+      <subtreeInterpretations>Comb: is40</subtreeInterpretations>
+      <subtreeInterpretations>Spot: is40</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: is40</subtreeInterpretations>
+    </P>
+    <Q xsi:type="comb:Literal" name="is30">
+      <subtreeInterpretations>Comb: is30</subtreeInterpretations>
+      <subtreeInterpretations>Spot: is30</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: is30</subtreeInterpretations>
+    </Q>
+    <R xsi:type="comb:Literal" name="is50">
+      <subtreeInterpretations>Comb: is50</subtreeInterpretations>
+      <subtreeInterpretations>Spot: is50</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: is50</subtreeInterpretations>
+    </R>
+  </element>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G(hello)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(hello)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](hello)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="hello">
+      <subtreeInterpretations>Comb: hello</subtreeInterpretations>
+      <subtreeInterpretations>Spot: hello</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: hello</subtreeInterpretations>
+    </P>
+  </element>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G(!p)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(!p)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](!p)</subtreeInterpretations>
+    <P xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
+      <subtreeInterpretations>Comb: !p</subtreeInterpretations>
+      <subtreeInterpretations>Spot: !p</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: !p</subtreeInterpretations>
+      <P xsi:type="comb:Literal" name="p">
+        <subtreeInterpretations>Comb: p</subtreeInterpretations>
+        <subtreeInterpretations>Spot: p</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: p</subtreeInterpretations>
+      </P>
+    </P>
+  </element>
+  <element xsi:type="comb:AbsenceGlobally_" name="new AbsenceGlobally_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G(!Test)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(!Test)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](!Test)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="Test">
+      <subtreeInterpretations>Comb: Test</subtreeInterpretations>
+      <subtreeInterpretations>Spot: Test</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: Test</subtreeInterpretations>
+    </P>
   </element>
 </comb:Comb>

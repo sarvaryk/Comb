@@ -108,10 +108,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BooleanOperators" abstract="true" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanOperators" abstract="true" eSuperTypes="#//LTLOperators"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrecedenceAfter_" eSuperTypes="#//PrecedenceOneParam">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="G!&lt;Q> || F(&lt;Q> &amp;&amp; (!&lt;P> U (&lt;S> || G!&lt;P>)))"/>
@@ -152,9 +149,7 @@
         defaultValueLiteral="The expression described by this element becomes true if: &lt;S> (&lt;S> may not become true) precedes &lt;P> between &lt;Q> and &lt;R>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BoundedExistence" abstract="true" eSuperTypes="#//Occurrence"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Order" abstract="true" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Order" abstract="true" eSuperTypes="#//LTLPatternMappings">
     <eStructuralFeatures xsi:type="ecore:EReference" name="S" lowerBound="1" eType="#//Element"
         containment="true"/>
   </eClassifiers>
@@ -339,10 +334,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
         defaultValueLiteral="The expression described by this element becomes true if: &lt;P> eventually becomes true before &lt;Q> (the state in which &lt;Q> becomes true is excluded, but &lt;Q> must eventually become true) in the given sub-expression."/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Occurrence" abstract="true" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Occurrence" abstract="true" eSuperTypes="#//LTLPatternMappings"/>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseOneParam" abstract="true" eSuperTypes="#//Response">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
         containment="true"/>
@@ -387,10 +379,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subtreeInterpretation"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subtreeInterpretations"
+        lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logicGroup" lowerBound="1"
-        eType="#//LogicGroup" defaultValueLiteral="LTL"/>
+        eType="#//LogicGroup" defaultValueLiteral="LITERAL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LTLOperatorsTwoParams" abstract="true"
       eSuperTypes="#//LTLOperators">
@@ -497,10 +489,10 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="_lessThan_" eSuperTypes="#//Relation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is less than (&lt;) &lt;Q>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> &lt; &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is less than (&lt;) &lt;Q>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="_lessThanOrEqual_" eSuperTypes="#//Relation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
@@ -509,22 +501,29 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is less than or equal to (&lt;=) &lt;Q>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="_equal_" eSuperTypes="#//Relation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is less equal to (=) &lt;Q>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> = &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is less equal to (=) &lt;Q>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="_greaterThan_" eSuperTypes="#//Relation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is greater than (>) &lt;Q>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> > &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is greater than (>) &lt;Q>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="_greaterThanOrEqual_" eSuperTypes="#//Relation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is greater than or equal to (>=) &lt;Q>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> >= &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is greater than or equal to (>=) &lt;Q>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="STLOperators" abstract="true" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="SupportedOutput">
+    <eLiterals name="Comb"/>
+    <eLiterals name="Spot" value="1"/>
+    <eLiterals name="Uppaal" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LTLPatternMappings" abstract="true"
+      eSuperTypes="#//Element #//LTLOperators"/>
 </ecore:EPackage>

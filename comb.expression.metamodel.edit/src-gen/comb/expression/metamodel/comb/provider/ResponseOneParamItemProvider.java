@@ -294,7 +294,8 @@ public class ResponseOneParamItemProvider extends ResponseItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.ORDER__P || childFeature == CombPackage.Literals.ORDER__S
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
+				|| childFeature == CombPackage.Literals.ORDER__S
 				|| childFeature == CombPackage.Literals.RESPONSE_ONE_PARAM__Q;
 
 		if (qualify) {

@@ -13,7 +13,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 
 import comb.expression.metamodel.comb.impl.ElementImpl;
 
-public class GenerateCombExpressionHandler extends AbstractHandler {
+public class GenerateExpressionHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -23,20 +23,21 @@ public class GenerateCombExpressionHandler extends AbstractHandler {
 		final ElementImpl element = (ElementImpl)firstElement;
 
 		try {
-			final String filePath = CombExpressionUtils.getTargetFilePath("Extract temporal logic as:");;
-
+			final String filePath = CombExpressionUtils.getTargetFilePath("Extract expression to (path):");
+			
 			List<String> content = new ArrayList<>();
-			content.add(element.getSubtreeInterpretation());
-			content.add(element.getLogicGroup().toString());
+			content.add(String.format("%s expression\n", element.getLogicGroup().toString()));
+		    for(String expression : element.getSubtreeInterpretations()) {
+		    	content.add(expression + "\n");
+		    }
 			
 			CombExpressionUtils.create(filePath, content);
 		} 
 		catch (CoreException | IOException e) {
 			e.printStackTrace();
-			throw new ExecutionException("Error", e);
 		}
-
+		
 		return null;
 	}
-
+	
 }

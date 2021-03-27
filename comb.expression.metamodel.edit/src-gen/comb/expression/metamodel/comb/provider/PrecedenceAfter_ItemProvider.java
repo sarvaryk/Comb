@@ -159,7 +159,8 @@ public class PrecedenceAfter_ItemProvider extends PrecedenceOneParamItemProvider
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.ORDER__P || childFeature == CombPackage.Literals.ORDER__S
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
+				|| childFeature == CombPackage.Literals.ORDER__S
 				|| childFeature == CombPackage.Literals.PRECEDENCE_ONE_PARAM__Q;
 
 		if (qualify) {

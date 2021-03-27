@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OrderItemProvider extends ElementItemProvider {
+public class OrderItemProvider extends LTLPatternMappingsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -61,7 +61,6 @@ public class OrderItemProvider extends ElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CombPackage.Literals.ORDER__P);
 			childrenFeatures.add(CombPackage.Literals.ORDER__S);
 		}
 		return childrenFeatures;
@@ -115,7 +114,6 @@ public class OrderItemProvider extends ElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Order.class)) {
-		case CombPackage.ORDER__P:
 		case CombPackage.ORDER__S:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -133,156 +131,6 @@ public class OrderItemProvider extends ElementItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createPrecedenceAfter_until_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAbsenceAfter_until_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_until_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createUniversalityBefore_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createPrecedenceBefore_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createUniversalityAfter_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createBoundedExistenceAfter_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createBoundedExistenceBetween_and_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createBoundedExistenceGlobally_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAbsenceBefore_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createUniversalityBetween_and_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createResponseAfter_until_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createPrecedenceAfter_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAlways_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createResponseBetween_and_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createResponseAfter_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createPrecedenceBetween_and_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createExistenceBetween_and_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createExistenceAfter_until_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createResponseBefore_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_and_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAbsenceGlobally_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAbsenceBetween_and_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_or_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createBoundedExistenceAfter_until_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createExistenceAfter_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createUniversalityAfter_until_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createResponseGlobally_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createExistenceGlobally_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createBoundedExistenceBefore_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createEventually_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_implies_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createUniversalityGlobally_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAbsenceAfter_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createExistenceBefore_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createPrecedenceGlobally_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createLiteral()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createNext_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createNot_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.createEventuallyWithin_and_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_untilWithin_and_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAlwaysWithin_and_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_untilWithin_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createAlwaysWithin_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.createEventuallyWithin_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_lessThan_()));
-
-		newChildDescriptors.add(
-				createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_lessThanOrEqual_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_equal_()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.ORDER__P, CombFactory.eINSTANCE.create_greaterThan_()));
-
-		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__P,
-				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__S,
 				CombFactory.eINSTANCE.createPrecedenceAfter_until_()));
@@ -446,7 +294,7 @@ public class OrderItemProvider extends ElementItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.ORDER__P
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.ORDER__S;
 
 		if (qualify) {

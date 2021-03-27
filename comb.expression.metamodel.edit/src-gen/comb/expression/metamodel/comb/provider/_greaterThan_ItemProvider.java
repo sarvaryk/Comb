@@ -44,8 +44,8 @@ public class _greaterThan_ItemProvider extends RelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
 			addInterpretationPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -128,8 +128,8 @@ public class _greaterThan_ItemProvider extends RelationItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(_greaterThan_.class)) {
-		case CombPackage._GREATER_THAN___DESCRIPTION:
 		case CombPackage._GREATER_THAN___INTERPRETATION:
+		case CombPackage._GREATER_THAN___DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

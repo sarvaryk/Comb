@@ -1,60 +1,140 @@
 package comb.expression.design;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 
-import comb.expression.metamodel.comb.*;
-import comb.expression.metamodel.comb.impl.ElementImpl;
+import comb.expression.metamodel.comb.Element;
+import comb.expression.metamodel.comb.LTLOperators;
+import comb.expression.metamodel.comb.LTLPatternMappings;
+import comb.expression.metamodel.comb.Literal;
+import comb.expression.metamodel.comb.LogicGroup;
+import comb.expression.metamodel.comb.MITLOperators;
+import comb.expression.metamodel.comb.MTLOperators;
+import comb.expression.metamodel.comb.STLOperators;
+import comb.expression.metamodel.comb.SupportedOutput;
+import comb.expression.metamodel.comb.impl.LiteralImpl;
 
 public class Services {
-    private LogicGroup logicGroup;
-    
-    public String getSubtreeInterpretation(Element abstract_element) {
-    	logicGroup = LogicGroup.LITERAL;
-    	ElementImpl abstract_ElementImpl = ((ElementImpl)abstract_element);
-    	
-		String subtreeInterpretation = subtreeInterpretation(abstract_ElementImpl, getElementInterpretation(abstract_ElementImpl));
-		setSubtreeInterpretation(abstract_element, subtreeInterpretation);
-		setLogicGroup(abstract_element, logicGroup);
-		return subtreeInterpretation;
+	private static String NOT_SUPPORTED_OPERAND_MESSAGE = "<Not all operands are supported for this output type>";
+	
+    public String refreshAttributes(final Element element) {   	
+    	final LogicGroup logicGroup = getSubtreeLogicGroup(element, getElementLogicGroupIfHigher(element, LogicGroup.LITERAL));
+		setLogicGroup(element, logicGroup);
+
+		final List<String> subtreeInterpretations = generateSubtreeInterpretations(element, generateElementInterpretations(element));
+		setInterpretations(element, subtreeInterpretations);
+		
+		return subtreeInterpretations.get(SupportedOutput.COMB.getValue());
 	}
     
-    private String subtreeInterpretation(ElementImpl abstract_elementImpl, String interpretation) {
-    	refreshLogicGroup(abstract_elementImpl);
-
-    	ElementImpl abstract_elementImpl_sub_element;
-    	
-    	//Amennyiben a jelenleg vizsgált operátornak van adott típusú operandusa,
-    	if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getP())) != null)
-			//A vizsgált elem interpretációjában a vizsgált operandus 
-			//lecserélésre kerül a vizsgált operandus valódi értékére,
-			//majd az algoritmus folytatódik az operandus kifejtésével
-			interpretation = interpretation.replace("<P>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
-	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getQ())) != null)
-			interpretation = interpretation.replace("<Q>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
-	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getR())) != null)
-			interpretation = interpretation.replace("<R>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
-	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getS())) != null)
-			interpretation = interpretation.replace("<S>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
-	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getL())) != null)
-			interpretation = interpretation.replace("<low>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
-	    if((abstract_elementImpl_sub_element = ((ElementImpl)abstract_elementImpl.getH())) != null)
-			interpretation = interpretation.replace("<high>", subtreeInterpretation(abstract_elementImpl_sub_element, getElementInterpretation(abstract_elementImpl_sub_element)));
+    private List<String> generateSubtreeInterpretations(final Element element, List<String> interpretations) {  	
+	    interpretations = generateSubtreeInterpretation(element.getP(), "<P>", interpretations);
+	    interpretations = generateSubtreeInterpretation(element.getQ(), "<Q>", interpretations);
+	    interpretations = generateSubtreeInterpretation(element.getR(), "<R>", interpretations);
+	    interpretations = generateSubtreeInterpretation(element.getS(), "<S>", interpretations);
+	    interpretations = generateSubtreeInterpretation(element.getL(), "<low>", interpretations);
+	    interpretations = generateSubtreeInterpretation(element.getH(), "<high>", interpretations);
+	    
+	    for(int i = 0; i < interpretations.size(); i++) {
+	    	if(interpretations.get(i).contains(NOT_SUPPORTED_OPERAND_MESSAGE))
+	    		interpretations.set(i, NOT_SUPPORTED_OPERAND_MESSAGE);
+	    	else {
+		    	interpretations.set(i, interpretations.get(i).replace("<low>", "0"));
+		    	interpretations.set(i, interpretations.get(i).replace("<high>", "-1"));
+	    	}
+	    }
 		
-		return interpretation;
+		return interpretations;
     }
     
-    private String getElementInterpretation(ElementImpl abstract_element) {
-    	switch(abstract_element.getClass().getName()) {
-			case "comb.expression.metamodel.comb.impl.LiteralImpl":
-				return abstract_element.getName();
-			default:
-				return "("+abstract_element.getInterpretation()+")";
+    private List<String> generateSubtreeInterpretation(Element element, String operand, List<String> interpretations) {
+    	List<String> tempElementInterpretations;
+	    if(element != null) {
+			tempElementInterpretations = generateElementInterpretations(element);
+    		generateSubtreeInterpretations(element, tempElementInterpretations);
+    		for(SupportedOutput so : SupportedOutput.values()) {
+    			int index = so.getValue();
+    			String newInterpretation = interpretations.get(index).replace(operand, tempElementInterpretations.get(index));
+    			interpretations.set(index, newInterpretation);
+    		}
     	}
+	    
+	    return interpretations;
     }
-  
-    private void refreshLogicGroup(Element element) {
+    
+    private List<String> generateElementInterpretations(final Element element) {   	
+    	List<String> elementInterpretations = new ArrayList<>();
+    	
+    	if(element instanceof LiteralImpl) {
+    		for(SupportedOutput so : SupportedOutput.values()) {
+    			elementInterpretations.add(element.getName());
+    		}
+    	}
+    	else {  		
+			LogicGroup oldLogicGroup = getElementLogicGroupIfHigher(element, LogicGroup.LTL);
+    		List<String[]> oldOperators = loadOperators("Comb");
+    		int oldOperatorColumnIndex = getIndexOfColumn(oldOperators, oldLogicGroup.getName());
+    		
+    		LogicGroup newLogicGroup = element.getLogicGroup();
+			List<String[]> newOperators;
+			for(SupportedOutput so : SupportedOutput.values()) {
+	    		String interpretation = element.getInterpretation();
+				newOperators = loadOperators(so.getName());
+				int newOperatorColumnIndex = getIndexOfColumn(newOperators, newLogicGroup.getName());
+				
+				for(int j = 0; j < oldOperators.size(); j++) {
+					String oldOperator = oldOperators.get(j)[oldOperatorColumnIndex];
+					if(interpretation.contains(oldOperator) && !oldOperator.equals("-")) {
+						String oldOperatorID = oldOperators.get(j)[0];
+						int newOperatorRowIndex;
+						for(newOperatorRowIndex = 0; newOperatorRowIndex < newOperators.size(); newOperatorRowIndex++) {
+							if(newOperators.get(newOperatorRowIndex)[0].equals(oldOperatorID))
+								break;
+						}
+						
+						String newOperator = newOperators.get(newOperatorRowIndex)[newOperatorColumnIndex];
+						interpretation = (!newOperator.equals("-")) ? interpretation.replace(oldOperator, newOperator) : NOT_SUPPORTED_OPERAND_MESSAGE; 
+						
+						if(!(element instanceof LTLPatternMappings) || interpretation.equals(NOT_SUPPORTED_OPERAND_MESSAGE))
+							break;
+					}
+				}
+				elementInterpretations.add(interpretation);
+			}
+    	}
+    	
+    	return elementInterpretations;
+    }
+    
+    private LogicGroup getSubtreeLogicGroup(final Element element, LogicGroup logicGroup) {
+    	Element subElement;
+    	
+    	if((subElement = element.getP()) != null)
+    		logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    if((subElement = element.getQ()) != null)
+	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    if((subElement = element.getR()) != null)
+	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    if((subElement = element.getS()) != null)
+	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    if((subElement = element.getL()) != null)
+	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    if((subElement = element.getH()) != null)
+	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    
+	    return logicGroup;
+    }
+    
+    private LogicGroup getElementLogicGroupIfHigher(final Element element, LogicGroup logicGroup) {
     	if(element instanceof STLOperators && LogicGroup.STL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.STL;
     	else if(element instanceof MITLOperators && LogicGroup.MITL.getValue() > logicGroup.getValue())
@@ -65,21 +145,29 @@ public class Services {
     		logicGroup = LogicGroup.LTL;
     	else if(element instanceof Literal && LogicGroup.LITERAL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.LITERAL;
+    	
+    	return logicGroup;
     }
     
     //source: https://stackoverflow.com/questions/38114267/emf-write-transaction
     //date of access: 2020.11.16.    
-    private void setSubtreeInterpretation(Element element, String value) {
+    private void setInterpretations(Element element, List<String> values) {
         TransactionalEditingDomain domain = TransactionUtil.getEditingDomain(element);
         domain.getCommandStack().execute(new RecordingCommand(domain) {
 
             @Override
             protected void doExecute() {
-                element.setSubtreeInterpretation(value);
+            	BasicEList<String> repr = new BasicEList<>();
+            	for(SupportedOutput so : SupportedOutput.values()) {
+            		repr.add(so.toString() + ": " + values.get(so.getValue()));
+            	}
+                element.setSubtreeInterpretations(repr);
             }
         });
     }
     
+    //source: https://stackoverflow.com/questions/38114267/emf-write-transaction
+    //date of access: 2020.11.16.  
     private void setLogicGroup(Element element, LogicGroup logicGroup) {
         TransactionalEditingDomain domain = TransactionUtil.getEditingDomain(element);
         domain.getCommandStack().execute(new RecordingCommand(domain) {
@@ -89,5 +177,29 @@ public class Services {
                 element.setLogicGroup(logicGroup);
             }
         });
+    }
+    
+    private List<String[]> loadOperators(String schemaName) {
+    	//TODO: hardcoded path...
+	    List<String[]> operators = new ArrayList<>();
+		try {
+			operators = Files.lines(Paths.get("C:\\Users\\Krisztián\\git\\Comb\\comb.generator.action\\schemas\\"+schemaName+".csv"))
+			                .map(line -> line.split(";"))
+			                .collect(Collectors.toList());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    
+		return operators;
+    }
+    
+    private int getIndexOfColumn(List<String[]> schema, String columnName) {
+		int columnIndex;
+		for(columnIndex = 0; columnIndex < schema.get(0).length; columnIndex++) {
+			if(schema.get(0)[columnIndex].equals(columnName))
+				break;
+		}
+		
+		return columnIndex;
     }
 }

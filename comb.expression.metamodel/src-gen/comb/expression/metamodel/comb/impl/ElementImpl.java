@@ -6,13 +6,14 @@ import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Element;
 import comb.expression.metamodel.comb.Literal;
 import comb.expression.metamodel.comb.LogicGroup;
-
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getName <em>Name</em>}</li>
- *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getSubtreeInterpretation <em>Subtree Interpretation</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getSubtreeInterpretations <em>Subtree Interpretations</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl.ElementImpl#getLogicGroup <em>Logic Group</em>}</li>
  * </ul>
  *
@@ -35,6 +36,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public Element getP() {
 		return null;
 	}
@@ -44,6 +46,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public Element getQ() {
 		return null;
 	}
@@ -53,6 +56,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public Element getR() {
 		return null;
 	}
@@ -62,6 +66,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public Element getS() {
 		return null;
 	}
@@ -71,6 +76,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public Literal getH() {
 		return null;
 	}
@@ -80,6 +86,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public Literal getL() {
 		return null;
 	}
@@ -89,6 +96,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * 
 	 * @generated NOT
 	 */
+	@Override
 	public String getInterpretation() {
 		return null;
 	}
@@ -114,24 +122,14 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSubtreeInterpretation() <em>Subtree Interpretation</em>}' attribute.
+	 * The cached value of the '{@link #getSubtreeInterpretations() <em>Subtree Interpretations</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubtreeInterpretation()
+	 * @see #getSubtreeInterpretations()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String SUBTREE_INTERPRETATION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSubtreeInterpretation() <em>Subtree Interpretation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubtreeInterpretation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String subtreeInterpretation = SUBTREE_INTERPRETATION_EDEFAULT;
+	protected EList<String> subtreeInterpretations;
 
 	/**
 	 * The default value of the '{@link #getLogicGroup() <em>Logic Group</em>}' attribute.
@@ -141,7 +139,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final LogicGroup LOGIC_GROUP_EDEFAULT = LogicGroup.LTL;
+	protected static final LogicGroup LOGIC_GROUP_EDEFAULT = LogicGroup.LITERAL;
 
 	/**
 	 * The cached value of the '{@link #getLogicGroup() <em>Logic Group</em>}' attribute.
@@ -201,22 +199,26 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public String getSubtreeInterpretation() {
-		return subtreeInterpretation;
+	public EList<String> getSubtreeInterpretations() {
+		if (subtreeInterpretations == null) {
+			subtreeInterpretations = new EDataTypeUniqueEList<String>(String.class, this,
+					CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS);
+		}
+		return subtreeInterpretations;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 *
+	 * 
+	 * @generated NOT
 	 */
 	@Override
-	public void setSubtreeInterpretation(String newSubtreeInterpretation) {
-		String oldSubtreeInterpretation = subtreeInterpretation;
-		subtreeInterpretation = newSubtreeInterpretation;
+	public void setSubtreeInterpretations(EList<String> newSubtreeInterpretations) {
+		EList<String> oldSubtreeInterpretations = subtreeInterpretations;
+		subtreeInterpretations = newSubtreeInterpretations;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.ELEMENT__SUBTREE_INTERPRETATION,
-					oldSubtreeInterpretation, subtreeInterpretation));
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS,
+					oldSubtreeInterpretations, subtreeInterpretations));
 	}
 
 	/**
@@ -253,8 +255,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case CombPackage.ELEMENT__NAME:
 			return getName();
-		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
-			return getSubtreeInterpretation();
+		case CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS:
+			return getSubtreeInterpretations();
 		case CombPackage.ELEMENT__LOGIC_GROUP:
 			return getLogicGroup();
 		}
@@ -266,14 +268,16 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case CombPackage.ELEMENT__NAME:
 			setName((String) newValue);
 			return;
-		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
-			setSubtreeInterpretation((String) newValue);
+		case CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS:
+			getSubtreeInterpretations().clear();
+			getSubtreeInterpretations().addAll((Collection<? extends String>) newValue);
 			return;
 		case CombPackage.ELEMENT__LOGIC_GROUP:
 			setLogicGroup((LogicGroup) newValue);
@@ -293,8 +297,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case CombPackage.ELEMENT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
-			setSubtreeInterpretation(SUBTREE_INTERPRETATION_EDEFAULT);
+		case CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS:
+			getSubtreeInterpretations().clear();
 			return;
 		case CombPackage.ELEMENT__LOGIC_GROUP:
 			setLogicGroup(LOGIC_GROUP_EDEFAULT);
@@ -313,9 +317,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 		case CombPackage.ELEMENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
-			return SUBTREE_INTERPRETATION_EDEFAULT == null ? subtreeInterpretation != null
-					: !SUBTREE_INTERPRETATION_EDEFAULT.equals(subtreeInterpretation);
+		case CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS:
+			return subtreeInterpretations != null && !subtreeInterpretations.isEmpty();
 		case CombPackage.ELEMENT__LOGIC_GROUP:
 			return logicGroup != LOGIC_GROUP_EDEFAULT;
 		}
@@ -335,8 +338,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", subtreeInterpretation: ");
-		result.append(subtreeInterpretation);
+		result.append(", subtreeInterpretations: ");
+		result.append(subtreeInterpretations);
 		result.append(", logicGroup: ");
 		result.append(logicGroup);
 		result.append(')');

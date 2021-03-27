@@ -159,7 +159,7 @@ public class UniversalityBetween_and_ItemProvider extends UniversalityTwoParamsI
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.OCCURRENCE__P
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__Q
 				|| childFeature == CombPackage.Literals.UNIVERSALITY_TWO_PARAMS__R;
 

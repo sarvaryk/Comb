@@ -44,8 +44,8 @@ public class _equal_ItemProvider extends RelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
 			addInterpretationPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -128,8 +128,8 @@ public class _equal_ItemProvider extends RelationItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(_equal_.class)) {
-		case CombPackage._EQUAL___DESCRIPTION:
 		case CombPackage._EQUAL___INTERPRETATION:
+		case CombPackage._EQUAL___DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

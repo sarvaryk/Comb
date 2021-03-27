@@ -159,7 +159,8 @@ public class PrecedenceBetween_and_ItemProvider extends PrecedenceTwoParamsItemP
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.ORDER__P || childFeature == CombPackage.Literals.ORDER__S
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
+				|| childFeature == CombPackage.Literals.ORDER__S
 				|| childFeature == CombPackage.Literals.PRECEDENCE_TWO_PARAMS__Q
 				|| childFeature == CombPackage.Literals.PRECEDENCE_TWO_PARAMS__R;
 

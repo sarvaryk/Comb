@@ -7,7 +7,6 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.emf.common.CommonPlugin;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 import comb.expression.metamodel.comb.impl.ElementImpl;
@@ -19,23 +18,22 @@ public class ImportCombElementHandler extends AbstractHandler {
 		final IStructuredSelection selection = (IStructuredSelection) HandlerUtil.getCurrentSelection(event);
 		final Object firstElement = selection.getFirstElement();
 		final ElementImpl element = (ElementImpl)firstElement;
-
-		try {
-			String overwriteFileOnPathString = CombExpressionUtils.getTargetFilePath("Import to (path):").replace("/", "//");
+		
+		try {			
+			String originalContentPath = CommonPlugin.resolve(element.eResource().getURI()).toFileString();
+			List<String> originalContent = CombExpressionUtils.readTextFile(originalContentPath);
+			String lastLineOfOriginalContent = originalContent.remove(originalContent.size()-1);
 			
-			List<String> contentToOverwrite = CombExpressionUtils.readTextFile(overwriteFileOnPathString);
-			String lastLineOfContentToOverwrite = contentToOverwrite.remove(contentToOverwrite.size()-1);
+			String newlyAddedContentPath = CombExpressionUtils.getTargetFilePath("Import from (path):").replace("/", "//");
+			List<String> newlyAddedContent = CombExpressionUtils.readTextFile(newlyAddedContentPath);
+			newlyAddedContent.remove(newlyAddedContent.size()-1);
+			newlyAddedContent.remove(1);
+			newlyAddedContent.remove(0);
 			
-			URI resolvedFile = CommonPlugin.resolve(element.eResource().getURI());
-			List<String> contentToWrite = CombExpressionUtils.readTextFile(resolvedFile.toFileString());
-			contentToWrite.remove(contentToWrite.size()-1);
-			contentToWrite.remove(1);
-			contentToWrite.remove(0);
+			originalContent.addAll(newlyAddedContent);
+			originalContent.add(lastLineOfOriginalContent);
 			
-			contentToOverwrite.addAll(contentToWrite);
-			contentToOverwrite.add(lastLineOfContentToOverwrite);
-			
-			CombExpressionUtils.writeTextFile(contentToOverwrite, overwriteFileOnPathString);
+			CombExpressionUtils.writeTextFile(originalContent, originalContentPath);
 		} 
 		catch (IOException e) {
 			e.printStackTrace();

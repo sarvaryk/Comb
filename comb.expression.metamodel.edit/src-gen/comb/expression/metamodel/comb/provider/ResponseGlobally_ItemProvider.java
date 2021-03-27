@@ -159,7 +159,7 @@ public class ResponseGlobally_ItemProvider extends ResponseWithoutParamsItemProv
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.ORDER__P
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.ORDER__S;
 
 		if (qualify) {

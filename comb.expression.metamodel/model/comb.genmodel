@@ -17,6 +17,11 @@
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MITL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/STL"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="comb.ecore#//SupportedOutput">
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Comb"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Spot"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Uppaal"/>
+    </genEnums>
     <genClasses ecoreClass="comb.ecore#//PrecedenceAfter_until_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/interpretation"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_until_/description"/>
@@ -80,9 +85,7 @@
     <genClasses image="false" ecoreClass="comb.ecore#//LTLOperators">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//LTLOperators/P"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="comb.ecore#//BooleanOperators">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//BooleanOperators/P"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//BooleanOperators"/>
     <genClasses ecoreClass="comb.ecore#//PrecedenceAfter_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_/interpretation"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//PrecedenceAfter_/description"/>
@@ -107,7 +110,6 @@
     </genClasses>
     <genClasses image="false" ecoreClass="comb.ecore#//BoundedExistence"/>
     <genClasses image="false" ecoreClass="comb.ecore#//Order">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Order/P"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Order/S"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//ExistenceBetween_and_">
@@ -217,9 +219,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceBefore_/interpretation"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//ExistenceBefore_/description"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="comb.ecore#//Occurrence">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Occurrence/P"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="comb.ecore#//Occurrence"/>
     <genClasses image="false" ecoreClass="comb.ecore#//ResponseOneParam">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//ResponseOneParam/Q"/>
     </genClasses>
@@ -247,7 +247,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="comb.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/subtreeInterpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/subtreeInterpretations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Element/logicGroup"/>
     </genClasses>
     <genClasses image="false" ecoreClass="comb.ecore#//LTLOperatorsTwoParams">
@@ -308,25 +308,26 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Relation/Q"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//_lessThan_">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_lessThan_/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_lessThan_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_lessThan_/description"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//_lessThanOrEqual_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_lessThanOrEqual_/interpretation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_lessThanOrEqual_/description"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//_equal_">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_equal_/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_equal_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_equal_/description"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//_greaterThan_">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_greaterThan_/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_greaterThan_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_greaterThan_/description"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//_greaterThanOrEqual_">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_greaterThanOrEqual_/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_greaterThanOrEqual_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_greaterThanOrEqual_/description"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//STLOperators"/>
+    <genClasses ecoreClass="comb.ecore#//LTLPatternMappings"/>
   </genPackages>
 </genmodel:GenModel>

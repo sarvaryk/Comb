@@ -11,8 +11,8 @@ package comb.expression.metamodel.comb;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link comb.expression.metamodel.comb._greaterThan_#getDescription <em>Description</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb._greaterThan_#getInterpretation <em>Interpretation</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb._greaterThan_#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see comb.expression.metamodel.comb.CombPackage#get_greaterThan_()

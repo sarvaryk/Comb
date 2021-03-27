@@ -446,7 +446,8 @@ public class ResponseTwoParamsItemProvider extends ResponseItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.ORDER__P || childFeature == CombPackage.Literals.ORDER__S
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
+				|| childFeature == CombPackage.Literals.ORDER__S
 				|| childFeature == CombPackage.Literals.RESPONSE_TWO_PARAMS__Q
 				|| childFeature == CombPackage.Literals.RESPONSE_TWO_PARAMS__R;
 

@@ -446,7 +446,7 @@ public class ExistenceTwoParamsItemProvider extends ExistenceItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.OCCURRENCE__P
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.EXISTENCE_TWO_PARAMS__R
 				|| childFeature == CombPackage.Literals.EXISTENCE_TWO_PARAMS__Q;
 

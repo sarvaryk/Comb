@@ -54,7 +54,7 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addSubtreeInterpretationPropertyDescriptor(object);
+			addSubtreeInterpretationsPropertyDescriptor(object);
 			addLogicGroupPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -76,18 +76,18 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 	}
 
 	/**
-	 * This adds a property descriptor for the Subtree Interpretation feature.
+	 * This adds a property descriptor for the Subtree Interpretations feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubtreeInterpretationPropertyDescriptor(Object object) {
+	protected void addSubtreeInterpretationsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Element_subtreeInterpretation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Element_subtreeInterpretation_feature",
+						getResourceLocator(), getString("_UI_Element_subtreeInterpretations_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Element_subtreeInterpretations_feature",
 								"_UI_Element_type"),
-						CombPackage.Literals.ELEMENT__SUBTREE_INTERPRETATION, true, false, false,
+						CombPackage.Literals.ELEMENT__SUBTREE_INTERPRETATIONS, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -143,7 +143,7 @@ public class ElementItemProvider extends ItemProviderAdapter implements IEditing
 
 		switch (notification.getFeatureID(Element.class)) {
 		case CombPackage.ELEMENT__NAME:
-		case CombPackage.ELEMENT__SUBTREE_INTERPRETATION:
+		case CombPackage.ELEMENT__SUBTREE_INTERPRETATIONS:
 		case CombPackage.ELEMENT__LOGIC_GROUP:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

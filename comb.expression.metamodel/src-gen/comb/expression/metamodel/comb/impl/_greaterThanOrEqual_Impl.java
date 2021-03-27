@@ -19,33 +19,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl#getDescription <em>Description</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl#getInterpretation <em>Interpretation</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterThanOrEqual_ {
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: <P> is greater than or equal to (>=) <Q>";
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,6 +45,26 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	 * @ordered
 	 */
 	protected String interpretation = INTERPRETATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: <P> is greater than or equal to (>=) <Q>";
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,10 +141,10 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
-			return getDescription();
 		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
 			return getInterpretation();
+		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
+			return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,11 +157,11 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
-			setDescription((String) newValue);
-			return;
 		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
 			setInterpretation((String) newValue);
+			return;
+		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
+			setDescription((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,11 +175,11 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
-			setDescription(DESCRIPTION_EDEFAULT);
-			return;
 		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
 			setInterpretation(INTERPRETATION_EDEFAULT);
+			return;
+		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -193,11 +193,11 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
-			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
 			return INTERPRETATION_EDEFAULT == null ? interpretation != null
 					: !INTERPRETATION_EDEFAULT.equals(interpretation);
+		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,10 +213,10 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (description: ");
-		result.append(description);
-		result.append(", interpretation: ");
+		result.append(" (interpretation: ");
 		result.append(interpretation);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

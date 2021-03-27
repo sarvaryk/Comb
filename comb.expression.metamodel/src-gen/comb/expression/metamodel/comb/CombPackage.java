@@ -77,13 +77,13 @@ public interface CombPackage extends EPackage {
 	int ELEMENT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__SUBTREE_INTERPRETATION = 1;
+	int ELEMENT__SUBTREE_INTERPRETATIONS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -113,6 +113,70 @@ public interface CombPackage extends EPackage {
 	int ELEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.LTLPatternMappingsImpl <em>LTL Pattern Mappings</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.LTLPatternMappingsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLTLPatternMappings()
+	 * @generated
+	 */
+	int LTL_PATTERN_MAPPINGS = 93;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_PATTERN_MAPPINGS__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_PATTERN_MAPPINGS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_PATTERN_MAPPINGS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_PATTERN_MAPPINGS__P = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>LTL Pattern Mappings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_PATTERN_MAPPINGS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>LTL Pattern Mappings</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LTL_PATTERN_MAPPINGS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.OrderImpl <em>Order</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,16 +193,16 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER__NAME = ELEMENT__NAME;
+	int ORDER__NAME = LTL_PATTERN_MAPPINGS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int ORDER__SUBTREE_INTERPRETATIONS = LTL_PATTERN_MAPPINGS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -147,7 +211,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+	int ORDER__LOGIC_GROUP = LTL_PATTERN_MAPPINGS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -156,7 +220,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER__P = ELEMENT_FEATURE_COUNT + 0;
+	int ORDER__P = LTL_PATTERN_MAPPINGS__P;
 
 	/**
 	 * The feature id for the '<em><b>S</b></em>' containment reference.
@@ -165,7 +229,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER__S = ELEMENT_FEATURE_COUNT + 1;
+	int ORDER__S = LTL_PATTERN_MAPPINGS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Order</em>' class.
@@ -174,7 +238,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
+	int ORDER_FEATURE_COUNT = LTL_PATTERN_MAPPINGS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Order</em>' class.
@@ -183,7 +247,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORDER_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+	int ORDER_OPERATION_COUNT = LTL_PATTERN_MAPPINGS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.PrecedenceImpl <em>Precedence</em>}' class.
@@ -205,13 +269,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE__NAME = ORDER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE__SUBTREE_INTERPRETATION = ORDER__SUBTREE_INTERPRETATION;
+	int PRECEDENCE__SUBTREE_INTERPRETATIONS = ORDER__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -278,13 +342,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_TWO_PARAMS__NAME = PRECEDENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = PRECEDENCE__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS = PRECEDENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -369,13 +433,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_AFTER_UNTIL___NAME = PRECEDENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_AFTER_UNTIL___SUBTREE_INTERPRETATIONS = PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -475,16 +539,16 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCURRENCE__NAME = ELEMENT__NAME;
+	int OCCURRENCE__NAME = LTL_PATTERN_MAPPINGS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCCURRENCE__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int OCCURRENCE__SUBTREE_INTERPRETATIONS = LTL_PATTERN_MAPPINGS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -493,7 +557,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCURRENCE__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+	int OCCURRENCE__LOGIC_GROUP = LTL_PATTERN_MAPPINGS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -502,7 +566,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCURRENCE__P = ELEMENT_FEATURE_COUNT + 0;
+	int OCCURRENCE__P = LTL_PATTERN_MAPPINGS__P;
 
 	/**
 	 * The number of structural features of the '<em>Occurrence</em>' class.
@@ -511,7 +575,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCURRENCE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+	int OCCURRENCE_FEATURE_COUNT = LTL_PATTERN_MAPPINGS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Occurrence</em>' class.
@@ -520,7 +584,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCCURRENCE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+	int OCCURRENCE_OPERATION_COUNT = LTL_PATTERN_MAPPINGS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceImpl <em>Absence</em>}' class.
@@ -542,13 +606,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE__NAME = OCCURRENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
+	int ABSENCE__SUBTREE_INTERPRETATIONS = OCCURRENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -606,13 +670,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_TWO_PARAMS__NAME = ABSENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = ABSENCE__SUBTREE_INTERPRETATION;
+	int ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS = ABSENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -688,13 +752,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_AFTER_UNTIL___NAME = ABSENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int ABSENCE_AFTER_UNTIL___SUBTREE_INTERPRETATIONS = ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -788,13 +852,13 @@ public interface CombPackage extends EPackage {
 	int LTL_OPERATORS__NAME = ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LTL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int LTL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -852,13 +916,13 @@ public interface CombPackage extends EPackage {
 	int LTL_OPERATORS_TWO_PARAMS__NAME = LTL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = LTL_OPERATORS__SUBTREE_INTERPRETATION;
+	int LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS = LTL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -925,13 +989,13 @@ public interface CombPackage extends EPackage {
 	int _UNTIL___NAME = LTL_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL___SUBTREE_INTERPRETATION = LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int _UNTIL___SUBTREE_INTERPRETATIONS = LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1016,13 +1080,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_WITHOUT_PARAMS__NAME = PRECEDENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = PRECEDENCE__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS = PRECEDENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1089,13 +1153,13 @@ public interface CombPackage extends EPackage {
 	int LTL_OPERATORS_ONE_PARAM__NAME = LTL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = LTL_OPERATORS__SUBTREE_INTERPRETATION;
+	int LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS = LTL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1153,13 +1217,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY__NAME = OCCURRENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY__SUBTREE_INTERPRETATIONS = OCCURRENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1217,13 +1281,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_ONE_PARAM__NAME = UNIVERSALITY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATION = UNIVERSALITY__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATIONS = UNIVERSALITY__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1290,13 +1354,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_BEFORE___NAME = UNIVERSALITY_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_BEFORE___SUBTREE_INTERPRETATION = UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_BEFORE___SUBTREE_INTERPRETATIONS = UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1381,13 +1445,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_ONE_PARAM__NAME = PRECEDENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATION = PRECEDENCE__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATIONS = PRECEDENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1463,13 +1527,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_BEFORE___NAME = PRECEDENCE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_BEFORE___SUBTREE_INTERPRETATION = PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_BEFORE___SUBTREE_INTERPRETATIONS = PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1563,13 +1627,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_AFTER___NAME = UNIVERSALITY_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_AFTER___SUBTREE_INTERPRETATION = UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_AFTER___SUBTREE_INTERPRETATIONS = UNIVERSALITY_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1654,13 +1718,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE__NAME = OCCURRENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE__SUBTREE_INTERPRETATIONS = OCCURRENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1718,13 +1782,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTNECE_ONE_PARAM__NAME = BOUNDED_EXISTENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATIONS = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1791,13 +1855,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_AFTER___NAME = BOUNDED_EXISTNECE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_AFTER___SUBTREE_INTERPRETATION = BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_AFTER___SUBTREE_INTERPRETATIONS = BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1882,13 +1946,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_TWO_PARAMS__NAME = BOUNDED_EXISTENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -1964,13 +2028,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_BETWEEN_AND___NAME = BOUNDED_EXISTENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_BETWEEN_AND___SUBTREE_INTERPRETATIONS = BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2064,13 +2128,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_WITHOUT_PARAMS__NAME = BOUNDED_EXISTENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS = BOUNDED_EXISTENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2128,13 +2192,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_GLOBALLY___NAME = BOUNDED_EXISTENCE_WITHOUT_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_GLOBALLY___SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_GLOBALLY___SUBTREE_INTERPRETATIONS = BOUNDED_EXISTENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2210,13 +2274,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_ONE_PARAM__NAME = ABSENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATION = ABSENCE__SUBTREE_INTERPRETATION;
+	int ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATIONS = ABSENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2283,13 +2347,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_BEFORE___NAME = ABSENCE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_BEFORE___SUBTREE_INTERPRETATION = ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int ABSENCE_BEFORE___SUBTREE_INTERPRETATIONS = ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2374,13 +2438,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_TWO_PARAMS__NAME = UNIVERSALITY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATION = UNIVERSALITY__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATIONS = UNIVERSALITY__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2456,13 +2520,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_BETWEEN_AND___NAME = UNIVERSALITY_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_BETWEEN_AND___SUBTREE_INTERPRETATION = UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_BETWEEN_AND___SUBTREE_INTERPRETATIONS = UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2556,13 +2620,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE__NAME = OCCURRENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE__SUBTREE_INTERPRETATION = OCCURRENCE__SUBTREE_INTERPRETATION;
+	int EXISTENCE__SUBTREE_INTERPRETATIONS = OCCURRENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2620,13 +2684,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_WITHOUR_PARAMS__NAME = EXISTENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_WITHOUR_PARAMS__SUBTREE_INTERPRETATION = EXISTENCE__SUBTREE_INTERPRETATION;
+	int EXISTENCE_WITHOUR_PARAMS__SUBTREE_INTERPRETATIONS = EXISTENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2684,13 +2748,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE__NAME = ORDER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE__SUBTREE_INTERPRETATION = ORDER__SUBTREE_INTERPRETATION;
+	int RESPONSE__SUBTREE_INTERPRETATIONS = ORDER__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2757,13 +2821,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_TWO_PARAMS__NAME = RESPONSE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATION = RESPONSE__SUBTREE_INTERPRETATION;
+	int RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATIONS = RESPONSE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2848,13 +2912,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_AFTER_UNTIL___NAME = RESPONSE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_AFTER_UNTIL___SUBTREE_INTERPRETATION = RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int RESPONSE_AFTER_UNTIL___SUBTREE_INTERPRETATIONS = RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2954,16 +3018,16 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS__NAME = ELEMENT__NAME;
+	int BOOLEAN_OPERATORS__NAME = LTL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int BOOLEAN_OPERATORS__SUBTREE_INTERPRETATIONS = LTL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -2972,7 +3036,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+	int BOOLEAN_OPERATORS__LOGIC_GROUP = LTL_OPERATORS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -2981,7 +3045,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS__P = ELEMENT_FEATURE_COUNT + 0;
+	int BOOLEAN_OPERATORS__P = LTL_OPERATORS__P;
 
 	/**
 	 * The number of structural features of the '<em>Boolean Operators</em>' class.
@@ -2990,7 +3054,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+	int BOOLEAN_OPERATORS_FEATURE_COUNT = LTL_OPERATORS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Boolean Operators</em>' class.
@@ -2999,7 +3063,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+	int BOOLEAN_OPERATORS_OPERATION_COUNT = LTL_OPERATORS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.PrecedenceAfter_Impl <em>Precedence After </em>}' class.
@@ -3021,13 +3085,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_AFTER___NAME = PRECEDENCE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_AFTER___SUBTREE_INTERPRETATION = PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_AFTER___SUBTREE_INTERPRETATIONS = PRECEDENCE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3121,13 +3185,13 @@ public interface CombPackage extends EPackage {
 	int ALWAYS___NAME = LTL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS___SUBTREE_INTERPRETATION = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int ALWAYS___SUBTREE_INTERPRETATIONS = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3203,13 +3267,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_WITHOUT_PARAMS__NAME = ABSENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = ABSENCE__SUBTREE_INTERPRETATION;
+	int ABSENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS = ABSENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3267,13 +3331,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_BETWEEN_AND___NAME = RESPONSE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_BETWEEN_AND___SUBTREE_INTERPRETATION = RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int RESPONSE_BETWEEN_AND___SUBTREE_INTERPRETATIONS = RESPONSE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3376,13 +3440,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_ONE_PARAM__NAME = RESPONSE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATION = RESPONSE__SUBTREE_INTERPRETATION;
+	int RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATIONS = RESPONSE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3458,13 +3522,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_AFTER___NAME = RESPONSE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_AFTER___SUBTREE_INTERPRETATION = RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int RESPONSE_AFTER___SUBTREE_INTERPRETATIONS = RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3558,13 +3622,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_BETWEEN_AND___NAME = PRECEDENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_BETWEEN_AND___SUBTREE_INTERPRETATIONS = PRECEDENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3667,13 +3731,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_TWO_PARAMS__NAME = EXISTENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION = EXISTENCE__SUBTREE_INTERPRETATION;
+	int EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS = EXISTENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3749,13 +3813,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_BETWEEN_AND___NAME = EXISTENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int EXISTENCE_BETWEEN_AND___SUBTREE_INTERPRETATIONS = EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3849,13 +3913,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_AFTER_UNTIL___NAME = EXISTENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int EXISTENCE_AFTER_UNTIL___SUBTREE_INTERPRETATIONS = EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -3949,13 +4013,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_BEFORE___NAME = RESPONSE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_BEFORE___SUBTREE_INTERPRETATION = RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int RESPONSE_BEFORE___SUBTREE_INTERPRETATIONS = RESPONSE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4049,13 +4113,13 @@ public interface CombPackage extends EPackage {
 	int BOOLEAN_OPERATORS_TWO_PARAMS__NAME = BOOLEAN_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS__SUBTREE_INTERPRETATION;
+	int BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS = BOOLEAN_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4122,13 +4186,13 @@ public interface CombPackage extends EPackage {
 	int _AND___NAME = BOOLEAN_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _AND___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int _AND___SUBTREE_INTERPRETATIONS = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4213,13 +4277,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_GLOBALLY___NAME = ABSENCE_WITHOUT_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_GLOBALLY___SUBTREE_INTERPRETATION = ABSENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+	int ABSENCE_GLOBALLY___SUBTREE_INTERPRETATIONS = ABSENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4295,13 +4359,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_BETWEEN_AND___NAME = ABSENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_BETWEEN_AND___SUBTREE_INTERPRETATION = ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int ABSENCE_BETWEEN_AND___SUBTREE_INTERPRETATIONS = ABSENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4395,13 +4459,13 @@ public interface CombPackage extends EPackage {
 	int EXISTNECE_ONE_PARAM__NAME = EXISTENCE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION = EXISTENCE__SUBTREE_INTERPRETATION;
+	int EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATIONS = EXISTENCE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4468,13 +4532,13 @@ public interface CombPackage extends EPackage {
 	int _OR___NAME = BOOLEAN_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _OR___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int _OR___SUBTREE_INTERPRETATIONS = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4559,13 +4623,13 @@ public interface CombPackage extends EPackage {
 	int BASIC_ELEMENTS__NAME = ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BASIC_ELEMENTS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int BASIC_ELEMENTS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4614,13 +4678,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_WITHOUT_PARAMS__NAME = UNIVERSALITY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = UNIVERSALITY__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS = UNIVERSALITY__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4678,13 +4742,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_WITHOUT_PARAMS__NAME = RESPONSE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION = RESPONSE__SUBTREE_INTERPRETATION;
+	int RESPONSE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS = RESPONSE__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4751,13 +4815,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_AFTER_UNTIL___NAME = BOUNDED_EXISTENCE_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_AFTER_UNTIL___SUBTREE_INTERPRETATION = BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_AFTER_UNTIL___SUBTREE_INTERPRETATIONS = BOUNDED_EXISTENCE_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4851,13 +4915,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_AFTER___NAME = EXISTNECE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_AFTER___SUBTREE_INTERPRETATION = EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int EXISTENCE_AFTER___SUBTREE_INTERPRETATIONS = EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -4942,13 +5006,13 @@ public interface CombPackage extends EPackage {
 	int BOOLEAN_OPERATORS_ONE_PARAM__NAME = BOOLEAN_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS__SUBTREE_INTERPRETATION;
+	int BOOLEAN_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS = BOOLEAN_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5006,13 +5070,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_AFTER_UNTIL___NAME = UNIVERSALITY_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_AFTER_UNTIL___SUBTREE_INTERPRETATION = UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_AFTER_UNTIL___SUBTREE_INTERPRETATIONS = UNIVERSALITY_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5106,13 +5170,13 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_GLOBALLY___NAME = RESPONSE_WITHOUT_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_GLOBALLY___SUBTREE_INTERPRETATION = RESPONSE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+	int RESPONSE_GLOBALLY___SUBTREE_INTERPRETATIONS = RESPONSE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5197,13 +5261,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_GLOBALLY___NAME = EXISTENCE_WITHOUR_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_GLOBALLY___SUBTREE_INTERPRETATION = EXISTENCE_WITHOUR_PARAMS__SUBTREE_INTERPRETATION;
+	int EXISTENCE_GLOBALLY___SUBTREE_INTERPRETATIONS = EXISTENCE_WITHOUR_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5279,13 +5343,13 @@ public interface CombPackage extends EPackage {
 	int BOUNDED_EXISTENCE_BEFORE___NAME = BOUNDED_EXISTNECE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOUNDED_EXISTENCE_BEFORE___SUBTREE_INTERPRETATION = BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int BOUNDED_EXISTENCE_BEFORE___SUBTREE_INTERPRETATIONS = BOUNDED_EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5370,13 +5434,13 @@ public interface CombPackage extends EPackage {
 	int EVENTUALLY___NAME = LTL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY___SUBTREE_INTERPRETATION = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int EVENTUALLY___SUBTREE_INTERPRETATIONS = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5452,13 +5516,13 @@ public interface CombPackage extends EPackage {
 	int _IMPLIES___NAME = BOOLEAN_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _IMPLIES___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int _IMPLIES___SUBTREE_INTERPRETATIONS = BOOLEAN_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5543,13 +5607,13 @@ public interface CombPackage extends EPackage {
 	int UNIVERSALITY_GLOBALLY___NAME = UNIVERSALITY_WITHOUT_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIVERSALITY_GLOBALLY___SUBTREE_INTERPRETATION = UNIVERSALITY_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+	int UNIVERSALITY_GLOBALLY___SUBTREE_INTERPRETATIONS = UNIVERSALITY_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5625,13 +5689,13 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_AFTER___NAME = ABSENCE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSENCE_AFTER___SUBTREE_INTERPRETATION = ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int ABSENCE_AFTER___SUBTREE_INTERPRETATIONS = ABSENCE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5716,13 +5780,13 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_BEFORE___NAME = EXISTNECE_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTENCE_BEFORE___SUBTREE_INTERPRETATION = EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int EXISTENCE_BEFORE___SUBTREE_INTERPRETATIONS = EXISTNECE_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5807,13 +5871,13 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_GLOBALLY___NAME = PRECEDENCE_WITHOUT_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRECEDENCE_GLOBALLY___SUBTREE_INTERPRETATION = PRECEDENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATION;
+	int PRECEDENCE_GLOBALLY___SUBTREE_INTERPRETATIONS = PRECEDENCE_WITHOUT_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5898,13 +5962,13 @@ public interface CombPackage extends EPackage {
 	int LITERAL__NAME = BASIC_ELEMENTS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL__SUBTREE_INTERPRETATION = BASIC_ELEMENTS__SUBTREE_INTERPRETATION;
+	int LITERAL__SUBTREE_INTERPRETATIONS = BASIC_ELEMENTS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -5962,13 +6026,13 @@ public interface CombPackage extends EPackage {
 	int NEXT___NAME = LTL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NEXT___SUBTREE_INTERPRETATION = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int NEXT___SUBTREE_INTERPRETATIONS = LTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6044,13 +6108,13 @@ public interface CombPackage extends EPackage {
 	int NOT___NAME = BOOLEAN_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NOT___SUBTREE_INTERPRETATION = BOOLEAN_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int NOT___SUBTREE_INTERPRETATIONS = BOOLEAN_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6126,13 +6190,13 @@ public interface CombPackage extends EPackage {
 	int MITL_OPERATORS__NAME = ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MITL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int MITL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6190,13 +6254,13 @@ public interface CombPackage extends EPackage {
 	int MITL_OPERATORS_ONE_PARAM__NAME = MITL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = MITL_OPERATORS__SUBTREE_INTERPRETATION;
+	int MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS = MITL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6254,13 +6318,13 @@ public interface CombPackage extends EPackage {
 	int EVENTUALLY_WITHIN_AND___NAME = MITL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN_AND___SUBTREE_INTERPRETATION = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int EVENTUALLY_WITHIN_AND___SUBTREE_INTERPRETATIONS = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6354,13 +6418,13 @@ public interface CombPackage extends EPackage {
 	int MITL_OPERATORS_TWO_PARAMS__NAME = MITL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = MITL_OPERATORS__SUBTREE_INTERPRETATION;
+	int MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS = MITL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6427,13 +6491,13 @@ public interface CombPackage extends EPackage {
 	int _UNTIL_WITHIN_AND___NAME = MITL_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN_AND___SUBTREE_INTERPRETATION = MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int _UNTIL_WITHIN_AND___SUBTREE_INTERPRETATIONS = MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6536,13 +6600,13 @@ public interface CombPackage extends EPackage {
 	int ALWAYS_WITHIN_AND___NAME = MITL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN_AND___SUBTREE_INTERPRETATION = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int ALWAYS_WITHIN_AND___SUBTREE_INTERPRETATIONS = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6673,13 +6737,13 @@ public interface CombPackage extends EPackage {
 	int MTL_OPERATORS__NAME = ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int MTL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6737,13 +6801,13 @@ public interface CombPackage extends EPackage {
 	int MTL_OPERATORS_ONE_PARAM__NAME = MTL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION = MTL_OPERATORS__SUBTREE_INTERPRETATION;
+	int MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS = MTL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6801,13 +6865,13 @@ public interface CombPackage extends EPackage {
 	int MTL_OPERATORS_TWO_PARAMS__NAME = MTL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION = MTL_OPERATORS__SUBTREE_INTERPRETATION;
+	int MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS = MTL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6874,13 +6938,13 @@ public interface CombPackage extends EPackage {
 	int _UNTIL_WITHIN___NAME = MTL_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___SUBTREE_INTERPRETATION = MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATION;
+	int _UNTIL_WITHIN___SUBTREE_INTERPRETATIONS = MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6974,13 +7038,13 @@ public interface CombPackage extends EPackage {
 	int ALWAYS_WITHIN___NAME = MTL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___SUBTREE_INTERPRETATION = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int ALWAYS_WITHIN___SUBTREE_INTERPRETATIONS = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7065,13 +7129,13 @@ public interface CombPackage extends EPackage {
 	int EVENTUALLY_WITHIN___NAME = MTL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___SUBTREE_INTERPRETATION = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATION;
+	int EVENTUALLY_WITHIN___SUBTREE_INTERPRETATIONS = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7156,13 +7220,13 @@ public interface CombPackage extends EPackage {
 	int STL_OPERATORS__NAME = ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STL_OPERATORS__SUBTREE_INTERPRETATION = ELEMENT__SUBTREE_INTERPRETATION;
+	int STL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7211,13 +7275,13 @@ public interface CombPackage extends EPackage {
 	int RELATION__NAME = STL_OPERATORS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__SUBTREE_INTERPRETATION = STL_OPERATORS__SUBTREE_INTERPRETATION;
+	int RELATION__SUBTREE_INTERPRETATIONS = STL_OPERATORS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7284,13 +7348,13 @@ public interface CombPackage extends EPackage {
 	int _LESS_THAN___NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _LESS_THAN___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+	int _LESS_THAN___SUBTREE_INTERPRETATIONS = RELATION__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7320,22 +7384,22 @@ public interface CombPackage extends EPackage {
 	int _LESS_THAN___Q = RELATION__Q;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int _LESS_THAN___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _LESS_THAN___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+	int _LESS_THAN___INTERPRETATION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _LESS_THAN___DESCRIPTION = RELATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>less Than </em>' class.
@@ -7375,13 +7439,13 @@ public interface CombPackage extends EPackage {
 	int _LESS_THAN_OR_EQUAL___NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _LESS_THAN_OR_EQUAL___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+	int _LESS_THAN_OR_EQUAL___SUBTREE_INTERPRETATIONS = RELATION__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7466,13 +7530,13 @@ public interface CombPackage extends EPackage {
 	int _EQUAL___NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _EQUAL___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+	int _EQUAL___SUBTREE_INTERPRETATIONS = RELATION__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7502,22 +7566,22 @@ public interface CombPackage extends EPackage {
 	int _EQUAL___Q = RELATION__Q;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int _EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+	int _EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>equal </em>' class.
@@ -7557,13 +7621,13 @@ public interface CombPackage extends EPackage {
 	int _GREATER_THAN___NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _GREATER_THAN___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+	int _GREATER_THAN___SUBTREE_INTERPRETATIONS = RELATION__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7593,22 +7657,22 @@ public interface CombPackage extends EPackage {
 	int _GREATER_THAN___Q = RELATION__Q;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int _GREATER_THAN___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _GREATER_THAN___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+	int _GREATER_THAN___INTERPRETATION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN___DESCRIPTION = RELATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>greater Than </em>' class.
@@ -7648,13 +7712,13 @@ public interface CombPackage extends EPackage {
 	int _GREATER_THAN_OR_EQUAL___NAME = RELATION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Subtree Interpretation</b></em>' attribute.
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _GREATER_THAN_OR_EQUAL___SUBTREE_INTERPRETATION = RELATION__SUBTREE_INTERPRETATION;
+	int _GREATER_THAN_OR_EQUAL___SUBTREE_INTERPRETATIONS = RELATION__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7684,22 +7748,22 @@ public interface CombPackage extends EPackage {
 	int _GREATER_THAN_OR_EQUAL___Q = RELATION__Q;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int _GREATER_THAN_OR_EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int _GREATER_THAN_OR_EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 1;
+	int _GREATER_THAN_OR_EQUAL___INTERPRETATION = RELATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _GREATER_THAN_OR_EQUAL___DESCRIPTION = RELATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>greater Than Or Equal </em>' class.
@@ -7727,7 +7791,17 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
 	 * @generated
 	 */
-	int LOGIC_GROUP = 93;
+	int LOGIC_GROUP = 94;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.SupportedOutput
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSupportedOutput()
+	 * @generated
+	 */
+	int SUPPORTED_OUTPUT = 95;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -8248,17 +8322,6 @@ public interface CombPackage extends EPackage {
 	EClass getBooleanOperators();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.BooleanOperators#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>P</em>'.
-	 * @see comb.expression.metamodel.comb.BooleanOperators#getP()
-	 * @see #getBooleanOperators()
-	 * @generated
-	 */
-	EReference getBooleanOperators_P();
-
-	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_ <em>Precedence After </em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8457,17 +8520,6 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOrder();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Order#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>P</em>'.
-	 * @see comb.expression.metamodel.comb.Order#getP()
-	 * @see #getOrder()
-	 * @generated
-	 */
-	EReference getOrder_P();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Order#getS <em>S</em>}'.
@@ -9349,17 +9401,6 @@ public interface CombPackage extends EPackage {
 	EClass getOccurrence();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Occurrence#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>P</em>'.
-	 * @see comb.expression.metamodel.comb.Occurrence#getP()
-	 * @see #getOccurrence()
-	 * @generated
-	 */
-	EReference getOccurrence_P();
-
-	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.ResponseOneParam <em>Response One Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9572,15 +9613,15 @@ public interface CombPackage extends EPackage {
 	EAttribute getElement_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Element#getSubtreeInterpretation <em>Subtree Interpretation</em>}'.
+	 * Returns the meta object for the attribute list '{@link comb.expression.metamodel.comb.Element#getSubtreeInterpretations <em>Subtree Interpretations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Subtree Interpretation</em>'.
-	 * @see comb.expression.metamodel.comb.Element#getSubtreeInterpretation()
+	 * @return the meta object for the attribute list '<em>Subtree Interpretations</em>'.
+	 * @see comb.expression.metamodel.comb.Element#getSubtreeInterpretations()
 	 * @see #getElement()
 	 * @generated
 	 */
-	EAttribute getElement_SubtreeInterpretation();
+	EAttribute getElement_SubtreeInterpretations();
 
 	/**
 	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Element#getLogicGroup <em>Logic Group</em>}'.
@@ -10233,6 +10274,16 @@ public interface CombPackage extends EPackage {
 	EClass getSTLOperators();
 
 	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.LTLPatternMappings <em>LTL Pattern Mappings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>LTL Pattern Mappings</em>'.
+	 * @see comb.expression.metamodel.comb.LTLPatternMappings
+	 * @generated
+	 */
+	EClass getLTLPatternMappings();
+
+	/**
 	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10241,6 +10292,16 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getLogicGroup();
+
+	/**
+	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Supported Output</em>'.
+	 * @see comb.expression.metamodel.comb.SupportedOutput
+	 * @generated
+	 */
+	EEnum getSupportedOutput();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -10703,14 +10764,6 @@ public interface CombPackage extends EPackage {
 		EClass BOOLEAN_OPERATORS = eINSTANCE.getBooleanOperators();
 
 		/**
-		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BOOLEAN_OPERATORS__P = eINSTANCE.getBooleanOperators_P();
-
-		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.PrecedenceAfter_Impl <em>Precedence After </em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10879,14 +10932,6 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ORDER = eINSTANCE.getOrder();
-
-		/**
-		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ORDER__P = eINSTANCE.getOrder_P();
 
 		/**
 		 * The meta object literal for the '<em><b>S</b></em>' containment reference feature.
@@ -11623,14 +11668,6 @@ public interface CombPackage extends EPackage {
 		EClass OCCURRENCE = eINSTANCE.getOccurrence();
 
 		/**
-		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OCCURRENCE__P = eINSTANCE.getOccurrence_P();
-
-		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.ResponseOneParamImpl <em>Response One Param</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11807,12 +11844,12 @@ public interface CombPackage extends EPackage {
 		EAttribute ELEMENT__NAME = eINSTANCE.getElement_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Subtree Interpretation</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Subtree Interpretations</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT__SUBTREE_INTERPRETATION = eINSTANCE.getElement_SubtreeInterpretation();
+		EAttribute ELEMENT__SUBTREE_INTERPRETATIONS = eINSTANCE.getElement_SubtreeInterpretations();
 
 		/**
 		 * The meta object literal for the '<em><b>Logic Group</b></em>' attribute feature.
@@ -12345,6 +12382,16 @@ public interface CombPackage extends EPackage {
 		EClass STL_OPERATORS = eINSTANCE.getSTLOperators();
 
 		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.LTLPatternMappingsImpl <em>LTL Pattern Mappings</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.LTLPatternMappingsImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLTLPatternMappings()
+		 * @generated
+		 */
+		EClass LTL_PATTERN_MAPPINGS = eINSTANCE.getLTLPatternMappings();
+
+		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12353,6 +12400,16 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LOGIC_GROUP = eINSTANCE.getLogicGroup();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.SupportedOutput
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSupportedOutput()
+		 * @generated
+		 */
+		EEnum SUPPORTED_OUTPUT = eINSTANCE.getSupportedOutput();
 
 	}
 

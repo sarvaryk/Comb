@@ -159,7 +159,7 @@ public class BoundedExistenceBefore_ItemProvider extends BoundedExistneceOnePara
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.OCCURRENCE__P
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.BOUNDED_EXISTNECE_ONE_PARAM__Q;
 
 		if (qualify) {

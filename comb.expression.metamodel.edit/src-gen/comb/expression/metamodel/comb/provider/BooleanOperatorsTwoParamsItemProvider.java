@@ -294,7 +294,7 @@ public class BooleanOperatorsTwoParamsItemProvider extends BooleanOperatorsItemP
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.BOOLEAN_OPERATORS__P
+		boolean qualify = childFeature == CombPackage.Literals.LTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.BOOLEAN_OPERATORS_TWO_PARAMS__Q;
 
 		if (qualify) {
