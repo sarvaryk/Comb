@@ -34,7 +34,7 @@ public class Not_Impl extends BooleanOperatorsOneParamImpl implements Not_ {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "!<P>";
+	protected static final String INTERPRETATION_EDEFAULT = "!(<P>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

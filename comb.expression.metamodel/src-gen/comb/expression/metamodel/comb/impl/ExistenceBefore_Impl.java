@@ -34,7 +34,7 @@ public class ExistenceBefore_Impl extends ExistneceOneParamImpl implements Exist
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "F<Q> -> (!<Q> U <P>)";
+	protected static final String INTERPRETATION_EDEFAULT = "F(<Q>) -> (!(<Q>) U <P>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

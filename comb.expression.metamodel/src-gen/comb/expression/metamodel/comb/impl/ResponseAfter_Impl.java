@@ -34,7 +34,7 @@ public class ResponseAfter_Impl extends ResponseOneParamImpl implements Response
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> G(<P> -> F<S>))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> G(<P> -> F(<S>)))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

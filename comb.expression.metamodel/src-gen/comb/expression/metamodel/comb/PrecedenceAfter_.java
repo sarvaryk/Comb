@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface PrecedenceAfter_ extends PrecedenceOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G!<Q> || F(<Q> && (!<P> U (<S> || G!<P>)))"</code>.
+	 * The default value is <code>"G(!(<Q>)) || F(<Q> && (!(<P>) U (<S> || G(!(<P>)))))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getPrecedenceAfter__Interpretation()
-	 * @model default="G!&lt;Q&gt; || F(&lt;Q&gt; &amp;&amp; (!&lt;P&gt; U (&lt;S&gt; || G!&lt;P&gt;)))" required="true"
+	 * @model default="G(!(&lt;Q&gt;)) || F(&lt;Q&gt; &amp;&amp; (!(&lt;P&gt;) U (&lt;S&gt; || G(!(&lt;P&gt;)))))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

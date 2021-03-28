@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface BoundedExistenceAfter_until_ extends BoundedExistenceTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G(<Q> -> ((!<P> && !<R>) U (<R> || ((<P> & !<R>) U (<R> || ((!<P> && !<R>) U (<R> || ((<P> && !<R>) (<R> || (!<P> W <R>) || G<P>)))))))))"</code>.
+	 * The default value is <code>"G(<Q> -> ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) U (<R> || ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) (<R> || (!(<P>) W <R>) || G(<P>))))))))))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getBoundedExistenceAfter_until__Interpretation()
-	 * @model default="G(&lt;Q&gt; -&gt; ((!&lt;P&gt; &amp;&amp; !&lt;R&gt;) U (&lt;R&gt; || ((&lt;P&gt; &amp; !&lt;R&gt;) U (&lt;R&gt; || ((!&lt;P&gt; &amp;&amp; !&lt;R&gt;) U (&lt;R&gt; || ((&lt;P&gt; &amp;&amp; !&lt;R&gt;) (&lt;R&gt; || (!&lt;P&gt; W &lt;R&gt;) || G&lt;P&gt;)))))))))" required="true"
+	 * @model default="G(&lt;Q&gt; -&gt; ((!(&lt;P&gt;) &amp;&amp; !(&lt;R&gt;)) U (&lt;R&gt; || ((&lt;P&gt; &amp;&amp; !(&lt;R&gt;)) U (&lt;R&gt; || ((!(&lt;P&gt;) &amp;&amp; !(&lt;R&gt;)) U (&lt;R&gt; || ((&lt;P&gt; &amp;&amp; !(&lt;R&gt;)) (&lt;R&gt; || (!(&lt;P&gt;) W &lt;R&gt;) || G(&lt;P&gt;))))))))))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

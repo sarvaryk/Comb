@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface ExistenceAfter_ extends ExistneceOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G(!<Q>) || F(<Q> && F<P>))"</code>.
+	 * The default value is <code>"G(!(<Q>)) || F(<Q> && F(<P>)))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getExistenceAfter__Interpretation()
-	 * @model default="G(!&lt;Q&gt;) || F(&lt;Q&gt; &amp;&amp; F&lt;P&gt;))" required="true"
+	 * @model default="G(!(&lt;Q&gt;)) || F(&lt;Q&gt; &amp;&amp; F(&lt;P&gt;)))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

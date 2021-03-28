@@ -34,7 +34,7 @@ public class ExistenceAfter_until_Impl extends ExistenceTwoParamsImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> (!<R> U <P>))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> (!(<R>) U <P>))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

@@ -34,7 +34,7 @@ public class ExistenceAfter_Impl extends ExistneceOneParamImpl implements Existe
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(!<Q>) || F(<Q> && F<P>))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(!(<Q>)) || F(<Q> && F(<P>)))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

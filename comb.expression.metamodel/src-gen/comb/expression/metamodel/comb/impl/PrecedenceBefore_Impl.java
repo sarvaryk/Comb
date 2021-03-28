@@ -34,7 +34,7 @@ public class PrecedenceBefore_Impl extends PrecedenceOneParamImpl implements Pre
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "F<Q> -> (!<P> U (<S> || <Q>))";
+	protected static final String INTERPRETATION_EDEFAULT = "F(<Q>) -> (!(<P>) U (<S> || <Q>))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

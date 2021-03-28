@@ -34,7 +34,7 @@ public class BoundedExistenceBefore_Impl extends BoundedExistneceOneParamImpl im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "F<Q> -> ((!<P> && !<Q>) U (<Q> || ((<P> && !<Q>) U (<Q> || ((!<P> && !<Q>) U (<Q> || ((<P> && !<Q>) U (<Q> | (!<P> U <Q>)))))))))";
+	protected static final String INTERPRETATION_EDEFAULT = "F(<Q>) -> ((!(<P>) && !(<Q>)) U (<Q> || ((<P> && !(<Q>)) U (<Q> || ((!(<P>) && !(<Q>)) U (<Q> || ((<P> && !(<Q>)) U (<Q> | (!(<P>) U <Q>)))))))))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

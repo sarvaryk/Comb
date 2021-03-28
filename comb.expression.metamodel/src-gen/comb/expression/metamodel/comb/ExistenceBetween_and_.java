@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface ExistenceBetween_and_ extends ExistenceTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G((<Q> && F<R>) -> (!<R> U <P>))"</code>.
+	 * The default value is <code>"G((<Q> && F(<R>)) -> (!(<R>) U <P>))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getExistenceBetween_and__Interpretation()
-	 * @model default="G((&lt;Q&gt; &amp;&amp; F&lt;R&gt;) -&gt; (!&lt;R&gt; U &lt;P&gt;))" required="true"
+	 * @model default="G((&lt;Q&gt; &amp;&amp; F(&lt;R&gt;)) -&gt; (!(&lt;R&gt;) U &lt;P&gt;))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

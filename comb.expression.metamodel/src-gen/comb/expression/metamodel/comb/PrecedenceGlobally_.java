@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface PrecedenceGlobally_ extends PrecedenceWithoutParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"F<P> -> (!<P> U (<S> && !<P>))"</code>.
+	 * The default value is <code>"F(<P>) -> (!(<P>) U (<S> && !(<P>)))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getPrecedenceGlobally__Interpretation()
-	 * @model default="F&lt;P&gt; -&gt; (!&lt;P&gt; U (&lt;S&gt; &amp;&amp; !&lt;P&gt;))" required="true"
+	 * @model default="F(&lt;P&gt;) -&gt; (!(&lt;P&gt;) U (&lt;S&gt; &amp;&amp; !(&lt;P&gt;)))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

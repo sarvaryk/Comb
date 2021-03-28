@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface ExistenceAfter_until_ extends ExistenceTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G(<Q> -> (!<R> U <P>))"</code>.
+	 * The default value is <code>"G(<Q> -> (!(<R>) U <P>))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getExistenceAfter_until__Interpretation()
-	 * @model default="G(&lt;Q&gt; -&gt; (!&lt;R&gt; U &lt;P&gt;))" required="true"
+	 * @model default="G(&lt;Q&gt; -&gt; (!(&lt;R&gt;) U &lt;P&gt;))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface UniversalityBetween_and_ extends UniversalityTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G((<Q> && F<R>) -> <P> U <R>)"</code>.
+	 * The default value is <code>"G((<Q> && F(<R>)) -> <P> U <R>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getUniversalityBetween_and__Interpretation()
-	 * @model default="G((&lt;Q&gt; &amp;&amp; F&lt;R&gt;) -&gt; &lt;P&gt; U &lt;R&gt;)" required="true"
+	 * @model default="G((&lt;Q&gt; &amp;&amp; F(&lt;R&gt;)) -&gt; &lt;P&gt; U &lt;R&gt;)" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

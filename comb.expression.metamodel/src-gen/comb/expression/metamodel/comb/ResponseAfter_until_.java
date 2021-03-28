@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface ResponseAfter_until_ extends ResponseTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G(<Q> -> ((<P> -> (!<R> U <S>)) U <R>) || G(<P> -> (!<R> U <S>)))"</code>.
+	 * The default value is <code>"G(<Q> -> ((<P> -> (!(<R>) U <S>)) U <R>) || G(<P> -> (!(<R>) U <S>)))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getResponseAfter_until__Interpretation()
-	 * @model default="G(&lt;Q&gt; -&gt; ((&lt;P&gt; -&gt; (!&lt;R&gt; U &lt;S&gt;)) U &lt;R&gt;) || G(&lt;P&gt; -&gt; (!&lt;R&gt; U &lt;S&gt;)))" required="true"
+	 * @model default="G(&lt;Q&gt; -&gt; ((&lt;P&gt; -&gt; (!(&lt;R&gt;) U &lt;S&gt;)) U &lt;R&gt;) || G(&lt;P&gt; -&gt; (!(&lt;R&gt;) U &lt;S&gt;)))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

@@ -46,22 +46,22 @@ public enum SupportedOutput implements Enumerator {
 	 */
 	UPPAAL(2, "Uppaal", "Uppaal"),
 	/**
-	* The '<em><b>Nu SMV</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Nu SMV</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #NU_SMV_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #NU_SMV_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	NU_SMV(3, "NuSMV", "NuSMV"),
 	/**
-	* The '<em><b>Spin</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Spin</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #SPIN_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #SPIN_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	SPIN(4, "Spin", "Spin");
 
 	/**

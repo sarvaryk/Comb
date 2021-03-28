@@ -34,7 +34,7 @@ public class ResponseBetween_and_Impl extends ResponseTwoParamsImpl implements R
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G((<Q> && F<R>) -> (<P> -> (!<R> U <S>)) U <R>)";
+	protected static final String INTERPRETATION_EDEFAULT = "G((<Q> && F(<R>)) -> (<P> -> (!(<R>) U <S>)) U <R>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

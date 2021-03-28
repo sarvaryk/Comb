@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface Not_ extends BooleanOperatorsOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"!<P>"</code>.
+	 * The default value is <code>"!(<P>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getNot__Interpretation()
-	 * @model default="!&lt;P&gt;" required="true"
+	 * @model default="!(&lt;P&gt;)" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

@@ -35,7 +35,7 @@ public class BoundedExistenceAfter_until_Impl extends BoundedExistenceTwoParamsI
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> ((!<P> && !<R>) U (<R> || ((<P> & !<R>) U (<R> || ((!<P> && !<R>) U (<R> || ((<P> && !<R>) (<R> || (!<P> W <R>) || G<P>)))))))))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) U (<R> || ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) (<R> || (!(<P>) W <R>) || G(<P>))))))))))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

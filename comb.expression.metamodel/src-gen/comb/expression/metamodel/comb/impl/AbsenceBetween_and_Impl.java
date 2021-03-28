@@ -34,7 +34,7 @@ public class AbsenceBetween_and_Impl extends AbsenceTwoParamsImpl implements Abs
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G((<Q> && F<R>) -> !<P> U <R>)";
+	protected static final String INTERPRETATION_EDEFAULT = "G((<Q> && F(<R>)) -> !(<P>) U <R>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

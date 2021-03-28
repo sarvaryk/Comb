@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface AbsenceGlobally_ extends AbsenceWithoutParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G(!<P>)"</code>.
+	 * The default value is <code>"G(!(<P>))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getAbsenceGlobally__Interpretation()
-	 * @model default="G(!&lt;P&gt;)" required="true"
+	 * @model default="G(!(&lt;P&gt;))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

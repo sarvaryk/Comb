@@ -34,7 +34,7 @@ public class AbsenceAfter_Impl extends AbsenceOneParamImpl implements AbsenceAft
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> <(!<P>))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> !(<P>))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

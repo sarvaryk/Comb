@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface BoundedExistenceAfter_ extends BoundedExistneceOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"F<Q> -> (!<Q> U (<Q> && (!<P> W (<P> W (!<P> W (<P> W G!<P>))))))"</code>.
+	 * The default value is <code>"F(<Q>) -> (!(<Q>) U (<Q> && (!(<P>) W (<P> W (!(<P>) W (<P> W G(!(<P>))))))))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getBoundedExistenceAfter__Interpretation()
-	 * @model default="F&lt;Q&gt; -&gt; (!&lt;Q&gt; U (&lt;Q&gt; &amp;&amp; (!&lt;P&gt; W (&lt;P&gt; W (!&lt;P&gt; W (&lt;P&gt; W G!&lt;P&gt;))))))" required="true"
+	 * @model default="F(&lt;Q&gt;) -&gt; (!(&lt;Q&gt;) U (&lt;Q&gt; &amp;&amp; (!(&lt;P&gt;) W (&lt;P&gt; W (!(&lt;P&gt;) W (&lt;P&gt; W G(!(&lt;P&gt;))))))))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

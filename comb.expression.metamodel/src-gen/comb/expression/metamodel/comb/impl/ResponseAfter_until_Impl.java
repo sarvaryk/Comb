@@ -34,7 +34,7 @@ public class ResponseAfter_until_Impl extends ResponseTwoParamsImpl implements R
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> ((<P> -> (!<R> U <S>)) U <R>) || G(<P> -> (!<R> U <S>)))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> ((<P> -> (!(<R>) U <S>)) U <R>) || G(<P> -> (!(<R>) U <S>)))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

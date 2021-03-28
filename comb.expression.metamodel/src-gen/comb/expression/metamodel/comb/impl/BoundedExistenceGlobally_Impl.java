@@ -35,7 +35,7 @@ public class BoundedExistenceGlobally_Impl extends BoundedExistenceWithoutParams
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "(!<P> W (<P> W (!<P> W (<P> W G!<P>))))";
+	protected static final String INTERPRETATION_EDEFAULT = "(!(<P>) W (<P> W (!(<P>) W (<P> W G(!(<P>))))))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

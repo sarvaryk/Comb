@@ -34,7 +34,7 @@ public class AbsenceBefore_Impl extends AbsenceOneParamImpl implements AbsenceBe
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "F<Q> -> (!<P> U <Q>)";
+	protected static final String INTERPRETATION_EDEFAULT = "F(<Q>) -> (!(<P>) U <Q>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

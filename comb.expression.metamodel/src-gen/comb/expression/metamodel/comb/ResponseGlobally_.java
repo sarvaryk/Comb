@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface ResponseGlobally_ extends ResponseWithoutParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G(<P> -> F<S>)"</code>.
+	 * The default value is <code>"G(<P> -> F(<S>))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getResponseGlobally__Interpretation()
-	 * @model default="G(&lt;P&gt; -&gt; F&lt;S&gt;)" required="true"
+	 * @model default="G(&lt;P&gt; -&gt; F(&lt;S&gt;))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

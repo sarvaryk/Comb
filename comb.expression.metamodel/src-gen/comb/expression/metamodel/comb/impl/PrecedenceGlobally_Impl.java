@@ -34,7 +34,7 @@ public class PrecedenceGlobally_Impl extends PrecedenceWithoutParamsImpl impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "F<P> -> (!<P> U (<S> && !<P>))";
+	protected static final String INTERPRETATION_EDEFAULT = "F(<P>) -> (!(<P>) U (<S> && !(<P>)))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

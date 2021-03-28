@@ -34,7 +34,7 @@ public class PrecedenceAfter_until_Impl extends PrecedenceTwoParamsImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> ((!<P> U (<S> || <R>)) || G!<P>))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> ((!(<P>) U (<S> || <R>)) || G(!(<P>))))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface BoundedExistenceBefore_ extends BoundedExistneceOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"F<Q> -> ((!<P> && !<Q>) U (<Q> || ((<P> && !<Q>) U (<Q> || ((!<P> && !<Q>) U (<Q> || ((<P> && !<Q>) U (<Q> | (!<P> U <Q>)))))))))"</code>.
+	 * The default value is <code>"F(<Q>) -> ((!(<P>) && !(<Q>)) U (<Q> || ((<P> && !(<Q>)) U (<Q> || ((!(<P>) && !(<Q>)) U (<Q> || ((<P> && !(<Q>)) U (<Q> | (!(<P>) U <Q>)))))))))"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getBoundedExistenceBefore__Interpretation()
-	 * @model default="F&lt;Q&gt; -&gt; ((!&lt;P&gt; &amp;&amp; !&lt;Q&gt;) U (&lt;Q&gt; || ((&lt;P&gt; &amp;&amp; !&lt;Q&gt;) U (&lt;Q&gt; || ((!&lt;P&gt; &amp;&amp; !&lt;Q&gt;) U (&lt;Q&gt; || ((&lt;P&gt; &amp;&amp; !&lt;Q&gt;) U (&lt;Q&gt; | (!&lt;P&gt; U &lt;Q&gt;)))))))))" required="true"
+	 * @model default="F(&lt;Q&gt;) -&gt; ((!(&lt;P&gt;) &amp;&amp; !(&lt;Q&gt;)) U (&lt;Q&gt; || ((&lt;P&gt; &amp;&amp; !(&lt;Q&gt;)) U (&lt;Q&gt; || ((!(&lt;P&gt;) &amp;&amp; !(&lt;Q&gt;)) U (&lt;Q&gt; || ((&lt;P&gt; &amp;&amp; !(&lt;Q&gt;)) U (&lt;Q&gt; | (!(&lt;P&gt;) U &lt;Q&gt;)))))))))" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

@@ -34,7 +34,7 @@ public class ResponseGlobally_Impl extends ResponseWithoutParamsImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<P> -> F<S>)";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<P> -> F(<S>))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

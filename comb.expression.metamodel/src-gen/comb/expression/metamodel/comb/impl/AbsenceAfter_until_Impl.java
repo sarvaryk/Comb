@@ -34,7 +34,7 @@ public class AbsenceAfter_until_Impl extends AbsenceTwoParamsImpl implements Abs
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> !<P> U (<R> | G(!<P>)))";
+	protected static final String INTERPRETATION_EDEFAULT = "G(<Q> -> !(<P>) U (<R> | G(!(<P>))))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

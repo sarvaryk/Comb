@@ -34,7 +34,7 @@ public class AbsenceGlobally_Impl extends AbsenceWithoutParamsImpl implements Ab
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G(!<P>)";
+	protected static final String INTERPRETATION_EDEFAULT = "G(!(<P>))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

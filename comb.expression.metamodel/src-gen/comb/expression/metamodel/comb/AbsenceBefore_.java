@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface AbsenceBefore_ extends AbsenceOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"F<Q> -> (!<P> U <Q>)"</code>.
+	 * The default value is <code>"F(<Q>) -> (!(<P>) U <Q>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getAbsenceBefore__Interpretation()
-	 * @model default="F&lt;Q&gt; -&gt; (!&lt;P&gt; U &lt;Q&gt;)" required="true"
+	 * @model default="F(&lt;Q&gt;) -&gt; (!(&lt;P&gt;) U &lt;Q&gt;)" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

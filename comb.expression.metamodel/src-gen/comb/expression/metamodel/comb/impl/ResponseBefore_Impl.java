@@ -34,7 +34,7 @@ public class ResponseBefore_Impl extends ResponseOneParamImpl implements Respons
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "(<P> -> (!<Q> U <S>)) U (<Q> || G(!<Q>))";
+	protected static final String INTERPRETATION_EDEFAULT = "(<P> -> (!(<Q>) U <S>)) U (<Q> || G(!(<Q>)))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

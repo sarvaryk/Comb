@@ -34,7 +34,7 @@ public class ExistenceBetween_and_Impl extends ExistenceTwoParamsImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G((<Q> && F<R>) -> (!<R> U <P>))";
+	protected static final String INTERPRETATION_EDEFAULT = "G((<Q> && F(<R>)) -> (!(<R>) U <P>))";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

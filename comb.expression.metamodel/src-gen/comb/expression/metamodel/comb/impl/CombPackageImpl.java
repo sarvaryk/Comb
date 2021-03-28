@@ -3702,7 +3702,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(precedenceAfter_until_EClass, PrecedenceAfter_until_.class, "PrecedenceAfter_until_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrecedenceAfter_until__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> ((!<P> U (<S> || <R>)) || G!<P>))", 1, 1, PrecedenceAfter_until_.class, !IS_TRANSIENT,
+				"G(<Q> -> ((!(<P>) U (<S> || <R>)) || G(!(<P>))))", 1, 1, PrecedenceAfter_until_.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrecedenceAfter_until__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: after <Q>, <S> (<S> may not become true) must precede <P> until <R> becomes true in the given sub-expression.",
@@ -3712,7 +3712,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(absenceAfter_until_EClass, AbsenceAfter_until_.class, "AbsenceAfter_until_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbsenceAfter_until__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> !<P> U (<R> | G(!<P>)))", 1, 1, AbsenceAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"G(<Q> -> !(<P>) U (<R> | G(!(<P>))))", 1, 1, AbsenceAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbsenceAfter_until__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always false after <Q> (the state in which <Q> becomes true is included) and <R> (the state in which <R> becomes true is excluded, but <R> may not ever become true) in the given sub-expression.",
@@ -3740,7 +3740,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(universalityBefore_EClass, UniversalityBefore_.class, "UniversalityBefore_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUniversalityBefore__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<Q> -> (<P> U <Q>)", 1, 1, UniversalityBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"F(<Q>) -> (<P> U <Q>)", 1, 1, UniversalityBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUniversalityBefore__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always true before <Q> (the state in which <Q> becomes true is excluded, but <Q> must eventually become true) in the given sub-expression.",
@@ -3750,7 +3750,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(precedenceBefore_EClass, PrecedenceBefore_.class, "PrecedenceBefore_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrecedenceBefore__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<Q> -> (!<P> U (<S> || <Q>))", 1, 1, PrecedenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"F(<Q>) -> (!(<P>) U (<S> || <Q>))", 1, 1, PrecedenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrecedenceBefore__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> does not precede <S> (<S> may not become true) before <Q> (<Q> must eventually become true) in the given sub-expression.",
@@ -3772,8 +3772,9 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(boundedExistenceAfter_EClass, BoundedExistenceAfter_.class, "BoundedExistenceAfter_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundedExistenceAfter__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<Q> -> (!<Q> U (<Q> && (!<P> W (<P> W (!<P> W (<P> W G!<P>))))))", 1, 1, BoundedExistenceAfter_.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"F(<Q>) -> (!(<Q>) U (<Q> && (!(<P>) W (<P> W (!(<P>) W (<P> W G(!(<P>))))))))", 1, 1,
+				BoundedExistenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundedExistenceAfter__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true exactly 2 times after <Q> (the state in which <Q> becomes true is included) in the given sub-expression.",
 				1, 1, BoundedExistenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -3782,7 +3783,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(boundedExistenceBetween_and_EClass, BoundedExistenceBetween_and_.class,
 				"BoundedExistenceBetween_and_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundedExistenceBetween_and__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G((<Q> && F<R>) -> ((!<P> && !<R>) U (<R> || ((<P> && !<R>) U (<R> || ((!<P> && !<R>) U (<R> || ((<P> && !<R>) U (<R> || (!<P> U <R>))))))))))",
+				"G((<Q> && F(<R>)) -> ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) U (<R> || ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) U (<R> || (!(<P>) U <R>))))))))))",
 				1, 1, BoundedExistenceBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundedExistenceBetween_and__Description(), ecorePackage.getEString(), "description",
@@ -3793,7 +3794,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(boundedExistenceGlobally_EClass, BoundedExistenceGlobally_.class, "BoundedExistenceGlobally_",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundedExistenceGlobally__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"(!<P> W (<P> W (!<P> W (<P> W G!<P>))))", 1, 1, BoundedExistenceGlobally_.class, !IS_TRANSIENT,
+				"(!(<P>) W (<P> W (!(<P>) W (<P> W G(!(<P>))))))", 1, 1, BoundedExistenceGlobally_.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundedExistenceGlobally__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true exactly 2 times in the given sub-expression.",
@@ -3803,7 +3804,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(absenceBefore_EClass, AbsenceBefore_.class, "AbsenceBefore_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbsenceBefore__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<Q> -> (!<P> U <Q>)", 1, 1, AbsenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"F(<Q>) -> (!(<P>) U <Q>)", 1, 1, AbsenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbsenceBefore__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always false before <Q> (the state in which <Q> becomes true is excluded, but <Q> must eventually become true) in the given sub-expression.",
@@ -3813,7 +3814,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(universalityBetween_and_EClass, UniversalityBetween_and_.class, "UniversalityBetween_and_",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUniversalityBetween_and__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G((<Q> && F<R>) -> <P> U <R>)", 1, 1, UniversalityBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"G((<Q> && F(<R>)) -> <P> U <R>)", 1, 1, UniversalityBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUniversalityBetween_and__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always true between <Q> (the state in which <Q> becomes true is included) and <R> (the state in which <R> becomes true is excluded) in the given sub-expression.",
@@ -3841,8 +3842,9 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(responseAfter_until_EClass, ResponseAfter_until_.class, "ResponseAfter_until_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResponseAfter_until__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> ((<P> -> (!<R> U <S>)) U <R>) || G(<P> -> (!<R> U <S>)))", 1, 1, ResponseAfter_until_.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"G(<Q> -> ((<P> -> (!(<R>) U <S>)) U <R>) || G(<P> -> (!(<R>) U <S>)))", 1, 1,
+				ResponseAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResponseAfter_until__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: after <Q>, <P> becomes true and <S> becomes true too until <R> becomes true in the given sub-expression.",
 				1, 1, ResponseAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -3860,8 +3862,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(precedenceAfter_EClass, PrecedenceAfter_.class, "PrecedenceAfter_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrecedenceAfter__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G!<Q> || F(<Q> && (!<P> U (<S> || G!<P>)))", 1, 1, PrecedenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"G(!(<Q>)) || F(<Q> && (!(<P>) U (<S> || G(!(<P>)))))", 1, 1, PrecedenceAfter_.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrecedenceAfter__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <S> (<S> may not become true) precedes <P> after <Q> (<Q> may not become true)",
 				1, 1, PrecedenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -3882,7 +3884,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(responseBetween_and_EClass, ResponseBetween_and_.class, "ResponseBetween_and_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResponseBetween_and__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G((<Q> && F<R>) -> (<P> -> (!<R> U <S>)) U <R>)", 1, 1, ResponseBetween_and_.class, !IS_TRANSIENT,
+				"G((<Q> && F(<R>)) -> (<P> -> (!(<R>) U <S>)) U <R>)", 1, 1, ResponseBetween_and_.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResponseBetween_and__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> becomes true and <S> becomes true too between <Q> and <R>in the given sub-expression.",
@@ -3892,7 +3894,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(responseAfter_EClass, ResponseAfter_.class, "ResponseAfter_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResponseAfter__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> G(<P> -> F<S>))", 1, 1, ResponseAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"G(<Q> -> G(<P> -> F(<S>)))", 1, 1, ResponseAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResponseAfter__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: after <Q>, <P> becomes true and eventually <S> becomes true too in the given sub-expression.",
@@ -3905,7 +3907,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(precedenceBetween_and_EClass, PrecedenceBetween_and_.class, "PrecedenceBetween_and_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrecedenceBetween_and__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G((<Q> && F<R>) -> (!<P> U (<S> || <R>)))", 1, 1, PrecedenceBetween_and_.class, !IS_TRANSIENT,
+				"G((<Q> && F(<R>)) -> (!(<P>) U (<S> || <R>)))", 1, 1, PrecedenceBetween_and_.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrecedenceBetween_and__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <S> (<S> may not become true) precedes <P> between <Q> and <R>",
@@ -3922,7 +3924,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(existenceBetween_and_EClass, ExistenceBetween_and_.class, "ExistenceBetween_and_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExistenceBetween_and__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G((<Q> && F<R>) -> (!<R> U <P>))", 1, 1, ExistenceBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"G((<Q> && F(<R>)) -> (!(<R>) U <P>))", 1, 1, ExistenceBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExistenceBetween_and__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true between <Q> (the state in which <Q> becomes true is included) and <R> (the state in which <R> becomes true is excluded) in the given sub-expression.",
@@ -3932,8 +3934,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(existenceAfter_until_EClass, ExistenceAfter_until_.class, "ExistenceAfter_until_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExistenceAfter_until__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> (!<R> U <P>))", 1, 1, ExistenceAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"G(<Q> -> (!(<R>) U <P>))", 1, 1, ExistenceAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExistenceAfter_until__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true after <Q> (the state in which <Q> becomes true is included) and <R> (the state in which <R> becomes true is excluded, but <R> may not ever become true) in the given sub-expression.",
 				1, 1, ExistenceAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -3942,8 +3944,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(responseBefore_EClass, ResponseBefore_.class, "ResponseBefore_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResponseBefore__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"(<P> -> (!<Q> U <S>)) U (<Q> || G(!<Q>))", 1, 1, ResponseBefore_.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"(<P> -> (!(<Q>) U <S>)) U (<Q> || G(!(<Q>)))", 1, 1, ResponseBefore_.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResponseBefore__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> becomes true and <S> becomes true too before <Q> (<Q> may not become true) in the given sub-expression.",
 				1, 1, ResponseBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -3969,8 +3971,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		initEClass(absenceGlobally_EClass, AbsenceGlobally_.class, "AbsenceGlobally_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAbsenceGlobally__Interpretation(), ecorePackage.getEString(), "interpretation", "G(!<P>)", 1,
-				1, AbsenceGlobally_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getAbsenceGlobally__Interpretation(), ecorePackage.getEString(), "interpretation", "G(!(<P>))",
+				1, 1, AbsenceGlobally_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbsenceGlobally__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always false in the given sub-expression.",
@@ -3980,7 +3982,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(absenceBetween_and_EClass, AbsenceBetween_and_.class, "AbsenceBetween_and_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbsenceBetween_and__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G((<Q> && F<R>) -> !<P> U <R>)", 1, 1, AbsenceBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"G((<Q> && F(<R>)) -> !(<P>) U <R>)", 1, 1, AbsenceBetween_and_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbsenceBetween_and__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always false between <Q> (the state in which <Q> becomes true is included) and <R> (the state in which <R> becomes true is excluded) in the given sub-expression.",
@@ -4022,7 +4024,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(boundedExistenceAfter_until_EClass, BoundedExistenceAfter_until_.class,
 				"BoundedExistenceAfter_until_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundedExistenceAfter_until__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> ((!<P> && !<R>) U (<R> || ((<P> & !<R>) U (<R> || ((!<P> && !<R>) U (<R> || ((<P> && !<R>) (<R> || (!<P> W <R>) || G<P>)))))))))",
+				"G(<Q> -> ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) U (<R> || ((!(<P>) && !(<R>)) U (<R> || ((<P> && !(<R>)) (<R> || (!(<P>) W <R>) || G(<P>))))))))))",
 				1, 1, BoundedExistenceAfter_until_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundedExistenceAfter_until__Description(), ecorePackage.getEString(), "description",
@@ -4033,8 +4035,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(existenceAfter_EClass, ExistenceAfter_.class, "ExistenceAfter_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExistenceAfter__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(!<Q>) || F(<Q> && F<P>))", 1, 1, ExistenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				"G(!(<Q>)) || F(<Q> && F(<P>)))", 1, 1, ExistenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExistenceAfter__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true after <Q> (the state in which <Q> becomes true is included) in the given sub-expression.",
 				1, 1, ExistenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -4074,7 +4076,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(responseGlobally_EClass, ResponseGlobally_.class, "ResponseGlobally_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResponseGlobally__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<P> -> F<S>)", 1, 1, ResponseGlobally_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"G(<P> -> F(<S>))", 1, 1, ResponseGlobally_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResponseGlobally__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> becomes true and eventually <S> becomes true too in the given sub-expression.",
@@ -4094,7 +4096,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(boundedExistenceBefore_EClass, BoundedExistenceBefore_.class, "BoundedExistenceBefore_",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoundedExistenceBefore__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<Q> -> ((!<P> && !<Q>) U (<Q> || ((<P> && !<Q>) U (<Q> || ((!<P> && !<Q>) U (<Q> || ((<P> && !<Q>) U (<Q> | (!<P> U <Q>)))))))))",
+				"F(<Q>) -> ((!(<P>) && !(<Q>)) U (<Q> || ((<P> && !(<Q>)) U (<Q> || ((!(<P>) && !(<Q>)) U (<Q> || ((<P> && !(<Q>)) U (<Q> | (!(<P>) U <Q>)))))))))",
 				1, 1, BoundedExistenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBoundedExistenceBefore__Description(), ecorePackage.getEString(), "description",
@@ -4114,8 +4116,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		initEClass(_implies_EClass, _implies_.class, "_implies_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(get_implies__Interpretation(), ecorePackage.getEString(), "interpretation", "!<P> || <Q>", 1, 1,
-				_implies_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(get_implies__Interpretation(), ecorePackage.getEString(), "interpretation", "!(<P>) || <Q>", 1,
+				1, _implies_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(get_implies__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> becomes true then <Q> becomes true in the given sub-expression.",
@@ -4144,7 +4146,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(absenceAfter_EClass, AbsenceAfter_.class, "AbsenceAfter_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbsenceAfter__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"G(<Q> -> <(!<P>))", 1, 1, AbsenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"G(<Q> -> !(<P>))", 1, 1, AbsenceAfter_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbsenceAfter__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always false after <Q> (the state in which <Q> becomes true is included) in the given sub-expression.",
@@ -4172,7 +4174,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(existenceBefore_EClass, ExistenceBefore_.class, "ExistenceBefore_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExistenceBefore__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<Q> -> (!<Q> U <P>)", 1, 1, ExistenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"F(<Q>) -> (!(<Q>) U <P>)", 1, 1, ExistenceBefore_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExistenceBefore__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true before <Q> (the state in which <Q> becomes true is excluded, but <Q> must eventually become true) in the given sub-expression.",
@@ -4197,7 +4199,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(precedenceGlobally_EClass, PrecedenceGlobally_.class, "PrecedenceGlobally_", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrecedenceGlobally__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F<P> -> (!<P> U (<S> && !<P>))", 1, 1, PrecedenceGlobally_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"F(<P>) -> (!(<P>) U (<S> && !(<P>)))", 1, 1, PrecedenceGlobally_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrecedenceGlobally__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <S> always precedes <P> (<P> must eventually become true) in the given sub-expression.",
@@ -4229,8 +4231,9 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(not_EClass, Not_.class, "Not_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNot__Interpretation(), ecorePackage.getEString(), "interpretation", "!<P>", 1, 1, Not_.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNot__Interpretation(), ecorePackage.getEString(), "interpretation", "!(<P>)", 1, 1,
+				Not_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 		initEAttribute(getNot__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is false in the given sub-expression.",
 				1, 1, Not_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
