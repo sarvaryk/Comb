@@ -2,74 +2,42 @@
 <?eclipse version="3.4"?>
 <plugin>
     <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_handlers.AUTFormatHandler" name="AUT format"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_handlers.AUTFormatHandler" commandId="comb.generator.action.save_automaton_handlers.AUTFormatHandler"/>
-    </extension>
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_handlers.FSPFormatHandler" name="FSP format"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_handlers.FSPFormatHandler" commandId="comb.generator.action.save_automaton_handlers.FSPFormatHandler"/>
-    </extension>
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_handlers.SMFormatHandler" name="SM format"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_handlers.SMFormatHandler" commandId="comb.generator.action.save_automaton_handlers.SMFormatHandler"/>
-    </extension>
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_handlers.SpinFormatHandler" name="Spin format"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_handlers.SpinFormatHandler" commandId="comb.generator.action.save_automaton_handlers.SpinFormatHandler"/>
-    </extension>
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_handlers.XMLFormatHandler" name="XML format"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_handlers.XMLFormatHandler" commandId="comb.generator.action.save_automaton_handlers.XMLFormatHandler"/>
-    </extension>
-
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.SaveInterpretationsHandler" name="Save interpretations"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.SaveInterpretationsHandler" commandId="comb.generator.action.SaveInterpretationsHandler"/>
+      <command id="AUT_format" name="AUT format"/>
+      <command id="FSP_format" name="FSP format"/>
+      <command id="SM_format" name="SM format"/>
+      <command id="Spin_format" name="Spin format"/>
+      <command id="XML_format" name="XML format"/>
+      
+      <command id="Save_Interpretations" name="Save interpretations"/>
+      
+      <command id="Import_Comb_element" name="Import Comb element"/>
+      <command id="Import_Comb_file" name="Import Comb file"/>
+      <command id="Export_Comb_element" name="Export Comb element"/>
+      <command id="Export_Comb_file" name="Export Comb file"/>
     </extension>
     
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.ImportCombElement" name="Import Comb element"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export_handlers.ImportCombElementHandler" commandId="comb.generator.action.ImportCombElement"/>
-    </extension>
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.ImportCombFile" name="Import Comb file"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export_handlers.ImportCombFileHandler" commandId="comb.generator.action.ImportCombFile"/>
-    </extension>
     
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.ExportCombElement" name="Export Comb element"/>
-    </extension>
+    
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export_handlers.ExportCombElementHandler" commandId="comb.generator.action.ExportCombElement"/>
-    </extension>
-    <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.ExportCombFile" name="Export Comb file"/>
-    </extension>
-    <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export_handlers.ExportCombFileHandler" commandId="comb.generator.action.ExportCombFile"/>
+      <handler class="comb.generator.action.save_automaton_handlers.AUTFormatHandler" commandId="AUT_format"/>
+      <handler class="comb.generator.action.save_automaton_handlers.FSPFormatHandler" commandId="FSP_format"/>
+      <handler class="comb.generator.action.save_automaton_handlers.SMFormatHandler" commandId="SM_format"/>
+      <handler class="comb.generator.action.save_automaton_handlers.SpinFormatHandler" commandId="Spin_format"/>
+      <handler class="comb.generator.action.save_automaton_handlers.XMLFormatHandler" commandId="XML_format"/>
+      
+      <handler class="comb.generator.action.SaveInterpretationsHandler" commandId="Save_Interpretations"/>
+      
+      <handler class="comb.generator.action.import_export_handlers.ImportCombElementHandler" commandId="Import_Comb_element"/>
+      <handler class="comb.generator.action.import_export_handlers.ImportCombFileHandler" commandId="Import_Comb_file"/>
+      <handler class="comb.generator.action.import_export_handlers.ExportCombElementHandler" commandId="Export_Comb_element"/>
+      <handler class="comb.generator.action.import_export_handlers.ExportCombFileHandler" commandId="Export_Comb_file"/>
     </extension>
     
     <extension point="org.eclipse.ui.menus">
     <menuContribution allPopups="false" locationURI="popup:org.eclipse.sirius.ui.tools.views.model.explorer#PopupMenu?after=additions">
     <menu label="Comb generator" id="comb-menu-model">  
     	<menu label="Save automaton as" id="comb-automaton-output-menu">
-    	    <command commandId="comb.generator.action.save_automaton_handlers.AUTFormatHandler" label="AUT format" style="push">
+    	    <command commandId="AUT_format" label="AUT format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -78,7 +46,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command>
-	    	<command commandId="comb.generator.action.save_automaton_handlers.FSPFormatHandler" label="FSP format" style="push">
+	    	<command commandId="FSP_format" label="FSP format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -87,7 +55,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command>
-	    	<command commandId="comb.generator.action.save_automaton_handlers.SMFormatHandler" label="SM format" style="push">
+	    	<command commandId="SM_format" label="SM format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -96,7 +64,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command>
-    		<command commandId="comb.generator.action.save_automaton_handlers.SpinFormatHandler" label="Spin format" style="push">
+    		<command commandId="Spin_format" label="Spin format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -105,7 +73,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command> 
-	    	<command commandId="comb.generator.action.save_automaton_handlers.XMLFormatHandler" label="XML format" style="push">
+	    	<command commandId="XML_format" label="XML format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -116,7 +84,7 @@
 	    	</command>  
     	</menu>
 	    	
-	    <command commandId="comb.generator.action.SaveInterpretationsHandler" label="Save interpretations" style="push">
+	    <command commandId="Save_Interpretations" label="Save interpretations" style="push">
 	    	<visibleWhen checkEnabled="false">
               <iterate>
                  <adapt
@@ -126,7 +94,7 @@
             </visibleWhen>
 	    </command>
 	    
-	    <command commandId="comb.generator.action.ImportCombElement" label="Import" style="push">
+	    <command commandId="Import_Comb_element" label="Import" style="push">
 	    	<visibleWhen checkEnabled="false">
               <iterate>
                  <adapt
@@ -135,7 +103,7 @@
               </iterate>
             </visibleWhen>
 	    </command>
-	    <command commandId="comb.generator.action.ImportCombFile" label="Import" style="push">
+	    <command commandId="Import_Comb_file" label="Import" style="push">
 	    	<visibleWhen checkEnabled="false">
               <iterate>
                  <test
@@ -145,7 +113,7 @@
               </iterate>
             </visibleWhen>
 	    </command>
-	    <command commandId="comb.generator.action.ExportCombElement" label="Export" style="push">
+	    <command commandId="Export_Comb_element" label="Export" style="push">
 	    	<visibleWhen checkEnabled="false">
               <iterate>
                  <adapt
@@ -154,7 +122,7 @@
               </iterate>
             </visibleWhen>
 	    </command>
-	    <command commandId="comb.generator.action.ExportCombFile" label="Export" style="push">
+	    <command commandId="Export_Comb_file" label="Export" style="push">
 	    	<visibleWhen checkEnabled="false">
               <iterate>
                  <test
