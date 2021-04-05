@@ -1,4 +1,4 @@
-package comb.generator.action.save_automaton_as;
+package comb.generator.action.save_automaton_handlers;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import comb.generator.action.CombExpressionUtils;
 import gov.nasa.ltl.graph.Graph;
 import gov.nasa.ltl.trans.ParseErrorException;
 
-public class FSPFormatHandler extends AbstractHandler {
+public class XMLFormatHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -28,7 +28,7 @@ public class FSPFormatHandler extends AbstractHandler {
 			g = CombExpressionUtils.generateAutomaton(element);
 			
 			if(g != null) {
-				g.save(filePath, gov.nasa.ltl.graph.Graph.FSP_FORMAT);
+				g.save(filePath, gov.nasa.ltl.graph.Graph.XML_FORMAT);
 				
 				CombExpressionUtils.showMessageDialog("File saved successfully!\nSee: " + filePath);
 			}

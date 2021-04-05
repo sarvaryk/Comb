@@ -2,34 +2,34 @@
 <?eclipse version="3.4"?>
 <plugin>
     <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_as.AUTFormatHandler" name="AUT format"/>
+      <command id="comb.generator.action.save_automaton_handlers.AUTFormatHandler" name="AUT format"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_as.AUTFormatHandler" commandId="comb.generator.action.save_automaton_as.AUTFormatHandler"/>
+      <handler class="comb.generator.action.save_automaton_handlers.AUTFormatHandler" commandId="comb.generator.action.save_automaton_handlers.AUTFormatHandler"/>
     </extension>
     <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_as.FSPFormatHandler" name="FSP format"/>
+      <command id="comb.generator.action.save_automaton_handlers.FSPFormatHandler" name="FSP format"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_as.FSPFormatHandler" commandId="comb.generator.action.save_automaton_as.FSPFormatHandler"/>
+      <handler class="comb.generator.action.save_automaton_handlers.FSPFormatHandler" commandId="comb.generator.action.save_automaton_handlers.FSPFormatHandler"/>
     </extension>
     <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_as.SMFormatHandler" name="SM format"/>
+      <command id="comb.generator.action.save_automaton_handlers.SMFormatHandler" name="SM format"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_as.SMFormatHandler" commandId="comb.generator.action.save_automaton_as.SMFormatHandler"/>
+      <handler class="comb.generator.action.save_automaton_handlers.SMFormatHandler" commandId="comb.generator.action.save_automaton_handlers.SMFormatHandler"/>
     </extension>
     <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_as.SpinFormatHandler" name="Spin format"/>
+      <command id="comb.generator.action.save_automaton_handlers.SpinFormatHandler" name="Spin format"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_as.SpinFormatHandler" commandId="comb.generator.action.save_automaton_as.SpinFormatHandler"/>
+      <handler class="comb.generator.action.save_automaton_handlers.SpinFormatHandler" commandId="comb.generator.action.save_automaton_handlers.SpinFormatHandler"/>
     </extension>
     <extension point="org.eclipse.ui.commands">
-      <command id="comb.generator.action.save_automaton_as.XMLFormatHandler" name="XML format"/>
+      <command id="comb.generator.action.save_automaton_handlers.XMLFormatHandler" name="XML format"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_as.XMLFormatHandler" commandId="comb.generator.action.save_automaton_as.XMLFormatHandler"/>
+      <handler class="comb.generator.action.save_automaton_handlers.XMLFormatHandler" commandId="comb.generator.action.save_automaton_handlers.XMLFormatHandler"/>
     </extension>
 
     <extension point="org.eclipse.ui.commands">
@@ -43,33 +43,33 @@
       <command id="comb.generator.action.ImportCombElement" name="Import Comb element"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export.ImportCombElementHandler" commandId="comb.generator.action.ImportCombElement"/>
+      <handler class="comb.generator.action.import_export_handlers.ImportCombElementHandler" commandId="comb.generator.action.ImportCombElement"/>
     </extension>
     <extension point="org.eclipse.ui.commands">
       <command id="comb.generator.action.ImportCombFile" name="Import Comb file"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export.ImportCombFileHandler" commandId="comb.generator.action.ImportCombFile"/>
+      <handler class="comb.generator.action.import_export_handlers.ImportCombFileHandler" commandId="comb.generator.action.ImportCombFile"/>
     </extension>
     
     <extension point="org.eclipse.ui.commands">
       <command id="comb.generator.action.ExportCombElement" name="Export Comb element"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export.ExportCombElementHandler" commandId="comb.generator.action.ExportCombElement"/>
+      <handler class="comb.generator.action.import_export_handlers.ExportCombElementHandler" commandId="comb.generator.action.ExportCombElement"/>
     </extension>
     <extension point="org.eclipse.ui.commands">
       <command id="comb.generator.action.ExportCombFile" name="Export Comb file"/>
     </extension>
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.import_export.ExportCombFileHandler" commandId="comb.generator.action.ExportCombFile"/>
+      <handler class="comb.generator.action.import_export_handlers.ExportCombFileHandler" commandId="comb.generator.action.ExportCombFile"/>
     </extension>
     
     <extension point="org.eclipse.ui.menus">
     <menuContribution allPopups="false" locationURI="popup:org.eclipse.sirius.ui.tools.views.model.explorer#PopupMenu?after=additions">
     <menu label="Comb generator" id="comb-menu-model">  
     	<menu label="Save automaton as" id="comb-automaton-output-menu">
-    	    <command commandId="comb.generator.action.save_automaton_as.AUTFormatHandler" label="AUT format" style="push">
+    	    <command commandId="comb.generator.action.save_automaton_handlers.AUTFormatHandler" label="AUT format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -78,7 +78,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command>
-	    	<command commandId="comb.generator.action.save_automaton_as.FSPFormatHandler" label="FSP format" style="push">
+	    	<command commandId="comb.generator.action.save_automaton_handlers.FSPFormatHandler" label="FSP format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -87,7 +87,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command>
-	    	<command commandId="comb.generator.action.save_automaton_as.SMFormatHandler" label="SM format" style="push">
+	    	<command commandId="comb.generator.action.save_automaton_handlers.SMFormatHandler" label="SM format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -96,7 +96,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command>
-    		<command commandId="comb.generator.action.save_automaton_as.SpinFormatHandler" label="Spin format" style="push">
+    		<command commandId="comb.generator.action.save_automaton_handlers.SpinFormatHandler" label="Spin format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt
@@ -105,7 +105,7 @@
               		</iterate>
             	</visibleWhen>
 	    	</command> 
-	    	<command commandId="comb.generator.action.save_automaton_as.XMLFormatHandler" label="XML format" style="push">
+	    	<command commandId="comb.generator.action.save_automaton_handlers.XMLFormatHandler" label="XML format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>
                 		<adapt

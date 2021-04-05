@@ -1,4 +1,4 @@
-package comb.generator.action.save_automaton_as;
+package comb.generator.action.save_automaton_handlers;
 
 import java.io.IOException;
 
