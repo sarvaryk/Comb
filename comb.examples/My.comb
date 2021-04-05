@@ -1,83 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
-  <element xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" logicGroup="STL">
-    <subtreeInterpretations>Comb: G[0, 10.5](speed &lt; 55)</subtreeInterpretations>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G(TRUE)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(TRUE)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](TRUE)</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: G(TRUE)</subtreeInterpretations>
+    <subtreeInterpretations>Spin: [](TRUE)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="TRUE">
+      <subtreeInterpretations>Comb: TRUE</subtreeInterpretations>
+      <subtreeInterpretations>Spot: TRUE</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: TRUE</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: TRUE</subtreeInterpretations>
+      <subtreeInterpretations>Spin: TRUE</subtreeInterpretations>
+    </P>
+  </element>
+  <element xsi:type="comb:_untilWithin_" name="_untilWithin_" logicGroup="STL">
+    <subtreeInterpretations>Comb: G(!G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R))))))))))) U[0, 10.5] G[0, 10.5](speed &lt; 55)</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-    <P xsi:type="comb:_lessThan_" name="_lessThan_" logicGroup="STL">
-      <subtreeInterpretations>Comb: speed &lt; 55</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
+      <subtreeInterpretations>Comb: G(!G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R)))))))))))</subtreeInterpretations>
+      <subtreeInterpretations>Spot: G(!G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R)))))))))))</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: G(!G((Q &amp; FR) -> ((!G(!GTest) &amp; !R) U (R | ((G(!GTest) &amp; !R) U (R | ((!G(!GTest) &amp; !R) U (R | ((G(!GTest) &amp; !R) U (R | (!G(!GTest) U R)))))))))))</subtreeInterpretations>
+      <subtreeInterpretations>Spin: [](![]((Q &amp;&amp; &lt;>R) -> ((![](!GTest) &amp;&amp; !R) U (R || (([](!GTest) &amp;&amp; !R) U (R || ((![](!GTest) &amp;&amp; !R) U (R || (([](!GTest) &amp;&amp; !R) U (R || (![](!GTest) U R)))))))))))</subtreeInterpretations>
+      <P xsi:type="comb:Not_" name="Not_" logicGroup="LTL" interpretation="!&lt;P>">
+        <subtreeInterpretations>Comb: !G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R))))))))))</subtreeInterpretations>
+        <subtreeInterpretations>Spot: !G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R))))))))))</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: !G((Q &amp; FR) -> ((!G(!GTest) &amp; !R) U (R | ((G(!GTest) &amp; !R) U (R | ((!G(!GTest) &amp; !R) U (R | ((G(!GTest) &amp; !R) U (R | (!G(!GTest) U R))))))))))</subtreeInterpretations>
+        <subtreeInterpretations>Spin: ![]((Q &amp;&amp; &lt;>R) -> ((![](!GTest) &amp;&amp; !R) U (R || (([](!GTest) &amp;&amp; !R) U (R || ((![](!GTest) &amp;&amp; !R) U (R || (([](!GTest) &amp;&amp; !R) U (R || (![](!GTest) U R))))))))))</subtreeInterpretations>
+        <P xsi:type="comb:BoundedExistenceBetween_and_" name="new BoundedExistenceBetween_and_" logicGroup="LTL" interpretation="G((&lt;Q> &amp;&amp; F&lt;R>) -> ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || (!&lt;P> U &lt;R>))))))))))">
+          <subtreeInterpretations>Comb: G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R))))))))))</subtreeInterpretations>
+          <subtreeInterpretations>Spot: G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R))))))))))</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: G((Q &amp; FR) -> ((!G(!GTest) &amp; !R) U (R | ((G(!GTest) &amp; !R) U (R | ((!G(!GTest) &amp; !R) U (R | ((G(!GTest) &amp; !R) U (R | (!G(!GTest) U R))))))))))</subtreeInterpretations>
+          <subtreeInterpretations>Spin: []((Q &amp;&amp; &lt;>R) -> ((![](!GTest) &amp;&amp; !R) U (R || (([](!GTest) &amp;&amp; !R) U (R || ((![](!GTest) &amp;&amp; !R) U (R || (([](!GTest) &amp;&amp; !R) U (R || (![](!GTest) U R))))))))))</subtreeInterpretations>
+          <P xsi:type="comb:AbsenceGlobally_" name="new AbsenceGlobally_" logicGroup="LTL" interpretation="G(!&lt;P>)">
+            <subtreeInterpretations>Comb: G(!Test)</subtreeInterpretations>
+            <subtreeInterpretations>Spot: G(!Test)</subtreeInterpretations>
+            <subtreeInterpretations>Uppaal: [](notTest)</subtreeInterpretations>
+            <subtreeInterpretations>NuSMV: G(!Test)</subtreeInterpretations>
+            <subtreeInterpretations>Spin: [](!Test)</subtreeInterpretations>
+            <P xsi:type="comb:Literal" name="GTest">
+              <subtreeInterpretations>Comb: GTest</subtreeInterpretations>
+              <subtreeInterpretations>Spot: GTest</subtreeInterpretations>
+              <subtreeInterpretations>Uppaal: GTest</subtreeInterpretations>
+              <subtreeInterpretations>NuSMV: GTest</subtreeInterpretations>
+              <subtreeInterpretations>Spin: GTest</subtreeInterpretations>
+            </P>
+          </P>
+          <Q xsi:type="comb:Literal" name="Q">
+            <subtreeInterpretations>Comb: Q</subtreeInterpretations>
+            <subtreeInterpretations>Spot: Q</subtreeInterpretations>
+            <subtreeInterpretations>Uppaal: Q</subtreeInterpretations>
+            <subtreeInterpretations>NuSMV: Q</subtreeInterpretations>
+            <subtreeInterpretations>Spin: Q</subtreeInterpretations>
+          </Q>
+          <R xsi:type="comb:Literal" name="R">
+            <subtreeInterpretations>Comb: R</subtreeInterpretations>
+            <subtreeInterpretations>Spot: R</subtreeInterpretations>
+            <subtreeInterpretations>Uppaal: R</subtreeInterpretations>
+            <subtreeInterpretations>NuSMV: R</subtreeInterpretations>
+            <subtreeInterpretations>Spin: R</subtreeInterpretations>
+          </R>
+        </P>
+      </P>
+    </P>
+    <Q xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" logicGroup="STL">
+      <subtreeInterpretations>Comb: G[0, 10.5](speed &lt; 55)</subtreeInterpretations>
       <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-      <P name="speed">
-        <subtreeInterpretations>Comb: speed</subtreeInterpretations>
-        <subtreeInterpretations>Spot: speed</subtreeInterpretations>
-        <subtreeInterpretations>Uppaal: speed</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <P xsi:type="comb:_lessThan_" name="_lessThan_" logicGroup="STL">
+        <subtreeInterpretations>Comb: speed &lt; 55</subtreeInterpretations>
+        <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <P name="speed">
+          <subtreeInterpretations>Comb: speed</subtreeInterpretations>
+          <subtreeInterpretations>Spot: speed</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: speed</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: speed</subtreeInterpretations>
+          <subtreeInterpretations>Spin: speed</subtreeInterpretations>
+        </P>
+        <Q name="55">
+          <subtreeInterpretations>Comb: 55</subtreeInterpretations>
+          <subtreeInterpretations>Spot: 55</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: 55</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: 55</subtreeInterpretations>
+          <subtreeInterpretations>Spin: 55</subtreeInterpretations>
+        </Q>
       </P>
-      <Q name="55">
-        <subtreeInterpretations>Comb: 55</subtreeInterpretations>
-        <subtreeInterpretations>Spot: 55</subtreeInterpretations>
-        <subtreeInterpretations>Uppaal: 55</subtreeInterpretations>
-      </Q>
-    </P>
+      <H name="10.5">
+        <subtreeInterpretations>Comb: 10.5</subtreeInterpretations>
+        <subtreeInterpretations>Spot: 10.5</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: 10.5</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: 10.5</subtreeInterpretations>
+        <subtreeInterpretations>Spin: 10.5</subtreeInterpretations>
+      </H>
+    </Q>
     <H name="10.5">
       <subtreeInterpretations>Comb: 10.5</subtreeInterpretations>
       <subtreeInterpretations>Spot: 10.5</subtreeInterpretations>
       <subtreeInterpretations>Uppaal: 10.5</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: 10.5</subtreeInterpretations>
+      <subtreeInterpretations>Spin: 10.5</subtreeInterpretations>
     </H>
-  </element>
-  <element xsi:type="comb:BoundedExistenceBetween_and_" name="new BoundedExistenceBetween_and_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G((is30 &amp;&amp; Fis50) -> ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || (!is40 U is50))))))))))</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G((is30 &amp;&amp; Fis50) -> ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || ((!is40 &amp;&amp; !is50) U (is50 || ((is40 &amp;&amp; !is50) U (is50 || (!is40 U is50))))))))))</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-    <P xsi:type="comb:Literal" name="is40">
-      <subtreeInterpretations>Comb: is40</subtreeInterpretations>
-      <subtreeInterpretations>Spot: is40</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: is40</subtreeInterpretations>
-    </P>
-    <Q xsi:type="comb:Literal" name="is30">
-      <subtreeInterpretations>Comb: is30</subtreeInterpretations>
-      <subtreeInterpretations>Spot: is30</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: is30</subtreeInterpretations>
-    </Q>
-    <R xsi:type="comb:Literal" name="is50">
-      <subtreeInterpretations>Comb: is50</subtreeInterpretations>
-      <subtreeInterpretations>Spot: is50</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: is50</subtreeInterpretations>
-    </R>
-  </element>
-  <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G(hello)</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G(hello)</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: [](hello)</subtreeInterpretations>
-    <P xsi:type="comb:Literal" name="hello">
-      <subtreeInterpretations>Comb: hello</subtreeInterpretations>
-      <subtreeInterpretations>Spot: hello</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: hello</subtreeInterpretations>
-    </P>
-  </element>
-  <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G(!p)</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G(!p)</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: [](!p)</subtreeInterpretations>
-    <P xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
-      <subtreeInterpretations>Comb: !p</subtreeInterpretations>
-      <subtreeInterpretations>Spot: !p</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: !p</subtreeInterpretations>
-      <P xsi:type="comb:Literal" name="p">
-        <subtreeInterpretations>Comb: p</subtreeInterpretations>
-        <subtreeInterpretations>Spot: p</subtreeInterpretations>
-        <subtreeInterpretations>Uppaal: p</subtreeInterpretations>
-      </P>
-    </P>
-  </element>
-  <element xsi:type="comb:AbsenceGlobally_" name="new AbsenceGlobally_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G(!Test)</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G(!Test)</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: [](!Test)</subtreeInterpretations>
-    <P xsi:type="comb:Literal" name="Test">
-      <subtreeInterpretations>Comb: Test</subtreeInterpretations>
-      <subtreeInterpretations>Spot: Test</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: Test</subtreeInterpretations>
-    </P>
   </element>
 </comb:Comb>

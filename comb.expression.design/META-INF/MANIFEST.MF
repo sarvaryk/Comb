@@ -16,3 +16,4 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
 Automatic-Module-Name: comb.expression.design
+Export-Package: comb.expression.design

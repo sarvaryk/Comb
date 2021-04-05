@@ -25,7 +25,7 @@ import comb.expression.metamodel.comb.impl.LiteralImpl;
 
 public class Services {
 	private static String NOT_SUPPORTED_OPERATOR = "-";
-	private static String NOT_SUPPORTED_OPERATOR_MESSAGE = "<Not all operands are supported for this output type>";
+	public static String NOT_SUPPORTED_OPERATOR_MESSAGE = "<Not all operands are supported for this output type>";
 	
     public String refreshAttributes(final Element element) {   	
     	final LogicGroup logicGroup = getSubtreeLogicGroup(element, getElementLogicGroupIfHigher(element, LogicGroup.LITERAL));
@@ -182,6 +182,10 @@ public class Services {
     
     private List<String[]> loadOperators(String schemaName) {
     	//TODO: hardcoded path...
+		//import org.eclipse.emf.common.CommonPlugin;
+		//import org.eclipse.emf.common.util.URI;
+		//URI path = CommonPlugin.resolve(element.eResource().getURI());
+		//String originalContentPath = path.toFileString();
 	    List<String[]> operators = new ArrayList<>();
 		try {
 			operators = Files.lines(Paths.get("C:\\Users\\Krisztián\\git\\Comb\\comb.generator.action\\schemas\\"+schemaName+".csv"))

@@ -2,7 +2,7 @@ ID;LTL;MTL;MITL;STL
 ALWAYS;[];-;-;-
 EVENTUALLY;<>;-;-;-
 UNTIL;U;-;-;-
-NEXT;-;-;-;-
+NEXT;X;-;-;-
 AND;&&;-;-;-
 OR;||;-;-;-
 IMPLIES;->;-;-;-
