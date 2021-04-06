@@ -1,8 +1,9 @@
 package comb.expression.design;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -181,14 +182,9 @@ public class Services {
     }
     
     private List<String[]> loadOperators(String schemaName) {
-    	//TODO: hardcoded path...
-		//import org.eclipse.emf.common.CommonPlugin;
-		//import org.eclipse.emf.common.util.URI;
-		//URI path = CommonPlugin.resolve(element.eResource().getURI());
-		//String originalContentPath = path.toFileString();
 	    List<String[]> operators = new ArrayList<>();
 		try {
-			operators = Files.lines(Paths.get("C:\\Users\\Krisztián\\git\\Comb\\comb.generator.action\\schemas\\"+schemaName+".csv"))
+			operators = Files.lines(Path.of("comb.expression.design/schemas/"+schemaName+".csv"))
 			                .map(line -> line.split(";"))
 			                .collect(Collectors.toList());
 		} catch (IOException e) {
