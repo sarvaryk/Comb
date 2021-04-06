@@ -22,7 +22,7 @@ public class ExportCombFileHandler extends AbstractHandler {
 		final IFile file = (IFile)firstElement;
 		
 		try {
-			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):").replace("/", "//");
+			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):");
 			final String fileName2 = file.getLocation().toOSString();
 
 			List<String> content = CombExpressionUtils.readTextFile(fileName2);

@@ -28,7 +28,7 @@ public class ExportCombElementHandler extends AbstractHandler {
 		final ElementImpl element = (ElementImpl)firstElement;
 		
 		try {
-			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):").replace("/", "//");
+			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):");
 			
 			URI resolvedFile = CommonPlugin.resolve(element.eResource().getURI());
 			File file = new File(resolvedFile.toFileString()); 

@@ -25,7 +25,7 @@ public class ImportCombElementHandler extends AbstractHandler {
 			List<String> originalContent = CombExpressionUtils.readTextFile(originalContentPath);
 			String lastLineOfOriginalContent = originalContent.remove(originalContent.size()-1);
 			
-			String newlyAddedContentPath = CombExpressionUtils.getTargetFilePath("Import from (path):").replace("/", "//");
+			String newlyAddedContentPath = CombExpressionUtils.getTargetFilePath("Import from (path):");
 			List<String> newlyAddedContent = CombExpressionUtils.readTextFile(newlyAddedContentPath);
 			newlyAddedContent.remove(newlyAddedContent.size()-1);
 			newlyAddedContent.remove(1);
