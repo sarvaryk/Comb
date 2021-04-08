@@ -11,7 +11,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import comb.generator.action.CombExpressionUtils;
+import comb.generator.action.InfoUtils;
 
 public class ExportCombFileHandler extends AbstractHandler {
 
@@ -22,16 +22,16 @@ public class ExportCombFileHandler extends AbstractHandler {
 		final IFile file = (IFile)firstElement;
 		
 		try {
-			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):");
+			final String fileName = InfoUtils.getTargetFilePath("Export to (path):");
 			final String fileName2 = file.getLocation().toOSString();
 
-			List<String> content = CombExpressionUtils.readTextFile(fileName2);
-			CombExpressionUtils.create(fileName, content);
+			List<String> content = ImportExportUtils.readTextFile(fileName2);
+			ImportExportUtils.create(fileName, content);
 			
-			CombExpressionUtils.showMessageDialog("File saved successfully!\nSee: " + fileName);
+			InfoUtils.showMessageDialog("File saved successfully!\nSee: " + fileName);
 		} 
 		catch (CoreException | IOException e) {
-			CombExpressionUtils.showMessageDialog("An error occured: " + e);
+			InfoUtils.showMessageDialog("An error occured: " + e);
 			
 			e.printStackTrace();
 			throw new ExecutionException("Error", e);

@@ -17,7 +17,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import comb.expression.metamodel.comb.impl.ElementImpl;
-import comb.generator.action.CombExpressionUtils;
+import comb.generator.action.InfoUtils;
 
 public class ExportCombElementHandler extends AbstractHandler {
 
@@ -28,7 +28,7 @@ public class ExportCombElementHandler extends AbstractHandler {
 		final ElementImpl element = (ElementImpl)firstElement;
 		
 		try {
-			final String fileName = CombExpressionUtils.getTargetFilePath("Export to (path):");
+			final String fileName = InfoUtils.getTargetFilePath("Export to (path):");
 			
 			URI resolvedFile = CommonPlugin.resolve(element.eResource().getURI());
 			File file = new File(resolvedFile.toFileString()); 
@@ -64,12 +64,12 @@ public class ExportCombElementHandler extends AbstractHandler {
 			sc.close();
 			content.add("</comb:Comb>");
 			
-			CombExpressionUtils.create(fileName, content);
+			ImportExportUtils.create(fileName, content);
 			
-			CombExpressionUtils.showMessageDialog("File saved successfully!\nSee: " + fileName);
+			InfoUtils.showMessageDialog("File saved successfully!\nSee: " + fileName);
 		} 
 		catch (CoreException | IOException e) {
-			CombExpressionUtils.showMessageDialog("An error occured: " + e);
+			InfoUtils.showMessageDialog("An error occured: " + e);
 			
 			e.printStackTrace();
 			throw new ExecutionException("Error", e);

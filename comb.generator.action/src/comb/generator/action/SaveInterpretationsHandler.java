@@ -12,6 +12,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import comb.expression.metamodel.comb.impl.ElementImpl;
+import comb.generator.action.import_export_handlers.ImportExportUtils;
 
 public class SaveInterpretationsHandler extends AbstractHandler {
 
@@ -23,7 +24,7 @@ public class SaveInterpretationsHandler extends AbstractHandler {
 		final ElementImpl element = (ElementImpl)firstElement;
 
 		try {
-			final String filePath = CombExpressionUtils.getTargetFilePath("Extract expression to (path):");
+			final String filePath = InfoUtils.getTargetFilePath("Extract expression to (path):");
 			
 			List<String> content = new ArrayList<>();
 			content.add(String.format("%s expression\n", element.getLogicGroup().toString()));
@@ -31,7 +32,7 @@ public class SaveInterpretationsHandler extends AbstractHandler {
 		    	content.add(expression + "\n");
 		    }
 			
-			CombExpressionUtils.create(filePath, content);
+			ImportExportUtils.create(filePath, content);
 		} 
 		catch (CoreException | IOException e) {
 			e.printStackTrace();

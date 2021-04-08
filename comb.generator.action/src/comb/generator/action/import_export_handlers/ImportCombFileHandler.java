@@ -10,7 +10,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import comb.generator.action.CombExpressionUtils;
+import comb.generator.action.InfoUtils;
 
 public class ImportCombFileHandler extends AbstractHandler {
 
@@ -22,11 +22,11 @@ public class ImportCombFileHandler extends AbstractHandler {
 		
 		try {			
 			String originalContentPath = file.getLocation().toOSString();
-			List<String> originalContent = CombExpressionUtils.readTextFile(originalContentPath);
+			List<String> originalContent = ImportExportUtils.readTextFile(originalContentPath);
 			String lastLineOfOriginalContent = originalContent.remove(originalContent.size()-1);
 			
-			String newlyAddedContentPath = CombExpressionUtils.getTargetFilePath("Import from (path):");
-			List<String> newlyAddedContent = CombExpressionUtils.readTextFile(newlyAddedContentPath);
+			String newlyAddedContentPath = InfoUtils.getTargetFilePath("Import from (path):");
+			List<String> newlyAddedContent = ImportExportUtils.readTextFile(newlyAddedContentPath);
 			newlyAddedContent.remove(newlyAddedContent.size()-1);
 			newlyAddedContent.remove(1);
 			newlyAddedContent.remove(0);
@@ -34,10 +34,10 @@ public class ImportCombFileHandler extends AbstractHandler {
 			originalContent.addAll(newlyAddedContent);
 			originalContent.add(lastLineOfOriginalContent);
 			
-			CombExpressionUtils.writeTextFile(originalContent, originalContentPath);
+			ImportExportUtils.writeTextFile(originalContent, originalContentPath);
 		} 
 		catch (IOException e) {
-			CombExpressionUtils.showMessageDialog("An error occured: " + e);
+			InfoUtils.showMessageDialog("An error occured: " + e);
 			
 			e.printStackTrace();
 			throw new ExecutionException("Error", e);
