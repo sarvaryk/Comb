@@ -51,7 +51,7 @@ public class AutomatonUtils {
 		Automaton dfa = null;
 		try {
 			String fileName = "temp_buchi.txt";
-			saveBuchi(element, Writer.Format.SPIN, true, fileName);
+			saveBuchi(element, Writer.Format.SPIN, false, fileName);
 			Automaton ba = NeverclaimToBuchi.parse(fileName);
 			Automaton nfa = Transform.buchiToNFA(ba);
 			dfa = Transform.NFAtoDFA(nfa);

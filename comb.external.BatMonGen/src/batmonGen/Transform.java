@@ -10,6 +10,9 @@ public class Transform {
             if(state.getSetType() != State.SetType.Bad)
                 state.setAccepting(true);
         }
+        
+        if(automaton.getStates().size() == 1 && automaton.getStates().get(0).isAccepting())
+        	automaton.getStates().get(0).setSetType(SetType.Good);
 
         return automaton;
     }
@@ -49,6 +52,7 @@ public class Transform {
                 state.setAccepting(evaluateAccepting(state, nfa));
                 state.setSetType(evaluateSetType(state, nfa));
             }
+            
             dfa.addState(state);
 
             if(tempStateName.equals(dfaInitStateName))

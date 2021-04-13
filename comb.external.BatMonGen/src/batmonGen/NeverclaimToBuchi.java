@@ -8,6 +8,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.regex.Pattern;
 
+import batmonGen.State.SetType;
+
 public class NeverclaimToBuchi {
     public static Automaton parse(String path) throws IOException, ReadBuchiDescriptionException{
         Automaton buchi = new Automaton();
@@ -133,6 +135,25 @@ public class NeverclaimToBuchi {
             else if(!(getStringFromText("(\\}|)", input).equals(""))) { 
                 if(buchi.getStates().size() == 0)
                     throw new ReadBuchiDescriptionException(rowNumber, input, "The automaton should have at least 1 state");
+            }
+            else if(input.equals("Empty")) {
+            	State emptyState = new State();
+            	emptyState.setAccepting(false);
+            	emptyState.setName("empty_buchi");
+            	emptyState.setSetType(SetType.Bad);
+            	
+            	Label label = new Label(Label.TRUE, new ArrayList<String>());
+            	Transition transition = new Transition();
+            	transition.setDestinationStateName("empty_buchi");
+            	transition.setLabel(label);
+            	
+            	emptyState.addTransition(transition);
+            	
+            	buchi.addState(emptyState);
+            	buchi.setInitState(emptyState);
+            	buchi.setScenarioBased(false);
+            	buchi.setName("empty_monitor");
+            	return buchi;
             }
             else {
                 throw new ReadBuchiDescriptionException(rowNumber, input, "Can not parse this row...");

@@ -1,6 +1,8 @@
 package comb.expression.design;
 
 import batmonGen.Automaton;
+import batmonGen.State;
+import batmonGen.State.SetType;
 import comb.expression.metamodel.comb.Element;
 import comb.generator.action.automaton.AutomatonUtils;
  
@@ -8,7 +10,11 @@ public class Services {
 	public boolean evaluateIsAlwaysTrue(final Element element) {
 		boolean alwaysTrue = true;
 		
-		Automaton dfs = AutomatonUtils.getDFA(element);
+		Automaton dfa = AutomatonUtils.getDFA(element);
+		for(State state : dfa.getStates()) {
+			if(!state.getSetType().equals(SetType.Good))
+				alwaysTrue = false;
+		}
 		
 		return alwaysTrue;
 	}
@@ -16,7 +22,11 @@ public class Services {
 	public boolean evaluateIsAlwaysFalse(final Element element) {	
 		boolean alwaysFalse = true;
 
-		Automaton dfs = AutomatonUtils.getDFA(element);
+		Automaton dfa = AutomatonUtils.getDFA(element);
+		for(State state : dfa.getStates()) {
+			if(!state.getSetType().equals(SetType.Bad))
+				alwaysFalse = false;
+		}
 		
 		return alwaysFalse;
 	}
