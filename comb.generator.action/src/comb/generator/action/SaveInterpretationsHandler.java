@@ -12,7 +12,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import comb.expression.metamodel.comb.impl.ElementImpl;
-import comb.generator.action.import_export_handlers.ImportExportUtils;
+import comb.generator.action.import_export.ImportExportUtils;
 
 public class SaveInterpretationsHandler extends AbstractHandler {
 

@@ -6,14 +6,14 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: comb.expression.design.Activator
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- org.eclipse.core.resources,
  org.eclipse.sirius,
- org.eclipse.sirius.common.acceleo.aql,
- comb.expression.metamodel;bundle-version="0.1.0",
- org.eclipse.emf.transaction;bundle-version="1.9.1"
+ org.eclipse.emf.transaction;bundle-version="1.9.1",
+ comb.expression.metamodel,
+ comb.generator.action,
+ comb.external.BatMonGen
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-14
 Bundle-Vendor: %providerName
 Automatic-Module-Name: comb.expression.design
 Export-Package: comb.expression.design
+Import-Package: comb.generator.action.automaton

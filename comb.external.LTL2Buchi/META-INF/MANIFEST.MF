@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Action
+Bundle-SymbolicName: comb.external.LTL2Buchi;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: comb.external.LTL2Buchi
+Bundle-RequiredExecutionEnvironment: JavaSE-14
+Export-Package: gov.nasa.ltl.graph,
+ gov.nasa.ltl.graphio,
+ gov.nasa.ltl.trans

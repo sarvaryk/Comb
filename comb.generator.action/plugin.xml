@@ -2,7 +2,6 @@
 <?eclipse version="3.4"?>
 <plugin>
     <extension point="org.eclipse.ui.commands">
-      <command id="AUT_format" name="AUT format"/>
       <command id="FSP_format" name="FSP format"/>
       <command id="SM_format" name="SM format"/>
       <command id="Spin_format" name="Spin format"/>
@@ -19,33 +18,23 @@
     
     
     <extension point="org.eclipse.ui.handlers">
-      <handler class="comb.generator.action.save_automaton_handlers.AUTFormatHandler" commandId="AUT_format"/>
-      <handler class="comb.generator.action.save_automaton_handlers.FSPFormatHandler" commandId="FSP_format"/>
-      <handler class="comb.generator.action.save_automaton_handlers.SMFormatHandler" commandId="SM_format"/>
-      <handler class="comb.generator.action.save_automaton_handlers.SpinFormatHandler" commandId="Spin_format"/>
-      <handler class="comb.generator.action.save_automaton_handlers.XMLFormatHandler" commandId="XML_format"/>
+      <handler class="comb.generator.action.automaton.FSPFormatHandler" commandId="FSP_format"/>
+      <handler class="comb.generator.action.automaton.SMFormatHandler" commandId="SM_format"/>
+      <handler class="comb.generator.action.automaton.SpinFormatHandler" commandId="Spin_format"/>
+      <handler class="comb.generator.action.automaton.XMLFormatHandler" commandId="XML_format"/>
       
       <handler class="comb.generator.action.SaveInterpretationsHandler" commandId="Save_Interpretations"/>
       
-      <handler class="comb.generator.action.import_export_handlers.ImportCombElementHandler" commandId="Import_Comb_element"/>
-      <handler class="comb.generator.action.import_export_handlers.ImportCombFileHandler" commandId="Import_Comb_file"/>
-      <handler class="comb.generator.action.import_export_handlers.ExportCombElementHandler" commandId="Export_Comb_element"/>
-      <handler class="comb.generator.action.import_export_handlers.ExportCombFileHandler" commandId="Export_Comb_file"/>
+      <handler class="comb.generator.action.import_export.ImportCombElementHandler" commandId="Import_Comb_element"/>
+      <handler class="comb.generator.action.import_export.ImportCombFileHandler" commandId="Import_Comb_file"/>
+      <handler class="comb.generator.action.import_export.ExportCombElementHandler" commandId="Export_Comb_element"/>
+      <handler class="comb.generator.action.import_export.ExportCombFileHandler" commandId="Export_Comb_file"/>
     </extension>
     
     <extension point="org.eclipse.ui.menus">
     <menuContribution allPopups="false" locationURI="popup:org.eclipse.sirius.ui.tools.views.model.explorer#PopupMenu?after=additions">
     <menu label="Comb generator" id="comb-menu-model">  
     	<menu label="Save automaton as" id="comb-automaton-output-menu">
-    	    <command commandId="AUT_format" label="AUT format" style="push">
-	    		<visibleWhen checkEnabled="false">
-              		<iterate>
-                		<adapt
-                       		type="comb.expression.metamodel.comb.Element">
-                 		</adapt>
-              		</iterate>
-            	</visibleWhen>
-	    	</command>
 	    	<command commandId="FSP_format" label="FSP format" style="push">
 	    		<visibleWhen checkEnabled="false">
               		<iterate>

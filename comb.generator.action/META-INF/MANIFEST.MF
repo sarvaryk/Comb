@@ -7,8 +7,11 @@ Automatic-Module-Name: comb.generator.action
 Bundle-RequiredExecutionEnvironment: JavaSE-12
 Require-Bundle: org.eclipse.ui;bundle-version="3.118.0",
  org.eclipse.sirius,
- comb.expression.metamodel
+ comb.expression.metamodel,
+ comb.external.LTL2Buchi,
+ comb.external.BatMonGen
 Import-Package: comb.expression.design,
- org.eclipse.core.internal.resources,
+ gov.nasa.ltl.graph,
  org.eclipse.core.resources,
  org.eclipse.core.runtime
+Export-Package: comb.generator.action.automaton
