@@ -9,6 +9,14 @@ public class Logger {
 
     public Logger(String automatonName, boolean appendLogger) {
         String dirPath = System.getProperty("user.dir") + File.separator + "Gen" + File.separator;
+        createWriter(automatonName, appendLogger, dirPath);
+    }
+    
+    public Logger(String automatonName, boolean appendLogger, String dirPath) {
+    	createWriter(automatonName, appendLogger, dirPath);
+    }
+    
+    private void createWriter(String automatonName, boolean appendLogger, String dirPath) {
         try {
             File dir = new File(dirPath);
             dir.mkdirs();

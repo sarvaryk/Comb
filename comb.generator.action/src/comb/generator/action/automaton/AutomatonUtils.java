@@ -19,12 +19,12 @@ import gov.nasa.ltl.trans.ParseErrorException;
 public class AutomatonUtils {
 	public static void saveBuchi(final Element element, final Writer.Format format, final boolean showInfo) {
 		String filePath = InfoUtils.getTargetFilePath("Extract automaton to (path):");
-		saveBuchi(element, format, showInfo, filePath);
+		saveBuchi(element, format, showInfo, false, filePath);
 	}
 	
-	public static void saveBuchi(final Element element, final Writer.Format format, final boolean showInfo, final String filePath) {
+	public static void saveBuchi(final Element element, final Writer.Format format, final boolean showInfo, final boolean isNegated, final String filePath) {
 		try {
-			Graph<String> g = generate_LTL2BuchiGraph(element, showInfo);
+			Graph<String> g = generate_LTL2BuchiGraph(element, isNegated, showInfo);
 			if(g != null) {
 				FileOutputStream fout = new FileOutputStream(filePath);
 				PrintStream pout = new PrintStream(fout);
@@ -42,17 +42,22 @@ public class AutomatonUtils {
 	}
 	
 	public static Automaton getDFA(final Element element) {
+		return getDFA(element, false);
+	}
+	
+	public static Automaton getDFA(final Element element, final boolean isNegated) {
 		RefreshLogicGroupAndInterpretations.refresh(element);
 		
 		//TODO: transform the POJO directly
-		//Graph<String> g = AutomatonUtils.generate_LTL2BuchiGraph(element);
+		//Graph<String> g = AutomatonUtils.generate_LTL2BuchiGraph(element, false);
 		//Automaton ba = translateFrom_LTL2BuchiGraph_To_BatMonGenAutomaton(g);
 		
 		Automaton dfa = null;
 		try {
 			String fileName = "temp_buchi.txt";
-			saveBuchi(element, Writer.Format.SPIN, false, fileName);
+			saveBuchi(element, Writer.Format.SPIN, false, isNegated, fileName);
 			Automaton ba = NeverclaimToBuchi.parse(fileName);
+			ba.setName(element.getName());
 			Automaton nfa = Transform.buchiToNFA(ba);
 			dfa = Transform.NFAtoDFA(nfa);
 		} catch (IOException | ReadBuchiDescriptionException e) {
@@ -63,11 +68,15 @@ public class AutomatonUtils {
 		return dfa;
 	}
 	
-	private static Graph<String> generate_LTL2BuchiGraph(final Element element, final boolean showInfo) {
+	private static Graph<String> generate_LTL2BuchiGraph(final Element element, final boolean isNegated, final boolean showInfo) {
 		String spinInterpretation = null;
 		for(String interpretation : element.getSubtreeInterpretations()) {
 			if(interpretation.startsWith("Spin")) {
 				spinInterpretation = interpretation.replace("Spin: ", "");
+				
+				if(isNegated)
+					spinInterpretation = "!("+spinInterpretation+")";
+				
 				break;
 			}
 		}

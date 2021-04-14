@@ -27,7 +27,7 @@ public class NeverclaimToBuchi {
             if(!(getStringFromText("(never\\s*\\{\\s*(/\\*\\s*.*\\*/)?)", input).equals(""))) {
                 if(rowNumber == 1) {
                     String name = getStringFromText("/\\*\\s*(.*)\\s*\\*/", input);
-                    if(name.equals("")) name = "monitor";
+                    if(name.equals("")) name = "monitor_name";
                     
                     name = name.replace("!", "NOT");
                     name = name.replace("&", "AND");

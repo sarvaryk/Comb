@@ -8,6 +8,10 @@ public class Generator {
     public static void generate(Automaton fsm, Logger logger) {
         //TODO: linux-on az IdeaProjects-el kene kezdenie
         String dirPath = System.getProperty("user.dir") + File.separator + "Gen" + File.separator;
+        generate(fsm, logger, dirPath);
+    }
+    
+    public static void generate(Automaton fsm, Logger logger, String dirPath) {
         try {
             File dir = new File(dirPath);
             dir.mkdirs();
@@ -87,7 +91,7 @@ public class Generator {
     }
 
     private static void generateAbstractMonitorClass(File dir) throws IOException {
-        String className = "Monitor";
+        String className = "AbstractMonitor";
         File actualFile = new File(dir, className + ".java");
         if(!actualFile.exists()) {
             FileWriter writer = new FileWriter(actualFile, false);
@@ -127,7 +131,7 @@ public class Generator {
     private static void generateMonitorComponent(Automaton fsm, File dir, Logger logger) throws IOException {
         boolean isMonitorable = false;
         String className =  fsm.getName();
-        File actualFile = new File(dir, className + ".java");
+        File actualFile = new File(dir, className + "_monitor.java");
         FileWriter writer = new FileWriter(actualFile, false);
 
         writer.write("import java.util.Collections;\n" +
@@ -255,10 +259,12 @@ public class Generator {
         writer.write("}");
         writer.close();
 
-        if(isMonitorable)
-            logger.log("\n\tThe monitor may eventually yield a verdict!");
-        else
-            logger.log("\n\tThe monitor will always return \"Inconclusive\"!" +
-                    "\n\tIt has no \"Good\" or \"Bad\" states!");
+        if(logger != null) {
+	        if(isMonitorable)
+	            logger.log("\n\tThe monitor may eventually yield a verdict!");
+	        else
+	            logger.log("\n\tThe monitor will always return \"Inconclusive\"!" +
+	                    "\n\tIt has no \"Good\" or \"Bad\" states!");
+        }
     }
 }

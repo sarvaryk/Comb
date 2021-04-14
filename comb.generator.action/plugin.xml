@@ -2,6 +2,8 @@
 <?eclipse version="3.4"?>
 <plugin>
     <extension point="org.eclipse.ui.commands">
+      <command id="Generate_monitor" name="Generate monitor"/>
+    
       <command id="FSP_format" name="FSP format"/>
       <command id="SM_format" name="SM format"/>
       <command id="Spin_format" name="Spin format"/>
@@ -18,6 +20,8 @@
     
     
     <extension point="org.eclipse.ui.handlers">
+      <handler class="comb.generator.action.GenerateMonitorHandler" commandId="Generate_monitor"/>
+    
       <handler class="comb.generator.action.automaton.FSPFormatHandler" commandId="FSP_format"/>
       <handler class="comb.generator.action.automaton.SMFormatHandler" commandId="SM_format"/>
       <handler class="comb.generator.action.automaton.SpinFormatHandler" commandId="Spin_format"/>
@@ -34,6 +38,16 @@
     <extension point="org.eclipse.ui.menus">
     <menuContribution allPopups="false" locationURI="popup:org.eclipse.sirius.ui.tools.views.model.explorer#PopupMenu?after=additions">
     <menu label="Comb generator" id="comb-menu-model">  
+	    <command commandId="Generate_monitor" label="Generate monitor" style="push">
+	    	<visibleWhen checkEnabled="false">
+              <iterate>
+                 <adapt
+                       type="comb.expression.metamodel.comb.Element">
+                 </adapt>
+              </iterate>
+            </visibleWhen>
+	    </command>    
+    
     	<menu label="Save automaton as" id="comb-automaton-output-menu">
 	    	<command commandId="FSP_format" label="FSP format" style="push">
 	    		<visibleWhen checkEnabled="false">

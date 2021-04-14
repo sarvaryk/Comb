@@ -134,17 +134,45 @@
     </H>
   </element>
   <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G(false)</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G(false)</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: [](false)</subtreeInterpretations>
-    <subtreeInterpretations>NuSMV: G(false)</subtreeInterpretations>
-    <subtreeInterpretations>Spin: [](false)</subtreeInterpretations>
-    <P xsi:type="comb:Literal" name="FALSE">
-      <subtreeInterpretations>Comb: false</subtreeInterpretations>
-      <subtreeInterpretations>Spot: false</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: false</subtreeInterpretations>
-      <subtreeInterpretations>NuSMV: false</subtreeInterpretations>
-      <subtreeInterpretations>Spin: false</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G(true)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(true)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](true)</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: G(true)</subtreeInterpretations>
+    <subtreeInterpretations>Spin: [](true)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="true">
+      <subtreeInterpretations>Comb: true</subtreeInterpretations>
+      <subtreeInterpretations>Spot: true</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: true</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: true</subtreeInterpretations>
+      <subtreeInterpretations>Spin: true</subtreeInterpretations>
     </P>
+  </element>
+  <element xsi:type="comb:_until_" name="not_spawn_until_init" logicGroup="LTL">
+    <subtreeInterpretations>Comb: !(spawn) U init</subtreeInterpretations>
+    <subtreeInterpretations>Spot: !(spawn) U init</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: !(spawn) U init</subtreeInterpretations>
+    <subtreeInterpretations>Spin: !(spawn) U init</subtreeInterpretations>
+    <P xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
+      <subtreeInterpretations>Comb: !(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>Spot: !(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: not(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: !(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>Spin: !(spawn)</subtreeInterpretations>
+      <P xsi:type="comb:Literal" name="spawn">
+        <subtreeInterpretations>Comb: spawn</subtreeInterpretations>
+        <subtreeInterpretations>Spot: spawn</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: spawn</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: spawn</subtreeInterpretations>
+        <subtreeInterpretations>Spin: spawn</subtreeInterpretations>
+      </P>
+    </P>
+    <Q xsi:type="comb:Literal" name="init">
+      <subtreeInterpretations>Comb: init</subtreeInterpretations>
+      <subtreeInterpretations>Spot: init</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: init</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: init</subtreeInterpretations>
+      <subtreeInterpretations>Spin: init</subtreeInterpretations>
+    </Q>
   </element>
 </comb:Comb>
