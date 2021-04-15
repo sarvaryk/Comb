@@ -10,8 +10,8 @@ public class Services {
 	public boolean evaluateIsAlwaysTrue(final Element element) {
 		boolean alwaysTrue = true;
 		
-		Automaton dfa = AutomatonUtils.getDFA(element);
-		for(State state : dfa.getStates()) {
+		Automaton nfa = AutomatonUtils.getNFA(element);
+		for(State state : nfa.getStates()) {
 			if(!state.getSetType().equals(SetType.Good))
 				alwaysTrue = false;
 		}
@@ -22,8 +22,8 @@ public class Services {
 	public boolean evaluateIsAlwaysFalse(final Element element) {	
 		boolean alwaysFalse = true;
 
-		Automaton dfa = AutomatonUtils.getDFA(element);
-		for(State state : dfa.getStates()) {
+		Automaton nfa = AutomatonUtils.getNFA(element);
+		for(State state : nfa.getStates()) {
 			if(!state.getSetType().equals(SetType.Bad))
 				alwaysFalse = false;
 		}

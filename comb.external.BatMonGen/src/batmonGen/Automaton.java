@@ -55,6 +55,8 @@ public class Automaton {
 
         return null;
     }
+    
+    public int getStateCount() { return getStates().size(); }
 
     public void setName(String name) { this.name = name; }
 

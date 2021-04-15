@@ -24,13 +24,28 @@ public class GenerateMonitorHandler extends AbstractHandler {
 		String filePath = InfoUtils.getTargetFilePath("Save monitor to (directory):");
 		
 		try {
-			Automaton dfa_original = AutomatonUtils.getDFA(element);
-			Automaton dfa_negated = AutomatonUtils.getDFA(element, true);
-			Automaton fsm = Transform.DFAtoFSM(dfa_original, dfa_negated);
+			Automaton nfa_original = AutomatonUtils.getNFA(element);
+			Automaton nfa_negated = AutomatonUtils.getNFA(element, true);
 			
-			Generator.generate(fsm, null, filePath);
-			
-			InfoUtils.showMessageDialog("Monitor and its compontnts saved successfully!\nSee: " + filePath);
+			//Creating DFA from NFA could result in 2^(number of NFA states).
+			//In case of an NFA consisting of 17 states could result in a DFA,
+			//which has 2^17 = 131072 states. The tool can not handle this in feasible time.
+			if(nfa_original.getStateCount() < 17 && nfa_negated.getStateCount() < 17) {
+				Automaton dfa_original = Transform.NFAtoDFA(nfa_original);
+				Automaton dfa_negated = Transform.NFAtoDFA(nfa_negated);
+				Automaton fsm = Transform.DFAtoFSM(dfa_original, dfa_negated);
+				
+				Generator.generate(fsm, null, filePath);
+				
+				InfoUtils.showMessageDialog("Monitor and its compontnts saved successfully!\nSee: " + filePath);
+			}
+			else {
+				double max_number_of_dfa_original_states = Math.pow(2, nfa_original.getStateCount());
+				double max_number_of_dfa_negated_states = Math.pow(2, nfa_negated.getStateCount());
+				double max_number_of_fsm_states = max_number_of_dfa_original_states * max_number_of_dfa_negated_states;
+				InfoUtils.showMessageDialog("Monitor generation can not be completed, as the generated monitor (in worst case) could consist of " + max_number_of_fsm_states + " states!");
+			}
+				
 		} catch (Exception e) {
 			e.printStackTrace();
 			InfoUtils.showMessageDialog("ERROR while generating monitor!\n" + e);

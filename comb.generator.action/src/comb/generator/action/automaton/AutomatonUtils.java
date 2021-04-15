@@ -41,31 +41,30 @@ public class AutomatonUtils {
 		}
 	}
 	
-	public static Automaton getDFA(final Element element) {
-		return getDFA(element, false);
+	public static Automaton getNFA(final Element element) {
+		return getNFA(element, false);
 	}
 	
-	public static Automaton getDFA(final Element element, final boolean isNegated) {
+	public static Automaton getNFA(final Element element, final boolean isNegated) {
 		RefreshLogicGroupAndInterpretations.refresh(element);
 		
 		//TODO: transform the POJO directly
 		//Graph<String> g = AutomatonUtils.generate_LTL2BuchiGraph(element, false);
 		//Automaton ba = translateFrom_LTL2BuchiGraph_To_BatMonGenAutomaton(g);
 		
-		Automaton dfa = null;
+		Automaton nfa = null;
 		try {
 			String fileName = "temp_buchi.txt";
 			saveBuchi(element, Writer.Format.SPIN, false, isNegated, fileName);
 			Automaton ba = NeverclaimToBuchi.parse(fileName);
 			ba.setName(element.getName());
-			Automaton nfa = Transform.buchiToNFA(ba);
-			dfa = Transform.NFAtoDFA(nfa);
+			nfa = Transform.buchiToNFA(ba);
 		} catch (IOException | ReadBuchiDescriptionException e) {
 			e.printStackTrace();
 			InfoUtils.showMessageDialog("ERROR while generating DFA!\n" + e);
 		}
 		
-		return dfa;
+		return nfa;
 	}
 	
 	private static Graph<String> generate_LTL2BuchiGraph(final Element element, final boolean isNegated, final boolean showInfo) {
@@ -92,7 +91,7 @@ public class AutomatonUtils {
 			}
 		}
 		else if(showInfo)
-			InfoUtils.showMessageDialog("ERROR: Automaton generation is based on the Spin LTL format, but the given expression can not be interpreted to Spin");
+			InfoUtils.showMessageDialog("ERROR: Automaton generation is supported only for LTL with Spin output.");
 		
 		return g;
 	}

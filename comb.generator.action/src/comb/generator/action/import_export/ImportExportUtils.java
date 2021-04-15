@@ -20,7 +20,7 @@ public class ImportExportUtils {
 	    try {
 			Files.write(path, lines, StandardCharsets.UTF_8);
 			
-			InfoUtils.showMessageDialog("File saved successfully!\nSee: " + pathString);
+			InfoUtils.showMessageDialog("Operation completed successfully!\nSee: " + pathString);
 		} catch (IOException e) {
 			InfoUtils.showMessageDialog("An error occured: " + e);
 			
