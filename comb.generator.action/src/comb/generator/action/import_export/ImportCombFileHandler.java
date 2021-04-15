@@ -34,7 +34,7 @@ public class ImportCombFileHandler extends AbstractHandler {
 			originalContent.addAll(newlyAddedContent);
 			originalContent.add(lastLineOfOriginalContent);
 			
-			ImportExportUtils.writeTextFile(originalContent, originalContentPath);
+			ImportExportUtils.writeTextFile(originalContentPath, originalContent);
 		} 
 		catch (IOException e) {
 			InfoUtils.showMessageDialog("An error occured: " + e);

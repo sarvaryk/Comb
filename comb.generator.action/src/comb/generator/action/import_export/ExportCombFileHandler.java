@@ -7,7 +7,6 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -26,11 +25,10 @@ public class ExportCombFileHandler extends AbstractHandler {
 			final String fileName2 = file.getLocation().toOSString();
 
 			List<String> content = ImportExportUtils.readTextFile(fileName2);
-			ImportExportUtils.create(fileName, content);
 			
-			InfoUtils.showMessageDialog("File saved successfully!\nSee: " + fileName);
+			ImportExportUtils.writeTextFile(fileName, content);
 		} 
-		catch (CoreException | IOException e) {
+		catch (IOException e) {
 			InfoUtils.showMessageDialog("An error occured: " + e);
 			
 			e.printStackTrace();

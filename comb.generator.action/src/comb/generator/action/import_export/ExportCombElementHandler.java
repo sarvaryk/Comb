@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -64,11 +63,9 @@ public class ExportCombElementHandler extends AbstractHandler {
 			sc.close();
 			content.add("</comb:Comb>");
 			
-			ImportExportUtils.create(fileName, content);
-			
-			InfoUtils.showMessageDialog("File saved successfully!\nSee: " + fileName);
+			ImportExportUtils.writeTextFile(fileName, content);
 		} 
-		catch (CoreException | IOException e) {
+		catch (IOException e) {
 			InfoUtils.showMessageDialog("An error occured: " + e);
 			
 			e.printStackTrace();
