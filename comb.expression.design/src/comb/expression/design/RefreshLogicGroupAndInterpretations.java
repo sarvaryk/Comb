@@ -74,7 +74,7 @@ public class RefreshLogicGroupAndInterpretations {
     	List<String> elementInterpretations = new ArrayList<>();
     	
     	if(element instanceof LiteralImpl) {
-    		for(SupportedOutput so : SupportedOutput.values()) {
+    		for(int i = 0; i < SupportedOutput.values().length; i++) {
     			elementInterpretations.add(element.getName().toLowerCase());
     		}
     	}

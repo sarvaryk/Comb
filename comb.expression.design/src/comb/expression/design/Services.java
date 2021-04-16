@@ -7,27 +7,45 @@ import comb.expression.metamodel.comb.Element;
 import comb.generator.action.automaton.AutomatonUtils;
  
 public class Services {
-	public boolean evaluateIsAlwaysTrue(final Element element) {
-		boolean alwaysTrue = true;
+	private static Automaton nfa;
+	
+	public boolean canEvaluationsBePerformed(final Element element) {
+		nfa = AutomatonUtils.getNFA(element);
 		
-		Automaton nfa = AutomatonUtils.getNFA(element);
-		for(State state : nfa.getStates()) {
-			if(!state.getSetType().equals(SetType.Good))
-				alwaysTrue = false;
-		}
-		
-		return alwaysTrue;
+		return nfa != null;
 	}
 	
-	public boolean evaluateIsAlwaysFalse(final Element element) {	
-		boolean alwaysFalse = true;
-
-		Automaton nfa = AutomatonUtils.getNFA(element);
-		for(State state : nfa.getStates()) {
-			if(!state.getSetType().equals(SetType.Bad))
-				alwaysFalse = false;
+	public String evaluateIsSatisfiable(final Element element) {
+		if(nfa != null) {
+			Boolean isSatisfiable = false;
+			
+			for(State state : nfa.getStates()) {
+				if(state.isAccepting()) {
+					isSatisfiable = true;
+					break;
+				}
+			}
+			
+			return isSatisfiable.toString();
 		}
 		
-		return alwaysFalse;
+		return "";
+	}
+	
+	public String evaluateIsAlwaysSatisfied(final Element element) {
+		if(nfa != null) {
+			Boolean isAlwaysSatisfied = true;
+			
+			for(State state : nfa.getStates()) {
+				if(!state.getSetType().equals(SetType.Good) || !state.isStateComplete(nfa)) {
+					isAlwaysSatisfied = false;
+					break;
+				}
+			}
+			
+			return isAlwaysSatisfied.toString();
+		}
+		
+		return "";
 	}
 }

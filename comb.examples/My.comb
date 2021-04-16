@@ -36,7 +36,7 @@
     </P>
   </element>
   <element xsi:type="comb:_untilWithin_" name="_untilWithin_" logicGroup="STL">
-    <subtreeInterpretations>Comb: G(!G((Q &amp;&amp; FR) -> ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || ((!G(!GTest) &amp;&amp; !R) U (R || ((G(!GTest) &amp;&amp; !R) U (R || (!G(!GTest) U R))))))))))) U[0, 10.5] G[0, 10.5](speed &lt; 55)</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G(!G((q &amp;&amp; Fr) -> ((!G(!gtest) &amp;&amp; !r) U (r || ((G(!gtest) &amp;&amp; !r) U (r || ((!G(!gtest) &amp;&amp; !r) U (r || ((G(!gtest) &amp;&amp; !r) U (r || (!G(!gtest) U r))))))))))) U[0, 10.5] G[0, 10.5](speed &lt; 55)</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
