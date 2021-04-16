@@ -3,6 +3,7 @@ package comb.generator.action.automaton;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import batmonGen.Automaton;
 import batmonGen.NeverclaimToBuchi;
@@ -11,18 +12,21 @@ import batmonGen.Transform;
 import comb.expression.design.RefreshLogicGroupAndInterpretations;
 import comb.expression.metamodel.comb.Element;
 import comb.generator.action.InfoUtils;
+import comb.generator.action.import_export.ImportExportUtils;
 import gov.nasa.ltl.graph.Graph;
 import gov.nasa.ltl.graphio.Writer;
 import gov.nasa.ltl.trans.LTL2Buchi;
 import gov.nasa.ltl.trans.ParseErrorException;
 
 public class AutomatonUtils {
-	public static void saveBuchi(final Element element, final Writer.Format format, final boolean showInfo) {
+	public static boolean saveBuchi(final Element element, final Writer.Format format, final boolean showInfo) {
 		String filePath = InfoUtils.getTargetFilePath("Extract automaton to (path):");
-		saveBuchi(element, format, showInfo, false, filePath);
+		return saveBuchi(element, format, showInfo, false, filePath);
 	}
 	
-	public static void saveBuchi(final Element element, final Writer.Format format, final boolean showInfo, final boolean isNegated, final String filePath) {
+	public static boolean saveBuchi(final Element element, final Writer.Format format, final boolean showInfo, final boolean isNegated, final String filePath) {
+		boolean successfulSave = false;
+		
 		try {
 			Graph<String> g = generate_LTL2BuchiGraph(element, isNegated, showInfo);
 			if(g != null) {
@@ -30,6 +34,8 @@ public class AutomatonUtils {
 				PrintStream pout = new PrintStream(fout);
 				Writer<String> writer = Writer.getWriter(format, pout);
 				writer.write(g);
+				
+				successfulSave = true;
 				
 				if(showInfo)
 					InfoUtils.showMessageDialog("File saved successfully!\nSee: " + filePath);
@@ -39,6 +45,8 @@ public class AutomatonUtils {
 			if(showInfo)
 				InfoUtils.showMessageDialog("ERROR while saving file\nSee: " + e);
 		}
+		
+		return successfulSave;
 	}
 	
 	public static Automaton getNFA(final Element element) {
@@ -55,10 +63,16 @@ public class AutomatonUtils {
 		Automaton nfa = null;
 		try {
 			String fileName = "temp_buchi.txt";
-			saveBuchi(element, Writer.Format.SPIN, false, isNegated, fileName);
-			Automaton ba = NeverclaimToBuchi.parse(fileName);
-			ba.setName(element.getName());
-			nfa = Transform.buchiToNFA(ba);
+			boolean successfulSave = saveBuchi(element, Writer.Format.SPIN, false, isNegated, fileName);
+			if(successfulSave) {
+				Automaton ba = NeverclaimToBuchi.parse(fileName);
+				ba.setName(element.getName());
+				nfa = Transform.buchiToNFA(ba);
+			}
+			else {
+				//clearing the file, so it does not contain the büchi description used before
+				ImportExportUtils.writeTextFile(fileName, new ArrayList<String>(), false);
+			}
 		} catch (IOException | ReadBuchiDescriptionException e) {
 			e.printStackTrace();
 			InfoUtils.showMessageDialog("ERROR while generating DFA!\n" + e);

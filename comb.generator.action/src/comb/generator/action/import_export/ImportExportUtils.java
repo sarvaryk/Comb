@@ -16,11 +16,16 @@ public class ImportExportUtils {
 	}
 	
 	public static void writeTextFile(String pathString, List<String> lines) {
+	    writeTextFile(pathString, lines, true);
+	}
+	
+	public static void writeTextFile(String pathString, List<String> lines, boolean showInfo) {
 	    Path path = Paths.get(pathString);
 	    try {
 			Files.write(path, lines, StandardCharsets.UTF_8);
 			
-			InfoUtils.showMessageDialog("Operation completed successfully!\nSee: " + pathString);
+			if(showInfo)
+				InfoUtils.showMessageDialog("Operation completed successfully!\nSee: " + pathString);
 		} catch (IOException e) {
 			InfoUtils.showMessageDialog("An error occured: " + e);
 			
