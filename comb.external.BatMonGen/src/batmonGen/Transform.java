@@ -11,8 +11,8 @@ public class Transform {
                 state.setAccepting(true);
         }
         
-        if(automaton.getStates().size() == 1 && automaton.getStates().get(0).isAccepting())
-        	automaton.getStates().get(0).setSetType(SetType.Good);
+        /*if(automaton.getStates().size() == 1 && automaton.getStates().get(0).isAccepting())
+        	automaton.getStates().get(0).setSetType(SetType.Good);*/
 
         return automaton;
     }

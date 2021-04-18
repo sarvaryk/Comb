@@ -13,6 +13,10 @@ public class Tarjan {
     //TODO, nice to have: It does not recognise GOOD SCCs properly when Epsilon transitions are present (see: BAs/ba_enfa_cycle.txt)
     // This is rated "nice to have" because GOOD SCCs are not required to yield a result. However by utilising them, the result could have been more accurate.
     // This issue does not effect the detection of BAD and INCONLUSIVE SCCs.
+    public static void markBadRegions(Automaton buchi) {
+        markBadRegions(buchi, null);
+    }
+    
     public static void markBadRegions(Automaton buchi, Logger logger) {
         sccs = new ArrayList<>();
 
@@ -26,9 +30,9 @@ public class Tarjan {
         }
 
         for(ArrayList<State> scc : sccs) {
-            logger.log("SCC:");
+            if(logger != null) logger.log("SCC:");
             for(State state : scc) {
-                logger.log("   " + state.getName());
+            	if(logger != null) logger.log("   " + state.getName());
                 if(state.getTransitions().size() == 0 && !state.isAccepting())
                     state.setSetType(State.SetType.Bad);
                 else {
@@ -75,11 +79,13 @@ public class Tarjan {
                     state.setSetType(State.SetType.Inconclusive);
                 }
             }
-            if(isGoodScc && !isBadScc && !isInconclusiveScc) {
-                logger.log("   Marked as good region!");
-            }
-            else if(!isGoodScc && isBadScc && !isInconclusiveScc) {
-                logger.log("   Marked as bad region!");
+            if(logger != null) {
+	            if(isGoodScc && !isBadScc && !isInconclusiveScc) {
+	                logger.log("   Marked as good region!");
+	            }
+	            else if(!isGoodScc && isBadScc && !isInconclusiveScc) {
+	                logger.log("   Marked as bad region!");
+	            }
             }
         }
     }

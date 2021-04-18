@@ -1,5 +1,7 @@
 package comb.generator.action;
 
+import java.util.Optional;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -22,10 +24,13 @@ public class GenerateMonitorHandler extends AbstractHandler {
 		final ElementImpl element = (ElementImpl)firstElement;
 		
 		try {
-			Automaton nfa_original = AutomatonUtils.getNFA(element);
-			Automaton nfa_negated = AutomatonUtils.getNFA(element, true);
+			Optional<Automaton> nfa_original_optional = AutomatonUtils.getNFA(element);
+			Optional<Automaton> nfa_negated_optional = AutomatonUtils.getNFA(element, true);
 			
-			if(nfa_original != null && nfa_negated != null) {
+			if(nfa_original_optional.isPresent() && nfa_negated_optional != null) {
+				Automaton nfa_original = nfa_original_optional.get();
+				Automaton nfa_negated = nfa_negated_optional.get();
+				
 				//Creating DFA from NFA could result in 2^(number of NFA states).
 				//In case of an NFA consisting of 17 states could result in a DFA,
 				//which has 2^17 = 131072 states. The tool can not handle this in feasible time.

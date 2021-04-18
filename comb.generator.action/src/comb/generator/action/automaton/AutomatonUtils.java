@@ -4,10 +4,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Optional;
 
 import batmonGen.Automaton;
 import batmonGen.NeverclaimToBuchi;
 import batmonGen.ReadBuchiDescriptionException;
+import batmonGen.Tarjan;
 import batmonGen.Transform;
 import comb.expression.design.RefreshLogicGroupAndInterpretations;
 import comb.expression.metamodel.comb.Element;
@@ -28,7 +30,7 @@ public class AutomatonUtils {
 		boolean successfulSave = false;
 		
 		try {
-			Graph<String> g = generate_LTL2BuchiGraph(element, isNegated, showInfo);
+			Graph<String> g = getBuchi(element, isNegated, showInfo);
 			if(g != null) {
 				FileOutputStream fout = new FileOutputStream(filePath);
 				PrintStream pout = new PrintStream(fout);
@@ -49,11 +51,11 @@ public class AutomatonUtils {
 		return successfulSave;
 	}
 	
-	public static Automaton getNFA(final Element element) {
+	public static Optional<Automaton> getNFA(final Element element) {
 		return getNFA(element, false);
 	}
 	
-	public static Automaton getNFA(final Element element, final boolean isNegated) {
+	public static Optional<Automaton> getNFA(final Element element, final boolean isNegated) {
 		RefreshLogicGroupAndInterpretations.refresh(element);
 		
 		//TODO: transform the POJO directly
@@ -67,6 +69,7 @@ public class AutomatonUtils {
 			if(successfulSave) {
 				Automaton ba = NeverclaimToBuchi.parse(fileName);
 				ba.setName(element.getName());
+				Tarjan.markBadRegions(ba);
 				nfa = Transform.buchiToNFA(ba);
 			}
 			else {
@@ -78,10 +81,10 @@ public class AutomatonUtils {
 			InfoUtils.showMessageDialog("ERROR while generating DFA!\n" + e);
 		}
 		
-		return nfa;
+		return Optional.ofNullable(nfa);
 	}
 	
-	private static Graph<String> generate_LTL2BuchiGraph(final Element element, final boolean isNegated, final boolean showInfo) {
+	private static Graph<String> getBuchi(final Element element, final boolean isNegated, final boolean showInfo) {
 		String spinInterpretation = null;
 		for(String interpretation : element.getSubtreeInterpretations()) {
 			if(interpretation.startsWith("Spin")) {

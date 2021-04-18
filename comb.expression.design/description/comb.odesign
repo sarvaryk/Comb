@@ -1141,6 +1141,16 @@
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
           </initialOperation>
         </controls>
+        <controls xsi:type="properties:TextDescription" name="ShortestSatisfying" labelExpression="Shortest satisfying trace" helpExpression="The shortest trace which ensures the satisfaction of the requirement" isEnabledExpression="aql:false" valueExpression="aql: self.evaluateShortestSatisfyingTrace()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="ShortestViolating" labelExpression="Shortest violating trace" helpExpression="The shortest trace which ensures the violation of the requirement" isEnabledExpression="aql:false" valueExpression="aql: self.evaluateShortestViolationTrace()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
       </groups>
     </categories>
   </extensions>
