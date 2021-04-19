@@ -134,17 +134,17 @@
     </H>
   </element>
   <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G(true)</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G(true)</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: [](true)</subtreeInterpretations>
-    <subtreeInterpretations>NuSMV: G(true)</subtreeInterpretations>
-    <subtreeInterpretations>Spin: [](true)</subtreeInterpretations>
-    <P xsi:type="comb:Literal" name="true">
-      <subtreeInterpretations>Comb: true</subtreeInterpretations>
-      <subtreeInterpretations>Spot: true</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: true</subtreeInterpretations>
-      <subtreeInterpretations>NuSMV: true</subtreeInterpretations>
-      <subtreeInterpretations>Spin: true</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G(false)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(false)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](false)</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: G(false)</subtreeInterpretations>
+    <subtreeInterpretations>Spin: [](false)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="false">
+      <subtreeInterpretations>Comb: false</subtreeInterpretations>
+      <subtreeInterpretations>Spot: false</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: false</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: false</subtreeInterpretations>
+      <subtreeInterpretations>Spin: false</subtreeInterpretations>
     </P>
   </element>
   <element xsi:type="comb:_until_" name="not_spawn_until_init" logicGroup="LTL">

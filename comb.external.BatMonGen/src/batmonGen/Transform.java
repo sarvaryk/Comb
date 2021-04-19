@@ -10,9 +10,6 @@ public class Transform {
             if(state.getSetType() != State.SetType.Bad)
                 state.setAccepting(true);
         }
-        
-        /*if(automaton.getStates().size() == 1 && automaton.getStates().get(0).isAccepting())
-        	automaton.getStates().get(0).setSetType(SetType.Good);*/
 
         return automaton;
     }
@@ -179,12 +176,62 @@ public class Transform {
         removeUnreachableStates(fsm);
         return fsm;
     }
-
+    
+    public static Automaton complete(Automaton automaton) {
+    	ArrayList<String> transitionLabels;
+    	ArrayList<String> transitionLabelsSatisfied;
+    	ArrayList<State> oldStates = new ArrayList<>();
+    	for(State state : automaton.getStates()) {
+    		oldStates.add(new State(state));
+    	}
+    	
+    	for(State state : oldStates) {
+    		transitionLabelsSatisfied = new ArrayList<>();
+    		transitionLabels = automaton.getEveryPossibleLabelName();
+    		for(Transition transition : state.getTransitions()) {
+    	        for(int i = 0; i < transitionLabels.size(); i++) {
+    	            Label label = new Label(transitionLabels.get(i), automaton.getAbc());
+	    			if(transition.getLabel().satisfies(label))
+	    				transitionLabelsSatisfied.add(label.getName());
+    	        }
+    		}
+    		
+    		for(String transitionLabelNamessSatisfied : transitionLabelsSatisfied) {
+    			transitionLabels.remove(transitionLabelNamessSatisfied);
+    		}
+    		
+    		for(String labelName : transitionLabels) {
+				if(automaton.getState(State.EMPTY) == null) {
+	            	State emptyState = new State();
+	            	emptyState.setAccepting(false);
+	            	emptyState.setName(State.EMPTY);
+	            	emptyState.setSetType(SetType.Bad);
+	            	
+	            	Label emptyLabel = new Label(Label.TRUE, automaton.getAbc());
+	            	Transition emptyTransition = new Transition();
+	            	emptyTransition.setDestinationStateName(State.EMPTY);
+	            	emptyTransition.setLabel(emptyLabel);
+	            	
+	            	emptyState.addTransition(emptyTransition);
+	            	
+	            	automaton.addState(emptyState);
+				}
+				
+				Label label = new Label(labelName, automaton.getAbc());
+	        	Transition newTransition = new Transition();
+	        	newTransition.setDestinationStateName(State.EMPTY);
+	        	newTransition.setLabel(label);
+	        	automaton.getState(state.getName()).addTransition(newTransition);
+    		}
+    	}
+    	
+    	return automaton;
+    }
+    
     private static Set<String> getDestinationStatesOfEpsilonStatesForLabel(State state, /*Label label,*/ Automaton automaton) {
         Set<String> destinationStateNames = new HashSet<>();
         destinationStateNames.addAll(reachableViaEpsilon(state, automaton, new HashSet<>()));
 
-        //Ezt a kodot egyszer csak itt talaltam, mert hibat okozott... Kikommentezve jonak tunik, de nem tudom, hogy eredetileg miert volt itt...
         /*Set<String> temp_destinationStateNames = new HashSet<>();
         for(String tempState : destinationStateNames) {
             for(Transition transition : automaton.getState(tempState).getTransitions()) {

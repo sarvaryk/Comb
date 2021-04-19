@@ -17,11 +17,21 @@ public class Label {
     public Label(String name, ArrayList<String> abc) {
         this.name = name;
         //Guard, so it wont try to generate an robdd if the abc is empty
+        this.truthAssignments = new ArrayList<>();
         if (!abc.isEmpty() && !name.equals(EPSILON)) {
-            generateRobdd(abc);
-            truthAssignments = robdd.getCompleteTruthAssignments();
-        } else {
-            truthAssignments = new ArrayList<>();
+        	if(name.equals(TRUE)) {
+                for(int i = 0; i < Math.pow(2, abc.size()); i++) {
+                    String binaryString = Integer.toBinaryString(i);
+                    while(binaryString.length() < abc.size()) {
+                        binaryString = "0"+binaryString;
+                    }
+                    truthAssignments.add(binaryString);
+        		}
+        	}
+        	else {
+	            generateRobdd(abc);
+	            truthAssignments = robdd.getCompleteTruthAssignments();
+        	}
         }
     }
 

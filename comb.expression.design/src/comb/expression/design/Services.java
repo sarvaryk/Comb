@@ -8,6 +8,7 @@ import java.util.Queue;
 import batmonGen.Automaton;
 import batmonGen.State;
 import batmonGen.State.SetType;
+import batmonGen.Transform;
 import batmonGen.Transition;
 import comb.expression.metamodel.comb.Element;
 import comb.generator.action.automaton.AutomatonUtils;
@@ -17,6 +18,9 @@ public class Services {
 	
 	public boolean canEvaluationsBePerformed(final Element element) {
 		optional_nfa = AutomatonUtils.getNFA(element);
+		
+		if(optional_nfa.isPresent())
+			optional_nfa = Optional.of(Transform.complete(optional_nfa.get()));
 		
 		return optional_nfa.isPresent();
 	}
@@ -44,12 +48,42 @@ public class Services {
 			
 			Boolean isAlwaysSatisfied = true;
 			for(State state : nfa.getStates()) {
-				if(!state.getSetType().equals(SetType.Good) || !state.isStateComplete(nfa)) {
+				if(!state.getSetType().equals(SetType.Good)) {
 					isAlwaysSatisfied = false;
 					break;
 				}
 			}
 			return isAlwaysSatisfied.toString();
+		}
+		
+		return "";
+	}
+	
+	public String evaluateShortestAcceptingTrace(final Element element) {
+		if(optional_nfa.isPresent()) {
+			Automaton nfa = optional_nfa.get();
+			
+			ArrayList<String>[] traces = getShortestTraces(nfa);
+			
+			String notExistingTrace = "No finite trace exists, which is accepted by the requirement";
+			String instantlyEvaluatedTrace = "The requirement accepts if nothing happens";
+			
+			ArrayList<String> shortestTrace = null;
+			for(int i = 0; i < nfa.getStateCount(); i++) {			
+				if(nfa.getStates().get(i).isAccepting() && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
+						shortestTrace = traces[i];
+				}
+			}
+			
+			String result;
+			if(shortestTrace == null)
+				result = notExistingTrace;
+			else if(shortestTrace.size() == 0)
+				result = instantlyEvaluatedTrace;
+			else
+				result = String.join(" --> ", shortestTrace);
+			
+			return result;
 		}
 		
 		return "";
@@ -77,7 +111,7 @@ public class Services {
 			
 			ArrayList<String>[] traces = getShortestTraces(nfa);
 			
-			String notExistingTrace = "No trace exists, which ensures the violation of the requirement";
+			String notExistingTrace = "No finite trace exists, which ensures the violation of the requirement";
 			String instantlyEvaluatedTrace = "The requirement is instantly violated";
 			String shortestTrace = getShortestTraceToSetType(nfa, traces, SetType.Bad, notExistingTrace, instantlyEvaluatedTrace);
 			
@@ -89,14 +123,8 @@ public class Services {
 	
 	private String getShortestTraceToSetType(final Automaton automaton, final ArrayList<String>[] traces, final SetType setType, final String notExistingTrace, final String instantlyEvaluatedTrace) {		
 		ArrayList<String> shortestTrace = null;
-		for(int i = 0; i < automaton.getStateCount(); i++) {
-			boolean isSearchedRegion;
-			if(setType.equals(SetType.Good))
-				isSearchedRegion = automaton.getStates().get(i).getSetType() == setType && automaton.getStates().get(i).isStateComplete(automaton);
-			else
-				isSearchedRegion = automaton.getStates().get(i).getSetType() == setType;
-			
-			if(isSearchedRegion && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
+		for(int i = 0; i < automaton.getStateCount(); i++) {			
+			if(automaton.getStates().get(i).getSetType() == setType && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
 					shortestTrace = traces[i];
 			}
 		}
@@ -107,7 +135,7 @@ public class Services {
 		else if(shortestTrace.size() == 0)
 			result = instantlyEvaluatedTrace;
 		else
-			result = String.join(" ", shortestTrace);
+			result = String.join(" --> ", shortestTrace);
 		
 		return result;
 	}
@@ -131,7 +159,7 @@ public class Services {
 			current = waiting.remove();
 			int current_index = automaton.getStates().indexOf(automaton.getState(current));
 
-			if(current_index != 0) {
+			if(!current.equals(automaton.getInitState().getName())) {
 				pred = preds.remove();
 				int pred_index = automaton.getStates().indexOf(automaton.getState(pred));
 				traces[current_index].addAll(traces[pred_index]);

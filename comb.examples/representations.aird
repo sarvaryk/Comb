@@ -32,7 +32,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_JdumkCMrEeu_Hc-ap4TZnw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/comb.expression.design/description/comb.odesign#//@ownedViewpoints[name='CombViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_uapisH3rEeuKXb98l8g0gg" name="new CombDiagramDescription" repPath="#_uaQhIH3rEeuKXb98l8g0gg" changeId="38835248-78ce-4fe0-a8d5-175e3e2a9925">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_uapisH3rEeuKXb98l8g0gg" name="new CombDiagramDescription" repPath="#_uaQhIH3rEeuKXb98l8g0gg" changeId="66f50bbf-a4ec-4f6c-b745-7a2e6134d79f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/comb.expression.design/description/comb.odesign#//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']"/>
         <target xmi:type="comb:Comb" href="My.comb#/"/>
       </ownedRepresentationDescriptors>
@@ -2756,7 +2756,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/comb.expression.design/description/comb.odesign#//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']/@defaultLayer/@nodeMappings[name='ElementNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_OetHMJpKEeu6i_uQR87IAw" name="true" incomingEdges="_QBdTiJpKEeu6i_uQR87IAw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_OetHMJpKEeu6i_uQR87IAw" name="false" incomingEdges="_QBdTiJpKEeu6i_uQR87IAw" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="comb:Literal" href="My.comb#//@element.2/@P"/>
       <semanticElements xmi:type="comb:Literal" href="My.comb#//@element.2/@P"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
