@@ -281,6 +281,9 @@ public class ResponseOneParamItemProvider extends ResponseItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.RESPONSE_ONE_PARAM__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.RESPONSE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

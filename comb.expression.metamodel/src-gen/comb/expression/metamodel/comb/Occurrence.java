@@ -13,5 +13,4 @@ package comb.expression.metamodel.comb;
  * @generated
  */
 public interface Occurrence extends LTLPatternMappings {
-
 } // Occurrence

@@ -1,6 +1,7 @@
 ID;LTL;MTL;MITL;STL
 ALWAYS;[];-;-;-
 EVENTUALLY;<>;-;-;-
+WEAKUNTIL;-;-;-;-
 UNTIL;-;-;-;-
 NEXT;-;-;-;-
 AND;and;-;-;-

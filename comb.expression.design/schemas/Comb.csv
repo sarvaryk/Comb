@@ -2,6 +2,7 @@ ID;LTL;MTL;MITL;STL
 ALWAYS;G;G[<high>];G[<low>, <high>];G[<low>, <high>]
 EVENTUALLY;F;F[<high>];F[<low>, <high>];F[<low>, <high>]
 UNTIL;U;U[<high>];U[<low>, <high>];U[<low>, <high>]
+WEAKUNTIL;W;-;-;-
 NEXT;X;-;-;-
 AND;&&;&&;&&;&&
 OR;||;||;||;||

@@ -1246,6 +1246,29 @@ public class CombItemProviderAdapterFactory extends CombAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb._weakUntil_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected _weakUntil_ItemProvider _weakUntil_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb._weakUntil_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter create_weakUntil_Adapter() {
+		if (_weakUntil_ItemProvider == null) {
+			_weakUntil_ItemProvider = new _weakUntil_ItemProvider(this);
+		}
+
+		return _weakUntil_ItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1452,6 +1475,8 @@ public class CombItemProviderAdapterFactory extends CombAdapterFactory
 			_greaterThan_ItemProvider.dispose();
 		if (_greaterThanOrEqual_ItemProvider != null)
 			_greaterThanOrEqual_ItemProvider.dispose();
+		if (_weakUntil_ItemProvider != null)
+			_weakUntil_ItemProvider.dispose();
 	}
 
 }

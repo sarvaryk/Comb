@@ -2,6 +2,7 @@ ID;LTL;MTL;MITL;STL
 ALWAYS;G;-;-;-
 EVENTUALLY;F;-;-;-
 UNTIL;U;-;-;-
+WEAKUNTIL;-;-;-;-
 NEXT;X;-;-;-
 AND;&;-;-;-
 OR;|;-;-;-

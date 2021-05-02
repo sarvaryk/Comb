@@ -101,6 +101,7 @@ import comb.expression.metamodel.comb._untilWithin_;
 import comb.expression.metamodel.comb._untilWithin_and_;
 import comb.expression.metamodel.comb._until_;
 
+import comb.expression.metamodel.comb._weakUntil_;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -773,6 +774,13 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	private EClass ltlPatternMappingsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass _weakUntil_EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3038,8 +3046,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_lessThan__Description() {
-		return (EAttribute) _lessThan_EClass.getEStructuralFeatures().get(1);
+	public EAttribute get_lessThan__Interpretation() {
+		return (EAttribute) _lessThan_EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3048,8 +3056,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_lessThan__Interpretation() {
-		return (EAttribute) _lessThan_EClass.getEStructuralFeatures().get(0);
+	public EAttribute get_lessThan__Description() {
+		return (EAttribute) _lessThan_EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3098,8 +3106,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_equal__Description() {
-		return (EAttribute) _equal_EClass.getEStructuralFeatures().get(1);
+	public EAttribute get_equal__Interpretation() {
+		return (EAttribute) _equal_EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3108,8 +3116,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_equal__Interpretation() {
-		return (EAttribute) _equal_EClass.getEStructuralFeatures().get(0);
+	public EAttribute get_equal__Description() {
+		return (EAttribute) _equal_EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3128,8 +3136,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_greaterThan__Description() {
-		return (EAttribute) _greaterThan_EClass.getEStructuralFeatures().get(1);
+	public EAttribute get_greaterThan__Interpretation() {
+		return (EAttribute) _greaterThan_EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3138,8 +3146,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_greaterThan__Interpretation() {
-		return (EAttribute) _greaterThan_EClass.getEStructuralFeatures().get(0);
+	public EAttribute get_greaterThan__Description() {
+		return (EAttribute) _greaterThan_EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3158,8 +3166,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_greaterThanOrEqual__Description() {
-		return (EAttribute) _greaterThanOrEqual_EClass.getEStructuralFeatures().get(1);
+	public EAttribute get_greaterThanOrEqual__Interpretation() {
+		return (EAttribute) _greaterThanOrEqual_EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3168,8 +3176,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute get_greaterThanOrEqual__Interpretation() {
-		return (EAttribute) _greaterThanOrEqual_EClass.getEStructuralFeatures().get(0);
+	public EAttribute get_greaterThanOrEqual__Description() {
+		return (EAttribute) _greaterThanOrEqual_EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3190,6 +3198,36 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	@Override
 	public EClass getLTLPatternMappings() {
 		return ltlPatternMappingsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass get_weakUntil_() {
+		return _weakUntil_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_weakUntil__Interpretation() {
+		return (EAttribute) _weakUntil_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute get_weakUntil__Description() {
+		return (EAttribute) _weakUntil_EClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3570,6 +3608,10 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		ltlPatternMappingsEClass = createEClass(LTL_PATTERN_MAPPINGS);
 
+		_weakUntil_EClass = createEClass(_WEAK_UNTIL_);
+		createEAttribute(_weakUntil_EClass, _WEAK_UNTIL___INTERPRETATION);
+		createEAttribute(_weakUntil_EClass, _WEAK_UNTIL___DESCRIPTION);
+
 		// Create enums
 		logicGroupEEnum = createEEnum(LOGIC_GROUP);
 		supportedOutputEEnum = createEEnum(SUPPORTED_OUTPUT);
@@ -3697,6 +3739,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		stlOperatorsEClass.getESuperTypes().add(this.getElement());
 		ltlPatternMappingsEClass.getESuperTypes().add(this.getElement());
 		ltlPatternMappingsEClass.getESuperTypes().add(this.getLTLOperators());
+		_weakUntil_EClass.getESuperTypes().add(this.getLTLOperatorsTwoParams());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(precedenceAfter_until_EClass, PrecedenceAfter_until_.class, "PrecedenceAfter_until_", !IS_ABSTRACT,
@@ -4438,6 +4481,16 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		initEClass(ltlPatternMappingsEClass, LTLPatternMappings.class, "LTLPatternMappings", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(_weakUntil_EClass, _weakUntil_.class, "_weakUntil_", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(get_weakUntil__Interpretation(), ecorePackage.getEString(), "interpretation", "<P> W <Q>", 1, 1,
+				_weakUntil_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(get_weakUntil__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: <P> is true until <Q> becomes true or <P> stays always true in the given sub-expression.",
+				1, 1, _weakUntil_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");

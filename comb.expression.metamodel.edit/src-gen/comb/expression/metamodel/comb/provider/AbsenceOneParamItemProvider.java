@@ -281,6 +281,9 @@ public class AbsenceOneParamItemProvider extends AbsenceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_ONE_PARAM__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

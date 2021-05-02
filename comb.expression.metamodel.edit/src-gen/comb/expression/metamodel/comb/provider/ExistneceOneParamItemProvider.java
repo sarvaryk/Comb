@@ -281,6 +281,9 @@ public class ExistneceOneParamItemProvider extends ExistenceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTNECE_ONE_PARAM__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTNECE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

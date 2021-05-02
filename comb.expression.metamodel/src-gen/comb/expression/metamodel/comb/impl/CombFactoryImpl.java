@@ -158,6 +158,8 @@ public class CombFactoryImpl extends EFactoryImpl implements CombFactory {
 			return create_greaterThan_();
 		case CombPackage._GREATER_THAN_OR_EQUAL_:
 			return create_greaterThanOrEqual_();
+		case CombPackage._WEAK_UNTIL_:
+			return create_weakUntil_();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -756,6 +758,17 @@ public class CombFactoryImpl extends EFactoryImpl implements CombFactory {
 	public _greaterThanOrEqual_ create_greaterThanOrEqual_() {
 		_greaterThanOrEqual_Impl _greaterThanOrEqual_ = new _greaterThanOrEqual_Impl();
 		return _greaterThanOrEqual_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public _weakUntil_ create_weakUntil_() {
+		_weakUntil_Impl _weakUntil_ = new _weakUntil_Impl();
+		return _weakUntil_;
 	}
 
 	/**

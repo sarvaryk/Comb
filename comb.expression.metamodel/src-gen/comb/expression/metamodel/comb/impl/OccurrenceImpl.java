@@ -4,6 +4,7 @@ package comb.expression.metamodel.comb.impl;
 
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Occurrence;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

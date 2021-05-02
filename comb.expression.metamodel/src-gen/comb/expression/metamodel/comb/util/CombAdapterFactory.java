@@ -537,6 +537,11 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter case_weakUntil_(_weakUntil_ object) {
+			return create_weakUntil_Adapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1868,6 +1873,20 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLTLPatternMappingsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb._weakUntil_ <em>weak Until </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb._weakUntil_
+	 * @generated
+	 */
+	public Adapter create_weakUntil_Adapter() {
 		return null;
 	}
 

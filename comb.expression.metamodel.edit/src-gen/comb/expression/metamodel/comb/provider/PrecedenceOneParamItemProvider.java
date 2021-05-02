@@ -281,6 +281,9 @@ public class PrecedenceOneParamItemProvider extends PrecedenceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.PRECEDENCE_ONE_PARAM__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.PRECEDENCE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

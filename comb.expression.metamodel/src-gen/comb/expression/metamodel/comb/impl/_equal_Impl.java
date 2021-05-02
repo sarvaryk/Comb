@@ -91,30 +91,6 @@ public class _equal_Impl extends RelationImpl implements _equal_ {
 	 * @generated
 	 */
 	@Override
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage._EQUAL___DESCRIPTION, oldDescription,
-					description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getInterpretation() {
 		return interpretation;
 	}
@@ -131,6 +107,30 @@ public class _equal_Impl extends RelationImpl implements _equal_ {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage._EQUAL___INTERPRETATION,
 					oldInterpretation, interpretation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage._EQUAL___DESCRIPTION, oldDescription,
+					description));
 	}
 
 	/**

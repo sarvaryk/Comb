@@ -281,6 +281,9 @@ public class UniversalityOneParamItemProvider extends UniversalityItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_ONE_PARAM__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.UNIVERSALITY_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

@@ -7784,6 +7784,97 @@ public interface CombPackage extends EPackage {
 	int _GREATER_THAN_OR_EQUAL__OPERATION_COUNT = RELATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._weakUntil_Impl <em>weak Until </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._weakUntil_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_weakUntil_()
+	 * @generated
+	 */
+	int _WEAK_UNTIL_ = 94;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___NAME = LTL_OPERATORS_TWO_PARAMS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___SUBTREE_INTERPRETATIONS = LTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___LOGIC_GROUP = LTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___P = LTL_OPERATORS_TWO_PARAMS__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___Q = LTL_OPERATORS_TWO_PARAMS__Q;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___INTERPRETATION = LTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL___DESCRIPTION = LTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>weak Until </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL__FEATURE_COUNT = LTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>weak Until </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int _WEAK_UNTIL__OPERATION_COUNT = LTL_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7791,7 +7882,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
 	 * @generated
 	 */
-	int LOGIC_GROUP = 94;
+	int LOGIC_GROUP = 95;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}' enum.
@@ -7801,7 +7892,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSupportedOutput()
 	 * @generated
 	 */
-	int SUPPORTED_OUTPUT = 95;
+	int SUPPORTED_OUTPUT = 96;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -10114,17 +10205,6 @@ public interface CombPackage extends EPackage {
 	EClass get_lessThan_();
 
 	/**
-	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThan_#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see comb.expression.metamodel.comb._lessThan_#getDescription()
-	 * @see #get_lessThan_()
-	 * @generated
-	 */
-	EAttribute get_lessThan__Description();
-
-	/**
 	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThan_#getInterpretation <em>Interpretation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10134,6 +10214,17 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute get_lessThan__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._lessThan_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._lessThan_#getDescription()
+	 * @see #get_lessThan_()
+	 * @generated
+	 */
+	EAttribute get_lessThan__Description();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._lessThanOrEqual_ <em>less Than Or Equal </em>}'.
@@ -10178,17 +10269,6 @@ public interface CombPackage extends EPackage {
 	EClass get_equal_();
 
 	/**
-	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._equal_#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see comb.expression.metamodel.comb._equal_#getDescription()
-	 * @see #get_equal_()
-	 * @generated
-	 */
-	EAttribute get_equal__Description();
-
-	/**
 	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._equal_#getInterpretation <em>Interpretation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10200,6 +10280,17 @@ public interface CombPackage extends EPackage {
 	EAttribute get_equal__Interpretation();
 
 	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._equal_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._equal_#getDescription()
+	 * @see #get_equal_()
+	 * @generated
+	 */
+	EAttribute get_equal__Description();
+
+	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._greaterThan_ <em>greater Than </em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10208,17 +10299,6 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EClass get_greaterThan_();
-
-	/**
-	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThan_#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see comb.expression.metamodel.comb._greaterThan_#getDescription()
-	 * @see #get_greaterThan_()
-	 * @generated
-	 */
-	EAttribute get_greaterThan__Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThan_#getInterpretation <em>Interpretation</em>}'.
@@ -10232,6 +10312,17 @@ public interface CombPackage extends EPackage {
 	EAttribute get_greaterThan__Interpretation();
 
 	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThan_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._greaterThan_#getDescription()
+	 * @see #get_greaterThan_()
+	 * @generated
+	 */
+	EAttribute get_greaterThan__Description();
+
+	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._greaterThanOrEqual_ <em>greater Than Or Equal </em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10240,17 +10331,6 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EClass get_greaterThanOrEqual_();
-
-	/**
-	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThanOrEqual_#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see comb.expression.metamodel.comb._greaterThanOrEqual_#getDescription()
-	 * @see #get_greaterThanOrEqual_()
-	 * @generated
-	 */
-	EAttribute get_greaterThanOrEqual__Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThanOrEqual_#getInterpretation <em>Interpretation</em>}'.
@@ -10262,6 +10342,17 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute get_greaterThanOrEqual__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._greaterThanOrEqual_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._greaterThanOrEqual_#getDescription()
+	 * @see #get_greaterThanOrEqual_()
+	 * @generated
+	 */
+	EAttribute get_greaterThanOrEqual__Description();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.STLOperators <em>STL Operators</em>}'.
@@ -10282,6 +10373,38 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLTLPatternMappings();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._weakUntil_ <em>weak Until </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>weak Until </em>'.
+	 * @see comb.expression.metamodel.comb._weakUntil_
+	 * @generated
+	 */
+	EClass get_weakUntil_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._weakUntil_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb._weakUntil_#getInterpretation()
+	 * @see #get_weakUntil_()
+	 * @generated
+	 */
+	EAttribute get_weakUntil__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb._weakUntil_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb._weakUntil_#getDescription()
+	 * @see #get_weakUntil_()
+	 * @generated
+	 */
+	EAttribute get_weakUntil__Description();
 
 	/**
 	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}'.
@@ -12252,20 +12375,20 @@ public interface CombPackage extends EPackage {
 		EClass _LESS_THAN_ = eINSTANCE.get_lessThan_();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute _LESS_THAN___DESCRIPTION = eINSTANCE.get_lessThan__Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute _LESS_THAN___INTERPRETATION = eINSTANCE.get_lessThan__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _LESS_THAN___DESCRIPTION = eINSTANCE.get_lessThan__Description();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._lessThanOrEqual_Impl <em>less Than Or Equal </em>}' class.
@@ -12304,20 +12427,20 @@ public interface CombPackage extends EPackage {
 		EClass _EQUAL_ = eINSTANCE.get_equal_();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute _EQUAL___DESCRIPTION = eINSTANCE.get_equal__Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute _EQUAL___INTERPRETATION = eINSTANCE.get_equal__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _EQUAL___DESCRIPTION = eINSTANCE.get_equal__Description();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._greaterThan_Impl <em>greater Than </em>}' class.
@@ -12330,20 +12453,20 @@ public interface CombPackage extends EPackage {
 		EClass _GREATER_THAN_ = eINSTANCE.get_greaterThan_();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute _GREATER_THAN___DESCRIPTION = eINSTANCE.get_greaterThan__Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute _GREATER_THAN___INTERPRETATION = eINSTANCE.get_greaterThan__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _GREATER_THAN___DESCRIPTION = eINSTANCE.get_greaterThan__Description();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl <em>greater Than Or Equal </em>}' class.
@@ -12356,20 +12479,20 @@ public interface CombPackage extends EPackage {
 		EClass _GREATER_THAN_OR_EQUAL_ = eINSTANCE.get_greaterThanOrEqual_();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute _GREATER_THAN_OR_EQUAL___DESCRIPTION = eINSTANCE.get_greaterThanOrEqual__Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute _GREATER_THAN_OR_EQUAL___INTERPRETATION = eINSTANCE.get_greaterThanOrEqual__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _GREATER_THAN_OR_EQUAL___DESCRIPTION = eINSTANCE.get_greaterThanOrEqual__Description();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.STLOperatorsImpl <em>STL Operators</em>}' class.
@@ -12390,6 +12513,32 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LTL_PATTERN_MAPPINGS = eINSTANCE.getLTLPatternMappings();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._weakUntil_Impl <em>weak Until </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl._weakUntil_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_weakUntil_()
+		 * @generated
+		 */
+		EClass _WEAK_UNTIL_ = eINSTANCE.get_weakUntil_();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _WEAK_UNTIL___INTERPRETATION = eINSTANCE.get_weakUntil__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute _WEAK_UNTIL___DESCRIPTION = eINSTANCE.get_weakUntil__Description();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.

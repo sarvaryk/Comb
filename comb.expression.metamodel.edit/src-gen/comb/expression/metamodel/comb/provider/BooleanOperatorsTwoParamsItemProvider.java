@@ -281,6 +281,9 @@ public class BooleanOperatorsTwoParamsItemProvider extends BooleanOperatorsItemP
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOOLEAN_OPERATORS_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOOLEAN_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

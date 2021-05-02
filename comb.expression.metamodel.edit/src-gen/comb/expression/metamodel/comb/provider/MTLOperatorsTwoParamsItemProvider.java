@@ -292,6 +292,9 @@ public class MTLOperatorsTwoParamsItemProvider extends MTLOperatorsItemProvider 
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

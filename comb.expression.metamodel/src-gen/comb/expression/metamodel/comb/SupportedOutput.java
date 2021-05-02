@@ -27,37 +27,41 @@ public enum SupportedOutput implements Enumerator {
 	 * @ordered
 	 */
 	COMB(0, "Comb", "Comb"),
+
 	/**
 	 * The '<em><b>Spot</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #SPOT_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	SPOT(1, "Spot", "Spot"),
+
 	/**
 	 * The '<em><b>Uppaal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #UPPAAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	UPPAAL(2, "Uppaal", "Uppaal"),
+
 	/**
 	 * The '<em><b>Nu SMV</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #NU_SMV_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	NU_SMV(3, "NuSMV", "NuSMV"),
+
 	/**
 	 * The '<em><b>Spin</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #SPIN_VALUE
 	 * @generated
 	 * @ordered

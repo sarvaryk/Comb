@@ -5,6 +5,7 @@ package comb.expression.metamodel.comb.impl;
 import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Literal;
 import comb.expression.metamodel.comb.Relation;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 

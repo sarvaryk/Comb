@@ -292,6 +292,9 @@ public class MITLOperatorsTwoParamsItemProvider extends MITLOperatorsItemProvide
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MITL_OPERATORS_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MITL_OPERATORS_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

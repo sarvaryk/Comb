@@ -284,6 +284,9 @@ public class ExistenceTwoParamsItemProvider extends ExistenceItemProvider {
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTENCE_TWO_PARAMS__R,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
 
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTENCE_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.create_weakUntil_()));
+
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTENCE_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.createPrecedenceAfter_until_()));
 
@@ -433,6 +436,9 @@ public class ExistenceTwoParamsItemProvider extends ExistenceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTENCE_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.EXISTENCE_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

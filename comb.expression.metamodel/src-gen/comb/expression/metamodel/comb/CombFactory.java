@@ -481,6 +481,15 @@ public interface CombFactory extends EFactory {
 	_greaterThanOrEqual_ create_greaterThanOrEqual_();
 
 	/**
+	 * Returns a new object of class '<em>weak Until </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>weak Until </em>'.
+	 * @generated
+	 */
+	_weakUntil_ create_weakUntil_();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

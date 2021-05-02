@@ -281,6 +281,9 @@ public class OrderItemProvider extends LTLPatternMappingsItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ORDER__S,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors
+				.add(createChildParameter(CombPackage.Literals.ORDER__S, CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 	/**

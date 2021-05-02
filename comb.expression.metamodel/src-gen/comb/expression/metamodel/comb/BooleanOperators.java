@@ -13,5 +13,4 @@ package comb.expression.metamodel.comb;
  * @generated
  */
 public interface BooleanOperators extends LTLOperators {
-
 } // BooleanOperators

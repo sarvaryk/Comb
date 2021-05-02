@@ -3,7 +3,7 @@
 package comb.expression.metamodel.comb.impl;
 
 import comb.expression.metamodel.comb.CombPackage;
-import comb.expression.metamodel.comb._greaterThanOrEqual_;
+import comb.expression.metamodel.comb._weakUntil_;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,19 +13,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>greater Than Or Equal </b></em>'.
+ * An implementation of the model object '<em><b>weak Until </b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl#getInterpretation <em>Interpretation</em>}</li>
- *   <li>{@link comb.expression.metamodel.comb.impl._greaterThanOrEqual_Impl#getDescription <em>Description</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl._weakUntil_Impl#getInterpretation <em>Interpretation</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl._weakUntil_Impl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterThanOrEqual_ {
+public class _weakUntil_Impl extends LTLOperatorsTwoParamsImpl implements _weakUntil_ {
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "<P> >= <Q>";
+	protected static final String INTERPRETATION_EDEFAULT = "<P> W <Q>";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
@@ -54,7 +54,7 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: <P> is greater than or equal to (>=) <Q>";
+	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: <P> is true until <Q> becomes true or <P> stays always true in the given sub-expression.";
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -71,7 +71,7 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected _greaterThanOrEqual_Impl() {
+	protected _weakUntil_Impl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CombPackage.Literals._GREATER_THAN_OR_EQUAL_;
+		return CombPackage.Literals._WEAK_UNTIL_;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 		String oldInterpretation = interpretation;
 		interpretation = newInterpretation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION,
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage._WEAK_UNTIL___INTERPRETATION,
 					oldInterpretation, interpretation));
 	}
 
@@ -125,25 +125,11 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	 * @generated
 	 */
 	@Override
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION,
-					oldDescription, description));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
+		case CombPackage._WEAK_UNTIL___INTERPRETATION:
 			return getInterpretation();
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
+		case CombPackage._WEAK_UNTIL___DESCRIPTION:
 			return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -157,11 +143,8 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
+		case CombPackage._WEAK_UNTIL___INTERPRETATION:
 			setInterpretation((String) newValue);
-			return;
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
-			setDescription((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,11 +158,8 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
+		case CombPackage._WEAK_UNTIL___INTERPRETATION:
 			setInterpretation(INTERPRETATION_EDEFAULT);
-			return;
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
-			setDescription(DESCRIPTION_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -193,10 +173,10 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CombPackage._GREATER_THAN_OR_EQUAL___INTERPRETATION:
+		case CombPackage._WEAK_UNTIL___INTERPRETATION:
 			return INTERPRETATION_EDEFAULT == null ? interpretation != null
 					: !INTERPRETATION_EDEFAULT.equals(interpretation);
-		case CombPackage._GREATER_THAN_OR_EQUAL___DESCRIPTION:
+		case CombPackage._WEAK_UNTIL___DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -221,4 +201,4 @@ public class _greaterThanOrEqual_Impl extends RelationImpl implements _greaterTh
 		return result.toString();
 	}
 
-} //_greaterThanOrEqual_Impl
+} //_weakUntil_Impl

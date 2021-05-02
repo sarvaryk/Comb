@@ -292,6 +292,9 @@ public class MTLOperatorsItemProvider extends ElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.MTL_OPERATORS__P,
 				CombFactory.eINSTANCE.create_greaterThanOrEqual_()));
+
+		newChildDescriptors.add(
+				createChildParameter(CombPackage.Literals.MTL_OPERATORS__P, CombFactory.eINSTANCE.create_weakUntil_()));
 	}
 
 }
