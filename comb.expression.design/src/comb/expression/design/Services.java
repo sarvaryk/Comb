@@ -81,7 +81,7 @@ public class Services {
 			else if(shortestTrace.size() == 0)
 				result = instantlyEvaluatedTrace;
 			else
-				result = String.join(" --> ", shortestTrace);
+				result = String.join(" ; ", shortestTrace);
 			
 			return result;
 		}
@@ -97,14 +97,30 @@ public class Services {
 			
 			String notExistingTrace = "No finite trace exists, which ensures the satisfaction of the requirement";
 			String instantlyEvaluatedTrace = "The requirement is instantly satisfied";
-			String shortestTrace = getShortestTraceToSetType(nfa, traces, SetType.Good, notExistingTrace, instantlyEvaluatedTrace);
 			
-			return shortestTrace;
+			ArrayList<String> shortestTrace = null;
+			for(int i = 0; i < nfa.getStateCount(); i++) {			
+				if(nfa.getStates().get(i).getSetType() == SetType.Good && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
+						shortestTrace = traces[i];
+				}
+			}
+			
+			String result;
+			if(shortestTrace == null)
+				result = notExistingTrace;
+			else if(shortestTrace.size() == 0)
+				result = instantlyEvaluatedTrace;
+			else
+				result = String.join(" ; ", shortestTrace);
+			
+			return result;
 		}
 		
 		return "";
 	}
 	
+	
+	//TODO: A trace is only violating in an NFA, if all possible runs of the given trace violate the requirement?
 	public String evaluateShortestViolationTrace(final Element element) {
 		if(optional_nfa.isPresent()) {
 			Automaton nfa = optional_nfa.get();
@@ -113,31 +129,26 @@ public class Services {
 			
 			String notExistingTrace = "No finite trace exists, which ensures the violation of the requirement";
 			String instantlyEvaluatedTrace = "The requirement is instantly violated";
-			String shortestTrace = getShortestTraceToSetType(nfa, traces, SetType.Bad, notExistingTrace, instantlyEvaluatedTrace);
 			
-			return shortestTrace;
+			ArrayList<String> shortestTrace = null;
+			for(int i = 0; i < nfa.getStateCount(); i++) {			
+				if(nfa.getStates().get(i).getSetType() == SetType.Bad && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
+						shortestTrace = traces[i];
+				}
+			}
+			
+			String result;
+			if(shortestTrace == null)
+				result = notExistingTrace;
+			else if(shortestTrace.size() == 0)
+				result = instantlyEvaluatedTrace;
+			else
+				result = String.join(" ; ", shortestTrace);
+			
+			return result;
 		}
 		
 		return "";
-	}
-	
-	private String getShortestTraceToSetType(final Automaton automaton, final ArrayList<String>[] traces, final SetType setType, final String notExistingTrace, final String instantlyEvaluatedTrace) {		
-		ArrayList<String> shortestTrace = null;
-		for(int i = 0; i < automaton.getStateCount(); i++) {			
-			if(automaton.getStates().get(i).getSetType() == setType && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
-					shortestTrace = traces[i];
-			}
-		}
-		
-		String result;
-		if(shortestTrace == null)
-			result = notExistingTrace;
-		else if(shortestTrace.size() == 0)
-			result = instantlyEvaluatedTrace;
-		else
-			result = String.join(" --> ", shortestTrace);
-		
-		return result;
 	}
 	
 	private ArrayList<String>[] getShortestTraces(final Automaton automaton) {

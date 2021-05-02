@@ -528,4 +528,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LTLPatternMappings" abstract="true"
       eSuperTypes="#//Element #//LTLOperators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="_weakUntil_" eSuperTypes="#//LTLOperatorsTwoParams">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> W &lt;Q>"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
+        defaultValueLiteral="The expression described by this element becomes true if: &lt;P> is true until &lt;Q> becomes true or &lt;P> stays always true in the given sub-expression."/>
+  </eClassifiers>
 </ecore:EPackage>

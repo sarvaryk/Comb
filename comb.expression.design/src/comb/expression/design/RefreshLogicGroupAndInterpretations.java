@@ -43,6 +43,7 @@ public class RefreshLogicGroupAndInterpretations {
 	    interpretations = generateSubtreeInterpretation(element.getL(), "<low>", interpretations);
 	    interpretations = generateSubtreeInterpretation(element.getH(), "<high>", interpretations);
 	    
+	    //TODO: could be format dependent
 	    for(int i = 0; i < interpretations.size(); i++) {
 	    	if(interpretations.get(i).contains(NOT_SUPPORTED_OPERATOR_MESSAGE))
 	    		interpretations.set(i, NOT_SUPPORTED_OPERATOR_MESSAGE);
@@ -56,9 +57,8 @@ public class RefreshLogicGroupAndInterpretations {
     }
     
     private static List<String> generateSubtreeInterpretation(Element element, String operand, List<String> interpretations) {
-    	List<String> tempElementInterpretations;
 	    if(element != null) {
-			tempElementInterpretations = generateElementInterpretations(element);
+	    	List<String> tempElementInterpretations = generateElementInterpretations(element);
     		generateSubtreeInterpretations(element, tempElementInterpretations);
     		for(SupportedOutput so : SupportedOutput.values()) {
     			int index = so.getValue();

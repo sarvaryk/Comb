@@ -331,5 +331,9 @@
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//STLOperators"/>
     <genClasses ecoreClass="comb.ecore#//LTLPatternMappings"/>
+    <genClasses ecoreClass="comb.ecore#//_weakUntil_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_weakUntil_/interpretation"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_weakUntil_/description"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
