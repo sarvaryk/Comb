@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import batmonGen.Automaton;
 import batmonGen.NeverclaimToBuchi;
@@ -21,6 +25,8 @@ import gov.nasa.ltl.trans.LTL2Buchi;
 import gov.nasa.ltl.trans.ParseErrorException;
 
 public class AutomatonUtils {
+	private static int TIMEOUT = 60;
+	
 	public static boolean saveBuchi(final Element element, final Writer.Format format, final boolean showInfo) {
 		String filePath = InfoUtils.getTargetFilePath("Extract automaton to (path):");
 		return saveBuchi(element, format, showInfo, false, filePath);
@@ -30,7 +36,7 @@ public class AutomatonUtils {
 		boolean successfulSave = false;
 		
 		try {
-			Graph<String> g = getBuchi(element, isNegated, showInfo);
+			Graph<String> g = CompletableFuture.supplyAsync(() -> getBuchi(element, isNegated, showInfo)).get(TIMEOUT, TimeUnit.SECONDS);
 			if(g != null) {
 				FileOutputStream fout = new FileOutputStream(filePath);
 				PrintStream pout = new PrintStream(fout);
@@ -42,10 +48,13 @@ public class AutomatonUtils {
 				if(showInfo)
 					InfoUtils.showMessageDialog("File saved successfully!\nSee: " + filePath);
 			}
-		} catch (IOException e) {
+		} catch (IOException | InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 			if(showInfo)
 				InfoUtils.showMessageDialog("ERROR while saving file\nSee: " + e);
+		} catch (TimeoutException e) {
+			InfoUtils.showMessageDialog("Generation of the Büchi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
+			e.printStackTrace();
 		}
 		
 		return successfulSave;

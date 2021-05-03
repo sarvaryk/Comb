@@ -8,21 +8,19 @@ import java.util.Queue;
 import batmonGen.Automaton;
 import batmonGen.State;
 import batmonGen.State.SetType;
-import batmonGen.Transform;
 import batmonGen.Transition;
 import comb.expression.metamodel.comb.Element;
 import comb.generator.action.automaton.AutomatonUtils;
  
 public class Services {
 	private static Optional<Automaton> optional_nfa;
+	private static Optional<Automaton> optional_negated_nfa;
 	
 	public boolean canEvaluationsBePerformed(final Element element) {
 		optional_nfa = AutomatonUtils.getNFA(element);
+		optional_negated_nfa = AutomatonUtils.getNFA(element, true);
 		
-		if(optional_nfa.isPresent())
-			optional_nfa = Optional.of(Transform.complete(optional_nfa.get()));
-		
-		return optional_nfa.isPresent();
+		return optional_nfa.isPresent() && optional_negated_nfa.isPresent();
 	}
 	
 	public String evaluateIsSatisfiable(final Element element) {
@@ -120,19 +118,18 @@ public class Services {
 	}
 	
 	
-	//TODO: A trace is only violating in an NFA, if all possible runs of the given trace violate the requirement?
 	public String evaluateShortestViolationTrace(final Element element) {
-		if(optional_nfa.isPresent()) {
-			Automaton nfa = optional_nfa.get();
+		if(optional_negated_nfa.isPresent()) {
+			Automaton nfa_negated = optional_negated_nfa.get();
 			
-			ArrayList<String>[] traces = getShortestTraces(nfa);
+			ArrayList<String>[] traces = getShortestTraces(nfa_negated);
 			
 			String notExistingTrace = "No finite trace exists, which ensures the violation of the requirement";
 			String instantlyEvaluatedTrace = "The requirement is instantly violated";
 			
 			ArrayList<String> shortestTrace = null;
-			for(int i = 0; i < nfa.getStateCount(); i++) {			
-				if(nfa.getStates().get(i).getSetType() == SetType.Bad && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
+			for(int i = 0; i < nfa_negated.getStateCount(); i++) {			
+				if(nfa_negated.getStates().get(i).getSetType() == SetType.Good && (shortestTrace == null || shortestTrace.size() > traces[i].size())) {
 						shortestTrace = traces[i];
 				}
 			}

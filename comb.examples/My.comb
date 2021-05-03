@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
-  <element xsi:type="comb:Always_" href="#//@element.0"/>
-  <element xsi:type="comb:_until_" href="#//@element.1"/>
-  <element xsi:type="comb:Not_" href="#//@element.2"/>
+  <element xsi:type="comb:Always_" name="request_response" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G(!(request) || F(response))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(!(request) || F(response))</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](!(request) or &lt;>(response))</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: G(!(request) | F(response))</subtreeInterpretations>
+    <subtreeInterpretations>Spin: [](!(request) || &lt;>(response))</subtreeInterpretations>
+    <P xsi:type="comb:_implies_" name="_implies_" logicGroup="LTL">
+      <subtreeInterpretations>Comb: !(request) || F(response)</subtreeInterpretations>
+      <subtreeInterpretations>Spot: !(request) || F(response)</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: !(request) or &lt;>(response)</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: !(request) | F(response)</subtreeInterpretations>
+      <subtreeInterpretations>Spin: !(request) || &lt;>(response)</subtreeInterpretations>
+      <P xsi:type="comb:Literal" name="request">
+        <subtreeInterpretations>Comb: request</subtreeInterpretations>
+        <subtreeInterpretations>Spot: request</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: request</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: request</subtreeInterpretations>
+        <subtreeInterpretations>Spin: request</subtreeInterpretations>
+      </P>
+      <Q xsi:type="comb:Eventually_" name="new Eventually_" logicGroup="LTL">
+        <subtreeInterpretations>Comb: F(response)</subtreeInterpretations>
+        <subtreeInterpretations>Spot: F(response)</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: &lt;>(response)</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: F(response)</subtreeInterpretations>
+        <subtreeInterpretations>Spin: &lt;>(response)</subtreeInterpretations>
+        <P xsi:type="comb:Literal" name="response">
+          <subtreeInterpretations>Comb: response</subtreeInterpretations>
+          <subtreeInterpretations>Spot: response</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: response</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: response</subtreeInterpretations>
+          <subtreeInterpretations>Spin: response</subtreeInterpretations>
+        </P>
+      </Q>
+    </P>
+  </element>
+  <element xsi:type="comb:_until_" name="not_spawn_until_init" logicGroup="LTL">
+    <subtreeInterpretations>Comb: !(spawn) U init</subtreeInterpretations>
+    <subtreeInterpretations>Spot: !(spawn) U init</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: !(spawn) U init</subtreeInterpretations>
+    <subtreeInterpretations>Spin: !(spawn) U init</subtreeInterpretations>
+    <P xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
+      <subtreeInterpretations>Comb: !(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>Spot: !(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: not(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: !(spawn)</subtreeInterpretations>
+      <subtreeInterpretations>Spin: !(spawn)</subtreeInterpretations>
+      <P xsi:type="comb:Literal" name="spawn">
+        <subtreeInterpretations>Comb: spawn</subtreeInterpretations>
+        <subtreeInterpretations>Spot: spawn</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: spawn</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: spawn</subtreeInterpretations>
+        <subtreeInterpretations>Spin: spawn</subtreeInterpretations>
+      </P>
+    </P>
+    <Q xsi:type="comb:Literal" name="init">
+      <subtreeInterpretations>Comb: init</subtreeInterpretations>
+      <subtreeInterpretations>Spot: init</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: init</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: init</subtreeInterpretations>
+      <subtreeInterpretations>Spin: init</subtreeInterpretations>
+    </Q>
+  </element>
+  <element xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: !(G((q &amp;&amp; Fr) -> ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || (!G(!p) U r)))))))))))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: !(G((q &amp;&amp; Fr) -> ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || (!G(!p) U r)))))))))))</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: !(G((q &amp; Fr) -> ((!G(!p) &amp; !r) U (r | ((G(!p) &amp; !r) U (r | ((!G(!p) &amp; !r) U (r | ((G(!p) &amp; !r) U (r | (!G(!p) U r)))))))))))</subtreeInterpretations>
+    <subtreeInterpretations>Spin: !([]((q &amp;&amp; &lt;>r) -> ((![](!p) &amp;&amp; !r) U (r || (([](!p) &amp;&amp; !r) U (r || ((![](!p) &amp;&amp; !r) U (r || (([](!p) &amp;&amp; !r) U (r || (![](!p) U r)))))))))))</subtreeInterpretations>
+    <P xsi:type="comb:BoundedExistenceBetween_and_" name="new BoundedExistenceBetween_and_" logicGroup="LTL" interpretation="G((&lt;Q> &amp;&amp; F&lt;R>) -> ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((!&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || ((&lt;P> &amp;&amp; !&lt;R>) U (&lt;R> || (!&lt;P> U &lt;R>))))))))))">
+      <subtreeInterpretations>Comb: G((q &amp;&amp; Fr) -> ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || (!G(!p) U r))))))))))</subtreeInterpretations>
+      <subtreeInterpretations>Spot: G((q &amp;&amp; Fr) -> ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || ((!G(!p) &amp;&amp; !r) U (r || ((G(!p) &amp;&amp; !r) U (r || (!G(!p) U r))))))))))</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: G((q &amp; Fr) -> ((!G(!p) &amp; !r) U (r | ((G(!p) &amp; !r) U (r | ((!G(!p) &amp; !r) U (r | ((G(!p) &amp; !r) U (r | (!G(!p) U r))))))))))</subtreeInterpretations>
+      <subtreeInterpretations>Spin: []((q &amp;&amp; &lt;>r) -> ((![](!p) &amp;&amp; !r) U (r || (([](!p) &amp;&amp; !r) U (r || ((![](!p) &amp;&amp; !r) U (r || (([](!p) &amp;&amp; !r) U (r || (![](!p) U r))))))))))</subtreeInterpretations>
+      <P xsi:type="comb:AbsenceGlobally_" name="new AbsenceGlobally_" logicGroup="LTL" interpretation="G(!&lt;P>)">
+        <subtreeInterpretations>Comb: G(!p)</subtreeInterpretations>
+        <subtreeInterpretations>Spot: G(!p)</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: [](notp)</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: G(!p)</subtreeInterpretations>
+        <subtreeInterpretations>Spin: [](!p)</subtreeInterpretations>
+        <P xsi:type="comb:Literal" name="P">
+          <subtreeInterpretations>Comb: p</subtreeInterpretations>
+          <subtreeInterpretations>Spot: p</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: p</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: p</subtreeInterpretations>
+          <subtreeInterpretations>Spin: p</subtreeInterpretations>
+        </P>
+      </P>
+      <Q xsi:type="comb:Literal" name="Q">
+        <subtreeInterpretations>Comb: q</subtreeInterpretations>
+        <subtreeInterpretations>Spot: q</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: q</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: q</subtreeInterpretations>
+        <subtreeInterpretations>Spin: q</subtreeInterpretations>
+      </Q>
+      <R xsi:type="comb:Literal" name="R">
+        <subtreeInterpretations>Comb: r</subtreeInterpretations>
+        <subtreeInterpretations>Spot: r</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: r</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: r</subtreeInterpretations>
+        <subtreeInterpretations>Spin: r</subtreeInterpretations>
+      </R>
+    </P>
+  </element>
 </comb:Comb>
