@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface _implies_ extends BooleanOperatorsTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"!(<P>) || <Q>"</code>.
+	 * The default value is <code>"(<P>) -> (<Q>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#get_implies__Interpretation()
-	 * @model default="!(&lt;P&gt;) || &lt;Q&gt;" required="true"
+	 * @model default="(&lt;P&gt;) -&gt; (&lt;Q&gt;)" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

@@ -5,7 +5,7 @@
     <semanticResources>comb.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_aX4a4CQ5EeuGyrK2x7frVw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aYSqkSQ5EeuGyrK2x7frVw" name="comb" repPath="#_aYLV0CQ5EeuGyrK2x7frVw" changeId="1ea253ee-8f2b-4d2a-b488-f71356824e6f">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aYSqkSQ5EeuGyrK2x7frVw" name="comb" repPath="#_aYLV0CQ5EeuGyrK2x7frVw" changeId="e3dbfa71-3191-47bd-900c-318c42e9a122">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="comb.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -4622,7 +4622,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_kVLxjCQ5EeuGyrK2x7frVw" name="interpretation : EString = !(&lt;P>) || &lt;Q>" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_kVLxjCQ5EeuGyrK2x7frVw" name="interpretation : EString = (&lt;P>) -> (&lt;Q>)" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="comb.ecore#//_implies_/interpretation"/>
         <semanticElements xmi:type="ecore:EAttribute" href="comb.ecore#//_implies_/interpretation"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_KzsaqyRBEeuGyrK2x7frVw" labelAlignment="LEFT" description="_vxD64CRAEeuGyrK2x7frVw">

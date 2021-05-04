@@ -4159,7 +4159,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		initEClass(_implies_EClass, _implies_.class, "_implies_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(get_implies__Interpretation(), ecorePackage.getEString(), "interpretation", "!(<P>) || <Q>", 1,
+		initEAttribute(get_implies__Interpretation(), ecorePackage.getEString(), "interpretation", "(<P>) -> (<Q>)", 1,
 				1, _implies_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(get_implies__Description(), ecorePackage.getEString(), "description",

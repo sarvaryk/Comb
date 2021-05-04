@@ -34,7 +34,7 @@ public class _implies_Impl extends BooleanOperatorsTwoParamsImpl implements _imp
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "!(<P>) || <Q>";
+	protected static final String INTERPRETATION_EDEFAULT = "(<P>) -> (<Q>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

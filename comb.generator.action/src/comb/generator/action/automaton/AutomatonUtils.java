@@ -53,7 +53,8 @@ public class AutomatonUtils {
 			if(showInfo)
 				InfoUtils.showMessageDialog("ERROR while saving file\nSee: " + e);
 		} catch (TimeoutException e) {
-			InfoUtils.showMessageDialog("Generation of the Büchi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
+			if(showInfo)
+				InfoUtils.showMessageDialog("Generation of the Büchi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
 			e.printStackTrace();
 		}
 		

@@ -289,7 +289,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="_implies_" eSuperTypes="#//BooleanOperatorsTwoParams">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="!(&lt;P>) || &lt;Q>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="(&lt;P>) -> (&lt;Q>)"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" changeable="false"
         defaultValueLiteral="The expression described by this element becomes true if: &lt;P> becomes true then &lt;Q> becomes true in the given sub-expression."/>
