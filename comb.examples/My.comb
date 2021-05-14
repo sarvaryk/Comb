@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <comb:Comb xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comb="http://www.example.org/comb">
   <element xsi:type="comb:Always_" name="request_response" logicGroup="LTL">
-    <subtreeInterpretations>Comb: G(!(request) || F(response))</subtreeInterpretations>
-    <subtreeInterpretations>Spot: G(!(request) || F(response))</subtreeInterpretations>
-    <subtreeInterpretations>Uppaal: [](!(request) or &lt;>(response))</subtreeInterpretations>
-    <subtreeInterpretations>NuSMV: G(!(request) | F(response))</subtreeInterpretations>
-    <subtreeInterpretations>Spin: [](!(request) || &lt;>(response))</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G((request) -> (F(response)))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G((request) -> (F(response)))</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: []((request) imply (&lt;>(response)))</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: G((request) -> (F(response)))</subtreeInterpretations>
+    <subtreeInterpretations>Spin: []((request) -> (&lt;>(response)))</subtreeInterpretations>
     <P xsi:type="comb:_implies_" name="_implies_" logicGroup="LTL">
-      <subtreeInterpretations>Comb: !(request) || F(response)</subtreeInterpretations>
-      <subtreeInterpretations>Spot: !(request) || F(response)</subtreeInterpretations>
-      <subtreeInterpretations>Uppaal: !(request) or &lt;>(response)</subtreeInterpretations>
-      <subtreeInterpretations>NuSMV: !(request) | F(response)</subtreeInterpretations>
-      <subtreeInterpretations>Spin: !(request) || &lt;>(response)</subtreeInterpretations>
+      <subtreeInterpretations>Comb: (request) -> (F(response))</subtreeInterpretations>
+      <subtreeInterpretations>Spot: (request) -> (F(response))</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: (request) imply (&lt;>(response))</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: (request) -> (F(response))</subtreeInterpretations>
+      <subtreeInterpretations>Spin: (request) -> (&lt;>(response))</subtreeInterpretations>
       <P xsi:type="comb:Literal" name="request">
         <subtreeInterpretations>Comb: request</subtreeInterpretations>
         <subtreeInterpretations>Spot: request</subtreeInterpretations>
@@ -103,6 +103,48 @@
         <subtreeInterpretations>NuSMV: r</subtreeInterpretations>
         <subtreeInterpretations>Spin: r</subtreeInterpretations>
       </R>
+    </P>
+  </element>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="STL">
+    <subtreeInterpretations>Comb: G[0, -1]((temp > 123.4) -> (limit_reached))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:_implies_" name="_implies_" logicGroup="STL">
+      <subtreeInterpretations>Comb: (temp > 123.4) -> (limit_reached)</subtreeInterpretations>
+      <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <P xsi:type="comb:_greaterThan_" name="_greaterThan_" logicGroup="STL">
+        <subtreeInterpretations>Comb: temp > 123.4</subtreeInterpretations>
+        <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <P name="temp">
+          <subtreeInterpretations>Comb: temp</subtreeInterpretations>
+          <subtreeInterpretations>Spot: temp</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: temp</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: temp</subtreeInterpretations>
+          <subtreeInterpretations>Spin: temp</subtreeInterpretations>
+        </P>
+        <Q name="123.4">
+          <subtreeInterpretations>Comb: 123.4</subtreeInterpretations>
+          <subtreeInterpretations>Spot: 123.4</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: 123.4</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: 123.4</subtreeInterpretations>
+          <subtreeInterpretations>Spin: 123.4</subtreeInterpretations>
+        </Q>
+      </P>
+      <Q xsi:type="comb:Literal" name="limit_reached">
+        <subtreeInterpretations>Comb: limit_reached</subtreeInterpretations>
+        <subtreeInterpretations>Spot: limit_reached</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: limit_reached</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: limit_reached</subtreeInterpretations>
+        <subtreeInterpretations>Spin: limit_reached</subtreeInterpretations>
+      </Q>
     </P>
   </element>
 </comb:Comb>

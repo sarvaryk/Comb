@@ -36,7 +36,7 @@ public class AutomatonUtils {
 		boolean successfulSave = false;
 		
 		try {
-			Graph<String> g = CompletableFuture.supplyAsync(() -> getBuchi(element, isNegated, showInfo)).get(TIMEOUT, TimeUnit.SECONDS);
+			Graph<String> g = CompletableFuture.supplyAsync(() -> generateBuchi(element, isNegated, showInfo)).get(TIMEOUT, TimeUnit.SECONDS);
 			if(g != null) {
 				FileOutputStream fout = new FileOutputStream(filePath);
 				PrintStream pout = new PrintStream(fout);
@@ -61,26 +61,21 @@ public class AutomatonUtils {
 		return successfulSave;
 	}
 	
-	public static Optional<Automaton> getNFA(final Element element) {
-		return getNFA(element, false);
-	}
-	
-	public static Optional<Automaton> getNFA(final Element element, final boolean isNegated) {
+	public static Optional<Automaton> getBuchi(final Element element, final boolean isNegated) {
 		RefreshLogicGroupAndInterpretations.refresh(element);
 		
 		//TODO: transform the POJO directly
 		//Graph<String> g = AutomatonUtils.generate_LTL2BuchiGraph(element, false);
 		//Automaton ba = translateFrom_LTL2BuchiGraph_To_BatMonGenAutomaton(g);
 		
-		Automaton nfa = null;
+		Automaton ba = null;
 		try {
 			String fileName = "temp_buchi.txt";
 			boolean successfulSave = saveBuchi(element, Writer.Format.SPIN, false, isNegated, fileName);
 			if(successfulSave) {
-				Automaton ba = NeverclaimToBuchi.parse(fileName);
+				ba = NeverclaimToBuchi.parse(fileName);
 				ba.setName(element.getName());
 				Tarjan.markBadRegions(ba);
-				nfa = Transform.buchiToNFA(ba);
 			}
 			else {
 				//clearing the file, so it does not contain the büchi description used before
@@ -88,13 +83,27 @@ public class AutomatonUtils {
 			}
 		} catch (IOException | ReadBuchiDescriptionException e) {
 			e.printStackTrace();
-			InfoUtils.showMessageDialog("ERROR while generating DFA!\n" + e);
+			InfoUtils.showMessageDialog("ERROR while generating the Büchi-automaton!\n" + e);
 		}
+		
+		return Optional.ofNullable(ba);
+	}
+	
+	public static Optional<Automaton> getNFA(final Element element) {
+		return getNFA(element, false);
+	}
+	
+	public static Optional<Automaton> getNFA(final Element element, final boolean isNegated) {
+		Optional<Automaton> ba = getBuchi(element, isNegated);
+		
+		Automaton nfa = null;
+		if(ba.isPresent())
+			nfa = Transform.buchiToNFA(ba.get());
 		
 		return Optional.ofNullable(nfa);
 	}
 	
-	private static Graph<String> getBuchi(final Element element, final boolean isNegated, final boolean showInfo) {
+	private static Graph<String> generateBuchi(final Element element, final boolean isNegated, final boolean showInfo) {
 		String spinInterpretation = null;
 		for(String interpretation : element.getSubtreeInterpretations()) {
 			if(interpretation.startsWith("Spin")) {

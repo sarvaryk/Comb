@@ -70,6 +70,7 @@ public class RefreshLogicGroupAndInterpretations {
 	    return interpretations;
     }
     
+    //TODO: can be improved if the metamodel contained the ID of the operator, and only one .csv should be accessed for a given interpretation
     private static List<String> generateElementInterpretations(final Element element) {   	
     	List<String> elementInterpretations = new ArrayList<>();
     	
