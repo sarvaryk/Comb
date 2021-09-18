@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: comb.expression.metamodel.comb.provider.CombEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-14
 Export-Package: comb.expression.metamodel.comb.provider
 Require-Bundle: org.eclipse.core.runtime,
  comb.expression.metamodel;visibility:=reexport,

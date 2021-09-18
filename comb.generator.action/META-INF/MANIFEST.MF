@@ -4,7 +4,7 @@ Bundle-Name: Action
 Bundle-SymbolicName: comb.generator.action;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: comb.generator.action
-Bundle-RequiredExecutionEnvironment: JavaSE-12
+Bundle-RequiredExecutionEnvironment: JavaSE-14
 Require-Bundle: org.eclipse.ui;bundle-version="3.118.0",
  org.eclipse.sirius,
  comb.expression.metamodel,

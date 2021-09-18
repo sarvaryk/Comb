@@ -1,16 +1,22 @@
 package comb.expression.design;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
+import org.osgi.framework.Bundle;
 
 import comb.expression.metamodel.comb.Element;
 import comb.expression.metamodel.comb.LTLOperators;
@@ -183,10 +189,15 @@ public class RefreshLogicGroupAndInterpretations {
     private static List<String[]> loadOperators(String schemaName) {
 	    List<String[]> operators = new ArrayList<>();
 		try {
-			operators = Files.lines(Path.of("comb.expression.design/schemas/"+schemaName+".csv"))
+			Bundle bundle = Platform.getBundle("comb.expression.design");
+			URI fileURI = FileLocator.resolve(bundle.getEntry("schemas/")).toURI();
+			String filePath = Paths.get(fileURI).toString();
+			Path path = Paths.get(filePath, schemaName+".csv");
+			
+			operators = Files.lines(path)
 			                .map(line -> line.split(";"))
 			                .collect(Collectors.toList());
-		} catch (IOException e) {
+		} catch (IOException | URISyntaxException e) {
 			e.printStackTrace();
 		}
     

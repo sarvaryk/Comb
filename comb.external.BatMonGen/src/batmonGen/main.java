@@ -40,6 +40,8 @@ public class main {
             if(isWrongInput)
                 System.out.println("Wrong input! Please type only the number of the option, then hit [ENTER].");
         }
+        
+        scanner_options.close();
 
         Automaton fsm = new Automaton();
         switch(inputOption) {
@@ -93,6 +95,8 @@ public class main {
                 buchi = NeverclaimToBuchi.parse(path);
 
                 wrongInput = false;
+                
+                scanner_path.close();
             }
             catch(Exception e) {
                 System.out.println("   An error occured:" + e.toString());
