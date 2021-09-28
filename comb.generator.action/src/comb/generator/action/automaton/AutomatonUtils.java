@@ -1,9 +1,9 @@
 package comb.generator.action.automaton;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -18,7 +18,6 @@ import batmonGen.Transform;
 import comb.expression.design.RefreshLogicGroupAndInterpretations;
 import comb.expression.metamodel.comb.Element;
 import comb.generator.action.InfoUtils;
-import comb.generator.action.import_export.ImportExportUtils;
 import gov.nasa.ltl.graph.Graph;
 import gov.nasa.ltl.graphio.Writer;
 import gov.nasa.ltl.trans.LTL2Buchi;
@@ -54,7 +53,7 @@ public class AutomatonUtils {
 				InfoUtils.showMessageDialog("ERROR while saving file\nSee: " + e);
 		} catch (TimeoutException e) {
 			if(showInfo)
-				InfoUtils.showMessageDialog("Generation of the Büchi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
+				InfoUtils.showMessageDialog("Generation of the Bï¿½chi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
 			e.printStackTrace();
 		}
 		
@@ -77,13 +76,11 @@ public class AutomatonUtils {
 				ba.setName(element.getName());
 				Tarjan.markBadRegions(ba);
 			}
-			else {
-				//clearing the file, so it does not contain the büchi description used before
-				ImportExportUtils.writeTextFile(fileName, new ArrayList<String>(), false);
-			}
+			new File(fileName).delete();
+
 		} catch (IOException | ReadBuchiDescriptionException e) {
 			e.printStackTrace();
-			InfoUtils.showMessageDialog("ERROR while generating the Büchi-automaton!\n" + e);
+			InfoUtils.showMessageDialog("ERROR while generating the Bï¿½chi-automaton!\n" + e);
 		}
 		
 		return Optional.ofNullable(ba);
