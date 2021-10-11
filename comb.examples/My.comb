@@ -147,4 +147,25 @@
       </Q>
     </P>
   </element>
+  <element xsi:type="comb:AlwaysWithin_" name="AlwaysWithin_" logicGroup="MITL">
+    <subtreeInterpretations>Comb: G[0, 0.2](a)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="a">
+      <subtreeInterpretations>Comb: a</subtreeInterpretations>
+      <subtreeInterpretations>Spot: a</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: a</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: a</subtreeInterpretations>
+      <subtreeInterpretations>Spin: a</subtreeInterpretations>
+    </P>
+    <H name="0.2">
+      <subtreeInterpretations>Comb: 0.2</subtreeInterpretations>
+      <subtreeInterpretations>Spot: 0.2</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: 0.2</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: 0.2</subtreeInterpretations>
+      <subtreeInterpretations>Spin: 0.2</subtreeInterpretations>
+    </H>
+  </element>
 </comb:Comb>

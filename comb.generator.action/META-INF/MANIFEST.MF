@@ -8,10 +8,10 @@ Bundle-RequiredExecutionEnvironment: JavaSE-14
 Require-Bundle: org.eclipse.ui;bundle-version="3.118.0",
  org.eclipse.sirius,
  comb.expression.metamodel,
+ comb.expression.design,
  comb.external.LTL2Buchi,
  comb.external.BatMonGen
 Import-Package: comb.expression.design,
- gov.nasa.ltl.graph,
  org.eclipse.core.resources,
  org.eclipse.core.runtime
 Export-Package: comb.generator.action.automaton
