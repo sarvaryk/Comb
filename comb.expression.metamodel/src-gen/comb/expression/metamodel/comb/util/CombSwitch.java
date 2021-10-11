@@ -1342,44 +1342,13 @@ public class CombSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case CombPackage.MTL_OPERATORS: {
-			MTLOperators mtlOperators = (MTLOperators) theEObject;
-			T result = caseMTLOperators(mtlOperators);
-			if (result == null)
-				result = caseElement(mtlOperators);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CombPackage.MTL_OPERATORS_ONE_PARAM: {
-			MTLOperatorsOneParam mtlOperatorsOneParam = (MTLOperatorsOneParam) theEObject;
-			T result = caseMTLOperatorsOneParam(mtlOperatorsOneParam);
-			if (result == null)
-				result = caseMTLOperators(mtlOperatorsOneParam);
-			if (result == null)
-				result = caseElement(mtlOperatorsOneParam);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CombPackage.MTL_OPERATORS_TWO_PARAMS: {
-			MTLOperatorsTwoParams mtlOperatorsTwoParams = (MTLOperatorsTwoParams) theEObject;
-			T result = caseMTLOperatorsTwoParams(mtlOperatorsTwoParams);
-			if (result == null)
-				result = caseMTLOperators(mtlOperatorsTwoParams);
-			if (result == null)
-				result = caseElement(mtlOperatorsTwoParams);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case CombPackage._UNTIL_WITHIN_: {
 			_untilWithin_ _untilWithin_ = (_untilWithin_) theEObject;
 			T result = case_untilWithin_(_untilWithin_);
 			if (result == null)
-				result = caseMTLOperatorsTwoParams(_untilWithin_);
+				result = caseMITLOperatorsTwoParams(_untilWithin_);
 			if (result == null)
-				result = caseMTLOperators(_untilWithin_);
+				result = caseMITLOperators(_untilWithin_);
 			if (result == null)
 				result = caseElement(_untilWithin_);
 			if (result == null)
@@ -1390,9 +1359,9 @@ public class CombSwitch<T> extends Switch<T> {
 			AlwaysWithin_ alwaysWithin_ = (AlwaysWithin_) theEObject;
 			T result = caseAlwaysWithin_(alwaysWithin_);
 			if (result == null)
-				result = caseMTLOperatorsOneParam(alwaysWithin_);
+				result = caseMITLOperatorsOneParam(alwaysWithin_);
 			if (result == null)
-				result = caseMTLOperators(alwaysWithin_);
+				result = caseMITLOperators(alwaysWithin_);
 			if (result == null)
 				result = caseElement(alwaysWithin_);
 			if (result == null)
@@ -1403,9 +1372,9 @@ public class CombSwitch<T> extends Switch<T> {
 			EventuallyWithin_ eventuallyWithin_ = (EventuallyWithin_) theEObject;
 			T result = caseEventuallyWithin_(eventuallyWithin_);
 			if (result == null)
-				result = caseMTLOperatorsOneParam(eventuallyWithin_);
+				result = caseMITLOperatorsOneParam(eventuallyWithin_);
 			if (result == null)
-				result = caseMTLOperators(eventuallyWithin_);
+				result = caseMITLOperators(eventuallyWithin_);
 			if (result == null)
 				result = caseElement(eventuallyWithin_);
 			if (result == null)
@@ -2723,51 +2692,6 @@ public class CombSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComb(Comb object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MTL Operators</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MTL Operators</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTLOperators(MTLOperators object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MTL Operators One Param</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MTL Operators One Param</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTLOperatorsOneParam(MTLOperatorsOneParam object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MTL Operators Two Params</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MTL Operators Two Params</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMTLOperatorsTwoParams(MTLOperatorsTwoParams object) {
 		return null;
 	}
 

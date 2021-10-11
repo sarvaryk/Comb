@@ -20,16 +20,16 @@ package comb.expression.metamodel.comb;
  * @model
  * @generated
  */
-public interface AlwaysWithin_ extends MTLOperatorsOneParam {
+public interface AlwaysWithin_ extends MITLOperatorsOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"G[<high>](<P>)"</code>.
+	 * The default value is <code>"G[<low>, <high>](<P>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getAlwaysWithin__Interpretation()
-	 * @model default="G[&lt;high&gt;](&lt;P&gt;)" required="true"
+	 * @model default="G[&lt;low&gt;, &lt;high&gt;](&lt;P&gt;)" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

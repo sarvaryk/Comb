@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AlwaysWithin_Impl extends MTLOperatorsOneParamImpl implements AlwaysWithin_ {
+public class AlwaysWithin_Impl extends MITLOperatorsOneParamImpl implements AlwaysWithin_ {
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class AlwaysWithin_Impl extends MTLOperatorsOneParamImpl implements Alway
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "G[<high>](<P>)";
+	protected static final String INTERPRETATION_EDEFAULT = "G[<low>, <high>](<P>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

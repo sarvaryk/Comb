@@ -13,7 +13,6 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="comb.ecore#//LogicGroup">
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LITERAL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LTL"/>
-      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MTL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MITL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/STL"/>
     </genEnums>
@@ -282,13 +281,6 @@
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//Comb">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Comb/element"/>
-    </genClasses>
-    <genClasses ecoreClass="comb.ecore#//MTLOperators">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//MTLOperators/P"/>
-    </genClasses>
-    <genClasses ecoreClass="comb.ecore#//MTLOperatorsOneParam"/>
-    <genClasses ecoreClass="comb.ecore#//MTLOperatorsTwoParams">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//MTLOperatorsTwoParams/Q"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//_untilWithin_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_untilWithin_/interpretation"/>

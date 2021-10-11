@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EventuallyWithin_Impl extends MTLOperatorsOneParamImpl implements EventuallyWithin_ {
+public class EventuallyWithin_Impl extends MITLOperatorsOneParamImpl implements EventuallyWithin_ {
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class EventuallyWithin_Impl extends MTLOperatorsOneParamImpl implements E
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "F[<high>](<P>)";
+	protected static final String INTERPRETATION_EDEFAULT = "F[<low>, <high>](<P>)";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

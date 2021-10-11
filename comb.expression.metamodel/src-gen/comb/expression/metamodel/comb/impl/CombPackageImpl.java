@@ -52,9 +52,6 @@ import comb.expression.metamodel.comb.LogicGroup;
 import comb.expression.metamodel.comb.MITLOperators;
 import comb.expression.metamodel.comb.MITLOperatorsOneParam;
 import comb.expression.metamodel.comb.MITLOperatorsTwoParams;
-import comb.expression.metamodel.comb.MTLOperators;
-import comb.expression.metamodel.comb.MTLOperatorsOneParam;
-import comb.expression.metamodel.comb.MTLOperatorsTwoParams;
 import comb.expression.metamodel.comb.Next_;
 import comb.expression.metamodel.comb.Not_;
 import comb.expression.metamodel.comb.Occurrence;
@@ -676,27 +673,6 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	private EClass combEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtlOperatorsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtlOperatorsOneParamEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mtlOperatorsTwoParamsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2836,56 +2812,6 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMTLOperators() {
-		return mtlOperatorsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMTLOperators_P() {
-		return (EReference) mtlOperatorsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMTLOperatorsOneParam() {
-		return mtlOperatorsOneParamEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMTLOperatorsTwoParams() {
-		return mtlOperatorsTwoParamsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMTLOperatorsTwoParams_Q() {
-		return (EReference) mtlOperatorsTwoParamsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass get_untilWithin_() {
 		return _untilWithin_EClass;
 	}
@@ -3557,14 +3483,6 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		combEClass = createEClass(COMB);
 		createEReference(combEClass, COMB__ELEMENT);
 
-		mtlOperatorsEClass = createEClass(MTL_OPERATORS);
-		createEReference(mtlOperatorsEClass, MTL_OPERATORS__P);
-
-		mtlOperatorsOneParamEClass = createEClass(MTL_OPERATORS_ONE_PARAM);
-
-		mtlOperatorsTwoParamsEClass = createEClass(MTL_OPERATORS_TWO_PARAMS);
-		createEReference(mtlOperatorsTwoParamsEClass, MTL_OPERATORS_TWO_PARAMS__Q);
-
 		_untilWithin_EClass = createEClass(_UNTIL_WITHIN_);
 		createEAttribute(_untilWithin_EClass, _UNTIL_WITHIN___INTERPRETATION);
 		createEAttribute(_untilWithin_EClass, _UNTIL_WITHIN___DESCRIPTION);
@@ -3724,12 +3642,9 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		mitlOperatorsEClass.getESuperTypes().add(this.getElement());
 		mitlOperatorsOneParamEClass.getESuperTypes().add(this.getMITLOperators());
 		mitlOperatorsTwoParamsEClass.getESuperTypes().add(this.getMITLOperators());
-		mtlOperatorsEClass.getESuperTypes().add(this.getElement());
-		mtlOperatorsOneParamEClass.getESuperTypes().add(this.getMTLOperators());
-		mtlOperatorsTwoParamsEClass.getESuperTypes().add(this.getMTLOperators());
-		_untilWithin_EClass.getESuperTypes().add(this.getMTLOperatorsTwoParams());
-		alwaysWithin_EClass.getESuperTypes().add(this.getMTLOperatorsOneParam());
-		eventuallyWithin_EClass.getESuperTypes().add(this.getMTLOperatorsOneParam());
+		_untilWithin_EClass.getESuperTypes().add(this.getMITLOperatorsTwoParams());
+		alwaysWithin_EClass.getESuperTypes().add(this.getMITLOperatorsOneParam());
+		eventuallyWithin_EClass.getESuperTypes().add(this.getMITLOperatorsOneParam());
 		relationEClass.getESuperTypes().add(this.getSTLOperators());
 		_lessThan_EClass.getESuperTypes().add(this.getRelation());
 		_lessThanOrEqual_EClass.getESuperTypes().add(this.getRelation());
@@ -4365,25 +4280,10 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(mtlOperatorsEClass, MTLOperators.class, "MTLOperators", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMTLOperators_P(), this.getElement(), null, "P", null, 1, 1, MTLOperators.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-
-		initEClass(mtlOperatorsOneParamEClass, MTLOperatorsOneParam.class, "MTLOperatorsOneParam", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(mtlOperatorsTwoParamsEClass, MTLOperatorsTwoParams.class, "MTLOperatorsTwoParams", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMTLOperatorsTwoParams_Q(), this.getElement(), null, "Q", null, 1, 1,
-				MTLOperatorsTwoParams.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(_untilWithin_EClass, _untilWithin_.class, "_untilWithin_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(get_untilWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"<P> U[<high>] <Q>", 1, 1, _untilWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"<P> U[<low>, <high>] <Q>", 1, 1, _untilWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(get_untilWithin__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is true until <Q> becomes true within <high> timeunits in the given sub-expression.",
@@ -4395,9 +4295,9 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 
 		initEClass(alwaysWithin_EClass, AlwaysWithin_.class, "AlwaysWithin_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAlwaysWithin__Interpretation(), ecorePackage.getEString(), "interpretation", "G[<high>](<P>)",
-				1, 1, AlwaysWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAlwaysWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
+				"G[<low>, <high>](<P>)", 1, 1, AlwaysWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAlwaysWithin__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> is always true within <high> time units in the given sub-expression.",
 				1, 1, AlwaysWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
@@ -4409,7 +4309,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEClass(eventuallyWithin_EClass, EventuallyWithin_.class, "EventuallyWithin_", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEventuallyWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"F[<high>](<P>)", 1, 1, EventuallyWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"F[<low>, <high>](<P>)", 1, 1, EventuallyWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEventuallyWithin__Description(), ecorePackage.getEString(), "description",
 				"The expression described by this element becomes true if: <P> eventually becomes true within <high> time units in the given sub-expression.",
@@ -4496,7 +4396,6 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LITERAL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
-		addEEnumLiteral(logicGroupEEnum, LogicGroup.MTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.STL);
 

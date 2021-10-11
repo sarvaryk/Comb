@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AlwaysWithin_ItemProvider extends MTLOperatorsOneParamItemProvider {
+public class AlwaysWithin_ItemProvider extends MITLOperatorsOneParamItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -198,7 +198,7 @@ public class AlwaysWithin_ItemProvider extends MTLOperatorsOneParamItemProvider 
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.MTL_OPERATORS__P
+		boolean qualify = childFeature == CombPackage.Literals.MITL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.ALWAYS_WITHIN___H;
 
 		if (qualify) {

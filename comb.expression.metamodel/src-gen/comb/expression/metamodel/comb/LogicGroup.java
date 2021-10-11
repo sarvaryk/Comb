@@ -39,16 +39,6 @@ public enum LogicGroup implements Enumerator {
 	LTL(1, "LTL", "LTL"),
 
 	/**
-	 * The '<em><b>MTL</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MTL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MTL(2, "MTL", "MTL"),
-
-	/**
 	 * The '<em><b>MITL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,17 +81,6 @@ public enum LogicGroup implements Enumerator {
 	public static final int LTL_VALUE = 1;
 
 	/**
-	 * The '<em><b>MTL</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MTL
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int MTL_VALUE = 2;
-
-	/**
 	 * The '<em><b>MITL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,7 +108,7 @@ public enum LogicGroup implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LITERAL, LTL, MTL, MITL, STL, };
+	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LITERAL, LTL, MITL, STL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Logic Group</b></em>' enumerators.
@@ -189,8 +168,6 @@ public enum LogicGroup implements Enumerator {
 			return LITERAL;
 		case LTL_VALUE:
 			return LTL;
-		case MTL_VALUE:
-			return MTL;
 		case MITL_VALUE:
 			return MITL;
 		case STL_VALUE:

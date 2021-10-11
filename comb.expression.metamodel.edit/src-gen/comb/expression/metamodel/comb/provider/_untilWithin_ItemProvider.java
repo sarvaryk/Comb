@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class _untilWithin_ItemProvider extends MTLOperatorsTwoParamsItemProvider {
+public class _untilWithin_ItemProvider extends MITLOperatorsTwoParamsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -198,8 +198,8 @@ public class _untilWithin_ItemProvider extends MTLOperatorsTwoParamsItemProvider
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.MTL_OPERATORS__P
-				|| childFeature == CombPackage.Literals.MTL_OPERATORS_TWO_PARAMS__Q
+		boolean qualify = childFeature == CombPackage.Literals.MITL_OPERATORS__P
+				|| childFeature == CombPackage.Literals.MITL_OPERATORS_TWO_PARAMS__Q
 				|| childFeature == CombPackage.Literals._UNTIL_WITHIN___H;
 
 		if (qualify) {

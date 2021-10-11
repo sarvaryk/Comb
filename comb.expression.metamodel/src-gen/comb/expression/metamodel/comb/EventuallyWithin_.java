@@ -20,16 +20,16 @@ package comb.expression.metamodel.comb;
  * @model
  * @generated
  */
-public interface EventuallyWithin_ extends MTLOperatorsOneParam {
+public interface EventuallyWithin_ extends MITLOperatorsOneParam {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"F[<high>](<P>)"</code>.
+	 * The default value is <code>"F[<low>, <high>](<P>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getEventuallyWithin__Interpretation()
-	 * @model default="F[&lt;high&gt;](&lt;P&gt;)" required="true"
+	 * @model default="F[&lt;low&gt;, &lt;high&gt;](&lt;P&gt;)" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

@@ -145,8 +145,6 @@ public class RefreshLogicGroupAndInterpretations {
     		logicGroup = LogicGroup.STL;
     	else if(element instanceof MITLOperators && LogicGroup.MITL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.MITL;
-    	else if(element instanceof MTLOperators && LogicGroup.MTL.getValue() > logicGroup.getValue())
-    		logicGroup = LogicGroup.MTL;
     	else if(element instanceof LTLOperators && LogicGroup.LTL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.LTL;
     	else if(element instanceof Literal && LogicGroup.LITERAL.getValue() > logicGroup.getValue())

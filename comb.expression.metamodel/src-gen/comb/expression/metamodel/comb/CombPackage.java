@@ -120,7 +120,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLTLPatternMappings()
 	 * @generated
 	 */
-	int LTL_PATTERN_MAPPINGS = 93;
+	int LTL_PATTERN_MAPPINGS = 90;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6718,207 +6718,6 @@ public interface CombPackage extends EPackage {
 	int COMB_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.MTLOperatorsImpl <em>MTL Operators</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.MTLOperatorsImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getMTLOperators()
-	 * @generated
-	 */
-	int MTL_OPERATORS = 80;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS__NAME = ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS__P = ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>MTL Operators</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>MTL Operators</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.MTLOperatorsOneParamImpl <em>MTL Operators One Param</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.MTLOperatorsOneParamImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getMTLOperatorsOneParam()
-	 * @generated
-	 */
-	int MTL_OPERATORS_ONE_PARAM = 81;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_ONE_PARAM__NAME = MTL_OPERATORS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS = MTL_OPERATORS__SUBTREE_INTERPRETATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_ONE_PARAM__LOGIC_GROUP = MTL_OPERATORS__LOGIC_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_ONE_PARAM__P = MTL_OPERATORS__P;
-
-	/**
-	 * The number of structural features of the '<em>MTL Operators One Param</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT = MTL_OPERATORS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>MTL Operators One Param</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_ONE_PARAM_OPERATION_COUNT = MTL_OPERATORS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.MTLOperatorsTwoParamsImpl <em>MTL Operators Two Params</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.MTLOperatorsTwoParamsImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getMTLOperatorsTwoParams()
-	 * @generated
-	 */
-	int MTL_OPERATORS_TWO_PARAMS = 82;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS__NAME = MTL_OPERATORS__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS = MTL_OPERATORS__SUBTREE_INTERPRETATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP = MTL_OPERATORS__LOGIC_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS__P = MTL_OPERATORS__P;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS__Q = MTL_OPERATORS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>MTL Operators Two Params</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT = MTL_OPERATORS_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>MTL Operators Two Params</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MTL_OPERATORS_TWO_PARAMS_OPERATION_COUNT = MTL_OPERATORS_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._untilWithin_Impl <em>until Within </em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6926,7 +6725,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_untilWithin_()
 	 * @generated
 	 */
-	int _UNTIL_WITHIN_ = 83;
+	int _UNTIL_WITHIN_ = 80;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6935,7 +6734,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___NAME = MTL_OPERATORS_TWO_PARAMS__NAME;
+	int _UNTIL_WITHIN___NAME = MITL_OPERATORS_TWO_PARAMS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
@@ -6944,7 +6743,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___SUBTREE_INTERPRETATIONS = MTL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
+	int _UNTIL_WITHIN___SUBTREE_INTERPRETATIONS = MITL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -6953,7 +6752,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___LOGIC_GROUP = MTL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
+	int _UNTIL_WITHIN___LOGIC_GROUP = MITL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -6962,7 +6761,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___P = MTL_OPERATORS_TWO_PARAMS__P;
+	int _UNTIL_WITHIN___P = MITL_OPERATORS_TWO_PARAMS__P;
 
 	/**
 	 * The feature id for the '<em><b>Q</b></em>' containment reference.
@@ -6971,7 +6770,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___Q = MTL_OPERATORS_TWO_PARAMS__Q;
+	int _UNTIL_WITHIN___Q = MITL_OPERATORS_TWO_PARAMS__Q;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -6980,7 +6779,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___INTERPRETATION = MTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 0;
+	int _UNTIL_WITHIN___INTERPRETATION = MITL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -6989,7 +6788,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___DESCRIPTION = MTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 1;
+	int _UNTIL_WITHIN___DESCRIPTION = MITL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>H</b></em>' containment reference.
@@ -6998,7 +6797,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN___H = MTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 2;
+	int _UNTIL_WITHIN___H = MITL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>until Within </em>' class.
@@ -7007,7 +6806,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN__FEATURE_COUNT = MTL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 3;
+	int _UNTIL_WITHIN__FEATURE_COUNT = MITL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>until Within </em>' class.
@@ -7016,7 +6815,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int _UNTIL_WITHIN__OPERATION_COUNT = MTL_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
+	int _UNTIL_WITHIN__OPERATION_COUNT = MITL_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AlwaysWithin_Impl <em>Always Within </em>}' class.
@@ -7026,7 +6825,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAlwaysWithin_()
 	 * @generated
 	 */
-	int ALWAYS_WITHIN_ = 84;
+	int ALWAYS_WITHIN_ = 81;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7035,7 +6834,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___NAME = MTL_OPERATORS_ONE_PARAM__NAME;
+	int ALWAYS_WITHIN___NAME = MITL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
@@ -7044,7 +6843,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___SUBTREE_INTERPRETATIONS = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+	int ALWAYS_WITHIN___SUBTREE_INTERPRETATIONS = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7053,7 +6852,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___LOGIC_GROUP = MTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+	int ALWAYS_WITHIN___LOGIC_GROUP = MITL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -7062,7 +6861,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___P = MTL_OPERATORS_ONE_PARAM__P;
+	int ALWAYS_WITHIN___P = MITL_OPERATORS_ONE_PARAM__P;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -7071,7 +6870,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___INTERPRETATION = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 0;
+	int ALWAYS_WITHIN___INTERPRETATION = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -7080,7 +6879,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___DESCRIPTION = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 1;
+	int ALWAYS_WITHIN___DESCRIPTION = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>H</b></em>' containment reference.
@@ -7089,7 +6888,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN___H = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 2;
+	int ALWAYS_WITHIN___H = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Always Within </em>' class.
@@ -7098,7 +6897,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN__FEATURE_COUNT = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 3;
+	int ALWAYS_WITHIN__FEATURE_COUNT = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Always Within </em>' class.
@@ -7107,7 +6906,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALWAYS_WITHIN__OPERATION_COUNT = MTL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
+	int ALWAYS_WITHIN__OPERATION_COUNT = MITL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.EventuallyWithin_Impl <em>Eventually Within </em>}' class.
@@ -7117,7 +6916,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getEventuallyWithin_()
 	 * @generated
 	 */
-	int EVENTUALLY_WITHIN_ = 85;
+	int EVENTUALLY_WITHIN_ = 82;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7126,7 +6925,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___NAME = MTL_OPERATORS_ONE_PARAM__NAME;
+	int EVENTUALLY_WITHIN___NAME = MITL_OPERATORS_ONE_PARAM__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
@@ -7135,7 +6934,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___SUBTREE_INTERPRETATIONS = MTL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+	int EVENTUALLY_WITHIN___SUBTREE_INTERPRETATIONS = MITL_OPERATORS_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -7144,7 +6943,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___LOGIC_GROUP = MTL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
+	int EVENTUALLY_WITHIN___LOGIC_GROUP = MITL_OPERATORS_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -7153,7 +6952,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___P = MTL_OPERATORS_ONE_PARAM__P;
+	int EVENTUALLY_WITHIN___P = MITL_OPERATORS_ONE_PARAM__P;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -7162,7 +6961,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___INTERPRETATION = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 0;
+	int EVENTUALLY_WITHIN___INTERPRETATION = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -7171,7 +6970,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___DESCRIPTION = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 1;
+	int EVENTUALLY_WITHIN___DESCRIPTION = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>H</b></em>' containment reference.
@@ -7180,7 +6979,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN___H = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 2;
+	int EVENTUALLY_WITHIN___H = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Eventually Within </em>' class.
@@ -7189,7 +6988,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN__FEATURE_COUNT = MTL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 3;
+	int EVENTUALLY_WITHIN__FEATURE_COUNT = MITL_OPERATORS_ONE_PARAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Eventually Within </em>' class.
@@ -7198,7 +6997,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENTUALLY_WITHIN__OPERATION_COUNT = MTL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
+	int EVENTUALLY_WITHIN__OPERATION_COUNT = MITL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.STLOperatorsImpl <em>STL Operators</em>}' class.
@@ -7208,7 +7007,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTLOperators()
 	 * @generated
 	 */
-	int STL_OPERATORS = 92;
+	int STL_OPERATORS = 89;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7263,7 +7062,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getRelation()
 	 * @generated
 	 */
-	int RELATION = 86;
+	int RELATION = 83;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7336,7 +7135,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_lessThan_()
 	 * @generated
 	 */
-	int _LESS_THAN_ = 87;
+	int _LESS_THAN_ = 84;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7427,7 +7226,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_lessThanOrEqual_()
 	 * @generated
 	 */
-	int _LESS_THAN_OR_EQUAL_ = 88;
+	int _LESS_THAN_OR_EQUAL_ = 85;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7518,7 +7317,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_equal_()
 	 * @generated
 	 */
-	int _EQUAL_ = 89;
+	int _EQUAL_ = 86;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7609,7 +7408,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_greaterThan_()
 	 * @generated
 	 */
-	int _GREATER_THAN_ = 90;
+	int _GREATER_THAN_ = 87;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7700,7 +7499,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_greaterThanOrEqual_()
 	 * @generated
 	 */
-	int _GREATER_THAN_OR_EQUAL_ = 91;
+	int _GREATER_THAN_OR_EQUAL_ = 88;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7791,7 +7590,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_weakUntil_()
 	 * @generated
 	 */
-	int _WEAK_UNTIL_ = 94;
+	int _WEAK_UNTIL_ = 91;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7882,7 +7681,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
 	 * @generated
 	 */
-	int LOGIC_GROUP = 95;
+	int LOGIC_GROUP = 92;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}' enum.
@@ -7892,7 +7691,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSupportedOutput()
 	 * @generated
 	 */
-	int SUPPORTED_OUTPUT = 96;
+	int SUPPORTED_OUTPUT = 93;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -9980,58 +9779,6 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComb_Element();
-
-	/**
-	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.MTLOperators <em>MTL Operators</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MTL Operators</em>'.
-	 * @see comb.expression.metamodel.comb.MTLOperators
-	 * @generated
-	 */
-	EClass getMTLOperators();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.MTLOperators#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>P</em>'.
-	 * @see comb.expression.metamodel.comb.MTLOperators#getP()
-	 * @see #getMTLOperators()
-	 * @generated
-	 */
-	EReference getMTLOperators_P();
-
-	/**
-	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.MTLOperatorsOneParam <em>MTL Operators One Param</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MTL Operators One Param</em>'.
-	 * @see comb.expression.metamodel.comb.MTLOperatorsOneParam
-	 * @generated
-	 */
-	EClass getMTLOperatorsOneParam();
-
-	/**
-	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.MTLOperatorsTwoParams <em>MTL Operators Two Params</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>MTL Operators Two Params</em>'.
-	 * @see comb.expression.metamodel.comb.MTLOperatorsTwoParams
-	 * @generated
-	 */
-	EClass getMTLOperatorsTwoParams();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.MTLOperatorsTwoParams#getQ <em>Q</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Q</em>'.
-	 * @see comb.expression.metamodel.comb.MTLOperatorsTwoParams#getQ()
-	 * @see #getMTLOperatorsTwoParams()
-	 * @generated
-	 */
-	EReference getMTLOperatorsTwoParams_Q();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb._untilWithin_ <em>until Within </em>}'.
@@ -12189,52 +11936,6 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMB__ELEMENT = eINSTANCE.getComb_Element();
-
-		/**
-		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.MTLOperatorsImpl <em>MTL Operators</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see comb.expression.metamodel.comb.impl.MTLOperatorsImpl
-		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getMTLOperators()
-		 * @generated
-		 */
-		EClass MTL_OPERATORS = eINSTANCE.getMTLOperators();
-
-		/**
-		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MTL_OPERATORS__P = eINSTANCE.getMTLOperators_P();
-
-		/**
-		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.MTLOperatorsOneParamImpl <em>MTL Operators One Param</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see comb.expression.metamodel.comb.impl.MTLOperatorsOneParamImpl
-		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getMTLOperatorsOneParam()
-		 * @generated
-		 */
-		EClass MTL_OPERATORS_ONE_PARAM = eINSTANCE.getMTLOperatorsOneParam();
-
-		/**
-		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.MTLOperatorsTwoParamsImpl <em>MTL Operators Two Params</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see comb.expression.metamodel.comb.impl.MTLOperatorsTwoParamsImpl
-		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getMTLOperatorsTwoParams()
-		 * @generated
-		 */
-		EClass MTL_OPERATORS_TWO_PARAMS = eINSTANCE.getMTLOperatorsTwoParams();
-
-		/**
-		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MTL_OPERATORS_TWO_PARAMS__Q = eINSTANCE.getMTLOperatorsTwoParams_Q();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl._untilWithin_Impl <em>until Within </em>}' class.

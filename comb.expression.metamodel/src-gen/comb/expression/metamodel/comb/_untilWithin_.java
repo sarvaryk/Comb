@@ -20,16 +20,16 @@ package comb.expression.metamodel.comb;
  * @model
  * @generated
  */
-public interface _untilWithin_ extends MTLOperatorsTwoParams {
+public interface _untilWithin_ extends MITLOperatorsTwoParams {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"<P> U[<high>] <Q>"</code>.
+	 * The default value is <code>"<P> U[<low>, <high>] <Q>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#get_untilWithin__Interpretation()
-	 * @model default="&lt;P&gt; U[&lt;high&gt;] &lt;Q&gt;" required="true"
+	 * @model default="&lt;P&gt; U[&lt;low&gt;, &lt;high&gt;] &lt;Q&gt;" required="true"
 	 * @generated
 	 */
 	String getInterpretation();

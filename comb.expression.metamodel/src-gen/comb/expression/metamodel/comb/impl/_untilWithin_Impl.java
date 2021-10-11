@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class _untilWithin_Impl extends MTLOperatorsTwoParamsImpl implements _untilWithin_ {
+public class _untilWithin_Impl extends MITLOperatorsTwoParamsImpl implements _untilWithin_ {
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class _untilWithin_Impl extends MTLOperatorsTwoParamsImpl implements _unt
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "<P> U[<high>] <Q>";
+	protected static final String INTERPRETATION_EDEFAULT = "<P> U[<low>, <high>] <Q>";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.

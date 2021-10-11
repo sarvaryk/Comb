@@ -467,21 +467,6 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMTLOperators(MTLOperators object) {
-			return createMTLOperatorsAdapter();
-		}
-
-		@Override
-		public Adapter caseMTLOperatorsOneParam(MTLOperatorsOneParam object) {
-			return createMTLOperatorsOneParamAdapter();
-		}
-
-		@Override
-		public Adapter caseMTLOperatorsTwoParams(MTLOperatorsTwoParams object) {
-			return createMTLOperatorsTwoParamsAdapter();
-		}
-
-		@Override
 		public Adapter case_untilWithin_(_untilWithin_ object) {
 			return create_untilWithin_Adapter();
 		}
@@ -1677,48 +1662,6 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCombAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.MTLOperators <em>MTL Operators</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see comb.expression.metamodel.comb.MTLOperators
-	 * @generated
-	 */
-	public Adapter createMTLOperatorsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.MTLOperatorsOneParam <em>MTL Operators One Param</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see comb.expression.metamodel.comb.MTLOperatorsOneParam
-	 * @generated
-	 */
-	public Adapter createMTLOperatorsOneParamAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.MTLOperatorsTwoParams <em>MTL Operators Two Params</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see comb.expression.metamodel.comb.MTLOperatorsTwoParams
-	 * @generated
-	 */
-	public Adapter createMTLOperatorsTwoParamsAdapter() {
 		return null;
 	}
 
