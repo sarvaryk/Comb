@@ -287,6 +287,18 @@ public class AbsenceTwoParamsItemProvider extends AbsenceItemProvider {
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__R,
 				CombFactory.eINSTANCE.create_weakUntil_()));
 
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.createReach_by_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.createSomewhere_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.createEscapeBy_withADistanceOfAtLeast_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__R,
+				CombFactory.eINSTANCE.createEverywhere_InADistanceWithin_()));
+
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.createPrecedenceAfter_until_()));
 
@@ -439,6 +451,18 @@ public class AbsenceTwoParamsItemProvider extends AbsenceItemProvider {
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__Q,
 				CombFactory.eINSTANCE.create_weakUntil_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.createReach_by_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.createSomewhere_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.createEscapeBy_withADistanceOfAtLeast_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.ABSENCE_TWO_PARAMS__Q,
+				CombFactory.eINSTANCE.createEverywhere_InADistanceWithin_()));
 	}
 
 	/**

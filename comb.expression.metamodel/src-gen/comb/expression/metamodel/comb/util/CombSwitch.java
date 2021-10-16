@@ -1490,6 +1490,104 @@ public class CombSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case CombPackage.STREL_OPERATORS: {
+			STRELOperators strelOperators = (STRELOperators) theEObject;
+			T result = caseSTRELOperators(strelOperators);
+			if (result == null)
+				result = caseElement(strelOperators);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.SPATIAL: {
+			Spatial spatial = (Spatial) theEObject;
+			T result = caseSpatial(spatial);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN_: {
+			Reach_by_InADistanceWithin_ reach_by_InADistanceWithin_ = (Reach_by_InADistanceWithin_) theEObject;
+			T result = caseReach_by_InADistanceWithin_(reach_by_InADistanceWithin_);
+			if (result == null)
+				result = caseSTRELOperatorsTwoParams(reach_by_InADistanceWithin_);
+			if (result == null)
+				result = caseSpatial(reach_by_InADistanceWithin_);
+			if (result == null)
+				result = caseSTRELOperators(reach_by_InADistanceWithin_);
+			if (result == null)
+				result = caseElement(reach_by_InADistanceWithin_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.SOMEWHERE_IN_ADISTANCE_WITHIN_: {
+			Somewhere_InADistanceWithin_ somewhere_InADistanceWithin_ = (Somewhere_InADistanceWithin_) theEObject;
+			T result = caseSomewhere_InADistanceWithin_(somewhere_InADistanceWithin_);
+			if (result == null)
+				result = caseSTRELOperatorOneParam(somewhere_InADistanceWithin_);
+			if (result == null)
+				result = caseSpatial(somewhere_InADistanceWithin_);
+			if (result == null)
+				result = caseSTRELOperators(somewhere_InADistanceWithin_);
+			if (result == null)
+				result = caseElement(somewhere_InADistanceWithin_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST_: {
+			EscapeBy_withADistanceOfAtLeast_ escapeBy_withADistanceOfAtLeast_ = (EscapeBy_withADistanceOfAtLeast_) theEObject;
+			T result = caseEscapeBy_withADistanceOfAtLeast_(escapeBy_withADistanceOfAtLeast_);
+			if (result == null)
+				result = caseSTRELOperatorOneParam(escapeBy_withADistanceOfAtLeast_);
+			if (result == null)
+				result = caseSpatial(escapeBy_withADistanceOfAtLeast_);
+			if (result == null)
+				result = caseSTRELOperators(escapeBy_withADistanceOfAtLeast_);
+			if (result == null)
+				result = caseElement(escapeBy_withADistanceOfAtLeast_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.EVERYWHERE_IN_ADISTANCE_WITHIN_: {
+			Everywhere_InADistanceWithin_ everywhere_InADistanceWithin_ = (Everywhere_InADistanceWithin_) theEObject;
+			T result = caseEverywhere_InADistanceWithin_(everywhere_InADistanceWithin_);
+			if (result == null)
+				result = caseSTRELOperatorOneParam(everywhere_InADistanceWithin_);
+			if (result == null)
+				result = caseSpatial(everywhere_InADistanceWithin_);
+			if (result == null)
+				result = caseSTRELOperators(everywhere_InADistanceWithin_);
+			if (result == null)
+				result = caseElement(everywhere_InADistanceWithin_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.STREL_OPERATOR_ONE_PARAM: {
+			STRELOperatorOneParam strelOperatorOneParam = (STRELOperatorOneParam) theEObject;
+			T result = caseSTRELOperatorOneParam(strelOperatorOneParam);
+			if (result == null)
+				result = caseSTRELOperators(strelOperatorOneParam);
+			if (result == null)
+				result = caseElement(strelOperatorOneParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.STREL_OPERATORS_TWO_PARAMS: {
+			STRELOperatorsTwoParams strelOperatorsTwoParams = (STRELOperatorsTwoParams) theEObject;
+			T result = caseSTRELOperatorsTwoParams(strelOperatorsTwoParams);
+			if (result == null)
+				result = caseSTRELOperators(strelOperatorsTwoParams);
+			if (result == null)
+				result = caseElement(strelOperatorsTwoParams);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -2872,6 +2970,126 @@ public class CombSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T case_weakUntil_(_weakUntil_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>STREL Operators</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>STREL Operators</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSTRELOperators(STRELOperators object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Spatial</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Spatial</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpatial(Spatial object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reach by In ADistance Within </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reach by In ADistance Within </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReach_by_InADistanceWithin_(Reach_by_InADistanceWithin_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Somewhere In ADistance Within </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Somewhere In ADistance Within </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSomewhere_InADistanceWithin_(Somewhere_InADistanceWithin_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Escape By with ADistance Of At Least </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Escape By with ADistance Of At Least </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEscapeBy_withADistanceOfAtLeast_(EscapeBy_withADistanceOfAtLeast_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Everywhere In ADistance Within </em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Everywhere In ADistance Within </em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEverywhere_InADistanceWithin_(Everywhere_InADistanceWithin_ object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>STREL Operator One Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>STREL Operator One Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSTRELOperatorOneParam(STRELOperatorOneParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>STREL Operators Two Params</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>STREL Operators Two Params</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSTRELOperatorsTwoParams(STRELOperatorsTwoParams object) {
 		return null;
 	}
 

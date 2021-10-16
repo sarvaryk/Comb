@@ -7674,6 +7674,662 @@ public interface CombPackage extends EPackage {
 	int _WEAK_UNTIL__OPERATION_COUNT = LTL_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorsImpl <em>STREL Operators</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.STRELOperatorsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTRELOperators()
+	 * @generated
+	 */
+	int STREL_OPERATORS = 92;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS__P = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>STREL Operators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>STREL Operators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.SpatialImpl <em>Spatial</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.SpatialImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSpatial()
+	 * @generated
+	 */
+	int SPATIAL = 93;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPATIAL__H = 0;
+
+	/**
+	 * The feature id for the '<em><b>L</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPATIAL__L = 1;
+
+	/**
+	 * The number of structural features of the '<em>Spatial</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPATIAL_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Spatial</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPATIAL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorsTwoParamsImpl <em>STREL Operators Two Params</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.STRELOperatorsTwoParamsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTRELOperatorsTwoParams()
+	 * @generated
+	 */
+	int STREL_OPERATORS_TWO_PARAMS = 99;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS__NAME = STREL_OPERATORS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS = STREL_OPERATORS__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS__LOGIC_GROUP = STREL_OPERATORS__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS__P = STREL_OPERATORS__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS__Q = STREL_OPERATORS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>STREL Operators Two Params</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT = STREL_OPERATORS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>STREL Operators Two Params</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATORS_TWO_PARAMS_OPERATION_COUNT = STREL_OPERATORS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl <em>Reach by In ADistance Within </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getReach_by_InADistanceWithin_()
+	 * @generated
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN_ = 94;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___NAME = STREL_OPERATORS_TWO_PARAMS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = STREL_OPERATORS_TWO_PARAMS__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___LOGIC_GROUP = STREL_OPERATORS_TWO_PARAMS__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___P = STREL_OPERATORS_TWO_PARAMS__P;
+
+	/**
+	 * The feature id for the '<em><b>Q</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___Q = STREL_OPERATORS_TWO_PARAMS__Q;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___H = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>L</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___L = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Reach by In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Reach by In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACH_BY_IN_ADISTANCE_WITHIN__OPERATION_COUNT = STREL_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorOneParamImpl <em>STREL Operator One Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.STRELOperatorOneParamImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTRELOperatorOneParam()
+	 * @generated
+	 */
+	int STREL_OPERATOR_ONE_PARAM = 98;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATOR_ONE_PARAM__NAME = STREL_OPERATORS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS = STREL_OPERATORS__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATOR_ONE_PARAM__LOGIC_GROUP = STREL_OPERATORS__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATOR_ONE_PARAM__P = STREL_OPERATORS__P;
+
+	/**
+	 * The number of structural features of the '<em>STREL Operator One Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT = STREL_OPERATORS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>STREL Operator One Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT = STREL_OPERATORS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl <em>Somewhere In ADistance Within </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSomewhere_InADistanceWithin_()
+	 * @generated
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN_ = 95;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___NAME = STREL_OPERATOR_ONE_PARAM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = STREL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___LOGIC_GROUP = STREL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___P = STREL_OPERATOR_ONE_PARAM__P;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___H = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>L</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___L = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Somewhere In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Somewhere In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN__OPERATION_COUNT = STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl <em>Escape By with ADistance Of At Least </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getEscapeBy_withADistanceOfAtLeast_()
+	 * @generated
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST_ = 96;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___NAME = STREL_OPERATOR_ONE_PARAM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___SUBTREE_INTERPRETATIONS = STREL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___LOGIC_GROUP = STREL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___P = STREL_OPERATOR_ONE_PARAM__P;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>L</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Escape By with ADistance Of At Least </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Escape By with ADistance Of At Least </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST__OPERATION_COUNT = STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Everywhere_InADistanceWithin_Impl <em>Everywhere In ADistance Within </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.Everywhere_InADistanceWithin_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getEverywhere_InADistanceWithin_()
+	 * @generated
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN_ = 97;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___NAME = STREL_OPERATOR_ONE_PARAM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = STREL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___LOGIC_GROUP = STREL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___P = STREL_OPERATOR_ONE_PARAM__P;
+
+	/**
+	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___H = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>L</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___L = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Everywhere In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Everywhere In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVERYWHERE_IN_ADISTANCE_WITHIN__OPERATION_COUNT = STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7681,7 +8337,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
 	 * @generated
 	 */
-	int LOGIC_GROUP = 92;
+	int LOGIC_GROUP = 100;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}' enum.
@@ -7691,7 +8347,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSupportedOutput()
 	 * @generated
 	 */
-	int SUPPORTED_OUTPUT = 93;
+	int SUPPORTED_OUTPUT = 101;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -10154,6 +10810,218 @@ public interface CombPackage extends EPackage {
 	EAttribute get_weakUntil__Description();
 
 	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.STRELOperators <em>STREL Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>STREL Operators</em>'.
+	 * @see comb.expression.metamodel.comb.STRELOperators
+	 * @generated
+	 */
+	EClass getSTRELOperators();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.STRELOperators#getP <em>P</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>P</em>'.
+	 * @see comb.expression.metamodel.comb.STRELOperators#getP()
+	 * @see #getSTRELOperators()
+	 * @generated
+	 */
+	EReference getSTRELOperators_P();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Spatial <em>Spatial</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Spatial</em>'.
+	 * @see comb.expression.metamodel.comb.Spatial
+	 * @generated
+	 */
+	EClass getSpatial();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Spatial#getH <em>H</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>H</em>'.
+	 * @see comb.expression.metamodel.comb.Spatial#getH()
+	 * @see #getSpatial()
+	 * @generated
+	 */
+	EReference getSpatial_H();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Spatial#getL <em>L</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>L</em>'.
+	 * @see comb.expression.metamodel.comb.Spatial#getL()
+	 * @see #getSpatial()
+	 * @generated
+	 */
+	EReference getSpatial_L();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_ <em>Reach by In ADistance Within </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Reach by In ADistance Within </em>'.
+	 * @see comb.expression.metamodel.comb.Reach_by_InADistanceWithin_
+	 * @generated
+	 */
+	EClass getReach_by_InADistanceWithin_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb.Reach_by_InADistanceWithin_#getInterpretation()
+	 * @see #getReach_by_InADistanceWithin_()
+	 * @generated
+	 */
+	EAttribute getReach_by_InADistanceWithin__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb.Reach_by_InADistanceWithin_#getDescription()
+	 * @see #getReach_by_InADistanceWithin_()
+	 * @generated
+	 */
+	EAttribute getReach_by_InADistanceWithin__Description();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Somewhere_InADistanceWithin_ <em>Somewhere In ADistance Within </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Somewhere In ADistance Within </em>'.
+	 * @see comb.expression.metamodel.comb.Somewhere_InADistanceWithin_
+	 * @generated
+	 */
+	EClass getSomewhere_InADistanceWithin_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Somewhere_InADistanceWithin_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb.Somewhere_InADistanceWithin_#getInterpretation()
+	 * @see #getSomewhere_InADistanceWithin_()
+	 * @generated
+	 */
+	EAttribute getSomewhere_InADistanceWithin__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Somewhere_InADistanceWithin_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb.Somewhere_InADistanceWithin_#getDescription()
+	 * @see #getSomewhere_InADistanceWithin_()
+	 * @generated
+	 */
+	EAttribute getSomewhere_InADistanceWithin__Description();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_ <em>Escape By with ADistance Of At Least </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Escape By with ADistance Of At Least </em>'.
+	 * @see comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_
+	 * @generated
+	 */
+	EClass getEscapeBy_withADistanceOfAtLeast_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_#getInterpretation()
+	 * @see #getEscapeBy_withADistanceOfAtLeast_()
+	 * @generated
+	 */
+	EAttribute getEscapeBy_withADistanceOfAtLeast__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_#getDescription()
+	 * @see #getEscapeBy_withADistanceOfAtLeast_()
+	 * @generated
+	 */
+	EAttribute getEscapeBy_withADistanceOfAtLeast__Description();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Everywhere_InADistanceWithin_ <em>Everywhere In ADistance Within </em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Everywhere In ADistance Within </em>'.
+	 * @see comb.expression.metamodel.comb.Everywhere_InADistanceWithin_
+	 * @generated
+	 */
+	EClass getEverywhere_InADistanceWithin_();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Everywhere_InADistanceWithin_#getInterpretation <em>Interpretation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interpretation</em>'.
+	 * @see comb.expression.metamodel.comb.Everywhere_InADistanceWithin_#getInterpretation()
+	 * @see #getEverywhere_InADistanceWithin_()
+	 * @generated
+	 */
+	EAttribute getEverywhere_InADistanceWithin__Interpretation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link comb.expression.metamodel.comb.Everywhere_InADistanceWithin_#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see comb.expression.metamodel.comb.Everywhere_InADistanceWithin_#getDescription()
+	 * @see #getEverywhere_InADistanceWithin_()
+	 * @generated
+	 */
+	EAttribute getEverywhere_InADistanceWithin__Description();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.STRELOperatorOneParam <em>STREL Operator One Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>STREL Operator One Param</em>'.
+	 * @see comb.expression.metamodel.comb.STRELOperatorOneParam
+	 * @generated
+	 */
+	EClass getSTRELOperatorOneParam();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.STRELOperatorsTwoParams <em>STREL Operators Two Params</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>STREL Operators Two Params</em>'.
+	 * @see comb.expression.metamodel.comb.STRELOperatorsTwoParams
+	 * @generated
+	 */
+	EClass getSTRELOperatorsTwoParams();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.STRELOperatorsTwoParams#getQ <em>Q</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Q</em>'.
+	 * @see comb.expression.metamodel.comb.STRELOperatorsTwoParams#getQ()
+	 * @see #getSTRELOperatorsTwoParams()
+	 * @generated
+	 */
+	EReference getSTRELOperatorsTwoParams_Q();
+
+	/**
 	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12240,6 +13108,189 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute _WEAK_UNTIL___DESCRIPTION = eINSTANCE.get_weakUntil__Description();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorsImpl <em>STREL Operators</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.STRELOperatorsImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTRELOperators()
+		 * @generated
+		 */
+		EClass STREL_OPERATORS = eINSTANCE.getSTRELOperators();
+
+		/**
+		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STREL_OPERATORS__P = eINSTANCE.getSTRELOperators_P();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.SpatialImpl <em>Spatial</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.SpatialImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSpatial()
+		 * @generated
+		 */
+		EClass SPATIAL = eINSTANCE.getSpatial();
+
+		/**
+		 * The meta object literal for the '<em><b>H</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPATIAL__H = eINSTANCE.getSpatial_H();
+
+		/**
+		 * The meta object literal for the '<em><b>L</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPATIAL__L = eINSTANCE.getSpatial_L();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl <em>Reach by In ADistance Within </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getReach_by_InADistanceWithin_()
+		 * @generated
+		 */
+		EClass REACH_BY_IN_ADISTANCE_WITHIN_ = eINSTANCE.getReach_by_InADistanceWithin_();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION = eINSTANCE
+				.getReach_by_InADistanceWithin__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION = eINSTANCE.getReach_by_InADistanceWithin__Description();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl <em>Somewhere In ADistance Within </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSomewhere_InADistanceWithin_()
+		 * @generated
+		 */
+		EClass SOMEWHERE_IN_ADISTANCE_WITHIN_ = eINSTANCE.getSomewhere_InADistanceWithin_();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = eINSTANCE
+				.getSomewhere_InADistanceWithin__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = eINSTANCE
+				.getSomewhere_InADistanceWithin__Description();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl <em>Escape By with ADistance Of At Least </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getEscapeBy_withADistanceOfAtLeast_()
+		 * @generated
+		 */
+		EClass ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST_ = eINSTANCE.getEscapeBy_withADistanceOfAtLeast_();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION = eINSTANCE
+				.getEscapeBy_withADistanceOfAtLeast__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION = eINSTANCE
+				.getEscapeBy_withADistanceOfAtLeast__Description();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.Everywhere_InADistanceWithin_Impl <em>Everywhere In ADistance Within </em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.Everywhere_InADistanceWithin_Impl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getEverywhere_InADistanceWithin_()
+		 * @generated
+		 */
+		EClass EVERYWHERE_IN_ADISTANCE_WITHIN_ = eINSTANCE.getEverywhere_InADistanceWithin_();
+
+		/**
+		 * The meta object literal for the '<em><b>Interpretation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = eINSTANCE
+				.getEverywhere_InADistanceWithin__Interpretation();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = eINSTANCE
+				.getEverywhere_InADistanceWithin__Description();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorOneParamImpl <em>STREL Operator One Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.STRELOperatorOneParamImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTRELOperatorOneParam()
+		 * @generated
+		 */
+		EClass STREL_OPERATOR_ONE_PARAM = eINSTANCE.getSTRELOperatorOneParam();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorsTwoParamsImpl <em>STREL Operators Two Params</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.STRELOperatorsTwoParamsImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSTRELOperatorsTwoParams()
+		 * @generated
+		 */
+		EClass STREL_OPERATORS_TWO_PARAMS = eINSTANCE.getSTRELOperatorsTwoParams();
+
+		/**
+		 * The meta object literal for the '<em><b>Q</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STREL_OPERATORS_TWO_PARAMS__Q = eINSTANCE.getSTRELOperatorsTwoParams_Q();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.

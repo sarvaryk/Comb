@@ -2,103 +2,7 @@
  */
 package comb.expression.metamodel.comb.impl;
 
-import comb.expression.metamodel.comb.Absence;
-import comb.expression.metamodel.comb.AbsenceAfter_;
-import comb.expression.metamodel.comb.AbsenceAfter_until_;
-import comb.expression.metamodel.comb.AbsenceBefore_;
-import comb.expression.metamodel.comb.AbsenceBetween_and_;
-import comb.expression.metamodel.comb.AbsenceGlobally_;
-import comb.expression.metamodel.comb.AbsenceOneParam;
-import comb.expression.metamodel.comb.AbsenceTwoParams;
-import comb.expression.metamodel.comb.AbsenceWithoutParams;
-import comb.expression.metamodel.comb.AlwaysWithin_;
-import comb.expression.metamodel.comb.AlwaysWithin_and_;
-import comb.expression.metamodel.comb.Always_;
-import comb.expression.metamodel.comb.BasicElements;
-import comb.expression.metamodel.comb.BooleanOperators;
-import comb.expression.metamodel.comb.BooleanOperatorsOneParam;
-import comb.expression.metamodel.comb.BooleanOperatorsTwoParams;
-import comb.expression.metamodel.comb.BoundedExistence;
-import comb.expression.metamodel.comb.BoundedExistenceAfter_;
-import comb.expression.metamodel.comb.BoundedExistenceAfter_until_;
-import comb.expression.metamodel.comb.BoundedExistenceBefore_;
-import comb.expression.metamodel.comb.BoundedExistenceBetween_and_;
-import comb.expression.metamodel.comb.BoundedExistenceGlobally_;
-import comb.expression.metamodel.comb.BoundedExistenceTwoParams;
-import comb.expression.metamodel.comb.BoundedExistenceWithoutParams;
-import comb.expression.metamodel.comb.BoundedExistneceOneParam;
-import comb.expression.metamodel.comb.Comb;
-import comb.expression.metamodel.comb.CombFactory;
-import comb.expression.metamodel.comb.CombPackage;
-import comb.expression.metamodel.comb.Element;
-import comb.expression.metamodel.comb.EventuallyWithin_;
-import comb.expression.metamodel.comb.EventuallyWithin_and_;
-import comb.expression.metamodel.comb.Eventually_;
-import comb.expression.metamodel.comb.Existence;
-import comb.expression.metamodel.comb.ExistenceAfter_;
-import comb.expression.metamodel.comb.ExistenceAfter_until_;
-import comb.expression.metamodel.comb.ExistenceBefore_;
-import comb.expression.metamodel.comb.ExistenceBetween_and_;
-import comb.expression.metamodel.comb.ExistenceGlobally_;
-import comb.expression.metamodel.comb.ExistenceTwoParams;
-import comb.expression.metamodel.comb.ExistenceWithourParams;
-import comb.expression.metamodel.comb.ExistneceOneParam;
-import comb.expression.metamodel.comb.LTLOperators;
-import comb.expression.metamodel.comb.LTLOperatorsOneParam;
-import comb.expression.metamodel.comb.LTLOperatorsTwoParams;
-import comb.expression.metamodel.comb.LTLPatternMappings;
-import comb.expression.metamodel.comb.Literal;
-import comb.expression.metamodel.comb.LogicGroup;
-import comb.expression.metamodel.comb.MITLOperators;
-import comb.expression.metamodel.comb.MITLOperatorsOneParam;
-import comb.expression.metamodel.comb.MITLOperatorsTwoParams;
-import comb.expression.metamodel.comb.Next_;
-import comb.expression.metamodel.comb.Not_;
-import comb.expression.metamodel.comb.Occurrence;
-import comb.expression.metamodel.comb.Order;
-import comb.expression.metamodel.comb.Precedence;
-import comb.expression.metamodel.comb.PrecedenceAfter_;
-import comb.expression.metamodel.comb.PrecedenceAfter_until_;
-import comb.expression.metamodel.comb.PrecedenceBefore_;
-import comb.expression.metamodel.comb.PrecedenceBetween_and_;
-import comb.expression.metamodel.comb.PrecedenceGlobally_;
-import comb.expression.metamodel.comb.PrecedenceOneParam;
-import comb.expression.metamodel.comb.PrecedenceTwoParams;
-import comb.expression.metamodel.comb.PrecedenceWithoutParams;
-import comb.expression.metamodel.comb.Relation;
-import comb.expression.metamodel.comb.Response;
-import comb.expression.metamodel.comb.ResponseAfter_;
-import comb.expression.metamodel.comb.ResponseAfter_until_;
-import comb.expression.metamodel.comb.ResponseBefore_;
-import comb.expression.metamodel.comb.ResponseBetween_and_;
-import comb.expression.metamodel.comb.ResponseGlobally_;
-import comb.expression.metamodel.comb.ResponseOneParam;
-import comb.expression.metamodel.comb.ResponseTwoParams;
-import comb.expression.metamodel.comb.ResponseWithoutParams;
-import comb.expression.metamodel.comb.STLOperators;
-import comb.expression.metamodel.comb.SupportedOutput;
-import comb.expression.metamodel.comb.Universality;
-import comb.expression.metamodel.comb.UniversalityAfter_;
-import comb.expression.metamodel.comb.UniversalityAfter_until_;
-import comb.expression.metamodel.comb.UniversalityBefore_;
-import comb.expression.metamodel.comb.UniversalityBetween_and_;
-import comb.expression.metamodel.comb.UniversalityGlobally_;
-import comb.expression.metamodel.comb.UniversalityOneParam;
-import comb.expression.metamodel.comb.UniversalityTwoParams;
-import comb.expression.metamodel.comb.UniversalityWithoutParams;
-import comb.expression.metamodel.comb._and_;
-import comb.expression.metamodel.comb._equal_;
-import comb.expression.metamodel.comb._greaterThanOrEqual_;
-import comb.expression.metamodel.comb._greaterThan_;
-import comb.expression.metamodel.comb._implies_;
-import comb.expression.metamodel.comb._lessThanOrEqual_;
-import comb.expression.metamodel.comb._lessThan_;
-import comb.expression.metamodel.comb._or_;
-import comb.expression.metamodel.comb._untilWithin_;
-import comb.expression.metamodel.comb._untilWithin_and_;
-import comb.expression.metamodel.comb._until_;
-
-import comb.expression.metamodel.comb._weakUntil_;
+import comb.expression.metamodel.comb.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -757,6 +661,62 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	private EClass _weakUntil_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strelOperatorsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass spatialEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass reach_by_InADistanceWithin_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass somewhere_InADistanceWithin_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass escapeBy_withADistanceOfAtLeast_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass everywhere_InADistanceWithin_EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strelOperatorOneParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strelOperatorsTwoParamsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3162,6 +3122,206 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getSTRELOperators() {
+		return strelOperatorsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSTRELOperators_P() {
+		return (EReference) strelOperatorsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSpatial() {
+		return spatialEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSpatial_H() {
+		return (EReference) spatialEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSpatial_L() {
+		return (EReference) spatialEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getReach_by_InADistanceWithin_() {
+		return reach_by_InADistanceWithin_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getReach_by_InADistanceWithin__Interpretation() {
+		return (EAttribute) reach_by_InADistanceWithin_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getReach_by_InADistanceWithin__Description() {
+		return (EAttribute) reach_by_InADistanceWithin_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSomewhere_InADistanceWithin_() {
+		return somewhere_InADistanceWithin_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSomewhere_InADistanceWithin__Interpretation() {
+		return (EAttribute) somewhere_InADistanceWithin_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getSomewhere_InADistanceWithin__Description() {
+		return (EAttribute) somewhere_InADistanceWithin_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEscapeBy_withADistanceOfAtLeast_() {
+		return escapeBy_withADistanceOfAtLeast_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEscapeBy_withADistanceOfAtLeast__Interpretation() {
+		return (EAttribute) escapeBy_withADistanceOfAtLeast_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEscapeBy_withADistanceOfAtLeast__Description() {
+		return (EAttribute) escapeBy_withADistanceOfAtLeast_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEverywhere_InADistanceWithin_() {
+		return everywhere_InADistanceWithin_EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEverywhere_InADistanceWithin__Interpretation() {
+		return (EAttribute) everywhere_InADistanceWithin_EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEverywhere_InADistanceWithin__Description() {
+		return (EAttribute) everywhere_InADistanceWithin_EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSTRELOperatorOneParam() {
+		return strelOperatorOneParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSTRELOperatorsTwoParams() {
+		return strelOperatorsTwoParamsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSTRELOperatorsTwoParams_Q() {
+		return (EReference) strelOperatorsTwoParamsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getLogicGroup() {
 		return logicGroupEEnum;
 	}
@@ -3530,6 +3690,34 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		createEAttribute(_weakUntil_EClass, _WEAK_UNTIL___INTERPRETATION);
 		createEAttribute(_weakUntil_EClass, _WEAK_UNTIL___DESCRIPTION);
 
+		strelOperatorsEClass = createEClass(STREL_OPERATORS);
+		createEReference(strelOperatorsEClass, STREL_OPERATORS__P);
+
+		spatialEClass = createEClass(SPATIAL);
+		createEReference(spatialEClass, SPATIAL__H);
+		createEReference(spatialEClass, SPATIAL__L);
+
+		reach_by_InADistanceWithin_EClass = createEClass(REACH_BY_IN_ADISTANCE_WITHIN_);
+		createEAttribute(reach_by_InADistanceWithin_EClass, REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION);
+		createEAttribute(reach_by_InADistanceWithin_EClass, REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION);
+
+		somewhere_InADistanceWithin_EClass = createEClass(SOMEWHERE_IN_ADISTANCE_WITHIN_);
+		createEAttribute(somewhere_InADistanceWithin_EClass, SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION);
+		createEAttribute(somewhere_InADistanceWithin_EClass, SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION);
+
+		escapeBy_withADistanceOfAtLeast_EClass = createEClass(ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST_);
+		createEAttribute(escapeBy_withADistanceOfAtLeast_EClass, ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION);
+		createEAttribute(escapeBy_withADistanceOfAtLeast_EClass, ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION);
+
+		everywhere_InADistanceWithin_EClass = createEClass(EVERYWHERE_IN_ADISTANCE_WITHIN_);
+		createEAttribute(everywhere_InADistanceWithin_EClass, EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION);
+		createEAttribute(everywhere_InADistanceWithin_EClass, EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION);
+
+		strelOperatorOneParamEClass = createEClass(STREL_OPERATOR_ONE_PARAM);
+
+		strelOperatorsTwoParamsEClass = createEClass(STREL_OPERATORS_TWO_PARAMS);
+		createEReference(strelOperatorsTwoParamsEClass, STREL_OPERATORS_TWO_PARAMS__Q);
+
 		// Create enums
 		logicGroupEEnum = createEEnum(LOGIC_GROUP);
 		supportedOutputEEnum = createEEnum(SUPPORTED_OUTPUT);
@@ -3655,6 +3843,17 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		ltlPatternMappingsEClass.getESuperTypes().add(this.getElement());
 		ltlPatternMappingsEClass.getESuperTypes().add(this.getLTLOperators());
 		_weakUntil_EClass.getESuperTypes().add(this.getLTLOperatorsTwoParams());
+		strelOperatorsEClass.getESuperTypes().add(this.getElement());
+		reach_by_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorsTwoParams());
+		reach_by_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
+		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
+		escapeBy_withADistanceOfAtLeast_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		escapeBy_withADistanceOfAtLeast_EClass.getESuperTypes().add(this.getSpatial());
+		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
+		strelOperatorOneParamEClass.getESuperTypes().add(this.getSTRELOperators());
+		strelOperatorsTwoParamsEClass.getESuperTypes().add(this.getSTRELOperators());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(precedenceAfter_until_EClass, PrecedenceAfter_until_.class, "PrecedenceAfter_until_", !IS_ABSTRACT,
@@ -4392,12 +4591,76 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				1, 1, _weakUntil_.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
+		initEClass(strelOperatorsEClass, STRELOperators.class, "STRELOperators", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSTRELOperators_P(), this.getElement(), null, "P", null, 1, 1, STRELOperators.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(spatialEClass, Spatial.class, "Spatial", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSpatial_H(), this.getLiteral(), null, "H", null, 1, 1, Spatial.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getSpatial_L(), this.getLiteral(), null, "L", null, 1, 1, Spatial.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(reach_by_InADistanceWithin_EClass, Reach_by_InADistanceWithin_.class, "Reach_by_InADistanceWithin_",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReach_by_InADistanceWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
+				"<P> R[<high>] <Q>", 1, 1, Reach_by_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReach_by_InADistanceWithin__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <high>) to a location which satisfies <Q>",
+				1, 1, Reach_by_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(somewhere_InADistanceWithin_EClass, Somewhere_InADistanceWithin_.class,
+				"Somewhere_InADistanceWithin_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSomewhere_InADistanceWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
+				"SO[<high>] <P>", 1, 1, Somewhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSomewhere_InADistanceWithin__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: there exists a route (with a lentgth <= <high>) to a location which satisfies <P>",
+				1, 1, Somewhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(escapeBy_withADistanceOfAtLeast_EClass, EscapeBy_withADistanceOfAtLeast_.class,
+				"EscapeBy_withADistanceOfAtLeast_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEscapeBy_withADistanceOfAtLeast__Interpretation(), ecorePackage.getEString(),
+				"interpretation", "E[<low>] <P>", 1, 1, EscapeBy_withADistanceOfAtLeast_.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEscapeBy_withADistanceOfAtLeast__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <low>)",
+				1, 1, EscapeBy_withADistanceOfAtLeast_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(everywhere_InADistanceWithin_EClass, Everywhere_InADistanceWithin_.class,
+				"Everywhere_InADistanceWithin_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEverywhere_InADistanceWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
+				"EV[<high>] <P>", 1, 1, Everywhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEverywhere_InADistanceWithin__Description(), ecorePackage.getEString(), "description",
+				"The expression described by this element becomes true if: there exists a location, from which every location (in a distance of <= <high>) satisfy <P>",
+				1, 1, Everywhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strelOperatorOneParamEClass, STRELOperatorOneParam.class, "STRELOperatorOneParam", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(strelOperatorsTwoParamsEClass, STRELOperatorsTwoParams.class, "STRELOperatorsTwoParams", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSTRELOperatorsTwoParams_Q(), this.getElement(), null, "Q", null, 1, 1,
+				STRELOperatorsTwoParams.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LITERAL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.STL);
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.STREL);
 
 		initEEnum(supportedOutputEEnum, SupportedOutput.class, "SupportedOutput");
 		addEEnumLiteral(supportedOutputEEnum, SupportedOutput.COMB);

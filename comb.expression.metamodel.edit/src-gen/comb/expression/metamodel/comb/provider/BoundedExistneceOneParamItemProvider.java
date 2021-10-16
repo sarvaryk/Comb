@@ -284,6 +284,18 @@ public class BoundedExistneceOneParamItemProvider extends BoundedExistenceItemPr
 
 		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOUNDED_EXISTNECE_ONE_PARAM__Q,
 				CombFactory.eINSTANCE.create_weakUntil_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOUNDED_EXISTNECE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.createReach_by_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOUNDED_EXISTNECE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.createSomewhere_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOUNDED_EXISTNECE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.createEscapeBy_withADistanceOfAtLeast_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.BOUNDED_EXISTNECE_ONE_PARAM__Q,
+				CombFactory.eINSTANCE.createEverywhere_InADistanceWithin_()));
 	}
 
 	/**

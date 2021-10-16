@@ -160,6 +160,14 @@ public class CombFactoryImpl extends EFactoryImpl implements CombFactory {
 			return create_greaterThanOrEqual_();
 		case CombPackage._WEAK_UNTIL_:
 			return create_weakUntil_();
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN_:
+			return createReach_by_InADistanceWithin_();
+		case CombPackage.SOMEWHERE_IN_ADISTANCE_WITHIN_:
+			return createSomewhere_InADistanceWithin_();
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST_:
+			return createEscapeBy_withADistanceOfAtLeast_();
+		case CombPackage.EVERYWHERE_IN_ADISTANCE_WITHIN_:
+			return createEverywhere_InADistanceWithin_();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -769,6 +777,50 @@ public class CombFactoryImpl extends EFactoryImpl implements CombFactory {
 	public _weakUntil_ create_weakUntil_() {
 		_weakUntil_Impl _weakUntil_ = new _weakUntil_Impl();
 		return _weakUntil_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Reach_by_InADistanceWithin_ createReach_by_InADistanceWithin_() {
+		Reach_by_InADistanceWithin_Impl reach_by_InADistanceWithin_ = new Reach_by_InADistanceWithin_Impl();
+		return reach_by_InADistanceWithin_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Somewhere_InADistanceWithin_ createSomewhere_InADistanceWithin_() {
+		Somewhere_InADistanceWithin_Impl somewhere_InADistanceWithin_ = new Somewhere_InADistanceWithin_Impl();
+		return somewhere_InADistanceWithin_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EscapeBy_withADistanceOfAtLeast_ createEscapeBy_withADistanceOfAtLeast_() {
+		EscapeBy_withADistanceOfAtLeast_Impl escapeBy_withADistanceOfAtLeast_ = new EscapeBy_withADistanceOfAtLeast_Impl();
+		return escapeBy_withADistanceOfAtLeast_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Everywhere_InADistanceWithin_ createEverywhere_InADistanceWithin_() {
+		Everywhere_InADistanceWithin_Impl everywhere_InADistanceWithin_ = new Everywhere_InADistanceWithin_Impl();
+		return everywhere_InADistanceWithin_;
 	}
 
 	/**

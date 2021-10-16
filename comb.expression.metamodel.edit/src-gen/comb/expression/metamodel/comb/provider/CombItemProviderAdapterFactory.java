@@ -1269,6 +1269,98 @@ public class CombItemProviderAdapterFactory extends CombAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Reach_by_InADistanceWithin_ItemProvider reach_by_InADistanceWithin_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createReach_by_InADistanceWithin_Adapter() {
+		if (reach_by_InADistanceWithin_ItemProvider == null) {
+			reach_by_InADistanceWithin_ItemProvider = new Reach_by_InADistanceWithin_ItemProvider(this);
+		}
+
+		return reach_by_InADistanceWithin_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb.Somewhere_InADistanceWithin_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Somewhere_InADistanceWithin_ItemProvider somewhere_InADistanceWithin_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb.Somewhere_InADistanceWithin_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSomewhere_InADistanceWithin_Adapter() {
+		if (somewhere_InADistanceWithin_ItemProvider == null) {
+			somewhere_InADistanceWithin_ItemProvider = new Somewhere_InADistanceWithin_ItemProvider(this);
+		}
+
+		return somewhere_InADistanceWithin_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EscapeBy_withADistanceOfAtLeast_ItemProvider escapeBy_withADistanceOfAtLeast_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEscapeBy_withADistanceOfAtLeast_Adapter() {
+		if (escapeBy_withADistanceOfAtLeast_ItemProvider == null) {
+			escapeBy_withADistanceOfAtLeast_ItemProvider = new EscapeBy_withADistanceOfAtLeast_ItemProvider(this);
+		}
+
+		return escapeBy_withADistanceOfAtLeast_ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link comb.expression.metamodel.comb.Everywhere_InADistanceWithin_} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Everywhere_InADistanceWithin_ItemProvider everywhere_InADistanceWithin_ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link comb.expression.metamodel.comb.Everywhere_InADistanceWithin_}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEverywhere_InADistanceWithin_Adapter() {
+		if (everywhere_InADistanceWithin_ItemProvider == null) {
+			everywhere_InADistanceWithin_ItemProvider = new Everywhere_InADistanceWithin_ItemProvider(this);
+		}
+
+		return everywhere_InADistanceWithin_ItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1477,6 +1569,14 @@ public class CombItemProviderAdapterFactory extends CombAdapterFactory
 			_greaterThanOrEqual_ItemProvider.dispose();
 		if (_weakUntil_ItemProvider != null)
 			_weakUntil_ItemProvider.dispose();
+		if (reach_by_InADistanceWithin_ItemProvider != null)
+			reach_by_InADistanceWithin_ItemProvider.dispose();
+		if (somewhere_InADistanceWithin_ItemProvider != null)
+			somewhere_InADistanceWithin_ItemProvider.dispose();
+		if (escapeBy_withADistanceOfAtLeast_ItemProvider != null)
+			escapeBy_withADistanceOfAtLeast_ItemProvider.dispose();
+		if (everywhere_InADistanceWithin_ItemProvider != null)
+			everywhere_InADistanceWithin_ItemProvider.dispose();
 	}
 
 }

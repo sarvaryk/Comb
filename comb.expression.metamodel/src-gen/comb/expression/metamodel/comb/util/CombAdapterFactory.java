@@ -527,6 +527,46 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseSTRELOperators(STRELOperators object) {
+			return createSTRELOperatorsAdapter();
+		}
+
+		@Override
+		public Adapter caseSpatial(Spatial object) {
+			return createSpatialAdapter();
+		}
+
+		@Override
+		public Adapter caseReach_by_InADistanceWithin_(Reach_by_InADistanceWithin_ object) {
+			return createReach_by_InADistanceWithin_Adapter();
+		}
+
+		@Override
+		public Adapter caseSomewhere_InADistanceWithin_(Somewhere_InADistanceWithin_ object) {
+			return createSomewhere_InADistanceWithin_Adapter();
+		}
+
+		@Override
+		public Adapter caseEscapeBy_withADistanceOfAtLeast_(EscapeBy_withADistanceOfAtLeast_ object) {
+			return createEscapeBy_withADistanceOfAtLeast_Adapter();
+		}
+
+		@Override
+		public Adapter caseEverywhere_InADistanceWithin_(Everywhere_InADistanceWithin_ object) {
+			return createEverywhere_InADistanceWithin_Adapter();
+		}
+
+		@Override
+		public Adapter caseSTRELOperatorOneParam(STRELOperatorOneParam object) {
+			return createSTRELOperatorOneParamAdapter();
+		}
+
+		@Override
+		public Adapter caseSTRELOperatorsTwoParams(STRELOperatorsTwoParams object) {
+			return createSTRELOperatorsTwoParamsAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1830,6 +1870,118 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter create_weakUntil_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.STRELOperators <em>STREL Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.STRELOperators
+	 * @generated
+	 */
+	public Adapter createSTRELOperatorsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.Spatial <em>Spatial</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.Spatial
+	 * @generated
+	 */
+	public Adapter createSpatialAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_ <em>Reach by In ADistance Within </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.Reach_by_InADistanceWithin_
+	 * @generated
+	 */
+	public Adapter createReach_by_InADistanceWithin_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.Somewhere_InADistanceWithin_ <em>Somewhere In ADistance Within </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.Somewhere_InADistanceWithin_
+	 * @generated
+	 */
+	public Adapter createSomewhere_InADistanceWithin_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_ <em>Escape By with ADistance Of At Least </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_
+	 * @generated
+	 */
+	public Adapter createEscapeBy_withADistanceOfAtLeast_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.Everywhere_InADistanceWithin_ <em>Everywhere In ADistance Within </em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.Everywhere_InADistanceWithin_
+	 * @generated
+	 */
+	public Adapter createEverywhere_InADistanceWithin_Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.STRELOperatorOneParam <em>STREL Operator One Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.STRELOperatorOneParam
+	 * @generated
+	 */
+	public Adapter createSTRELOperatorOneParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.STRELOperatorsTwoParams <em>STREL Operators Two Params</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.STRELOperatorsTwoParams
+	 * @generated
+	 */
+	public Adapter createSTRELOperatorsTwoParamsAdapter() {
 		return null;
 	}
 

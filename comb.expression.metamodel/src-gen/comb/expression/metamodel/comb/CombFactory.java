@@ -490,6 +490,42 @@ public interface CombFactory extends EFactory {
 	_weakUntil_ create_weakUntil_();
 
 	/**
+	 * Returns a new object of class '<em>Reach by In ADistance Within </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reach by In ADistance Within </em>'.
+	 * @generated
+	 */
+	Reach_by_InADistanceWithin_ createReach_by_InADistanceWithin_();
+
+	/**
+	 * Returns a new object of class '<em>Somewhere In ADistance Within </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Somewhere In ADistance Within </em>'.
+	 * @generated
+	 */
+	Somewhere_InADistanceWithin_ createSomewhere_InADistanceWithin_();
+
+	/**
+	 * Returns a new object of class '<em>Escape By with ADistance Of At Least </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Escape By with ADistance Of At Least </em>'.
+	 * @generated
+	 */
+	EscapeBy_withADistanceOfAtLeast_ createEscapeBy_withADistanceOfAtLeast_();
+
+	/**
+	 * Returns a new object of class '<em>Everywhere In ADistance Within </em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Everywhere In ADistance Within </em>'.
+	 * @generated
+	 */
+	Everywhere_InADistanceWithin_ createEverywhere_InADistanceWithin_();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

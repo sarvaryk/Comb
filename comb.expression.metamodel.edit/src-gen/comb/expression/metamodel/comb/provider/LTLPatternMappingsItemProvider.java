@@ -295,6 +295,18 @@ public class LTLPatternMappingsItemProvider extends ElementItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(CombPackage.Literals.LTL_OPERATORS__P, CombFactory.eINSTANCE.create_weakUntil_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.LTL_OPERATORS__P,
+				CombFactory.eINSTANCE.createReach_by_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.LTL_OPERATORS__P,
+				CombFactory.eINSTANCE.createSomewhere_InADistanceWithin_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.LTL_OPERATORS__P,
+				CombFactory.eINSTANCE.createEscapeBy_withADistanceOfAtLeast_()));
+
+		newChildDescriptors.add(createChildParameter(CombPackage.Literals.LTL_OPERATORS__P,
+				CombFactory.eINSTANCE.createEverywhere_InADistanceWithin_()));
 	}
 
 }

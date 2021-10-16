@@ -15,6 +15,7 @@
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LTL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MITL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/STL"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/STREL"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="comb.ecore#//SupportedOutput">
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//SupportedOutput/Comb"/>
@@ -326,6 +327,33 @@
     <genClasses ecoreClass="comb.ecore#//_weakUntil_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_weakUntil_/interpretation"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//_weakUntil_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//STRELOperators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//STRELOperators/P"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Spatial">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Spatial/H"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Spatial/L"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Reach_by_InADistanceWithin_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Reach_by_InADistanceWithin_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Reach_by_InADistanceWithin_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Somewhere_InADistanceWithin_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Somewhere_InADistanceWithin_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Somewhere_InADistanceWithin_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//EscapeBy_withADistanceOfAtLeast_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//EscapeBy_withADistanceOfAtLeast_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//EscapeBy_withADistanceOfAtLeast_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//Everywhere_InADistanceWithin_">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Everywhere_InADistanceWithin_/interpretation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Everywhere_InADistanceWithin_/description"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//STRELOperatorOneParam"/>
+    <genClasses ecoreClass="comb.ecore#//STRELOperatorsTwoParams">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//STRELOperatorsTwoParams/Q"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
