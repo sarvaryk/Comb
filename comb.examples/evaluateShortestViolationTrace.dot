@@ -1,0 +1,4 @@
+digraph {
+	"0"[label="(not (init) and spawn)"]
+	0
+}

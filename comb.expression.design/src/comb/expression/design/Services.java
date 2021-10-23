@@ -1,5 +1,7 @@
 package comb.expression.design;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -15,6 +17,10 @@ import comb.generator.action.automaton.AutomatonUtils;
 public class Services {
 	private static Optional<Automaton> optional_nfa;
 	private static Optional<Automaton> optional_negated_nfa;
+	
+	private static String traceElementSeparator = " -> ";
+	
+	
 	
 	public boolean canEvaluationsBePerformed(final Element element) {
 		optional_nfa = AutomatonUtils.getNFA(element);
@@ -58,6 +64,9 @@ public class Services {
 	}
 	
 	public String evaluateShortestAcceptingTrace(final Element element) {
+		String evaluationName = "evaluateShortestAcceptingTrace";
+		generateTraceInDotFormat(evaluationName+".dot", "");
+		
 		if(optional_nfa.isPresent()) {
 			Automaton nfa = optional_nfa.get();
 			
@@ -78,16 +87,21 @@ public class Services {
 				result = notExistingTrace;
 			else if(shortestTrace.size() == 0)
 				result = instantlyEvaluatedTrace;
-			else
-				result = String.join(" ; ", shortestTrace);
+			else {
+				result = String.join(traceElementSeparator, shortestTrace);
+				generateTraceInDotFormat(evaluationName+".dot", result);
+			}
 			
 			return result;
 		}
-		
+
 		return "";
 	}
 	
 	public String evaluateShortestSatisfyingTrace(final Element element) {
+		String evaluationName = "evaluateShortestSatisfyingTrace";
+		generateTraceInDotFormat(evaluationName+".dot", "");
+		
 		if(optional_nfa.isPresent()) {
 			Automaton nfa = optional_nfa.get();
 			
@@ -108,8 +122,10 @@ public class Services {
 				result = notExistingTrace;
 			else if(shortestTrace.size() == 0)
 				result = instantlyEvaluatedTrace;
-			else
-				result = String.join(" ; ", shortestTrace);
+			else {
+				result = String.join(traceElementSeparator, shortestTrace);
+				generateTraceInDotFormat(evaluationName+".dot", result);
+			}
 			
 			return result;
 		}
@@ -119,6 +135,9 @@ public class Services {
 	
 	
 	public String evaluateShortestViolationTrace(final Element element) {
+		String evaluationName = "evaluateShortestViolationTrace";
+		generateTraceInDotFormat(evaluationName+".dot", "");
+		
 		if(optional_negated_nfa.isPresent()) {
 			Automaton nfa_negated = optional_negated_nfa.get();
 			
@@ -139,12 +158,14 @@ public class Services {
 				result = notExistingTrace;
 			else if(shortestTrace.size() == 0)
 				result = instantlyEvaluatedTrace;
-			else
-				result = String.join(" ; ", shortestTrace);
+			else {
+				result = String.join(traceElementSeparator, shortestTrace);
+				generateTraceInDotFormat(evaluationName+".dot", result);
+			}
 			
 			return result;
 		}
-		
+
 		return "";
 	}
 	
@@ -187,5 +208,30 @@ public class Services {
 		}
 		
 		return traces;
+	}
+	
+	private void generateTraceInDotFormat(String fileName, String trace) {
+		String filePath = System.getProperty("user.dir") + "\\comb.examples\\" + fileName;
+		
+		String[] traceElements = trace.split(traceElementSeparator);
+		String[] traceElementLabels = new String[traceElements.length];
+		String[] traceElementIDs = new String[traceElements.length];
+		
+		for (int i = 0; i < traceElements.length; i++) {
+			traceElementLabels[i] = String.format("\"%d\"[label=\"%s\"]", i, traceElements[i]);
+			traceElementIDs[i] = String.format("%d", i);
+		}
+		trace = String.join(traceElementSeparator, traceElements);
+
+		try {
+			FileWriter myWriter = new FileWriter(filePath);
+		    myWriter.write("digraph {" + "\n" + 
+		    			"\t" + String.join(" ", traceElementLabels) + "\n" + 
+		    			"\t" + String.join(traceElementSeparator, traceElementIDs) + "\n" + 
+		    		"}");
+		    myWriter.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
