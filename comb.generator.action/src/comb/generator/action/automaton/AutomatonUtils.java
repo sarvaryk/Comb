@@ -54,7 +54,7 @@ public class AutomatonUtils {
 		} catch (TimeoutException e) {
 			e.printStackTrace();
 			if(showInfo)
-				InfoUtils.showMessageDialog("Generation of the Büchi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
+				InfoUtils.showMessageDialog("Generation of the Buchi-automaton was terminated, as it was not completed before timeout\nSee: " + e);
 		}
 		
 		return successfulSave;
@@ -80,7 +80,7 @@ public class AutomatonUtils {
 
 		} catch (IOException | ReadBuchiDescriptionException e) {
 			e.printStackTrace();
-			InfoUtils.showMessageDialog("ERROR while generating the Bï¿½chi-automaton!\n" + e);
+			InfoUtils.showMessageDialog("ERROR while generating the Buchi-automaton!\n" + e);
 		}
 		
 		return Optional.ofNullable(ba);
