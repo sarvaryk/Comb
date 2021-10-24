@@ -1,38 +1,44 @@
-<svg width="325" height="60" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
-
- <g>
+<svg width="327" height="62" xmlns="http://www.w3.org/2000/svg" xmlns:undefined="https://boxy-svg.com">
+ <g transform="matrix(1, 0, 0, 1, 0.728768, 0.551361)">
   <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="62" width="327" y="-1" x="-1"/>
-  <g display="none" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="1" x="1" height="125" width="625" id="svg_1"/>
+  <rect x="-1" y="-1" width="327" height="62" id="canvas_background" fill="#fff"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_1" width="625" height="125" x="1" y="1" stroke-width="0" fill="url(#gridpattern)"/>
   </g>
  </g>
- <g>
+
+ <g transform="matrix(1, 0, 0, 1, 0.728768, 0.551361)">
   <title>Layer 1</title>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="4.44587" y1="4.79511" x2="55.0131" y2="4.79511" id="svg_4"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="5.0173" y1="4.79511" x2="5.0173" y2="54.70306" id="svg_5"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="55.0131" y1="4.79511" x2="55.0131" y2="54.70306" id="svg_9"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="55.0131" y1="4.71109" x2="105.0131" y2="4.71109" id="svg_15"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="105.0131" y1="4.71109" x2="105.0131" y2="54.70306" id="svg_17"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="202.67407" y1="4.71109" x2="269.48567" y2="4.71109" id="svg_19"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="203.99861" y1="4.42123" x2="203.99861" y2="54.4132" id="svg_20"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="253.9986" y1="4.42123" x2="253.9986" y2="54.4132" id="svg_32"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="154.00336" y1="4.71109" x2="204.62788" y2="4.71109" id="svg_34"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="272.40026" y1="4.69866" x2="272.40026" y2="54.69063" id="svg_35"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="268.56127" y1="4.71109" x2="320.56127" y2="4.71109" id="svg_37"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="319.79571" y1="4.71109" x2="319.79571" y2="54.70306" id="svg_38"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="104.68448" y1="4.71602" x2="155.13974" y2="4.71602" id="svg_40"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="4.59685" y1="55.01343" x2="55.44979" y2="55.01343" id="svg_2"/>
-  <line fill="none" stroke="#000" stroke-width="1.5" x1="253.25568" y1="54.63955" x2="272.8209" y2="54.63955" id="svg_6"/>
-  <line transform="rotate(-0.192951, 154.688, 55.0181)" fill="none" stroke="#000" stroke-width="1.5" x1="105.12062" y1="55.01805" x2="204.25508" y2="55.01805" id="svg_12"/>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="13.13551" y="35.1934" id="svg_10" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">Always</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="70.61563" y="35.21538" id="svg_13" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">&lt;P&gt;</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="113.36246" y="35.46957" id="svg_14" font-size="9" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">within time interval of</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="215.30532" y="45.09273" id="svg_16" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke-dasharray="2,2">&lt;low&gt;</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="260.5328" y="43.29565" id="svg_21" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">,</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="210.7339" y="24.80702" id="svg_3" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke-dasharray="2,2">time unit</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="281.3053" y="45.94987" id="svg_7" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke-dasharray="2,2">&lt;high&gt;</text>
-  <text fill="#000000" stroke="#000" stroke-width="0" x="277.59101" y="25.37845" id="svg_8" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke-dasharray="2,2">time unit</text>
+  <line id="svg_4" y2="4.79511" x2="55.0131" y1="4.79511" x1="4.44587" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_5" y2="54.70306" x2="5.0173" y1="4.79511" x1="5.0173" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_9" y2="54.70306" x2="55.0131" y1="4.79511" x1="55.0131" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_15" y2="4.71109" x2="105.0131" y1="4.71109" x1="55.0131" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_17" y2="54.70306" x2="105.0131" y1="4.71109" x1="105.0131" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_19" y2="4.71109" x2="269.48567" y1="4.71109" x1="202.67407" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_20" y2="54.4132" x2="203.99861" y1="4.42123" x1="203.99861" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_32" y2="54.4132" x2="253.9986" y1="4.42123" x1="253.9986" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_34" y2="4.71109" x2="204.62788" y1="4.71109" x1="154.00336" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_35" y2="54.69063" x2="272.40026" y1="4.69866" x1="272.40026" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_37" y2="4.71109" x2="320.56127" y1="4.71109" x1="268.56127" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_38" y2="54.70306" x2="319.79571" y1="4.71109" x1="319.79571" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_40" y2="4.71602" x2="155.13974" y1="4.71602" x1="104.68448" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_2" y2="55.01343" x2="55.44979" y1="55.01343" x1="4.59685" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_6" y2="54.63955" x2="272.8209" y1="54.63955" x1="253.25568" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line id="svg_12" y2="55.01805" x2="204.25508" y1="55.01805" x1="105.12062" stroke-width="1.5" stroke="#000" fill="none" transform="rotate(-0.192951, 154.688, 55.0181)"/>
+  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_10" y="35.1934" x="13.13551" stroke-width="0" stroke="#000" fill="#000000">Always</text>
+  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_13" y="35.21538" x="70.61563" stroke-width="0" stroke="#000" fill="#000000">&lt;P&gt;</text>
+  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="9" id="svg_14" y="35.46957" x="113.36246" stroke-width="0" stroke="#000" fill="#000000">within time interval of</text>
+  <text stroke-dasharray="2,2" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_16" y="45.09273" x="215.30532" stroke-width="0" stroke="#000" fill="#000000">&lt;low&gt;</text>
+  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="svg_21" y="43.29565" x="260.5328" stroke-width="0" stroke="#000" fill="#000000">,</text>
+  <text stroke-dasharray="2,2" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size=" 9px" id="svg_3" y="25.828" x="212.265" stroke-width="0" stroke="#000" fill="#000000">time unit</text>
+  <text stroke-dasharray="2,2" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="svg_7" y="45.94987" x="281.3053" stroke-width="0" stroke="#000" fill="#000000">&lt;high&gt;</text>
+  <text stroke-dasharray="2,2" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size=" 10px" id="text-1" y="28.75" x="277.523" stroke-width="0" stroke="#000" fill="#000000">time unit</text>
+ </g>
+ <g>
+  <title>Layer 2</title>
+  <path id="svg_8" stroke=" rgb(0, 0, 0)" fill=" rgb(0, 0, 0)" d="m253.817,29.943c0.151,-27.802 -43.115,-36.227 -48.133,0.186l2.772,-0.158c3.564,-32.063 42.323,-25.953 42.737,0.142"/>
+  <path id="svg_11" fill=" rgb(0, 0, 0)"  d="m215.27787,20.59641l-8.40218,-8.60851l11.65585,-2.97288l-3.25367,11.58139z"/>
+  <path id="svg_18" stroke=" rgb(0, 0, 0)" fill=" rgb(0, 0, 0)" d="m320.987,30.232c0.151,-27.802 -43.115,-36.227 -48.133,0.186l2.772,-0.158c3.564,-32.063 42.323,-25.953 42.737,0.142"/>
+  <path id="svg_22" fill=" rgb(0, 0, 0)"  d="m317.61332,19.62618l-11.52077,-3.46047l8.75656,-8.2474l2.76421,11.70787z"/>
  </g>
 </svg>
