@@ -15,4 +15,4 @@
 
 ## Further dependencies
 
-In order to graphically represent a trace, Graphviz is needed (the executable path needs to be in the environment path).
+In order to graphically represent a trace, [Graphviz](https://graphviz.org/) is needed (the executable path needs to be in the environment path).
