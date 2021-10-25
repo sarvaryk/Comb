@@ -11,4 +11,8 @@
 7. In the `Model Explorer` view extend the `Comb` element within the `My.comb` file of the `comb.expression` project. Here you can see the root elements of the contained expressions and a graphical Sirius editor `new CombDiagramDescription`. To open it, double click it.
 8. Here you can edit and save your requirements. You can observe various properties of the selected element in the `Properties` view.
 9. The various functions of a comb requirement can be accessed by right clicking on an element under the main `Comb` element in the `Model Explorer` view and select "Comb generator".
-10. In order to use [Graphviz](https://graphviz.org/), the following needs to be done: Eclipse -> Window -> Preferences -> Graphviz -> Specify Manually the `dot.exe` file, which can be found in the [comb.external.Graphviz](https://github.com/sarvaryk/Comb/tree/master/comb.external.Graphviz) folder. The Graphviz view can be accessed trough the `Image Viewer` view (Eclipse -> Window -> Perspective -> Open Perspective -> Other -> Image Viewer)
+10. Graphical trace representations are generetaed in dot format into the [comb.examples](https://github.com/sarvaryk/Comb/tree/master/comb.examples) project. These can be used by Graphviz. Its view can be accessed trough the `Image Viewer` view (Eclipse -> Window -> Perspective -> Open Perspective -> Other -> Image Viewer)
+
+## Further dependencies
+
+In order to graphically represent a trace, Graphviz is needed (the executable path needs to be in the environment path).
