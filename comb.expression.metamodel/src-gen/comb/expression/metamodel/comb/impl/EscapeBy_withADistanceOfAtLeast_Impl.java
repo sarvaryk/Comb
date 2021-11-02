@@ -23,8 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl#getH <em>H</em>}</li>
- *   <li>{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl#getL <em>L</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl#getD <em>D</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl#getInterpretation <em>Interpretation</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl#getDescription <em>Description</em>}</li>
  * </ul>
@@ -34,24 +33,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamImpl
 		implements EscapeBy_withADistanceOfAtLeast_ {
 	/**
-	 * The cached value of the '{@link #getH() <em>H</em>}' containment reference.
+	 * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getH()
+	 * @see #getD()
 	 * @generated
 	 * @ordered
 	 */
-	protected Literal h;
-
-	/**
-	 * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getL()
-	 * @generated
-	 * @ordered
-	 */
-	protected Literal l;
+	protected Literal d;
 
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
@@ -61,7 +50,7 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "E[<low>] <P>";
+	protected static final String INTERPRETATION_EDEFAULT = "E[<dist>] <P>";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
@@ -81,7 +70,7 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <low>)";
+	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <dist>)";
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -118,8 +107,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	 * @generated
 	 */
 	@Override
-	public Literal getH() {
-		return h;
+	public Literal getD() {
+		return d;
 	}
 
 	/**
@@ -127,12 +116,12 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetH(Literal newH, NotificationChain msgs) {
-		Literal oldH = h;
-		h = newH;
+	public NotificationChain basicSetD(Literal newD, NotificationChain msgs) {
+		Literal oldD = d;
+		d = newD;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H, oldH, newH);
+					CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D, oldD, newD);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -147,73 +136,21 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	 * @generated
 	 */
 	@Override
-	public void setH(Literal newH) {
-		if (newH != h) {
+	public void setD(Literal newD) {
+		if (newD != d) {
 			NotificationChain msgs = null;
-			if (h != null)
-				msgs = ((InternalEObject) h).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H, null, msgs);
-			if (newH != null)
-				msgs = ((InternalEObject) newH).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H, null, msgs);
-			msgs = basicSetH(newH, msgs);
+			if (d != null)
+				msgs = ((InternalEObject) d).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D, null, msgs);
+			if (newD != null)
+				msgs = ((InternalEObject) newD).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D, null, msgs);
+			msgs = basicSetD(newD, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H,
-					newH, newH));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Literal getL() {
-		return l;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetL(Literal newL, NotificationChain msgs) {
-		Literal oldL = l;
-		l = newL;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L, oldL, newL);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setL(Literal newL) {
-		if (newL != l) {
-			NotificationChain msgs = null;
-			if (l != null)
-				msgs = ((InternalEObject) l).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L, null, msgs);
-			if (newL != null)
-				msgs = ((InternalEObject) newL).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L, null, msgs);
-			msgs = basicSetL(newL, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L,
-					newL, newL));
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D,
+					newD, newD));
 	}
 
 	/**
@@ -273,10 +210,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-			return basicSetH(null, msgs);
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
-			return basicSetL(null, msgs);
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
+			return basicSetD(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -289,10 +224,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-			return getH();
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
-			return getL();
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
+			return getD();
 		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION:
 			return getInterpretation();
 		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION:
@@ -309,11 +242,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-			setH((Literal) newValue);
-			return;
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
-			setL((Literal) newValue);
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
+			setD((Literal) newValue);
 			return;
 		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION:
 			setInterpretation((String) newValue);
@@ -333,11 +263,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-			setH((Literal) null);
-			return;
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
-			setL((Literal) null);
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
+			setD((Literal) null);
 			return;
 		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION:
 			setInterpretation(INTERPRETATION_EDEFAULT);
@@ -357,10 +284,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-			return h != null;
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
-			return l != null;
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
+			return d != null;
 		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION:
 			return INTERPRETATION_EDEFAULT == null ? interpretation != null
 					: !INTERPRETATION_EDEFAULT.equals(interpretation);
@@ -379,10 +304,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Spatial.class) {
 			switch (derivedFeatureID) {
-			case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-				return CombPackage.SPATIAL__H;
-			case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
-				return CombPackage.SPATIAL__L;
+			case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
+				return CombPackage.SPATIAL__D;
 			default:
 				return -1;
 			}
@@ -399,10 +322,8 @@ public class EscapeBy_withADistanceOfAtLeast_Impl extends STRELOperatorOneParamI
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Spatial.class) {
 			switch (baseFeatureID) {
-			case CombPackage.SPATIAL__H:
-				return CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H;
-			case CombPackage.SPATIAL__L:
-				return CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L;
+			case CombPackage.SPATIAL__D:
+				return CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D;
 			default:
 				return -1;
 			}

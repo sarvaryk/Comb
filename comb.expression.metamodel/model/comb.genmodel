@@ -332,8 +332,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//STRELOperators/P"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//Spatial">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Spatial/H"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Spatial/L"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//Spatial/D"/>
     </genClasses>
     <genClasses ecoreClass="comb.ecore#//Reach_by_InADistanceWithin_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute comb.ecore#//Reach_by_InADistanceWithin_/interpretation"/>

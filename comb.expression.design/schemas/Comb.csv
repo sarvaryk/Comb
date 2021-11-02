@@ -4,10 +4,10 @@ EVENTUALLY;F;F[<low>, <high>];F[<low>, <high>];F[<low>, <high>]
 UNTIL;U;U[<low>, <high>];U[<low>, <high>];U[<low>, <high>]
 WEAKUNTIL;W;-;-;-
 NEXT;X;-;-;-
-REACH;-;-;-;R[<high>]
-ESCAPE;-;-;-;E[<low>]
-SOMEWHERE;-;-;-;SO[<high>]
-EVERYWHERE;-;-;-;EV[<high>]
+REACH;-;-;-;R[<dist>]
+ESCAPE;-;-;-;E[<dist>]
+SOMEWHERE;-;-;-;SO[<dist>]
+EVERYWHERE;-;-;-;EV[<dist>]
 AND;&&;&&;&&;&&
 OR;||;||;||;||
 IMPLIES;->;->;->;->

@@ -406,6 +406,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="Set &lt;dist>" sourceMapping="//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']/@defaultLayer/@nodeMappings[name='ElementNode']" targetMapping="//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']/@defaultLayer/@nodeMappings[name='ElementNode']" targetFinderExpression="feature:D">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="Distance">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <toolSections name="Basic elements">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Literal" nodeMappings="//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']/@defaultLayer/@nodeMappings[name='ElementNode']">
             <variable name="container"/>
@@ -483,6 +491,17 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="H" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Set &lt;dist>" edgeMappings="//@ownedViewpoints[name='CombViewpoint']/@ownedRepresentations[name='CombDiagramDescription']/@defaultLayer/@edgeMappings[name='Set%20%3Cdist%3E']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="D" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -1221,6 +1240,21 @@
         <extends href="platform:/plugin/org.eclipse.sirius.properties.defaultrules/model/properties.odesign#//@extensions.0/@categories.0/@pages.0"/>
       </pages>
       <groups name="Comb generator" labelExpression="Evaluations" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="SatisfactionNotBefore" labelExpression="Satisfaction can not happen before" helpExpression="The satisfaction of the requirement must happen in NO LESS THAN this amount of timeunits" isEnabledExpression="aql:false" valueExpression="aql: self.evaluateSatisfactionNotBefore()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="SatisfactionNotAfter" labelExpression="Satisfaction can not happen after" helpExpression="The satisfaction of the requirement must happen in NO MORE THAN this amount of timeunits" isEnabledExpression="aql:false" valueExpression="aql: self.evaluateSatisfactionNotAfter()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="isTimingContradicting" labelExpression="Timing contradiction detected" helpExpression="If a formula must be satisfied before its subformula could be satisfied" isEnabledExpression="aql:false" valueExpression="aql: self.evaluateIsTimingContradicting()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
         <controls xsi:type="properties:TextDescription" name="CanEvaluationsBePerformed" labelExpression="Can evaluations be performed?" helpExpression="If an automaton can be generated from the requirement and thus, the property evaluation is possible" isEnabledExpression="aql:false" valueExpression="aql: self.canEvaluationsBePerformed()">
           <initialOperation>
             <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>

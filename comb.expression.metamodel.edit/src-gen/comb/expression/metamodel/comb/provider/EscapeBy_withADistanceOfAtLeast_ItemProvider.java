@@ -98,8 +98,7 @@ public class EscapeBy_withADistanceOfAtLeast_ItemProvider extends STRELOperatorO
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__H);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__L);
+			childrenFeatures.add(CombPackage.Literals.SPATIAL__D);
 		}
 		return childrenFeatures;
 	}
@@ -167,8 +166,7 @@ public class EscapeBy_withADistanceOfAtLeast_ItemProvider extends STRELOperatorO
 		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H:
-		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L:
+		case CombPackage.ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -187,10 +185,7 @@ public class EscapeBy_withADistanceOfAtLeast_ItemProvider extends STRELOperatorO
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__H, CombFactory.eINSTANCE.createLiteral()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__L, CombFactory.eINSTANCE.createLiteral()));
+				.add(createChildParameter(CombPackage.Literals.SPATIAL__D, CombFactory.eINSTANCE.createLiteral()));
 	}
 
 	/**
@@ -205,7 +200,7 @@ public class EscapeBy_withADistanceOfAtLeast_ItemProvider extends STRELOperatorO
 		Object childObject = child;
 
 		boolean qualify = childFeature == CombPackage.Literals.STREL_OPERATORS__P
-				|| childFeature == CombPackage.Literals.SPATIAL__H || childFeature == CombPackage.Literals.SPATIAL__L;
+				|| childFeature == CombPackage.Literals.SPATIAL__D;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

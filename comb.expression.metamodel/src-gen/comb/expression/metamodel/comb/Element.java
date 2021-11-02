@@ -133,6 +133,13 @@ public interface Element extends EObject {
 	 * 
 	 * @generated NOT
 	 */
+	Literal getD();
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
 	String getInterpretation();
 
 } // Element

@@ -23,8 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl#getH <em>H</em>}</li>
- *   <li>{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl#getL <em>L</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl#getD <em>D</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl#getInterpretation <em>Interpretation</em>}</li>
  *   <li>{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl#getDescription <em>Description</em>}</li>
  * </ul>
@@ -34,24 +33,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 		implements Reach_by_InADistanceWithin_ {
 	/**
-	 * The cached value of the '{@link #getH() <em>H</em>}' containment reference.
+	 * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getH()
+	 * @see #getD()
 	 * @generated
 	 * @ordered
 	 */
-	protected Literal h;
-
-	/**
-	 * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getL()
-	 * @generated
-	 * @ordered
-	 */
-	protected Literal l;
+	protected Literal d;
 
 	/**
 	 * The default value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
@@ -61,7 +50,7 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INTERPRETATION_EDEFAULT = "<P> R[<high>] <Q>";
+	protected static final String INTERPRETATION_EDEFAULT = "<P> R[<dist>] <Q>";
 
 	/**
 	 * The cached value of the '{@link #getInterpretation() <em>Interpretation</em>}' attribute.
@@ -81,7 +70,7 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <high>) to a location which satisfies <Q>";
+	protected static final String DESCRIPTION_EDEFAULT = "The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <dist>) to a location which satisfies <Q>";
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -118,8 +107,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	 * @generated
 	 */
 	@Override
-	public Literal getH() {
-		return h;
+	public Literal getD() {
+		return d;
 	}
 
 	/**
@@ -127,12 +116,12 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetH(Literal newH, NotificationChain msgs) {
-		Literal oldH = h;
-		h = newH;
+	public NotificationChain basicSetD(Literal newD, NotificationChain msgs) {
+		Literal oldD = d;
+		d = newD;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H, oldH, newH);
+					CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D, oldD, newD);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -147,73 +136,21 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	 * @generated
 	 */
 	@Override
-	public void setH(Literal newH) {
-		if (newH != h) {
+	public void setD(Literal newD) {
+		if (newD != d) {
 			NotificationChain msgs = null;
-			if (h != null)
-				msgs = ((InternalEObject) h).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H, null, msgs);
-			if (newH != null)
-				msgs = ((InternalEObject) newH).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H, null, msgs);
-			msgs = basicSetH(newH, msgs);
+			if (d != null)
+				msgs = ((InternalEObject) d).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D, null, msgs);
+			if (newD != null)
+				msgs = ((InternalEObject) newD).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D, null, msgs);
+			msgs = basicSetD(newD, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H, newH,
-					newH));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Literal getL() {
-		return l;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetL(Literal newL, NotificationChain msgs) {
-		Literal oldL = l;
-		l = newL;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L, oldL, newL);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setL(Literal newL) {
-		if (newL != l) {
-			NotificationChain msgs = null;
-			if (l != null)
-				msgs = ((InternalEObject) l).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L, null, msgs);
-			if (newL != null)
-				msgs = ((InternalEObject) newL).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L, null, msgs);
-			msgs = basicSetL(newL, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L, newL,
-					newL));
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D, newD,
+					newD));
 	}
 
 	/**
@@ -272,10 +209,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-			return basicSetH(null, msgs);
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
-			return basicSetL(null, msgs);
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
+			return basicSetD(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -288,10 +223,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-			return getH();
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
-			return getL();
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
+			return getD();
 		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION:
 			return getInterpretation();
 		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION:
@@ -308,11 +241,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-			setH((Literal) newValue);
-			return;
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
-			setL((Literal) newValue);
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
+			setD((Literal) newValue);
 			return;
 		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION:
 			setInterpretation((String) newValue);
@@ -332,11 +262,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-			setH((Literal) null);
-			return;
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
-			setL((Literal) null);
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
+			setD((Literal) null);
 			return;
 		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION:
 			setInterpretation(INTERPRETATION_EDEFAULT);
@@ -356,10 +283,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-			return h != null;
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
-			return l != null;
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
+			return d != null;
 		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION:
 			return INTERPRETATION_EDEFAULT == null ? interpretation != null
 					: !INTERPRETATION_EDEFAULT.equals(interpretation);
@@ -378,10 +303,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Spatial.class) {
 			switch (derivedFeatureID) {
-			case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-				return CombPackage.SPATIAL__H;
-			case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
-				return CombPackage.SPATIAL__L;
+			case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
+				return CombPackage.SPATIAL__D;
 			default:
 				return -1;
 			}
@@ -398,10 +321,8 @@ public class Reach_by_InADistanceWithin_Impl extends STRELOperatorsTwoParamsImpl
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Spatial.class) {
 			switch (baseFeatureID) {
-			case CombPackage.SPATIAL__H:
-				return CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H;
-			case CombPackage.SPATIAL__L:
-				return CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L;
+			case CombPackage.SPATIAL__D:
+				return CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D;
 			default:
 				return -1;
 			}

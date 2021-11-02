@@ -529,34 +529,32 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Spatial" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="H" lowerBound="1" eType="#//Literal"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="L" lowerBound="1" eType="#//Literal"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="D" lowerBound="1" eType="#//Literal"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reach_by_InADistanceWithin_" eSuperTypes="#//STRELOperatorsTwoParams #//Spatial">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> R[&lt;high>] &lt;Q>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="&lt;P> R[&lt;dist>] &lt;Q>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P> (with a lentgth &lt;= &lt;high>) to a location which satisfies &lt;Q>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P> (with a lentgth &lt;= &lt;dist>) to a location which satisfies &lt;Q>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Somewhere_InADistanceWithin_" eSuperTypes="#//STRELOperatorOneParam #//Spatial">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="SO[&lt;high>] &lt;P>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="SO[&lt;dist>] &lt;P>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route (with a lentgth &lt;= &lt;high>) to a location which satisfies &lt;P>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route (with a lentgth &lt;= &lt;dist>) to a location which satisfies &lt;P>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EscapeBy_withADistanceOfAtLeast_" eSuperTypes="#//STRELOperatorOneParam #//Spatial">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="E[&lt;low>] &lt;P>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="E[&lt;dist>] &lt;P>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P> (with a lentgth >= &lt;low>)"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P> (with a lentgth >= &lt;dist>)"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Everywhere_InADistanceWithin_" eSuperTypes="#//STRELOperatorOneParam #//Spatial">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="EV[&lt;high>] &lt;P>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="EV[&lt;dist>] &lt;P>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a location, from which every location (in a distance of &lt;= &lt;high>) satisfy &lt;P>"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a location, from which every location (in a distance of &lt;= &lt;dist>) satisfy &lt;P>"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="STRELOperatorOneParam" abstract="true"
       eSuperTypes="#//STRELOperators"/>

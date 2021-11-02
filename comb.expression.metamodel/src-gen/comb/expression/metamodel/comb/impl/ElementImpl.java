@@ -97,6 +97,16 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @generated NOT
 	 */
 	@Override
+	public Literal getD() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * 
+	 * @generated NOT
+	 */
+	@Override
 	public String getInterpretation() {
 		return null;
 	}

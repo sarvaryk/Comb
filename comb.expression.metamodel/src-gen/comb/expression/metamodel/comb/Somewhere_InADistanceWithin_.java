@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface Somewhere_InADistanceWithin_ extends STRELOperatorOneParam, Spatial {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"SO[<high>] <P>"</code>.
+	 * The default value is <code>"SO[<dist>] <P>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getSomewhere_InADistanceWithin__Interpretation()
-	 * @model default="SO[&lt;high&gt;] &lt;P&gt;" required="true"
+	 * @model default="SO[&lt;dist&gt;] &lt;P&gt;" required="true"
 	 * @generated
 	 */
 	String getInterpretation();
@@ -45,13 +45,13 @@ public interface Somewhere_InADistanceWithin_ extends STRELOperatorOneParam, Spa
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * The default value is <code>"The expression described by this element becomes true if: there exists a route (with a lentgth <= <high>) to a location which satisfies <P>"</code>.
+	 * The default value is <code>"The expression described by this element becomes true if: there exists a route (with a lentgth <= <dist>) to a location which satisfies <P>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getSomewhere_InADistanceWithin__Description()
-	 * @model default="The expression described by this element becomes true if: there exists a route (with a lentgth &lt;= &lt;high&gt;) to a location which satisfies &lt;P&gt;" required="true"
+	 * @model default="The expression described by this element becomes true if: there exists a route (with a lentgth &lt;= &lt;dist&gt;) to a location which satisfies &lt;P&gt;" required="true"
 	 * @generated
 	 */
 	String getDescription();

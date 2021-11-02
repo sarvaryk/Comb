@@ -3012,6 +3012,186 @@ public interface CombPackage extends EPackage {
 	int BOOLEAN_OPERATORS = 20;
 
 	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.PrecedenceAfter_Impl <em>Precedence After </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.PrecedenceAfter_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getPrecedenceAfter_()
+	 * @generated
+	 */
+	int PRECEDENCE_AFTER_ = 21;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Always_Impl <em>Always </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.Always_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAlways_()
+	 * @generated
+	 */
+	int ALWAYS_ = 22;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceWithoutParamsImpl <em>Absence Without Params</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.AbsenceWithoutParamsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAbsenceWithoutParams()
+	 * @generated
+	 */
+	int ABSENCE_WITHOUT_PARAMS = 23;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseBetween_and_Impl <em>Response Between and </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ResponseBetween_and_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseBetween_and_()
+	 * @generated
+	 */
+	int RESPONSE_BETWEEN_AND_ = 24;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseOneParamImpl <em>Response One Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ResponseOneParamImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseOneParam()
+	 * @generated
+	 */
+	int RESPONSE_ONE_PARAM = 64;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseAfter_Impl <em>Response After </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ResponseAfter_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseAfter_()
+	 * @generated
+	 */
+	int RESPONSE_AFTER_ = 25;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.PrecedenceBetween_and_Impl <em>Precedence Between and </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.PrecedenceBetween_and_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getPrecedenceBetween_and_()
+	 * @generated
+	 */
+	int PRECEDENCE_BETWEEN_AND_ = 27;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistenceTwoParamsImpl <em>Existence Two Params</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ExistenceTwoParamsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistenceTwoParams()
+	 * @generated
+	 */
+	int EXISTENCE_TWO_PARAMS = 48;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistenceBetween_and_Impl <em>Existence Between and </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ExistenceBetween_and_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistenceBetween_and_()
+	 * @generated
+	 */
+	int EXISTENCE_BETWEEN_AND_ = 30;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistenceAfter_until_Impl <em>Existence After until </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ExistenceAfter_until_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistenceAfter_until_()
+	 * @generated
+	 */
+	int EXISTENCE_AFTER_UNTIL_ = 31;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseBefore_Impl <em>Response Before </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ResponseBefore_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseBefore_()
+	 * @generated
+	 */
+	int RESPONSE_BEFORE_ = 32;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.BooleanOperatorsTwoParamsImpl <em>Boolean Operators Two Params</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.BooleanOperatorsTwoParamsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getBooleanOperatorsTwoParams()
+	 * @generated
+	 */
+	int BOOLEAN_OPERATORS_TWO_PARAMS = 46;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._and_Impl <em>and </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._and_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_and_()
+	 * @generated
+	 */
+	int _AND_ = 34;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceGlobally_Impl <em>Absence Globally </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.AbsenceGlobally_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAbsenceGlobally_()
+	 * @generated
+	 */
+	int ABSENCE_GLOBALLY_ = 35;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceBetween_and_Impl <em>Absence Between and </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.AbsenceBetween_and_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAbsenceBetween_and_()
+	 * @generated
+	 */
+	int ABSENCE_BETWEEN_AND_ = 36;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistneceOneParamImpl <em>Existnece One Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.ExistneceOneParamImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistneceOneParam()
+	 * @generated
+	 */
+	int EXISTNECE_ONE_PARAM = 37;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._or_Impl <em>or </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl._or_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_or_()
+	 * @generated
+	 */
+	int _OR_ = 38;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.BasicElementsImpl <em>Basic Elements</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.BasicElementsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getBasicElements()
+	 * @generated
+	 */
+	int BASIC_ELEMENTS = 40;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3064,16 +3244,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_OPERATORS_OPERATION_COUNT = LTL_OPERATORS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.PrecedenceAfter_Impl <em>Precedence After </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.PrecedenceAfter_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getPrecedenceAfter_()
-	 * @generated
-	 */
-	int PRECEDENCE_AFTER_ = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3166,16 +3336,6 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_AFTER__OPERATION_COUNT = PRECEDENCE_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Always_Impl <em>Always </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.Always_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAlways_()
-	 * @generated
-	 */
-	int ALWAYS_ = 22;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3248,16 +3408,6 @@ public interface CombPackage extends EPackage {
 	int ALWAYS__OPERATION_COUNT = LTL_OPERATORS_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceWithoutParamsImpl <em>Absence Without Params</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.AbsenceWithoutParamsImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAbsenceWithoutParams()
-	 * @generated
-	 */
-	int ABSENCE_WITHOUT_PARAMS = 23;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3310,16 +3460,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_WITHOUT_PARAMS_OPERATION_COUNT = ABSENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseBetween_and_Impl <em>Response Between and </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ResponseBetween_and_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseBetween_and_()
-	 * @generated
-	 */
-	int RESPONSE_BETWEEN_AND_ = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3421,16 +3561,6 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_BETWEEN_AND__OPERATION_COUNT = RESPONSE_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseOneParamImpl <em>Response One Param</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ResponseOneParamImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseOneParam()
-	 * @generated
-	 */
-	int RESPONSE_ONE_PARAM = 64;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3501,16 +3631,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_ONE_PARAM_OPERATION_COUNT = RESPONSE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseAfter_Impl <em>Response After </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ResponseAfter_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseAfter_()
-	 * @generated
-	 */
-	int RESPONSE_AFTER_ = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3601,16 +3721,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESPONSE_AFTER__OPERATION_COUNT = RESPONSE_ONE_PARAM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.PrecedenceBetween_and_Impl <em>Precedence Between and </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.PrecedenceBetween_and_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getPrecedenceBetween_and_()
-	 * @generated
-	 */
-	int PRECEDENCE_BETWEEN_AND_ = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3712,16 +3822,6 @@ public interface CombPackage extends EPackage {
 	int PRECEDENCE_BETWEEN_AND__OPERATION_COUNT = PRECEDENCE_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistenceTwoParamsImpl <em>Existence Two Params</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ExistenceTwoParamsImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistenceTwoParams()
-	 * @generated
-	 */
-	int EXISTENCE_TWO_PARAMS = 48;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3792,16 +3892,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXISTENCE_TWO_PARAMS_OPERATION_COUNT = EXISTENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistenceBetween_and_Impl <em>Existence Between and </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ExistenceBetween_and_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistenceBetween_and_()
-	 * @generated
-	 */
-	int EXISTENCE_BETWEEN_AND_ = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3894,16 +3984,6 @@ public interface CombPackage extends EPackage {
 	int EXISTENCE_BETWEEN_AND__OPERATION_COUNT = EXISTENCE_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistenceAfter_until_Impl <em>Existence After until </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ExistenceAfter_until_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistenceAfter_until_()
-	 * @generated
-	 */
-	int EXISTENCE_AFTER_UNTIL_ = 31;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3992,16 +4072,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXISTENCE_AFTER_UNTIL__OPERATION_COUNT = EXISTENCE_TWO_PARAMS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ResponseBefore_Impl <em>Response Before </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ResponseBefore_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getResponseBefore_()
-	 * @generated
-	 */
-	int RESPONSE_BEFORE_ = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4094,16 +4164,6 @@ public interface CombPackage extends EPackage {
 	int RESPONSE_BEFORE__OPERATION_COUNT = RESPONSE_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.BooleanOperatorsTwoParamsImpl <em>Boolean Operators Two Params</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.BooleanOperatorsTwoParamsImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getBooleanOperatorsTwoParams()
-	 * @generated
-	 */
-	int BOOLEAN_OPERATORS_TWO_PARAMS = 46;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4165,16 +4225,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_OPERATORS_TWO_PARAMS_OPERATION_COUNT = BOOLEAN_OPERATORS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._and_Impl <em>and </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl._and_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_and_()
-	 * @generated
-	 */
-	int _AND_ = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4258,16 +4308,6 @@ public interface CombPackage extends EPackage {
 	int _AND__OPERATION_COUNT = BOOLEAN_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceGlobally_Impl <em>Absence Globally </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.AbsenceGlobally_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAbsenceGlobally_()
-	 * @generated
-	 */
-	int ABSENCE_GLOBALLY_ = 35;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4338,16 +4378,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSENCE_GLOBALLY__OPERATION_COUNT = ABSENCE_WITHOUT_PARAMS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.AbsenceBetween_and_Impl <em>Absence Between and </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.AbsenceBetween_and_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getAbsenceBetween_and_()
-	 * @generated
-	 */
-	int ABSENCE_BETWEEN_AND_ = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4440,16 +4470,6 @@ public interface CombPackage extends EPackage {
 	int ABSENCE_BETWEEN_AND__OPERATION_COUNT = ABSENCE_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.ExistneceOneParamImpl <em>Existnece One Param</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.ExistneceOneParamImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getExistneceOneParam()
-	 * @generated
-	 */
-	int EXISTNECE_ONE_PARAM = 37;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4511,16 +4531,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXISTNECE_ONE_PARAM_OPERATION_COUNT = EXISTENCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl._or_Impl <em>or </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl._or_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#get_or_()
-	 * @generated
-	 */
-	int _OR_ = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4602,16 +4612,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int _OR__OPERATION_COUNT = BOOLEAN_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.BasicElementsImpl <em>Basic Elements</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.BasicElementsImpl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getBasicElements()
-	 * @generated
-	 */
-	int BASIC_ELEMENTS = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7748,22 +7748,13 @@ public interface CombPackage extends EPackage {
 	int SPATIAL = 93;
 
 	/**
-	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * The feature id for the '<em><b>D</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPATIAL__H = 0;
-
-	/**
-	 * The feature id for the '<em><b>L</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPATIAL__L = 1;
+	int SPATIAL__D = 0;
 
 	/**
 	 * The number of structural features of the '<em>Spatial</em>' class.
@@ -7772,7 +7763,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPATIAL_FEATURE_COUNT = 2;
+	int SPATIAL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Spatial</em>' class.
@@ -7912,22 +7903,13 @@ public interface CombPackage extends EPackage {
 	int REACH_BY_IN_ADISTANCE_WITHIN___Q = STREL_OPERATORS_TWO_PARAMS__Q;
 
 	/**
-	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * The feature id for the '<em><b>D</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REACH_BY_IN_ADISTANCE_WITHIN___H = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>L</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REACH_BY_IN_ADISTANCE_WITHIN___L = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 1;
+	int REACH_BY_IN_ADISTANCE_WITHIN___D = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -7936,7 +7918,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 2;
+	int REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -7945,7 +7927,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 3;
+	int REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Reach by In ADistance Within </em>' class.
@@ -7954,7 +7936,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REACH_BY_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 4;
+	int REACH_BY_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATORS_TWO_PARAMS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Reach by In ADistance Within </em>' class.
@@ -8076,22 +8058,13 @@ public interface CombPackage extends EPackage {
 	int SOMEWHERE_IN_ADISTANCE_WITHIN___P = STREL_OPERATOR_ONE_PARAM__P;
 
 	/**
-	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * The feature id for the '<em><b>D</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___H = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>L</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___L = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___D = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -8100,7 +8073,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -8109,7 +8082,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Somewhere In ADistance Within </em>' class.
@@ -8118,7 +8091,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 4;
+	int SOMEWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Somewhere In ADistance Within </em>' class.
@@ -8176,22 +8149,13 @@ public interface CombPackage extends EPackage {
 	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___P = STREL_OPERATOR_ONE_PARAM__P;
 
 	/**
-	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * The feature id for the '<em><b>D</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___H = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>L</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___L = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___D = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -8200,7 +8164,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -8209,7 +8173,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Escape By with ADistance Of At Least </em>' class.
@@ -8218,7 +8182,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 4;
+	int ESCAPE_BY_WITH_ADISTANCE_OF_AT_LEAST__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Escape By with ADistance Of At Least </em>' class.
@@ -8276,22 +8240,13 @@ public interface CombPackage extends EPackage {
 	int EVERYWHERE_IN_ADISTANCE_WITHIN___P = STREL_OPERATOR_ONE_PARAM__P;
 
 	/**
-	 * The feature id for the '<em><b>H</b></em>' containment reference.
+	 * The feature id for the '<em><b>D</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___H = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>L</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___L = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___D = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -8300,7 +8255,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -8309,7 +8264,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Everywhere In ADistance Within </em>' class.
@@ -8318,7 +8273,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 4;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Everywhere In ADistance Within </em>' class.
@@ -10841,26 +10796,15 @@ public interface CombPackage extends EPackage {
 	EClass getSpatial();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Spatial#getH <em>H</em>}'.
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Spatial#getD <em>D</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>H</em>'.
-	 * @see comb.expression.metamodel.comb.Spatial#getH()
+	 * @return the meta object for the containment reference '<em>D</em>'.
+	 * @see comb.expression.metamodel.comb.Spatial#getD()
 	 * @see #getSpatial()
 	 * @generated
 	 */
-	EReference getSpatial_H();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.Spatial#getL <em>L</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>L</em>'.
-	 * @see comb.expression.metamodel.comb.Spatial#getL()
-	 * @see #getSpatial()
-	 * @generated
-	 */
-	EReference getSpatial_L();
+	EReference getSpatial_D();
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.Reach_by_InADistanceWithin_ <em>Reach by In ADistance Within </em>}'.
@@ -13138,20 +13082,12 @@ public interface CombPackage extends EPackage {
 		EClass SPATIAL = eINSTANCE.getSpatial();
 
 		/**
-		 * The meta object literal for the '<em><b>H</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>D</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SPATIAL__H = eINSTANCE.getSpatial_H();
-
-		/**
-		 * The meta object literal for the '<em><b>L</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPATIAL__L = eINSTANCE.getSpatial_L();
+		EReference SPATIAL__D = eINSTANCE.getSpatial_D();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.Reach_by_InADistanceWithin_Impl <em>Reach by In ADistance Within </em>}' class.

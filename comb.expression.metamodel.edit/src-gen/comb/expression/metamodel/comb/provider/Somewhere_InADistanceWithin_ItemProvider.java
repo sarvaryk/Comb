@@ -97,8 +97,7 @@ public class Somewhere_InADistanceWithin_ItemProvider extends STRELOperatorOnePa
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__H);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__L);
+			childrenFeatures.add(CombPackage.Literals.SPATIAL__D);
 		}
 		return childrenFeatures;
 	}
@@ -166,8 +165,7 @@ public class Somewhere_InADistanceWithin_ItemProvider extends STRELOperatorOnePa
 		case CombPackage.SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case CombPackage.SOMEWHERE_IN_ADISTANCE_WITHIN___H:
-		case CombPackage.SOMEWHERE_IN_ADISTANCE_WITHIN___L:
+		case CombPackage.SOMEWHERE_IN_ADISTANCE_WITHIN___D:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -186,10 +184,7 @@ public class Somewhere_InADistanceWithin_ItemProvider extends STRELOperatorOnePa
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__H, CombFactory.eINSTANCE.createLiteral()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__L, CombFactory.eINSTANCE.createLiteral()));
+				.add(createChildParameter(CombPackage.Literals.SPATIAL__D, CombFactory.eINSTANCE.createLiteral()));
 	}
 
 	/**
@@ -204,7 +199,7 @@ public class Somewhere_InADistanceWithin_ItemProvider extends STRELOperatorOnePa
 		Object childObject = child;
 
 		boolean qualify = childFeature == CombPackage.Literals.STREL_OPERATORS__P
-				|| childFeature == CombPackage.Literals.SPATIAL__H || childFeature == CombPackage.Literals.SPATIAL__L;
+				|| childFeature == CombPackage.Literals.SPATIAL__D;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

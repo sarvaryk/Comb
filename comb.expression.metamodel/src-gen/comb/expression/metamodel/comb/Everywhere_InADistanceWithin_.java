@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface Everywhere_InADistanceWithin_ extends STRELOperatorOneParam, Spatial {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"EV[<high>] <P>"</code>.
+	 * The default value is <code>"EV[<dist>] <P>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getEverywhere_InADistanceWithin__Interpretation()
-	 * @model default="EV[&lt;high&gt;] &lt;P&gt;" required="true"
+	 * @model default="EV[&lt;dist&gt;] &lt;P&gt;" required="true"
 	 * @generated
 	 */
 	String getInterpretation();
@@ -45,13 +45,13 @@ public interface Everywhere_InADistanceWithin_ extends STRELOperatorOneParam, Sp
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * The default value is <code>"The expression described by this element becomes true if: there exists a location, from which every location (in a distance of <= <high>) satisfy <P>"</code>.
+	 * The default value is <code>"The expression described by this element becomes true if: there exists a location, from which every location (in a distance of <= <dist>) satisfy <P>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getEverywhere_InADistanceWithin__Description()
-	 * @model default="The expression described by this element becomes true if: there exists a location, from which every location (in a distance of &lt;= &lt;high&gt;) satisfy &lt;P&gt;" required="true"
+	 * @model default="The expression described by this element becomes true if: there exists a location, from which every location (in a distance of &lt;= &lt;dist&gt;) satisfy &lt;P&gt;" required="true"
 	 * @generated
 	 */
 	String getDescription();

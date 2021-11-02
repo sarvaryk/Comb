@@ -48,6 +48,7 @@ public class RefreshLogicGroupAndInterpretations {
 	    interpretations = generateSubtreeInterpretation(element.getS(), "<S>", interpretations);
 	    interpretations = generateSubtreeInterpretation(element.getL(), "<low>", interpretations);
 	    interpretations = generateSubtreeInterpretation(element.getH(), "<high>", interpretations);
+	    interpretations = generateSubtreeInterpretation(element.getD(), "<dist>", interpretations);
 	    
 	    //TODO: could be format dependent
 	    for(int i = 0; i < interpretations.size(); i++) {
@@ -136,6 +137,8 @@ public class RefreshLogicGroupAndInterpretations {
 	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
 	    if((subElement = element.getH()) != null)
 	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
+	    if((subElement = element.getD()) != null)
+	    	logicGroup = getSubtreeLogicGroup(subElement, getElementLogicGroupIfHigher(subElement, logicGroup));
 	    
 	    return logicGroup;
     }
@@ -154,7 +157,6 @@ public class RefreshLogicGroupAndInterpretations {
     	
     	return logicGroup;
     }
-    
     
     //source: https://stackoverflow.com/questions/38114267/emf-write-transaction
     //date of access: 2020.11.16.    

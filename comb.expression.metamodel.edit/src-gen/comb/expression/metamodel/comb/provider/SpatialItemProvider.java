@@ -69,8 +69,7 @@ public class SpatialItemProvider extends ItemProviderAdapter implements IEditing
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__H);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__L);
+			childrenFeatures.add(CombPackage.Literals.SPATIAL__D);
 		}
 		return childrenFeatures;
 	}
@@ -132,8 +131,7 @@ public class SpatialItemProvider extends ItemProviderAdapter implements IEditing
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Spatial.class)) {
-		case CombPackage.SPATIAL__H:
-		case CombPackage.SPATIAL__L:
+		case CombPackage.SPATIAL__D:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -152,31 +150,7 @@ public class SpatialItemProvider extends ItemProviderAdapter implements IEditing
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__H, CombFactory.eINSTANCE.createLiteral()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__L, CombFactory.eINSTANCE.createLiteral()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify = childFeature == CombPackage.Literals.SPATIAL__H
-				|| childFeature == CombPackage.Literals.SPATIAL__L;
-
-		if (qualify) {
-			return getString("_UI_CreateChild_text2",
-					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+				.add(createChildParameter(CombPackage.Literals.SPATIAL__D, CombFactory.eINSTANCE.createLiteral()));
 	}
 
 	/**

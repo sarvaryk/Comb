@@ -97,8 +97,7 @@ public class Reach_by_InADistanceWithin_ItemProvider extends STRELOperatorsTwoPa
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__H);
-			childrenFeatures.add(CombPackage.Literals.SPATIAL__L);
+			childrenFeatures.add(CombPackage.Literals.SPATIAL__D);
 		}
 		return childrenFeatures;
 	}
@@ -166,8 +165,7 @@ public class Reach_by_InADistanceWithin_ItemProvider extends STRELOperatorsTwoPa
 		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___H:
-		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___L:
+		case CombPackage.REACH_BY_IN_ADISTANCE_WITHIN___D:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -186,10 +184,7 @@ public class Reach_by_InADistanceWithin_ItemProvider extends STRELOperatorsTwoPa
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__H, CombFactory.eINSTANCE.createLiteral()));
-
-		newChildDescriptors
-				.add(createChildParameter(CombPackage.Literals.SPATIAL__L, CombFactory.eINSTANCE.createLiteral()));
+				.add(createChildParameter(CombPackage.Literals.SPATIAL__D, CombFactory.eINSTANCE.createLiteral()));
 	}
 
 	/**
@@ -205,7 +200,7 @@ public class Reach_by_InADistanceWithin_ItemProvider extends STRELOperatorsTwoPa
 
 		boolean qualify = childFeature == CombPackage.Literals.STREL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.STREL_OPERATORS_TWO_PARAMS__Q
-				|| childFeature == CombPackage.Literals.SPATIAL__H || childFeature == CombPackage.Literals.SPATIAL__L;
+				|| childFeature == CombPackage.Literals.SPATIAL__D;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

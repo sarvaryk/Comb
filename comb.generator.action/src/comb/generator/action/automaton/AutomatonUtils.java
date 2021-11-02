@@ -118,9 +118,10 @@ public class AutomatonUtils {
 			try {
 				g = LTL2Buchi.translate(spinInterpretation);
 			} catch (ParseErrorException e) {
-				e.printStackTrace();
-				if(showInfo)
+				if(showInfo) {
+					e.printStackTrace();
 					InfoUtils.showMessageDialog("ERROR: " + e);
+				}
 			}
 		}
 		else if(showInfo)

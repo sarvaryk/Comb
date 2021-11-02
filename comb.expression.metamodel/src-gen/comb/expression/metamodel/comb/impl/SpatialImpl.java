@@ -23,31 +23,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link comb.expression.metamodel.comb.impl.SpatialImpl#getH <em>H</em>}</li>
- *   <li>{@link comb.expression.metamodel.comb.impl.SpatialImpl#getL <em>L</em>}</li>
+ *   <li>{@link comb.expression.metamodel.comb.impl.SpatialImpl#getD <em>D</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class SpatialImpl extends MinimalEObjectImpl.Container implements Spatial {
 	/**
-	 * The cached value of the '{@link #getH() <em>H</em>}' containment reference.
+	 * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getH()
+	 * @see #getD()
 	 * @generated
 	 * @ordered
 	 */
-	protected Literal h;
-	/**
-	 * The cached value of the '{@link #getL() <em>L</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getL()
-	 * @generated
-	 * @ordered
-	 */
-	protected Literal l;
+	protected Literal d;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,8 +64,8 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public Literal getH() {
-		return h;
+	public Literal getD() {
+		return d;
 	}
 
 	/**
@@ -83,12 +73,12 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetH(Literal newH, NotificationChain msgs) {
-		Literal oldH = h;
-		h = newH;
+	public NotificationChain basicSetD(Literal newD, NotificationChain msgs) {
+		Literal oldD = d;
+		d = newD;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CombPackage.SPATIAL__H, oldH,
-					newH);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CombPackage.SPATIAL__D, oldD,
+					newD);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -103,71 +93,20 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setH(Literal newH) {
-		if (newH != h) {
+	public void setD(Literal newD) {
+		if (newD != d) {
 			NotificationChain msgs = null;
-			if (h != null)
-				msgs = ((InternalEObject) h).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CombPackage.SPATIAL__H, null,
+			if (d != null)
+				msgs = ((InternalEObject) d).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CombPackage.SPATIAL__D, null,
 						msgs);
-			if (newH != null)
-				msgs = ((InternalEObject) newH).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CombPackage.SPATIAL__H, null,
+			if (newD != null)
+				msgs = ((InternalEObject) newD).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CombPackage.SPATIAL__D, null,
 						msgs);
-			msgs = basicSetH(newH, msgs);
+			msgs = basicSetD(newD, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.SPATIAL__H, newH, newH));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Literal getL() {
-		return l;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetL(Literal newL, NotificationChain msgs) {
-		Literal oldL = l;
-		l = newL;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CombPackage.SPATIAL__L, oldL,
-					newL);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setL(Literal newL) {
-		if (newL != l) {
-			NotificationChain msgs = null;
-			if (l != null)
-				msgs = ((InternalEObject) l).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CombPackage.SPATIAL__L, null,
-						msgs);
-			if (newL != null)
-				msgs = ((InternalEObject) newL).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CombPackage.SPATIAL__L, null,
-						msgs);
-			msgs = basicSetL(newL, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.SPATIAL__L, newL, newL));
+			eNotify(new ENotificationImpl(this, Notification.SET, CombPackage.SPATIAL__D, newD, newD));
 	}
 
 	/**
@@ -178,10 +117,8 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CombPackage.SPATIAL__H:
-			return basicSetH(null, msgs);
-		case CombPackage.SPATIAL__L:
-			return basicSetL(null, msgs);
+		case CombPackage.SPATIAL__D:
+			return basicSetD(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -194,10 +131,8 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CombPackage.SPATIAL__H:
-			return getH();
-		case CombPackage.SPATIAL__L:
-			return getL();
+		case CombPackage.SPATIAL__D:
+			return getD();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,11 +145,8 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CombPackage.SPATIAL__H:
-			setH((Literal) newValue);
-			return;
-		case CombPackage.SPATIAL__L:
-			setL((Literal) newValue);
+		case CombPackage.SPATIAL__D:
+			setD((Literal) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,11 +160,8 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CombPackage.SPATIAL__H:
-			setH((Literal) null);
-			return;
-		case CombPackage.SPATIAL__L:
-			setL((Literal) null);
+		case CombPackage.SPATIAL__D:
+			setD((Literal) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -246,10 +175,8 @@ public abstract class SpatialImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CombPackage.SPATIAL__H:
-			return h != null;
-		case CombPackage.SPATIAL__L:
-			return l != null;
+		case CombPackage.SPATIAL__D:
+			return d != null;
 		}
 		return super.eIsSet(featureID);
 	}

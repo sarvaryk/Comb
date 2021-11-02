@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface EscapeBy_withADistanceOfAtLeast_ extends STRELOperatorOneParam, Spatial {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"E[<low>] <P>"</code>.
+	 * The default value is <code>"E[<dist>] <P>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getEscapeBy_withADistanceOfAtLeast__Interpretation()
-	 * @model default="E[&lt;low&gt;] &lt;P&gt;" required="true"
+	 * @model default="E[&lt;dist&gt;] &lt;P&gt;" required="true"
 	 * @generated
 	 */
 	String getInterpretation();
@@ -45,13 +45,13 @@ public interface EscapeBy_withADistanceOfAtLeast_ extends STRELOperatorOneParam,
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * The default value is <code>"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <low>)"</code>.
+	 * The default value is <code>"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <dist>)"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getEscapeBy_withADistanceOfAtLeast__Description()
-	 * @model default="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P&gt; (with a lentgth &gt;= &lt;low&gt;)" required="true"
+	 * @model default="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P&gt; (with a lentgth &gt;= &lt;dist&gt;)" required="true"
 	 * @generated
 	 */
 	String getDescription();

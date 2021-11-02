@@ -3152,18 +3152,8 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSpatial_H() {
+	public EReference getSpatial_D() {
 		return (EReference) spatialEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getSpatial_L() {
-		return (EReference) spatialEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3694,8 +3684,7 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		createEReference(strelOperatorsEClass, STREL_OPERATORS__P);
 
 		spatialEClass = createEClass(SPATIAL);
-		createEReference(spatialEClass, SPATIAL__H);
-		createEReference(spatialEClass, SPATIAL__L);
+		createEReference(spatialEClass, SPATIAL__D);
 
 		reach_by_InADistanceWithin_EClass = createEClass(REACH_BY_IN_ADISTANCE_WITHIN_);
 		createEAttribute(reach_by_InADistanceWithin_EClass, REACH_BY_IN_ADISTANCE_WITHIN___INTERPRETATION);
@@ -4598,50 +4587,47 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spatialEClass, Spatial.class, "Spatial", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSpatial_H(), this.getLiteral(), null, "H", null, 1, 1, Spatial.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getSpatial_L(), this.getLiteral(), null, "L", null, 1, 1, Spatial.class, !IS_TRANSIENT,
+		initEReference(getSpatial_D(), this.getLiteral(), null, "D", null, 1, 1, Spatial.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(reach_by_InADistanceWithin_EClass, Reach_by_InADistanceWithin_.class, "Reach_by_InADistanceWithin_",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getReach_by_InADistanceWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"<P> R[<high>] <Q>", 1, 1, Reach_by_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE,
+				"<P> R[<dist>] <Q>", 1, 1, Reach_by_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReach_by_InADistanceWithin__Description(), ecorePackage.getEString(), "description",
-				"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <high>) to a location which satisfies <Q>",
+				"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <dist>) to a location which satisfies <Q>",
 				1, 1, Reach_by_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(somewhere_InADistanceWithin_EClass, Somewhere_InADistanceWithin_.class,
 				"Somewhere_InADistanceWithin_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSomewhere_InADistanceWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"SO[<high>] <P>", 1, 1, Somewhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"SO[<dist>] <P>", 1, 1, Somewhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSomewhere_InADistanceWithin__Description(), ecorePackage.getEString(), "description",
-				"The expression described by this element becomes true if: there exists a route (with a lentgth <= <high>) to a location which satisfies <P>",
+				"The expression described by this element becomes true if: there exists a route (with a lentgth <= <dist>) to a location which satisfies <P>",
 				1, 1, Somewhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(escapeBy_withADistanceOfAtLeast_EClass, EscapeBy_withADistanceOfAtLeast_.class,
 				"EscapeBy_withADistanceOfAtLeast_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEscapeBy_withADistanceOfAtLeast__Interpretation(), ecorePackage.getEString(),
-				"interpretation", "E[<low>] <P>", 1, 1, EscapeBy_withADistanceOfAtLeast_.class, !IS_TRANSIENT,
+				"interpretation", "E[<dist>] <P>", 1, 1, EscapeBy_withADistanceOfAtLeast_.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEscapeBy_withADistanceOfAtLeast__Description(), ecorePackage.getEString(), "description",
-				"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <low>)",
+				"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth >= <dist>)",
 				1, 1, EscapeBy_withADistanceOfAtLeast_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(everywhere_InADistanceWithin_EClass, Everywhere_InADistanceWithin_.class,
 				"Everywhere_InADistanceWithin_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEverywhere_InADistanceWithin__Interpretation(), ecorePackage.getEString(), "interpretation",
-				"EV[<high>] <P>", 1, 1, Everywhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				"EV[<dist>] <P>", 1, 1, Everywhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEverywhere_InADistanceWithin__Description(), ecorePackage.getEString(), "description",
-				"The expression described by this element becomes true if: there exists a location, from which every location (in a distance of <= <high>) satisfy <P>",
+				"The expression described by this element becomes true if: there exists a location, from which every location (in a distance of <= <dist>) satisfy <P>",
 				1, 1, Everywhere_InADistanceWithin_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

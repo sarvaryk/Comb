@@ -1,35 +1,35 @@
-<svg width="272" height="62" xmlns="http://www.w3.org/2000/svg" xmlns:undefined="https://boxy-svg.com">
+<svg width="272" height="62" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(1.107786, 0, 0, 1.325634, -3.81427, -6.746732)">
   <title>background</title>
-  <rect x="-1" y="-1" width="327" height="62" id="rect-3" fill="#fff"/>
-  <g id="g-2" display="none">
-   <rect id="rect-4" width="625" height="125" x="1" y="1" stroke-width="0" fill="url(#gridpattern)"/>
+  <rect fill="#fff" id="rect-3" height="62" width="327" y="-1" x="-1"/>
+  <g display="none" id="g-2">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="1" x="1" height="125" width="625" id="rect-4"/>
   </g>
  </g>
 
  <g transform="matrix(1, 0, 0, 1, 10.107792, 0.113654)">
   <title>Layer 1</title>
-  <line id="line-1" y2="4.46584" x2="55.01083" y1="5.15828" x1="-4.21716" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-2" y2="54.703" x2="-4.14" y1="4.795" x1="-4.14" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-3" y2="54.70306" x2="55.0131" y1="4.79511" x1="55.0131" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-4" y2="4.71109" x2="105.0131" y1="4.71109" x1="55.0131" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-5" y2="54.70306" x2="105.0131" y1="4.71109" x1="105.0131" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-6" y2="4.88" x2="254.214" y1="4.71109" x1="202.67407" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-7" y2="54.4132" x2="203.99861" y1="4.42123" x1="203.99861" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-8" y2="54.4132" x2="253.9986" y1="4.42123" x1="253.9986" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-9" y2="4.71109" x2="204.62788" y1="4.71109" x1="154.00336" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-13" y2="4.71602" x2="155.13974" y1="4.71602" x1="104.68448" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="svg_2" y2="55.01343" x2="55.44979" y1="55.013" x1="-4.614" stroke-width="1.5" stroke="#000" fill="none"/>
-  <line id="line-15" y2="55.01805" x2="204.25508" y1="55.01805" x1="105.12062" stroke-width="1.5" stroke="#000" fill="none" transform="rotate(-0.192951, 154.688, 55.0181)"/>
-  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size=" 10px" id="text-3" y="35.193" x="-1.059" stroke-width="0" stroke="#000" fill="#000000">Somewhere</text>
-  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" id="text-4" y="35.21538" x="70.61563" stroke-width="0" stroke="#000" fill="#000000">&lt;P&gt;</text>
-  <text text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size=" 9px" id="text-5" y="33.935" x="116.431" stroke-width="0" stroke="#000" fill="#000000">within a distance of</text>
-  <text stroke-dasharray="2,2" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size=" 10px" id="text-6" y="45.093" x="214.032" stroke-width="0" stroke="#000" fill="#000000">&lt;high&gt;</text>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="-4.21716" y1="5.15828" x2="55.01083" y2="4.46584" id="line-1"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="-4.14" y1="4.795" x2="-4.14" y2="54.703" id="line-2"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="55.0131" y1="4.79511" x2="55.0131" y2="54.70306" id="line-3"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="55.0131" y1="4.71109" x2="105.0131" y2="4.71109" id="line-4"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="105.0131" y1="4.71109" x2="105.0131" y2="54.70306" id="line-5"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="202.67407" y1="4.71109" x2="254.214" y2="4.88" id="line-6"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="203.99861" y1="4.42123" x2="203.99861" y2="54.4132" id="line-7"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="253.9986" y1="4.42123" x2="253.9986" y2="54.4132" id="line-8"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="154.00336" y1="4.71109" x2="204.62788" y2="4.71109" id="line-9"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="104.68448" y1="4.71602" x2="155.13974" y2="4.71602" id="line-13"/>
+  <line fill="none" stroke="#000" stroke-width="1.5" x1="-4.614" y1="55.013" x2="55.44979" y2="55.01343" id="svg_2"/>
+  <line transform="rotate(-0.192951, 154.688, 55.0181)" fill="none" stroke="#000" stroke-width="1.5" x1="105.12062" y1="55.01805" x2="204.25508" y2="55.01805" id="line-15"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="-1.059" y="35.193" id="text-3" font-size=" 10px" font-family="Helvetica, Arial, sans-serif" text-anchor="start">Somewhere</text>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="70.61563" y="35.21538" id="text-4" font-size="10" font-family="Helvetica, Arial, sans-serif" text-anchor="start">&lt;P&gt;</text>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="116.431" y="33.935" id="text-5" font-size=" 9px" font-family="Helvetica, Arial, sans-serif" text-anchor="start">within a distance of</text>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="214.635" y="45.093" id="text-6" font-size=" 10px" font-family="Helvetica, Arial, sans-serif" text-anchor="start" stroke-dasharray="2,2">&lt;dist&gt;</text>
  </g>
  <g>
   <title>Layer 2</title>
-  <text stroke-dasharray="2,2" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size=" 10px" id="text-9" y="32.338" x="219.993" stroke-width="0" stroke="#000" fill="#000000">distance</text>
-  <path id="svg_1" fill=" rgb(0, 0, 0)"   d="m263.06429,14.80255l-10.50365,5.86313l0.17348,-12.02775l10.33017,6.16462z"/>
-  <rect id="svg_3" fill=" rgb(0, 0, 0)" height="3.452" width="43.343" y="12.97" x="215.754"/>
+  <text fill="#000000" stroke="#000" stroke-width="0" x="219.993" y="32.338" id="text-9" font-size=" 10px" font-family="Helvetica, Arial, sans-serif" text-anchor="start" stroke-dasharray="2,2">distance</text>
+  <path d="m263.06429,14.80255l-10.50365,5.86313l0.17348,-12.02775l10.33017,6.16462z" fill=" rgb(0, 0, 0)" id="svg_1"/>
+  <rect x="215.754" y="12.97" width="43.343" height="3.452" fill=" rgb(0, 0, 0)" id="svg_3"/>
  </g>
 </svg>

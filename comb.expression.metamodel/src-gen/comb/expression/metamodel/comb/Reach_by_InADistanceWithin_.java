@@ -22,13 +22,13 @@ package comb.expression.metamodel.comb;
 public interface Reach_by_InADistanceWithin_ extends STRELOperatorsTwoParams, Spatial {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
-	 * The default value is <code>"<P> R[<high>] <Q>"</code>.
+	 * The default value is <code>"<P> R[<dist>] <Q>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interpretation</em>' attribute.
 	 * @see #setInterpretation(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getReach_by_InADistanceWithin__Interpretation()
-	 * @model default="&lt;P&gt; R[&lt;high&gt;] &lt;Q&gt;" required="true"
+	 * @model default="&lt;P&gt; R[&lt;dist&gt;] &lt;Q&gt;" required="true"
 	 * @generated
 	 */
 	String getInterpretation();
@@ -45,13 +45,13 @@ public interface Reach_by_InADistanceWithin_ extends STRELOperatorsTwoParams, Sp
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * The default value is <code>"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <high>) to a location which satisfies <Q>"</code>.
+	 * The default value is <code>"The expression described by this element becomes true if: there exists a route through locations satisfying <P> (with a lentgth <= <dist>) to a location which satisfies <Q>"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see comb.expression.metamodel.comb.CombPackage#getReach_by_InADistanceWithin__Description()
-	 * @model default="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P&gt; (with a lentgth &lt;= &lt;high&gt;) to a location which satisfies &lt;Q&gt;" required="true"
+	 * @model default="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P&gt; (with a lentgth &lt;= &lt;dist&gt;) to a location which satisfies &lt;Q&gt;" required="true"
 	 * @generated
 	 */
 	String getDescription();
