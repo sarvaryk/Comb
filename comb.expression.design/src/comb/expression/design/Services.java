@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.Queue;
 
@@ -21,18 +20,16 @@ public class Services {
 	private static String traceElementSeparator = " -> ";	
 	
 	public float evaluateSatisfactionNotBefore(final Element element) {
-		return traverseParseTreeLowLimit(element, 0);
-	}
-	
-	private float traverseParseTreeLowLimit(final Element element, float limit) {
+		float limit = 0;
+		
 		if(element != null) {
 			if(element.getL() != null)
 				limit += Float.parseFloat(element.getL().getName());
 			
-			float limitP = traverseParseTreeLowLimit(element.getP(), 0);
-			float limitQ = traverseParseTreeLowLimit(element.getQ(), 0);
-			float limitR = traverseParseTreeLowLimit(element.getR(), 0);
-			float limitS = traverseParseTreeLowLimit(element.getS(), 0);
+			float limitP = evaluateSatisfactionNotBefore(element.getP());
+			float limitQ = evaluateSatisfactionNotBefore(element.getQ());
+			float limitR = evaluateSatisfactionNotBefore(element.getR());
+			float limitS = evaluateSatisfactionNotBefore(element.getS());
 			
 			if(element instanceof _or_)
 				limit += Math.min(limitP, limitQ);
@@ -44,26 +41,20 @@ public class Services {
 	}
 	
 	public float evaluateSatisfactionNotAfter(final Element element) {
-		return traverseParseTreeHighLimit(element, 0, true);
-	}
-	
-	private float traverseParseTreeHighLimit(final Element element, float limit, boolean continueSearch) {
+		float limit = 0;
+		
 		if(element != null) {	
-			if(element.getH() != null)
-				limit += Float.parseFloat(element.getH().getName());
-			else if(element.getH() == null && (!(element instanceof BasicElements || element instanceof BooleanOperators || element instanceof Spatial))) {
-				limit = -1;
-				continueSearch = false;
+			if(!(element instanceof BasicElements || element instanceof BooleanOperators || element instanceof Spatial)) {
+				if(element.getH() != null)
+					limit += Float.parseFloat(element.getH().getName());
+				else
+					limit = -1;
 			}
-			
-			if(element instanceof Always_ || element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
-				continueSearch = false;
-			
-			if(continueSearch) {
-				float limitP = traverseParseTreeHighLimit(element.getP(), 0, continueSearch);
-				float limitQ = traverseParseTreeHighLimit(element.getQ(), 0, continueSearch);
-				float limitR = traverseParseTreeHighLimit(element.getR(), 0, continueSearch);
-				float limitS = traverseParseTreeHighLimit(element.getS(), 0, continueSearch);
+			else {
+				float limitP = evaluateSatisfactionNotAfter(element.getP());
+				float limitQ = evaluateSatisfactionNotAfter(element.getQ());
+				float limitR = evaluateSatisfactionNotAfter(element.getR());
+				float limitS = evaluateSatisfactionNotAfter(element.getS());
 				
 				if(element instanceof _or_)
 					limit += Math.max(limitP, limitQ);
@@ -76,9 +67,13 @@ public class Services {
 	}
 	
 	public boolean evaluateIsTimingContradicting(final Element element) {
-		float highLimit = traverseParseTreeHighLimit(element, 0, true);
-		float lowLimit = traverseParseTreeLowLimit(element, 0);
-		return lowLimit > highLimit;
+		float highLimit = evaluateSatisfactionNotAfter(element);
+		float lowLimit = evaluateSatisfactionNotBefore(element);
+		
+		if(highLimit == -1)
+			return false;
+		else
+			return lowLimit > highLimit;
 	}
 	
 	public boolean canEvaluationsBePerformed(final Element element) {
