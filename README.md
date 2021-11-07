@@ -2,6 +2,7 @@
 
 ## User guide
 
+0. Install [Eclipse IDE for Java and DSL Developers](https://www.eclipse.org/downloads/packages/release/2021-09/r/eclipse-ide-java-and-dsl-developers), and install the following plug-ins: Sirius 6.5, TextUML Toolkit 2.13.0
 1. Clone or download the project.
 2. Import the projects into your Eclipse IDE.
 3. Start a new run-time Eclipse with the aforementioned projects: right click on a plug-in project (e.g. [comb.expression.design](https://github.com/sarvaryk/Comb/tree/master/comb.expression.design)) -> Run As -> Eclipse Application.
