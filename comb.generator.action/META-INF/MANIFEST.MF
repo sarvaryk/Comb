@@ -13,5 +13,6 @@ Require-Bundle: org.eclipse.ui;bundle-version="3.118.0",
  comb.external.BatMonGen
 Import-Package: comb.expression.design,
  org.eclipse.core.resources,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.osgi.framework;version="1.10.0"
 Export-Package: comb.generator.action.automaton

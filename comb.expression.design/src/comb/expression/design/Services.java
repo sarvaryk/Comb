@@ -2,10 +2,17 @@ package comb.expression.design;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Queue;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Platform;
+import org.osgi.framework.Bundle;
 
 import batmonGen.Automaton;
 import batmonGen.State;
@@ -264,27 +271,30 @@ public class Services {
 	}
 	
 	private void generateTraceInDotFormat(String fileName, String trace) {
-		String filePath = System.getProperty("user.dir") + "\\comb.examples\\" + fileName;
-		
-		String[] traceElements = trace.split(traceElementSeparator);
-		String[] traceElementLabels = new String[traceElements.length];
-		String[] traceElementIDs = new String[traceElements.length];
-		
-		for (int i = 0; i < traceElements.length; i++) {
-			traceElementLabels[i] = String.format("\"%d\"[label=\"%s\"]", i, traceElements[i]);
-			traceElementIDs[i] = String.format("%d", i);
-		}
-		trace = String.join(traceElementSeparator, traceElements);
-
 		try {
+			String[] traceElements = trace.split(traceElementSeparator);
+			String[] traceElementLabels = new String[traceElements.length];
+			String[] traceElementIDs = new String[traceElements.length];
+			
+			for (int i = 0; i < traceElements.length; i++) {
+				traceElementLabels[i] = String.format("\"%d\"[label=\"%s\"]", i, traceElements[i]);
+				traceElementIDs[i] = String.format("%d", i);
+			}
+			trace = String.join(traceElementSeparator, traceElements);
+			
+			Bundle bundle = Platform.getBundle("comb.examples");
+			URI fileURI = FileLocator.resolve(bundle.getEntry("/")).toURI();
+			String filePath = Paths.get(fileURI).toString();
+			filePath = Paths.get(filePath, fileName).toString();
+			
 			FileWriter myWriter = new FileWriter(filePath);
 		    myWriter.write("digraph {" + "\n" + 
 		    			"\t" + String.join(" ", traceElementLabels) + "\n" + 
 		    			"\t" + String.join(traceElementSeparator, traceElementIDs) + "\n" + 
 		    		"}");
 		    myWriter.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (URISyntaxException | IOException e1) {
+			e1.printStackTrace();
 		}
 	}
 }

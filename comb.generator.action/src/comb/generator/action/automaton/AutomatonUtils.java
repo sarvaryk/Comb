@@ -4,11 +4,18 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Platform;
+import org.osgi.framework.Bundle;
 
 import batmonGen.Automaton;
 import batmonGen.NeverclaimToBuchi;
@@ -70,15 +77,20 @@ public class AutomatonUtils {
 		Automaton ba = null;
 		try {
 			String fileName = "temp_buchi.txt";
-			boolean successfulSave = saveBuchi(element, Writer.Format.SPIN, false, isNegated, fileName);
+			Bundle bundle = Platform.getBundle("comb.examples");
+			URI fileURI = FileLocator.resolve(bundle.getEntry("/")).toURI();
+			String filePath = Paths.get(fileURI).toString();
+			filePath = Paths.get(filePath, fileName).toString();
+			
+			boolean successfulSave = saveBuchi(element, Writer.Format.SPIN, false, isNegated, filePath);
 			if(successfulSave) {
-				ba = NeverclaimToBuchi.parse(fileName);
+				ba = NeverclaimToBuchi.parse(filePath);
 				ba.setName(element.getName());
 				Tarjan.markBadRegions(ba);
 			}
-			new File(fileName).delete();
+			new File(filePath).delete();
 
-		} catch (IOException | ReadBuchiDescriptionException e) {
+		} catch (IOException | ReadBuchiDescriptionException | URISyntaxException e) {
 			e.printStackTrace();
 			InfoUtils.showMessageDialog("ERROR while generating the Buchi-automaton!\n" + e);
 		}

@@ -1,4 +1,4 @@
 digraph {
-	"0"[label="(not (init) and spawn)"]
-	0
+	"0"[label="(!(p))"] "1"[label="(!(p))"]
+	0 -> 1
 }
