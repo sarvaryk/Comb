@@ -19,6 +19,8 @@
 The generated .dot format files can be viewed online, using [Graphviz online](https://dreampuf.github.io/GraphvizOnline)
 
 For in-Eclipse graphical trace representation, the following dependencies are needed:
-1. [Graphviz](https://graphviz.org/) needs to be installed, where the `dot` executable path needs to be in the environment paths.
+1. [Graphviz](https://graphviz.org/) needs to be installed, where the `dot` executable path  
+   a. needs to be in the environment paths, or   
+   b. it can be specified manually in the Eclipse -> Window -> Preferences -> Graphviz menu.  
 2. The `TextUML Toolkit 2.13.0` Eclipse plug-in needs to be installed (may not work on operating systems other than Windows). Its view can be accessed trough the `Image Viewer` view (Eclipse -> Window -> Perspective -> Open Perspective -> Other -> Image Viewer)
 
