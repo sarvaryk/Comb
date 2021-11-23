@@ -272,6 +272,7 @@ public class Services {
 	
 	private void generateTraceInDotFormat(String fileName, String trace) {
 		try {
+			trace = trace.replace("(", "").replace(")", "").replace("!", "NOT ");
 			String[] traceElements = trace.split(traceElementSeparator);
 			String[] traceElementLabels = new String[traceElements.length];
 			String[] traceElementIDs = new String[traceElements.length];
@@ -289,6 +290,7 @@ public class Services {
 			
 			FileWriter myWriter = new FileWriter(filePath);
 		    myWriter.write("digraph {" + "\n" + 
+		    			"\t" + "rankdir=\"LR\";" + "\n" + 
 		    			"\t" + String.join(" ", traceElementLabels) + "\n" + 
 		    			"\t" + String.join(traceElementSeparator, traceElementIDs) + "\n" + 
 		    		"}");

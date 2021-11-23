@@ -1,4 +1,5 @@
 digraph {
-	"0"[label="(!(p))"] "1"[label="(p)"]
-	0 -> 1
+	rankdir="LR";
+	"0"[label="NOT p"] "1"[label="NOT p"] "2"[label="p"]
+	0 -> 1 -> 2
 }
