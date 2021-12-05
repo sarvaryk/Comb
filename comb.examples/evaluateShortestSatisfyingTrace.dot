@@ -1,5 +1,5 @@
 digraph {
 	rankdir="LR";
-	"0"[label="NOT p"] "1"[label="NOT p"] "2"[label="p"]
-	0 -> 1 -> 2
+	"0"[label=""]
+	0
 }

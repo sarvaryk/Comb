@@ -30,8 +30,12 @@ public class Services {
 		float limit = 0;
 		
 		if(element != null) {
-			if(element.getL() != null)
-				limit += Float.parseFloat(element.getL().getName());
+			if(element.getL() != null) {
+				if(element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
+					limit += Float.parseFloat(element.getH().getName());
+				else
+					limit += Float.parseFloat(element.getL().getName());
+			}
 			
 			float limitP = evaluateSatisfactionNotBefore(element.getP());
 			float limitQ = evaluateSatisfactionNotBefore(element.getQ());
@@ -40,6 +44,11 @@ public class Services {
 			
 			if(element instanceof _or_)
 				limit += Math.min(limitP, limitQ);
+			else if(element instanceof _implies_) {
+				limit = 0; //TODO: The limit should represent the limit, when the first parameter could become false at the earliest
+			}
+			else if(element instanceof _until_ || element instanceof _untilWithin_ || element instanceof _untilWithin_and_)
+				limit += limitQ;
 			else
 				limit += limitP + limitQ + limitR + limitS;
 		}
@@ -51,7 +60,7 @@ public class Services {
 		float limit = 0;
 		
 		if(element != null) {	
-			if(!(element instanceof BasicElements || element instanceof BooleanOperators || element instanceof Spatial)) {
+			if(!(element instanceof BasicElements || element instanceof BooleanOperators || element instanceof Relation || element instanceof Spatial)) {
 				if(element.getH() != null)
 					limit += Float.parseFloat(element.getH().getName());
 				else
