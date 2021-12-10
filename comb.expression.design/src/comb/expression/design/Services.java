@@ -30,23 +30,30 @@ public class Services {
 		float limit = 0;
 		
 		if(element != null) {
-			if(element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
-				limit += Float.parseFloat(element.getH().getName());
-			else if(element.getL() != null) {
+			if(element.getL() != null)
 				limit += Float.parseFloat(element.getL().getName());
-			}
 			
 			float limitP = evaluateSatisfactionNotBefore(element.getP());
 			float limitQ = evaluateSatisfactionNotBefore(element.getQ());
 			float limitR = evaluateSatisfactionNotBefore(element.getR());
 			float limitS = evaluateSatisfactionNotBefore(element.getS());
 			
-			if(element instanceof _or_)
-				limit += Math.min(limitP, limitQ);
+			if(element instanceof Always_ || 
+					element instanceof AbsenceAfter_ || element instanceof AbsenceGlobally_ || 
+					element instanceof ExistenceAfter_ || element instanceof ExistenceBetween_and_ || element instanceof ExistenceAfter_until_ || 
+					element instanceof BoundedExistenceBetween_and_ || element instanceof BoundedExistenceAfter_until_ || 
+					element instanceof UniversalityAfter_ || element instanceof UniversalityGlobally_ || element instanceof UniversalityBetween_and_ || element instanceof UniversalityAfter_until_ || 
+					element instanceof PrecedenceAfter_ || element instanceof PrecedenceBetween_and_ || element instanceof PrecedenceAfter_until_ || 
+					element instanceof ResponseAfter_ || element instanceof ResponseGlobally_ || element instanceof ResponseBetween_and_ || element instanceof ResponseAfter_until_)
+				limit = -1;
+			else if(element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
+				limit = Float.parseFloat(element.getH().getName());
+			else if(element instanceof _or_)
+				limit = Math.min(limitP, limitQ);
 			else if(element instanceof _and_)
-				limit += Math.max(limitP, limitQ);
+				limit = Math.max(limitP, limitQ);
 			else if(element instanceof _implies_) {
-				limit = 0; //TODO: The limit should represent the limit, when the first parameter could become false at the earliest
+				limit = 0; //TODO: The limit should represent the earliest time instance, when the first parameter could become false
 			}
 			else if(element instanceof _until_ || element instanceof _untilWithin_ || element instanceof _untilWithin_and_)
 				limit += limitQ;
