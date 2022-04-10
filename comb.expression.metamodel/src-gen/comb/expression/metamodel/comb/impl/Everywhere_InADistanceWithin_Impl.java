@@ -6,7 +6,6 @@ import comb.expression.metamodel.comb.CombPackage;
 import comb.expression.metamodel.comb.Everywhere_InADistanceWithin_;
 import comb.expression.metamodel.comb.Literal;
 import comb.expression.metamodel.comb.Spatial;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Everywhere_InADistanceWithin_Impl extends STRELOperatorOneParamImpl
+public class Everywhere_InADistanceWithin_Impl extends SSTLOperatorOneParamImpl
 		implements Everywhere_InADistanceWithin_ {
 	/**
 	 * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
@@ -238,6 +237,7 @@ public class Everywhere_InADistanceWithin_Impl extends STRELOperatorOneParamImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

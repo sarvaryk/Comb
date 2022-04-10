@@ -1525,11 +1525,11 @@ public class CombSwitch<T> extends Switch<T> {
 			Somewhere_InADistanceWithin_ somewhere_InADistanceWithin_ = (Somewhere_InADistanceWithin_) theEObject;
 			T result = caseSomewhere_InADistanceWithin_(somewhere_InADistanceWithin_);
 			if (result == null)
-				result = caseSTRELOperatorOneParam(somewhere_InADistanceWithin_);
+				result = caseSSTLOperatorOneParam(somewhere_InADistanceWithin_);
 			if (result == null)
 				result = caseSpatial(somewhere_InADistanceWithin_);
 			if (result == null)
-				result = caseSTRELOperators(somewhere_InADistanceWithin_);
+				result = caseSSTLOperators(somewhere_InADistanceWithin_);
 			if (result == null)
 				result = caseElement(somewhere_InADistanceWithin_);
 			if (result == null)
@@ -1555,11 +1555,11 @@ public class CombSwitch<T> extends Switch<T> {
 			Everywhere_InADistanceWithin_ everywhere_InADistanceWithin_ = (Everywhere_InADistanceWithin_) theEObject;
 			T result = caseEverywhere_InADistanceWithin_(everywhere_InADistanceWithin_);
 			if (result == null)
-				result = caseSTRELOperatorOneParam(everywhere_InADistanceWithin_);
+				result = caseSSTLOperatorOneParam(everywhere_InADistanceWithin_);
 			if (result == null)
 				result = caseSpatial(everywhere_InADistanceWithin_);
 			if (result == null)
-				result = caseSTRELOperators(everywhere_InADistanceWithin_);
+				result = caseSSTLOperators(everywhere_InADistanceWithin_);
 			if (result == null)
 				result = caseElement(everywhere_InADistanceWithin_);
 			if (result == null)
@@ -1584,6 +1584,26 @@ public class CombSwitch<T> extends Switch<T> {
 				result = caseSTRELOperators(strelOperatorsTwoParams);
 			if (result == null)
 				result = caseElement(strelOperatorsTwoParams);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.SSTL_OPERATOR_ONE_PARAM: {
+			SSTLOperatorOneParam sstlOperatorOneParam = (SSTLOperatorOneParam) theEObject;
+			T result = caseSSTLOperatorOneParam(sstlOperatorOneParam);
+			if (result == null)
+				result = caseSSTLOperators(sstlOperatorOneParam);
+			if (result == null)
+				result = caseElement(sstlOperatorOneParam);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CombPackage.SSTL_OPERATORS: {
+			SSTLOperators sstlOperators = (SSTLOperators) theEObject;
+			T result = caseSSTLOperators(sstlOperators);
+			if (result == null)
+				result = caseElement(sstlOperators);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -3090,6 +3110,36 @@ public class CombSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSTRELOperatorsTwoParams(STRELOperatorsTwoParams object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SSTL Operator One Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SSTL Operator One Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSSTLOperatorOneParam(SSTLOperatorOneParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SSTL Operators</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SSTL Operators</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSSTLOperators(SSTLOperators object) {
 		return null;
 	}
 

@@ -723,6 +723,20 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass sstlOperatorOneParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sstlOperatorsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum logicGroupEEnum = null;
 
 	/**
@@ -3312,6 +3326,36 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getSSTLOperatorOneParam() {
+		return sstlOperatorOneParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSSTLOperators() {
+		return sstlOperatorsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSSTLOperators_P() {
+		return (EReference) sstlOperatorsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getLogicGroup() {
 		return logicGroupEEnum;
 	}
@@ -3707,6 +3751,11 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		strelOperatorsTwoParamsEClass = createEClass(STREL_OPERATORS_TWO_PARAMS);
 		createEReference(strelOperatorsTwoParamsEClass, STREL_OPERATORS_TWO_PARAMS__Q);
 
+		sstlOperatorOneParamEClass = createEClass(SSTL_OPERATOR_ONE_PARAM);
+
+		sstlOperatorsEClass = createEClass(SSTL_OPERATORS);
+		createEReference(sstlOperatorsEClass, SSTL_OPERATORS__P);
+
 		// Create enums
 		logicGroupEEnum = createEEnum(LOGIC_GROUP);
 		supportedOutputEEnum = createEEnum(SUPPORTED_OUTPUT);
@@ -3835,14 +3884,16 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		strelOperatorsEClass.getESuperTypes().add(this.getElement());
 		reach_by_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorsTwoParams());
 		reach_by_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
-		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSSTLOperatorOneParam());
 		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
 		escapeBy_withADistanceOfAtLeast_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
 		escapeBy_withADistanceOfAtLeast_EClass.getESuperTypes().add(this.getSpatial());
-		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSSTLOperatorOneParam());
 		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
 		strelOperatorOneParamEClass.getESuperTypes().add(this.getSTRELOperators());
 		strelOperatorsTwoParamsEClass.getESuperTypes().add(this.getSTRELOperators());
+		sstlOperatorOneParamEClass.getESuperTypes().add(this.getSSTLOperators());
+		sstlOperatorsEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(precedenceAfter_until_EClass, PrecedenceAfter_until_.class, "PrecedenceAfter_until_", !IS_ABSTRACT,
@@ -4640,12 +4691,22 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				STRELOperatorsTwoParams.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(sstlOperatorOneParamEClass, SSTLOperatorOneParam.class, "SSTLOperatorOneParam", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sstlOperatorsEClass, SSTLOperators.class, "SSTLOperators", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSSTLOperators_P(), this.getElement(), null, "P", null, 1, 1, SSTLOperators.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LITERAL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.STL);
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.SSTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.STREL);
 
 		initEEnum(supportedOutputEEnum, SupportedOutput.class, "SupportedOutput");

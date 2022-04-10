@@ -469,7 +469,8 @@
     <eLiterals name="LTL" value="1"/>
     <eLiterals name="MITL" value="3"/>
     <eLiterals name="STL" value="4"/>
-    <eLiterals name="STREL" value="4" literal="STREL"/>
+    <eLiterals name="SSTL" value="4" literal="SSTL"/>
+    <eLiterals name="STREL" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation" abstract="true" eSuperTypes="#//STLOperators">
     <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Literal"
@@ -538,7 +539,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P> (with a lentgth &lt;= &lt;dist>) to a location which satisfies &lt;Q>"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Somewhere_InADistanceWithin_" eSuperTypes="#//STRELOperatorOneParam #//Spatial">
+  <eClassifiers xsi:type="ecore:EClass" name="Somewhere_InADistanceWithin_" eSuperTypes="#//SSTLOperatorOneParam #//Spatial">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="SO[&lt;dist>] &lt;P>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
@@ -550,7 +551,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="The expression described by this element becomes true if: there exists a route through locations satisfying &lt;P> (with a lentgth >= &lt;dist>)"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Everywhere_InADistanceWithin_" eSuperTypes="#//STRELOperatorOneParam #//Spatial">
+  <eClassifiers xsi:type="ecore:EClass" name="Everywhere_InADistanceWithin_" eSuperTypes="#//SSTLOperatorOneParam #//Spatial">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interpretation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="EV[&lt;dist>] &lt;P>"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
@@ -561,6 +562,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="STRELOperatorsTwoParams" abstract="true"
       eSuperTypes="#//STRELOperators">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Q" lowerBound="1" eType="#//Element"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SSTLOperatorOneParam" abstract="true"
+      eSuperTypes="#//SSTLOperators"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SSTLOperators" abstract="true" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="P" lowerBound="1" eType="#//Element"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

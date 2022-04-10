@@ -50,12 +50,12 @@ public class GenerateMonitorHandler extends AbstractHandler {
 				InfoUtils.showMessageDialog("ERROR while generating monitor!\n" + e);
 			}
 		}
-		else if(element.getLogicGroup().equals(LogicGroup.MITL) || element.getLogicGroup().equals(LogicGroup.STL)/* || element.getLogicGroup().equals(LogicGroup.SSTL)*/) {
+		else if(element.getLogicGroup().equals(LogicGroup.MITL) || element.getLogicGroup().equals(LogicGroup.STL) || element.getLogicGroup().equals(LogicGroup.SSTL)) {
 			String filePath = InfoUtils.getTargetFilePath("Save monitor to (directory):");
 			generate_jSSTL_Monitor(element, filePath);
 		}
 		else {
-			//The chosen logic group is not yet supported.
+			InfoUtils.showMessageDialog("The monitor generation feature for the logic group " + element.getLogicGroup() + " is not supported.");
 		}
 		
 		return null;

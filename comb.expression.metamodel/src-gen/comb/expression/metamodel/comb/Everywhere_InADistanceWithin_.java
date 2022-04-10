@@ -19,7 +19,7 @@ package comb.expression.metamodel.comb;
  * @model
  * @generated
  */
-public interface Everywhere_InADistanceWithin_ extends STRELOperatorOneParam, Spatial {
+public interface Everywhere_InADistanceWithin_ extends SSTLOperatorOneParam, Spatial {
 	/**
 	 * Returns the value of the '<em><b>Interpretation</b></em>' attribute.
 	 * The default value is <code>"EV[<dist>] <P>"</code>.

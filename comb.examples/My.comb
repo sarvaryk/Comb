@@ -217,7 +217,7 @@
     <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <P xsi:type="comb:AlwaysWithin_and_" name="AlwaysWithin_and_" logicGroup="MITL">
-      <subtreeInterpretations>Comb: G[0, 1.1](task_is_safe)</subtreeInterpretations>
+      <subtreeInterpretations>Comb: G[0, 4.3](task_is_safe)</subtreeInterpretations>
       <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
@@ -334,27 +334,6 @@
           <subtreeInterpretations>Spin: 1.2</subtreeInterpretations>
         </H>
       </P>
-      <Q xsi:type="comb:Somewhere_InADistanceWithin_" name="new Somewhere_InADistanceWithin_" logicGroup="STREL">
-        <subtreeInterpretations>Comb: SO[25] fuel_station</subtreeInterpretations>
-        <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <P xsi:type="comb:Literal" name="fuel_station">
-          <subtreeInterpretations>Comb: fuel_station</subtreeInterpretations>
-          <subtreeInterpretations>Spot: fuel_station</subtreeInterpretations>
-          <subtreeInterpretations>Uppaal: fuel_station</subtreeInterpretations>
-          <subtreeInterpretations>NuSMV: fuel_station</subtreeInterpretations>
-          <subtreeInterpretations>Spin: fuel_station</subtreeInterpretations>
-        </P>
-        <D name="25">
-          <subtreeInterpretations>Comb: 25</subtreeInterpretations>
-          <subtreeInterpretations>Spot: 25</subtreeInterpretations>
-          <subtreeInterpretations>Uppaal: 25</subtreeInterpretations>
-          <subtreeInterpretations>NuSMV: 25</subtreeInterpretations>
-          <subtreeInterpretations>Spin: 25</subtreeInterpretations>
-        </D>
-      </Q>
     </P>
   </element>
   <element xsi:type="comb:_untilWithin_and_" name="_untilWithin_and_" logicGroup="MITL">
@@ -461,5 +440,61 @@
         </H>
       </Q>
     </P>
+  </element>
+  <element xsi:type="comb:Reach_by_InADistanceWithin_" name="new Reach_by_InADistanceWithin_" logicGroup="STREL">
+    <subtreeInterpretations>Comb: &lt;P> R[&lt;dist>] &lt;Q></subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+  </element>
+  <element xsi:type="comb:EscapeBy_withADistanceOfAtLeast_" name="new EscapeBy_withADistanceOfAtLeast_" logicGroup="STREL">
+    <subtreeInterpretations>Comb: E[1.2] a</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="a">
+      <subtreeInterpretations>Comb: a</subtreeInterpretations>
+      <subtreeInterpretations>Spot: a</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: a</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: a</subtreeInterpretations>
+      <subtreeInterpretations>Spin: a</subtreeInterpretations>
+    </P>
+    <D name="1.2">
+      <subtreeInterpretations>Comb: 1.2</subtreeInterpretations>
+      <subtreeInterpretations>Spot: 1.2</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: 1.2</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: 1.2</subtreeInterpretations>
+      <subtreeInterpretations>Spin: 1.2</subtreeInterpretations>
+    </D>
+  </element>
+  <element xsi:type="comb:Somewhere_InADistanceWithin_" name="new Somewhere_InADistanceWithin_" logicGroup="SSTL">
+    <subtreeInterpretations>Comb: SO[&lt;dist>] &lt;P></subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+  </element>
+  <element xsi:type="comb:Everywhere_InADistanceWithin_" name="new Everywhere_InADistanceWithin_" logicGroup="SSTL">
+    <subtreeInterpretations>Comb: EV[1.4] a</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="a">
+      <subtreeInterpretations>Comb: a</subtreeInterpretations>
+      <subtreeInterpretations>Spot: a</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: a</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: a</subtreeInterpretations>
+      <subtreeInterpretations>Spin: a</subtreeInterpretations>
+    </P>
+    <D name="1.4">
+      <subtreeInterpretations>Comb: 1.4</subtreeInterpretations>
+      <subtreeInterpretations>Spot: 1.4</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: 1.4</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: 1.4</subtreeInterpretations>
+      <subtreeInterpretations>Spin: 1.4</subtreeInterpretations>
+    </D>
   </element>
 </comb:Comb>
