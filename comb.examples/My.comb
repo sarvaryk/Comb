@@ -211,79 +211,23 @@
     </D>
   </element>
   <element xsi:type="comb:_or_" name="_or_" logicGroup="MITL">
-    <subtreeInterpretations>Comb: G[0, 1.1]((G[0.2, 1.2](request)) -> (F[1, 4](response))) || F[1.2, 3](b)</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G[0, 1.1](1mstask_is_safe) || F[1.2, 3](1mstask_is_not_safe)</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <P xsi:type="comb:AlwaysWithin_and_" name="AlwaysWithin_and_" logicGroup="MITL">
-      <subtreeInterpretations>Comb: G[0, 1.1]((G[0.2, 1.2](request)) -> (F[1, 4](response)))</subtreeInterpretations>
+      <subtreeInterpretations>Comb: G[0, 1.1](1mstask_is_safe)</subtreeInterpretations>
       <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-      <P xsi:type="comb:_implies_" name="_implies_" logicGroup="MITL">
-        <subtreeInterpretations>Comb: (G[0.2, 1.2](request)) -> (F[1, 4](response))</subtreeInterpretations>
-        <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-        <P xsi:type="comb:AlwaysWithin_and_" name="AlwaysWithin_and_" logicGroup="MITL">
-          <subtreeInterpretations>Comb: G[0.2, 1.2](request)</subtreeInterpretations>
-          <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <P xsi:type="comb:Literal" name="request">
-            <subtreeInterpretations>Comb: request</subtreeInterpretations>
-            <subtreeInterpretations>Spot: request</subtreeInterpretations>
-            <subtreeInterpretations>Uppaal: request</subtreeInterpretations>
-            <subtreeInterpretations>NuSMV: request</subtreeInterpretations>
-            <subtreeInterpretations>Spin: request</subtreeInterpretations>
-          </P>
-          <L name="0.2">
-            <subtreeInterpretations>Comb: 0.2</subtreeInterpretations>
-            <subtreeInterpretations>Spot: 0.2</subtreeInterpretations>
-            <subtreeInterpretations>Uppaal: 0.2</subtreeInterpretations>
-            <subtreeInterpretations>NuSMV: 0.2</subtreeInterpretations>
-            <subtreeInterpretations>Spin: 0.2</subtreeInterpretations>
-          </L>
-          <H name="1.2">
-            <subtreeInterpretations>Comb: 1.2</subtreeInterpretations>
-            <subtreeInterpretations>Spot: 1.2</subtreeInterpretations>
-            <subtreeInterpretations>Uppaal: 1.2</subtreeInterpretations>
-            <subtreeInterpretations>NuSMV: 1.2</subtreeInterpretations>
-            <subtreeInterpretations>Spin: 1.2</subtreeInterpretations>
-          </H>
-        </P>
-        <Q xsi:type="comb:EventuallyWithin_and_" name="Eventually response Within 1 and 4" logicGroup="MITL">
-          <subtreeInterpretations>Comb: F[1, 4](response)</subtreeInterpretations>
-          <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-          <P xsi:type="comb:Literal" name="response">
-            <subtreeInterpretations>Comb: response</subtreeInterpretations>
-            <subtreeInterpretations>Spot: response</subtreeInterpretations>
-            <subtreeInterpretations>Uppaal: response</subtreeInterpretations>
-            <subtreeInterpretations>NuSMV: response</subtreeInterpretations>
-            <subtreeInterpretations>Spin: response</subtreeInterpretations>
-          </P>
-          <L name="1">
-            <subtreeInterpretations>Comb: 1</subtreeInterpretations>
-            <subtreeInterpretations>Spot: 1</subtreeInterpretations>
-            <subtreeInterpretations>Uppaal: 1</subtreeInterpretations>
-            <subtreeInterpretations>NuSMV: 1</subtreeInterpretations>
-            <subtreeInterpretations>Spin: 1</subtreeInterpretations>
-          </L>
-          <H name="4">
-            <subtreeInterpretations>Comb: 4</subtreeInterpretations>
-            <subtreeInterpretations>Spot: 4</subtreeInterpretations>
-            <subtreeInterpretations>Uppaal: 4</subtreeInterpretations>
-            <subtreeInterpretations>NuSMV: 4</subtreeInterpretations>
-            <subtreeInterpretations>Spin: 4</subtreeInterpretations>
-          </H>
-        </Q>
+      <P xsi:type="comb:Literal" name="1msTask_Is_Safe">
+        <subtreeInterpretations>Comb: 1mstask_is_safe</subtreeInterpretations>
+        <subtreeInterpretations>Spot: 1mstask_is_safe</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: 1mstask_is_safe</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: 1mstask_is_safe</subtreeInterpretations>
+        <subtreeInterpretations>Spin: 1mstask_is_safe</subtreeInterpretations>
       </P>
       <L name="0">
         <subtreeInterpretations>Comb: 0</subtreeInterpretations>
@@ -301,17 +245,17 @@
       </H>
     </P>
     <Q xsi:type="comb:EventuallyWithin_and_" name="EventuallyWithin_and_" logicGroup="MITL">
-      <subtreeInterpretations>Comb: F[1.2, 3](b)</subtreeInterpretations>
+      <subtreeInterpretations>Comb: F[1.2, 3](1mstask_is_not_safe)</subtreeInterpretations>
       <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-      <P xsi:type="comb:Literal" name="b">
-        <subtreeInterpretations>Comb: b</subtreeInterpretations>
-        <subtreeInterpretations>Spot: b</subtreeInterpretations>
-        <subtreeInterpretations>Uppaal: b</subtreeInterpretations>
-        <subtreeInterpretations>NuSMV: b</subtreeInterpretations>
-        <subtreeInterpretations>Spin: b</subtreeInterpretations>
+      <P xsi:type="comb:Literal" name="1msTask_Is_Not_Safe">
+        <subtreeInterpretations>Comb: 1mstask_is_not_safe</subtreeInterpretations>
+        <subtreeInterpretations>Spot: 1mstask_is_not_safe</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: 1mstask_is_not_safe</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: 1mstask_is_not_safe</subtreeInterpretations>
+        <subtreeInterpretations>Spin: 1mstask_is_not_safe</subtreeInterpretations>
       </P>
       <L name="1.2">
         <subtreeInterpretations>Comb: 1.2</subtreeInterpretations>
@@ -405,5 +349,110 @@
       <subtreeInterpretations>NuSMV: 1.4</subtreeInterpretations>
       <subtreeInterpretations>Spin: 1.4</subtreeInterpretations>
     </H>
+  </element>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="MITL">
+    <subtreeInterpretations>Comb: G[0, -1]((G[0.2, 1.2](request)) -> (F[1, 4](response)))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:_implies_" name="_implies_" logicGroup="MITL">
+      <subtreeInterpretations>Comb: (G[0.2, 1.2](request)) -> (F[1, 4](response))</subtreeInterpretations>
+      <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <P xsi:type="comb:AlwaysWithin_and_" name="AlwaysWithin_and_" logicGroup="MITL">
+        <subtreeInterpretations>Comb: G[0.2, 1.2](request)</subtreeInterpretations>
+        <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <P xsi:type="comb:Literal" name="request">
+          <subtreeInterpretations>Comb: request</subtreeInterpretations>
+          <subtreeInterpretations>Spot: request</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: request</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: request</subtreeInterpretations>
+          <subtreeInterpretations>Spin: request</subtreeInterpretations>
+        </P>
+        <L name="0.2">
+          <subtreeInterpretations>Comb: 0.2</subtreeInterpretations>
+          <subtreeInterpretations>Spot: 0.2</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: 0.2</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: 0.2</subtreeInterpretations>
+          <subtreeInterpretations>Spin: 0.2</subtreeInterpretations>
+        </L>
+        <H name="1.2">
+          <subtreeInterpretations>Comb: 1.2</subtreeInterpretations>
+          <subtreeInterpretations>Spot: 1.2</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: 1.2</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: 1.2</subtreeInterpretations>
+          <subtreeInterpretations>Spin: 1.2</subtreeInterpretations>
+        </H>
+      </P>
+      <Q xsi:type="comb:EventuallyWithin_and_" name="Eventually response Within 1 and 4" logicGroup="MITL">
+        <subtreeInterpretations>Comb: F[1, 4](response)</subtreeInterpretations>
+        <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+        <P xsi:type="comb:Literal" name="response">
+          <subtreeInterpretations>Comb: response</subtreeInterpretations>
+          <subtreeInterpretations>Spot: response</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: response</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: response</subtreeInterpretations>
+          <subtreeInterpretations>Spin: response</subtreeInterpretations>
+        </P>
+        <L name="1">
+          <subtreeInterpretations>Comb: 1</subtreeInterpretations>
+          <subtreeInterpretations>Spot: 1</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: 1</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: 1</subtreeInterpretations>
+          <subtreeInterpretations>Spin: 1</subtreeInterpretations>
+        </L>
+        <H name="4">
+          <subtreeInterpretations>Comb: 4</subtreeInterpretations>
+          <subtreeInterpretations>Spot: 4</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: 4</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: 4</subtreeInterpretations>
+          <subtreeInterpretations>Spin: 4</subtreeInterpretations>
+        </H>
+      </Q>
+    </P>
+  </element>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="MITL">
+    <subtreeInterpretations>Comb: G[0, -1](F[0, 2](!(displayred)))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:EventuallyWithin_" name="EventuallyWithin_" logicGroup="MITL">
+      <subtreeInterpretations>Comb: F[0, 2](!(displayred))</subtreeInterpretations>
+      <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+      <P xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
+        <subtreeInterpretations>Comb: !(displayred)</subtreeInterpretations>
+        <subtreeInterpretations>Spot: !(displayred)</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: not(displayred)</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: !(displayred)</subtreeInterpretations>
+        <subtreeInterpretations>Spin: !(displayred)</subtreeInterpretations>
+        <P xsi:type="comb:Literal" name="displayRed">
+          <subtreeInterpretations>Comb: displayred</subtreeInterpretations>
+          <subtreeInterpretations>Spot: displayred</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: displayred</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: displayred</subtreeInterpretations>
+          <subtreeInterpretations>Spin: displayred</subtreeInterpretations>
+        </P>
+      </P>
+      <H name="2">
+        <subtreeInterpretations>Comb: 2</subtreeInterpretations>
+        <subtreeInterpretations>Spot: 2</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: 2</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: 2</subtreeInterpretations>
+        <subtreeInterpretations>Spin: 2</subtreeInterpretations>
+      </H>
+    </P>
   </element>
 </comb:Comb>
