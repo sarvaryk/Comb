@@ -15,6 +15,7 @@
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/LTL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/MITL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/STL"/>
+      <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/SSTL"/>
       <genEnumLiterals ecoreEnumLiteral="comb.ecore#//LogicGroup/STREL"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="comb.ecore#//SupportedOutput">
@@ -353,6 +354,10 @@
     <genClasses ecoreClass="comb.ecore#//STRELOperatorOneParam"/>
     <genClasses ecoreClass="comb.ecore#//STRELOperatorsTwoParams">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//STRELOperatorsTwoParams/Q"/>
+    </genClasses>
+    <genClasses ecoreClass="comb.ecore#//SSTLOperatorOneParam"/>
+    <genClasses ecoreClass="comb.ecore#//SSTLOperators">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference comb.ecore#//SSTLOperators/P"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -567,6 +567,16 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseSSTLOperatorOneParam(SSTLOperatorOneParam object) {
+			return createSSTLOperatorOneParamAdapter();
+		}
+
+		@Override
+		public Adapter caseSSTLOperators(SSTLOperators object) {
+			return createSSTLOperatorsAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1982,6 +1992,34 @@ public class CombAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSTRELOperatorsTwoParamsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.SSTLOperatorOneParam <em>SSTL Operator One Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.SSTLOperatorOneParam
+	 * @generated
+	 */
+	public Adapter createSSTLOperatorOneParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link comb.expression.metamodel.comb.SSTLOperators <em>SSTL Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see comb.expression.metamodel.comb.SSTLOperators
+	 * @generated
+	 */
+	public Adapter createSSTLOperatorsAdapter() {
 		return null;
 	}
 

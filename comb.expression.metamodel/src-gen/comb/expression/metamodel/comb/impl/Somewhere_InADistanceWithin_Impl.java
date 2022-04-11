@@ -30,8 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class Somewhere_InADistanceWithin_Impl extends STRELOperatorOneParamImpl
-		implements Somewhere_InADistanceWithin_ {
+public class Somewhere_InADistanceWithin_Impl extends SSTLOperatorOneParamImpl implements Somewhere_InADistanceWithin_ {
 	/**
 	 * The cached value of the '{@link #getD() <em>D</em>}' containment reference.
 	 * <!-- begin-user-doc -->

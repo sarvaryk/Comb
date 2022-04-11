@@ -24,6 +24,7 @@ import comb.expression.metamodel.comb.LTLPatternMappings;
 import comb.expression.metamodel.comb.Literal;
 import comb.expression.metamodel.comb.LogicGroup;
 import comb.expression.metamodel.comb.MITLOperators;
+import comb.expression.metamodel.comb.SSTLOperators;
 import comb.expression.metamodel.comb.STLOperators;
 import comb.expression.metamodel.comb.STRELOperators;
 import comb.expression.metamodel.comb.SupportedOutput;
@@ -146,6 +147,8 @@ public class RefreshLogicGroupAndInterpretations {
     private static LogicGroup getElementLogicGroupIfHigher(final Element element, LogicGroup logicGroup) {
     	if(element instanceof STRELOperators && LogicGroup.STREL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.STREL;
+    	else if(element instanceof SSTLOperators && LogicGroup.SSTL.getValue() > logicGroup.getValue())
+    		logicGroup = LogicGroup.SSTL;
     	else if(element instanceof STLOperators && LogicGroup.STL.getValue() > logicGroup.getValue())
     		logicGroup = LogicGroup.STL;
     	else if(element instanceof MITLOperators && LogicGroup.MITL.getValue() > logicGroup.getValue())

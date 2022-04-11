@@ -2,6 +2,112 @@
  */
 package comb.expression.metamodel.comb.impl;
 
+import comb.expression.metamodel.comb.Absence;
+import comb.expression.metamodel.comb.AbsenceAfter_;
+import comb.expression.metamodel.comb.AbsenceAfter_until_;
+import comb.expression.metamodel.comb.AbsenceBefore_;
+import comb.expression.metamodel.comb.AbsenceBetween_and_;
+import comb.expression.metamodel.comb.AbsenceGlobally_;
+import comb.expression.metamodel.comb.AbsenceOneParam;
+import comb.expression.metamodel.comb.AbsenceTwoParams;
+import comb.expression.metamodel.comb.AbsenceWithoutParams;
+import comb.expression.metamodel.comb.AlwaysWithin_;
+import comb.expression.metamodel.comb.AlwaysWithin_and_;
+import comb.expression.metamodel.comb.Always_;
+import comb.expression.metamodel.comb.BasicElements;
+import comb.expression.metamodel.comb.BooleanOperators;
+import comb.expression.metamodel.comb.BooleanOperatorsOneParam;
+import comb.expression.metamodel.comb.BooleanOperatorsTwoParams;
+import comb.expression.metamodel.comb.BoundedExistence;
+import comb.expression.metamodel.comb.BoundedExistenceAfter_;
+import comb.expression.metamodel.comb.BoundedExistenceAfter_until_;
+import comb.expression.metamodel.comb.BoundedExistenceBefore_;
+import comb.expression.metamodel.comb.BoundedExistenceBetween_and_;
+import comb.expression.metamodel.comb.BoundedExistenceGlobally_;
+import comb.expression.metamodel.comb.BoundedExistenceTwoParams;
+import comb.expression.metamodel.comb.BoundedExistenceWithoutParams;
+import comb.expression.metamodel.comb.BoundedExistneceOneParam;
+import comb.expression.metamodel.comb.Comb;
+import comb.expression.metamodel.comb.CombFactory;
+import comb.expression.metamodel.comb.CombPackage;
+import comb.expression.metamodel.comb.Element;
+import comb.expression.metamodel.comb.EscapeBy_withADistanceOfAtLeast_;
+import comb.expression.metamodel.comb.EventuallyWithin_;
+import comb.expression.metamodel.comb.EventuallyWithin_and_;
+import comb.expression.metamodel.comb.Eventually_;
+import comb.expression.metamodel.comb.Everywhere_InADistanceWithin_;
+import comb.expression.metamodel.comb.Existence;
+import comb.expression.metamodel.comb.ExistenceAfter_;
+import comb.expression.metamodel.comb.ExistenceAfter_until_;
+import comb.expression.metamodel.comb.ExistenceBefore_;
+import comb.expression.metamodel.comb.ExistenceBetween_and_;
+import comb.expression.metamodel.comb.ExistenceGlobally_;
+import comb.expression.metamodel.comb.ExistenceTwoParams;
+import comb.expression.metamodel.comb.ExistenceWithourParams;
+import comb.expression.metamodel.comb.ExistneceOneParam;
+import comb.expression.metamodel.comb.LTLOperators;
+import comb.expression.metamodel.comb.LTLOperatorsOneParam;
+import comb.expression.metamodel.comb.LTLOperatorsTwoParams;
+import comb.expression.metamodel.comb.LTLPatternMappings;
+import comb.expression.metamodel.comb.Literal;
+import comb.expression.metamodel.comb.LogicGroup;
+import comb.expression.metamodel.comb.MITLOperators;
+import comb.expression.metamodel.comb.MITLOperatorsOneParam;
+import comb.expression.metamodel.comb.MITLOperatorsTwoParams;
+import comb.expression.metamodel.comb.Next_;
+import comb.expression.metamodel.comb.Not_;
+import comb.expression.metamodel.comb.Occurrence;
+import comb.expression.metamodel.comb.Order;
+import comb.expression.metamodel.comb.Precedence;
+import comb.expression.metamodel.comb.PrecedenceAfter_;
+import comb.expression.metamodel.comb.PrecedenceAfter_until_;
+import comb.expression.metamodel.comb.PrecedenceBefore_;
+import comb.expression.metamodel.comb.PrecedenceBetween_and_;
+import comb.expression.metamodel.comb.PrecedenceGlobally_;
+import comb.expression.metamodel.comb.PrecedenceOneParam;
+import comb.expression.metamodel.comb.PrecedenceTwoParams;
+import comb.expression.metamodel.comb.PrecedenceWithoutParams;
+import comb.expression.metamodel.comb.Reach_by_InADistanceWithin_;
+import comb.expression.metamodel.comb.Relation;
+import comb.expression.metamodel.comb.Response;
+import comb.expression.metamodel.comb.ResponseAfter_;
+import comb.expression.metamodel.comb.ResponseAfter_until_;
+import comb.expression.metamodel.comb.ResponseBefore_;
+import comb.expression.metamodel.comb.ResponseBetween_and_;
+import comb.expression.metamodel.comb.ResponseGlobally_;
+import comb.expression.metamodel.comb.ResponseOneParam;
+import comb.expression.metamodel.comb.ResponseTwoParams;
+import comb.expression.metamodel.comb.ResponseWithoutParams;
+import comb.expression.metamodel.comb.SSTLOperatorOneParam;
+import comb.expression.metamodel.comb.SSTLOperators;
+import comb.expression.metamodel.comb.STLOperators;
+import comb.expression.metamodel.comb.STRELOperatorOneParam;
+import comb.expression.metamodel.comb.STRELOperators;
+import comb.expression.metamodel.comb.STRELOperatorsTwoParams;
+import comb.expression.metamodel.comb.Somewhere_InADistanceWithin_;
+import comb.expression.metamodel.comb.Spatial;
+import comb.expression.metamodel.comb.SupportedOutput;
+import comb.expression.metamodel.comb.Universality;
+import comb.expression.metamodel.comb.UniversalityAfter_;
+import comb.expression.metamodel.comb.UniversalityAfter_until_;
+import comb.expression.metamodel.comb.UniversalityBefore_;
+import comb.expression.metamodel.comb.UniversalityBetween_and_;
+import comb.expression.metamodel.comb.UniversalityGlobally_;
+import comb.expression.metamodel.comb.UniversalityOneParam;
+import comb.expression.metamodel.comb.UniversalityTwoParams;
+import comb.expression.metamodel.comb.UniversalityWithoutParams;
+import comb.expression.metamodel.comb._and_;
+import comb.expression.metamodel.comb._equal_;
+import comb.expression.metamodel.comb._greaterThanOrEqual_;
+import comb.expression.metamodel.comb._greaterThan_;
+import comb.expression.metamodel.comb._implies_;
+import comb.expression.metamodel.comb._lessThanOrEqual_;
+import comb.expression.metamodel.comb._lessThan_;
+import comb.expression.metamodel.comb._or_;
+import comb.expression.metamodel.comb._untilWithin_;
+import comb.expression.metamodel.comb._untilWithin_and_;
+import comb.expression.metamodel.comb._until_;
+import comb.expression.metamodel.comb._weakUntil_;
 import comb.expression.metamodel.comb.*;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -717,6 +823,20 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	private EClass strelOperatorsTwoParamsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sstlOperatorOneParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sstlOperatorsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -3312,6 +3432,36 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getSSTLOperatorOneParam() {
+		return sstlOperatorOneParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getSSTLOperators() {
+		return sstlOperatorsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSSTLOperators_P() {
+		return (EReference) sstlOperatorsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getLogicGroup() {
 		return logicGroupEEnum;
 	}
@@ -3707,6 +3857,11 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		strelOperatorsTwoParamsEClass = createEClass(STREL_OPERATORS_TWO_PARAMS);
 		createEReference(strelOperatorsTwoParamsEClass, STREL_OPERATORS_TWO_PARAMS__Q);
 
+		sstlOperatorOneParamEClass = createEClass(SSTL_OPERATOR_ONE_PARAM);
+
+		sstlOperatorsEClass = createEClass(SSTL_OPERATORS);
+		createEReference(sstlOperatorsEClass, SSTL_OPERATORS__P);
+
 		// Create enums
 		logicGroupEEnum = createEEnum(LOGIC_GROUP);
 		supportedOutputEEnum = createEEnum(SUPPORTED_OUTPUT);
@@ -3835,14 +3990,16 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 		strelOperatorsEClass.getESuperTypes().add(this.getElement());
 		reach_by_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorsTwoParams());
 		reach_by_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
-		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSSTLOperatorOneParam());
 		somewhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
 		escapeBy_withADistanceOfAtLeast_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
 		escapeBy_withADistanceOfAtLeast_EClass.getESuperTypes().add(this.getSpatial());
-		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSTRELOperatorOneParam());
+		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSSTLOperatorOneParam());
 		everywhere_InADistanceWithin_EClass.getESuperTypes().add(this.getSpatial());
 		strelOperatorOneParamEClass.getESuperTypes().add(this.getSTRELOperators());
 		strelOperatorsTwoParamsEClass.getESuperTypes().add(this.getSTRELOperators());
+		sstlOperatorOneParamEClass.getESuperTypes().add(this.getSSTLOperators());
+		sstlOperatorsEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(precedenceAfter_until_EClass, PrecedenceAfter_until_.class, "PrecedenceAfter_until_", !IS_ABSTRACT,
@@ -4640,12 +4797,22 @@ public class CombPackageImpl extends EPackageImpl implements CombPackage {
 				STRELOperatorsTwoParams.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(sstlOperatorOneParamEClass, SSTLOperatorOneParam.class, "SSTLOperatorOneParam", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sstlOperatorsEClass, SSTLOperators.class, "SSTLOperators", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSSTLOperators_P(), this.getElement(), null, "P", null, 1, 1, SSTLOperators.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(logicGroupEEnum, LogicGroup.class, "LogicGroup");
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LITERAL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.LTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.MITL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.STL);
+		addEEnumLiteral(logicGroupEEnum, LogicGroup.SSTL);
 		addEEnumLiteral(logicGroupEEnum, LogicGroup.STREL);
 
 		initEEnum(supportedOutputEEnum, SupportedOutput.class, "SupportedOutput");

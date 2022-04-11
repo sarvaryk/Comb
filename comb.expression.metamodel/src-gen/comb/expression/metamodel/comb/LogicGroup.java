@@ -58,14 +58,23 @@ public enum LogicGroup implements Enumerator {
 	 */
 	STL(4, "STL", "STL"),
 	/**
-	 * The '<em><b>STREL</b></em>' literal object.
+	 * The '<em><b>SSTL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #STREL_VALUE
+	 * <!-- end-user-doc -->
+	 * @see #SSTL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	STREL(4, "STREL", "STREL");
+	SSTL(4, "SSTL", "SSTL"),
+	/**
+	* The '<em><b>STREL</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #STREL_VALUE
+	* @generated
+	* @ordered
+	*/
+	STREL(5, "STREL", "STREL");
 
 	/**
 	 * The '<em><b>LITERAL</b></em>' literal value.
@@ -112,6 +121,17 @@ public enum LogicGroup implements Enumerator {
 	public static final int STL_VALUE = 4;
 
 	/**
+	 * The '<em><b>SSTL</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SSTL
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SSTL_VALUE = 4;
+
+	/**
 	 * The '<em><b>STREL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,7 +140,7 @@ public enum LogicGroup implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STREL_VALUE = 4;
+	public static final int STREL_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>Logic Group</b></em>' enumerators.
@@ -128,7 +148,7 @@ public enum LogicGroup implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LITERAL, LTL, MITL, STL, STREL, };
+	private static final LogicGroup[] VALUES_ARRAY = new LogicGroup[] { LITERAL, LTL, MITL, STL, SSTL, STREL, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Logic Group</b></em>' enumerators.
@@ -192,6 +212,8 @@ public enum LogicGroup implements Enumerator {
 			return MITL;
 		case STL_VALUE:
 			return STL;
+		case STREL_VALUE:
+			return STREL;
 		}
 		return null;
 	}

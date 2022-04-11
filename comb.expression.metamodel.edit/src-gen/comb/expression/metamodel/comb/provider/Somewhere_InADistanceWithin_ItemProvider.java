@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Somewhere_InADistanceWithin_ItemProvider extends STRELOperatorOneParamItemProvider {
+public class Somewhere_InADistanceWithin_ItemProvider extends SSTLOperatorOneParamItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -198,7 +198,7 @@ public class Somewhere_InADistanceWithin_ItemProvider extends STRELOperatorOnePa
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == CombPackage.Literals.STREL_OPERATORS__P
+		boolean qualify = childFeature == CombPackage.Literals.SSTL_OPERATORS__P
 				|| childFeature == CombPackage.Literals.SPATIAL__D;
 
 		if (qualify) {

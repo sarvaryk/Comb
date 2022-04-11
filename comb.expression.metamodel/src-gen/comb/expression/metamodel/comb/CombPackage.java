@@ -7948,6 +7948,134 @@ public interface CombPackage extends EPackage {
 	int REACH_BY_IN_ADISTANCE_WITHIN__OPERATION_COUNT = STREL_OPERATORS_TWO_PARAMS_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.SSTLOperatorsImpl <em>SSTL Operators</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.SSTLOperatorsImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSSTLOperators()
+	 * @generated
+	 */
+	int SSTL_OPERATORS = 101;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATORS__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATORS__SUBTREE_INTERPRETATIONS = ELEMENT__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATORS__LOGIC_GROUP = ELEMENT__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATORS__P = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>SSTL Operators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATORS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>SSTL Operators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATORS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.SSTLOperatorOneParamImpl <em>SSTL Operator One Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.SSTLOperatorOneParamImpl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSSTLOperatorOneParam()
+	 * @generated
+	 */
+	int SSTL_OPERATOR_ONE_PARAM = 100;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATOR_ONE_PARAM__NAME = SSTL_OPERATORS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS = SSTL_OPERATORS__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATOR_ONE_PARAM__LOGIC_GROUP = SSTL_OPERATORS__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATOR_ONE_PARAM__P = SSTL_OPERATORS__P;
+
+	/**
+	 * The number of structural features of the '<em>SSTL Operator One Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT = SSTL_OPERATORS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>SSTL Operator One Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SSTL_OPERATOR_ONE_PARAM_OPERATION_COUNT = SSTL_OPERATORS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.STRELOperatorOneParamImpl <em>STREL Operator One Param</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7956,6 +8084,97 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 */
 	int STREL_OPERATOR_ONE_PARAM = 98;
+
+	/**
+	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl <em>Somewhere In ADistance Within </em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl
+	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSomewhere_InADistanceWithin_()
+	 * @generated
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN_ = 95;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___NAME = SSTL_OPERATOR_ONE_PARAM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = SSTL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___LOGIC_GROUP = SSTL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>P</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___P = SSTL_OPERATOR_ONE_PARAM__P;
+
+	/**
+	 * The feature id for the '<em><b>D</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___D = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Somewhere In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Somewhere In ADistance Within </em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOMEWHERE_IN_ADISTANCE_WITHIN__OPERATION_COUNT = SSTL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8010,97 +8229,6 @@ public interface CombPackage extends EPackage {
 	 * @ordered
 	 */
 	int STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT = STREL_OPERATORS_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl <em>Somewhere In ADistance Within </em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see comb.expression.metamodel.comb.impl.Somewhere_InADistanceWithin_Impl
-	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSomewhere_InADistanceWithin_()
-	 * @generated
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN_ = 95;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___NAME = STREL_OPERATOR_ONE_PARAM__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = STREL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___LOGIC_GROUP = STREL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___P = STREL_OPERATOR_ONE_PARAM__P;
-
-	/**
-	 * The feature id for the '<em><b>D</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___D = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Somewhere In ADistance Within </em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Somewhere In ADistance Within </em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOMEWHERE_IN_ADISTANCE_WITHIN__OPERATION_COUNT = STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.impl.EscapeBy_withADistanceOfAtLeast_Impl <em>Escape By with ADistance Of At Least </em>}' class.
@@ -8210,7 +8338,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___NAME = STREL_OPERATOR_ONE_PARAM__NAME;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___NAME = SSTL_OPERATOR_ONE_PARAM__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Subtree Interpretations</b></em>' attribute list.
@@ -8219,7 +8347,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = STREL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___SUBTREE_INTERPRETATIONS = SSTL_OPERATOR_ONE_PARAM__SUBTREE_INTERPRETATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logic Group</b></em>' attribute.
@@ -8228,7 +8356,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___LOGIC_GROUP = STREL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___LOGIC_GROUP = SSTL_OPERATOR_ONE_PARAM__LOGIC_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>P</b></em>' containment reference.
@@ -8237,7 +8365,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___P = STREL_OPERATOR_ONE_PARAM__P;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___P = SSTL_OPERATOR_ONE_PARAM__P;
 
 	/**
 	 * The feature id for the '<em><b>D</b></em>' containment reference.
@@ -8246,7 +8374,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___D = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___D = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Interpretation</b></em>' attribute.
@@ -8255,7 +8383,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___INTERPRETATION = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -8264,7 +8392,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN___DESCRIPTION = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Everywhere In ADistance Within </em>' class.
@@ -8273,7 +8401,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = STREL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN__FEATURE_COUNT = SSTL_OPERATOR_ONE_PARAM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Everywhere In ADistance Within </em>' class.
@@ -8282,7 +8410,7 @@ public interface CombPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVERYWHERE_IN_ADISTANCE_WITHIN__OPERATION_COUNT = STREL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
+	int EVERYWHERE_IN_ADISTANCE_WITHIN__OPERATION_COUNT = SSTL_OPERATOR_ONE_PARAM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
@@ -8292,7 +8420,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getLogicGroup()
 	 * @generated
 	 */
-	int LOGIC_GROUP = 100;
+	int LOGIC_GROUP = 102;
 
 	/**
 	 * The meta object id for the '{@link comb.expression.metamodel.comb.SupportedOutput <em>Supported Output</em>}' enum.
@@ -8302,7 +8430,7 @@ public interface CombPackage extends EPackage {
 	 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSupportedOutput()
 	 * @generated
 	 */
-	int SUPPORTED_OUTPUT = 101;
+	int SUPPORTED_OUTPUT = 103;
 
 	/**
 	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.PrecedenceAfter_until_ <em>Precedence After until </em>}'.
@@ -10966,6 +11094,37 @@ public interface CombPackage extends EPackage {
 	EReference getSTRELOperatorsTwoParams_Q();
 
 	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.SSTLOperatorOneParam <em>SSTL Operator One Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SSTL Operator One Param</em>'.
+	 * @see comb.expression.metamodel.comb.SSTLOperatorOneParam
+	 * @generated
+	 */
+	EClass getSSTLOperatorOneParam();
+
+	/**
+	 * Returns the meta object for class '{@link comb.expression.metamodel.comb.SSTLOperators <em>SSTL Operators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SSTL Operators</em>'.
+	 * @see comb.expression.metamodel.comb.SSTLOperators
+	 * @generated
+	 */
+	EClass getSSTLOperators();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link comb.expression.metamodel.comb.SSTLOperators#getP <em>P</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>P</em>'.
+	 * @see comb.expression.metamodel.comb.SSTLOperators#getP()
+	 * @see #getSSTLOperators()
+	 * @generated
+	 */
+	EReference getSSTLOperators_P();
+
+	/**
 	 * Returns the meta object for enum '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13227,6 +13386,34 @@ public interface CombPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STREL_OPERATORS_TWO_PARAMS__Q = eINSTANCE.getSTRELOperatorsTwoParams_Q();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.SSTLOperatorOneParamImpl <em>SSTL Operator One Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.SSTLOperatorOneParamImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSSTLOperatorOneParam()
+		 * @generated
+		 */
+		EClass SSTL_OPERATOR_ONE_PARAM = eINSTANCE.getSSTLOperatorOneParam();
+
+		/**
+		 * The meta object literal for the '{@link comb.expression.metamodel.comb.impl.SSTLOperatorsImpl <em>SSTL Operators</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see comb.expression.metamodel.comb.impl.SSTLOperatorsImpl
+		 * @see comb.expression.metamodel.comb.impl.CombPackageImpl#getSSTLOperators()
+		 * @generated
+		 */
+		EClass SSTL_OPERATORS = eINSTANCE.getSSTLOperators();
+
+		/**
+		 * The meta object literal for the '<em><b>P</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SSTL_OPERATORS__P = eINSTANCE.getSSTLOperators_P();
 
 		/**
 		 * The meta object literal for the '{@link comb.expression.metamodel.comb.LogicGroup <em>Logic Group</em>}' enum.
