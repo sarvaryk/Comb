@@ -105,7 +105,7 @@
       </R>
     </P>
   </element>
-  <element xsi:type="comb:Always_" name="new Always_" logicGroup="STL">
+  <element xsi:type="comb:Always_" name="Always limit reached" logicGroup="STL">
     <subtreeInterpretations>Comb: G[0, -1]((temp > 123.4) -> (limit_reached))</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>

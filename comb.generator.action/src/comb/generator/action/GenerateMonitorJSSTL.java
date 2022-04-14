@@ -12,30 +12,20 @@ import comb.expression.metamodel.comb.impl.*;
 public class GenerateMonitorJSSTL {
 	private static List<String> events;
 	
-	public static void generate(ElementImpl element, String filePath) {
-		try {
-            File dir = new File(filePath);
-            dir.mkdirs();
+	public static void generate(ElementImpl element, String filePath) throws IOException, Exception {
+        File dir = new File(filePath);
+        dir.mkdirs();
 
-    		generate_formulaScript(element, filePath);
-    		generate_monitorComponent(element, filePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		generate_formulaScript(element, filePath);
+		generate_monitorComponent(element, filePath);
 	}
 	
-	private static void generate_formulaScript(ElementImpl element, String filePath) throws IOException {
+	private static void generate_formulaScript(ElementImpl element, String filePath) throws IOException, Exception {
 		String className = "formulaScript";
         File actualFile = new File(filePath, className + ".java");
         if(!actualFile.exists()) {
         	events = new ArrayList<>();
-        	String formula = null;
-			try {
-				formula = getOperatorCode(element, true);
-			} catch (Exception e) {
-				//TODO: ...
-				e.printStackTrace();
-			}
+        	String formula = getOperatorCode(element, true);
 			
         	String eventStrings = "";
         	for(int i = 0; i < events.size(); i++) {
@@ -77,7 +67,10 @@ public class GenerateMonitorJSSTL {
 		String result = "";
 		
 		if(element instanceof LiteralImpl) {
-    		if(!isIntervalParameter) {
+    		if(isIntervalParameter) {
+    			result = element.getName();
+    		}
+    		else {
     			String eventName = element.getName();
     			addEvent(eventName);
     			
@@ -92,25 +85,53 @@ public class GenerateMonitorJSSTL {
     					+ "}\r\n"
     					+ "}, false)\r\n";
     		}
-    		else {
-    			
-    		}
     	}
-    	else if(element instanceof Always_Impl || element instanceof AlwaysWithin_Impl || element instanceof AlwaysWithin_and_Impl ||
-    			element instanceof Eventually_Impl || element instanceof EventuallyWithin_Impl || element instanceof EventuallyWithin_and_Impl ||
-    			element instanceof Somewhere_InADistanceWithin_Impl ||
-    			element instanceof Everywhere_InADistanceWithin_Impl) {
-    		result =  "new "+getOPeratorName(element)+"Formula(\r\n"
+    	else if(element instanceof Always_Impl || element instanceof AlwaysWithin_Impl || element instanceof AlwaysWithin_and_Impl) {
+    		result =  "new GloballyFormula(\r\n"
     				+ "new ParametricInterval( \r\n"
     				+ getIntervalParameterCode(element.getL(), false)
     				+ ",\r\n"
     				+ getIntervalParameterCode(element.getH(), true)
     				+ "),\r\n"
     				+ getOperatorCode(element.getP(), false)+"\r\n"
+    			
+    				+ ")\r\n";
+    	}
+    	else if(element instanceof Eventually_Impl || element instanceof EventuallyWithin_Impl || element instanceof EventuallyWithin_and_Impl) {
+    		result =  "new EventuallyFormula(\r\n"
+    				+ "new ParametricInterval( \r\n"
+    				+ getIntervalParameterCode(element.getL(), false)
+    				+ ",\r\n"
+    				+ getIntervalParameterCode(element.getH(), true)
+    				+ "),\r\n"
+    				+ getOperatorCode(element.getP(), false)+"\r\n"
+    			
+    				+ ")\r\n";
+    	}
+    	else if(element instanceof Somewhere_InADistanceWithin_Impl) {
+    		result =  "new SomewhereFormula(\r\n"
+    				+ "new ParametricInterval( \r\n"
+    				+ 0
+    				+ ",\r\n"
+    				+ getIntervalParameterCode(element.getD(), true)
+    				+ "),\r\n"
+    				+ getOperatorCode(element.getP(), false)+"\r\n"
+    			
+    				+ ")\r\n";
+    	}
+    	else if(element instanceof Everywhere_InADistanceWithin_Impl) {
+    		result =  "new EverywhereFormula(\r\n"
+    				+ "new ParametricInterval( \r\n"
+    				+ 0
+    				+ ",\r\n"
+    				+ getIntervalParameterCode(element.getD(), true)
+    				+ "),\r\n"
+    				+ getOperatorCode(element.getP(), false)+"\r\n"
+    			
     				+ ")\r\n";
     	}
     	else if(element instanceof _until_Impl || element instanceof _untilWithin_Impl || element instanceof _untilWithin_and_Impl) {
-    		result =  "new "+getOPeratorName(element)+"Formula(\r\n"
+    		result =  "new UntilFormula(\r\n"
     				+ "new ParametricInterval(\r\n"
     				+ getIntervalParameterCode(element.getL(), false)
     				+ ",\r\n"
@@ -121,40 +142,81 @@ public class GenerateMonitorJSSTL {
     				+ ")\r\n";
     	}
     	else if(element instanceof Not_Impl) {
-    		result =  "new "+getOPeratorName(element)+"Formula(\r\n"
+    		result =  "new NotFormula(\r\n"
     				+ getOperatorCode(element.getP(), false)+"\r\n"
     				+ ")\r\n";
     	}
-    	else if(element instanceof _and_Impl || element instanceof _or_Impl) {
-    		result =  "new "+getOPeratorName(element)+"Formula(\r\n"
+    	else if(element instanceof _and_Impl) {
+    		result =  "new AndFormula(\r\n"
     				+ getOperatorCode(element.getP(), false)+",\r\n"
     				+ getOperatorCode(element.getQ(), false)+"\r\n"
     				+ ")\r\n";
     	}
-    	/*else if(element instanceof Reach_by_InADistanceWithin_Impl) {
-			
-		}
-    	else if(element instanceof EscapeBy_withADistanceOfAtLeast_Impl) {
-			
-		}
+    	else if(element instanceof _or_Impl) {
+    		result =  "new OrFormula(\r\n"
+    				+ getOperatorCode(element.getP(), false)+",\r\n"
+    				+ getOperatorCode(element.getQ(), false)+"\r\n"
+    				+ ")\r\n";
+    	}
     	else if(element instanceof _implies_Impl) {
-    		
+    		result =  "new OrFormula(\r\n"
+    				+ "new NotFormula(\r\n"
+    	    		+ getOperatorCode(element.getP(), false)+"\r\n"
+    	    		+ "),\r\n"
+    				+ getOperatorCode(element.getQ(), false)+"\r\n"
+    				+ ")\r\n";
     	}
-    	else if(element instanceof _lessThan_Impl) {
-    		
+		else if(element instanceof RelationImpl) {
+			String operator;			
+			if(element instanceof _lessThan_Impl) {
+				operator = "<";
+			}
+			else if(element instanceof _lessThanOrEqual_Impl) {
+				operator = "<=";
+	    	}
+	    	else if(element instanceof _greaterThan_Impl) {
+	    		operator = ">";
+	    	}
+	    	else if(element instanceof _greaterThanOrEqual_Impl) {
+	    		operator = ">=";
+	    	}
+	    	else {
+	    		operator = "==";
+	    	}
+			
+			String p, q;
+			try{
+				Double.parseDouble(element.getP().getName());
+				p = element.getP().getName();
+	        }
+	        catch (NumberFormatException ex){
+    			addEvent(element.getP().getName());
+	            p = "variables[getIndex("+events.indexOf(element.getP().getName())+")]";
+	        }
+			
+			try{
+				Double.parseDouble(element.getQ().getName());
+				q = element.getQ().getName();
+	        }
+	        catch (NumberFormatException ex){
+	        	addEvent(element.getQ().getName());
+	        	q = "variables[getIndex("+events.indexOf(element.getQ().getName())+")]";
+	        }
+			
+			result =  "new AtomicFormula(\r\n"
+					+ "new ParametricExpression() {\r\n"
+					+ "public SignalExpression eval( final Map<String,Double> parameters ) {\r\n"
+					+ "return new SignalExpression() {\r\n"
+					+ "public double eval( double ... variables ) {\r\n"
+					+ "return ("+ p + " " + operator + " " + q +") ? 1.0 : -1.0;\r\n"
+					+ "}\r\n"
+					+ "};\r\n"
+					+ "}\r\n"
+					+ "}, false)\r\n";
     	}
-    	else if(element instanceof _lessThanOrEqual_Impl) {
-    		
+    	else {
+    		throw new Exception("Operator not supported: " + element.getClass());
     	}
-    	else if(element instanceof _equal_Impl) {
-    		
-    	}
-    	else if(element instanceof _greaterThan_Impl) {
-    		
-    	}
-    	else if(element instanceof _greaterThanOrEqual_Impl) {
-    		
-    	}*/
 		
 		return result;
 	}
@@ -187,67 +249,6 @@ public class GenerateMonitorJSSTL {
 		return result;
 	}
 	
-	private static String getOPeratorName(Element element) throws Exception {
-		String result = "";
-		
-		if(element instanceof LiteralImpl) {
-    		result = element.getName();
-    	}
-    	else if(element instanceof Always_Impl || element instanceof AlwaysWithin_Impl || element instanceof AlwaysWithin_and_Impl) {
-    		result = "Globally";
-    	}
-    	else if(element instanceof Eventually_Impl || element instanceof EventuallyWithin_Impl || element instanceof EventuallyWithin_and_Impl) {
-    		result = "Eventually";
-    	}
-    	else if(element instanceof _until_Impl || element instanceof _untilWithin_Impl || element instanceof _untilWithin_and_Impl) {
-    		result = "Until";
-    	}
-    	else if(element instanceof Somewhere_InADistanceWithin_Impl) {
-    		result = "Somewhere";
-    	}
-    	else if(element instanceof Everywhere_InADistanceWithin_Impl) {
-    		result = "Everywhere";
-    	}
-    	else if(element instanceof Not_Impl) {
-    		result = "Not";
-    	}
-    	else if(element instanceof _and_Impl) {
-    		result = "And";
-    	}
-    	else if(element instanceof _or_Impl) {
-    		result = "Or";
-    	}
-    	/*else if(element instanceof Reach_by_InADistanceWithin_Impl) {
-		
-		}
-    	else if(element instanceof EscapeBy_withADistanceOfAtLeast_Impl) {
-			
-		}
-    	else if(element instanceof _implies_Impl) {
-    		
-    	}
-    	else if(element instanceof _lessThan_Impl) {
-    		
-    	}
-    	else if(element instanceof _lessThanOrEqual_Impl) {
-    		
-    	}
-    	else if(element instanceof _equal_Impl) {
-    		
-    	}
-    	else if(element instanceof _greaterThan_Impl) {
-    		
-    	}
-    	else if(element instanceof _greaterThanOrEqual_Impl) {
-    		
-    	}*/
-    	else {
-    		throw new Exception("Operator not supported: " + element.getClass());
-    	}
-		
-		return result;
-	}
-	
 	private static void addEvent(String event) {
 		if(!events.contains(event))
 			events.add(event);
@@ -265,31 +266,47 @@ public class GenerateMonitorJSSTL {
             		+ "import eu.quanticol.jsstl.core.formula.Signal;\r\n"
             		+ "import eu.quanticol.jsstl.core.formula.jSSTLScript;\r\n"
             		+ "import eu.quanticol.jsstl.core.space.GraphModel;\r\n"
+            		+ "import eu.quanticol.jsstl.core.io.SyntaxErrorExpection;\r\n"
             		+ "import eu.quanticol.jsstl.core.io.TraGraphModelReader;\r\n"
             		+ "import eu.quanticol.jsstl.core.monitor.SpatialBooleanSignal;\r\n"
             		+ "import eu.quanticol.jsstl.core.signal.BooleanSignal;\r\n"
             		+ "\r\n"
             		+ "public class jSSTLMonitor {\r\n"
+            		+ "\tprivate jSSTLScript script;\r\n"
+            		+ "\tprivate GraphModel graph;\r\n"
+            		+ "\tprivate String graphPath;\r\n"
             		+ "\r\n"
-            		+ "\tprivate static GraphModel graph;\r\n"
-            		+ "\tprivate static jSSTLScript script;\r\n"
-            		+ "\r\n"
-            		+ "\tpublic static void reset() throws Exception {\r\n"
-            		+ "\t\tTraGraphModelReader graphread = new TraGraphModelReader();\r\n"
-            		+ "\t\tgraph = graphread.read(\"models/spatialModel.tra\");\r\n"
-            		+ "\t\tgraph.dMcomputation();\r\n"
-            		+ "\t\tscript = new formulaScript();\r\n"
+            		+ "\tpublic jSSTLMonitor(String graphPath) {\r\n"
+            		+ "\t\tthis.graphPath = graphPath;\r\n"
+            		+ "\t\treset();\r\n"
             		+ "\t}\r\n"
-            		+ "\t\r\n"
-            		+ "\tpublic static double runCheck(ArrayList<HashMap<String, Double>> events) throws Exception {\r\n"
-            		+ "\t\tdouble result = check(script, \"req\", graph, events);\r\n"
+            		+ "\r\n"
+            		+ "\tpublic void reset() {\r\n"
+            		+ "\t\ttry {\r\n"
+            		+ "\t\t\tTraGraphModelReader graphReader = new TraGraphModelReader();\r\n"
+            		+ "\t\t\tgraph = graphReader.read(graphPath);\r\n"
+            		+ "\t\t\tgraph.dMcomputation();\r\n"
+            		+ "\t\t\tscript = new formulaScript();\r\n"
+            		+ "\t\t} catch (IOException | SyntaxErrorExpection e) {\r\n"
+            		+ "\t\t\te.printStackTrace();\r\n"
+            		+ "\t\t\tSystem.out.println(\"Error during reading the spatial model (\" + graphPath + \")!\");\r\n"
+            		+ "\t\t}\r\n"
+            		+ "\t}\r\n"
+            		+ "\r\n"
+            		+ "\tpublic double runCheck(ArrayList<HashMap<String, Double>> events) {\r\n"
+            		+ "\t\tdouble result = 0.0;\r\n"
+            		+ "\t\ttry {\r\n"
+            		+ "\t\t\tresult = check(script, \"req\", graph, events);\r\n"
+            		+ "\t\t} catch (IOException e) {\r\n"
+            		+ "\t\t\te.printStackTrace();\r\n"
+            		+ "\t\t\tSystem.out.println(\"Error during checking the requirement: \" );\r\n"
+            		+ "\t\t}\r\n"
+            		+ "\r\n"
             		+ "\t\tSystem.out.println(\"result: \" + result);\r\n"
-            		+ "\t\t\r\n"
             		+ "\t\treturn result;\r\n"
-            		+ "\r\n"
             		+ "\t}\r\n"
-            		+ "\t\r\n"
-            		+ "\tprivate static double[][][] transform(ArrayList<HashMap<String, Double>> events, int locSize, int timeLength) {\r\n"
+            		+ "\r\n"
+            		+ "\tprivate double[][][] transform(ArrayList<HashMap<String, Double>> events, int locSize, int timeLength) {\r\n"
             		+ "\t\tint nrOfSignals = script.getVariables().length;\r\n"
             		+ "\t\tdouble[][][] result = new double[locSize][timeLength][nrOfSignals]; \r\n"
             		+ "\r\n"
@@ -311,7 +328,7 @@ public class GenerateMonitorJSSTL {
             		+ "\t\treturn result;\r\n"
             		+ "\t}\r\n"
             		+ "\r\n"
-            		+ "\tpublic static double check(jSSTLScript script, String formula, GraphModel graph, ArrayList<HashMap<String, Double>> events) throws IOException {\r\n"
+            		+ "\tpublic double check(jSSTLScript script, String formula, GraphModel graph, ArrayList<HashMap<String, Double>> events) throws IOException {\r\n"
             		+ "\t\tdouble[] times = new double[events.size()+1]; //there exists no signal which exists only in 1 time instance\r\n"
             		+ "\t\tfor(int i = 0; i < times.length; i++) {\r\n"
             		+ "\t\t\ttimes[i] = i*1.0;\r\n"
@@ -331,8 +348,7 @@ public class GenerateMonitorJSSTL {
             		+ "\r\n"
             		+ "\t\treturn result ? 1.0 : -1.0;\r\n"
             		+ "\t}\r\n"
-            		+ "}\r\n"
-            		+ "");
+            		+ "}");
 
             writer.close();
         }
