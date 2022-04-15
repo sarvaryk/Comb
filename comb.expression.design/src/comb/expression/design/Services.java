@@ -45,7 +45,7 @@ public class Services {
 			if(element instanceof _or_)
 				limit += Math.min(limitP, limitQ);
 			else if(element instanceof _implies_) {
-				limit = 0; //TODO: The limit should represent the limit, when the first parameter could become false at the earliest
+				limit = 0; //TODO: The result would be more accurate, if it would represent the value, when the first parameter could become false at the earliest
 			}
 			else if(element instanceof _until_ || element instanceof _untilWithin_ || element instanceof _untilWithin_and_)
 				limit += limitQ;

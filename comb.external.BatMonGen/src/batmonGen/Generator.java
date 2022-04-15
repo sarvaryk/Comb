@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class Generator {
     public static void generate(Automaton fsm, Logger logger) {
-        //TODO: linux-on az IdeaProjects-el kene kezdenie
         String dirPath = System.getProperty("user.dir") + File.separator + "Gen" + File.separator;
         generate(fsm, logger, dirPath);
     }
