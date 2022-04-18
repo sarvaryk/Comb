@@ -73,7 +73,7 @@ public class main {
 
         logger.log("\n///////////////////////////////////////////////////////////////////////////////");
         logger.log("STAGE (6/6): GENERATING MONITOR");
-        Generator.generate(fsm, logger);
+        Generator.generate(fsm, logger, "the.packages.temp.name");
         logger.log("\n///////////////////////////////////////////////////////////////////////////////");
 
         logger.close();

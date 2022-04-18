@@ -1,6 +1,7 @@
 package hu.bme.mit.gamma.tutorial.extra.monitor;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import eu.quanticol.jsstl.core.formula.Signal;
@@ -12,41 +13,58 @@ import eu.quanticol.jsstl.core.monitor.SpatialBooleanSignal;
 import eu.quanticol.jsstl.core.signal.BooleanSignal;
 
 public class jSSTLMonitor {
+	private String monitorName;
 	private jSSTLScript script;
 	private GraphModel graph;
 	private String graphPath;
+	private PrintStream logger;
 	
-	public jSSTLMonitor(String graphPath) {
+	public jSSTLMonitor(String monitorName, String graphPath, PrintStream logger) {
+		this.monitorName = monitorName;
 		this.graphPath = graphPath;
+		this.logger = logger;
 		reset();
 	}
 	
 	public void reset() {
+		if(logger != null) logger.println(monitorName + ": " + "reset monitor");
+		
 		try {
 			TraGraphModelReader graphReader = new TraGraphModelReader();
 			graph = graphReader.read(graphPath);
 			graph.dMcomputation();
 			script = new formulaScript();
 		} catch (IOException | SyntaxErrorExpection e) {
-			e.printStackTrace();
-			System.out.println("Error during reading the spatial model (" + graphPath + ")!");
+			if(logger != null) logger.println(monitorName + ": " + e);
+			if(logger != null) logger.println(monitorName + ": " + "Error during reading the spatial model (" + graphPath + ")!");
 		}
 	}
 	
-	public double runCheck(ArrayList<HashMap<String, Double>> events) {
+	public double runCheck(ArrayList<HashMap<String, Double>> events, ArrayList<Double> timestamps, double startCheckTime) {
 		double result = 0.0;
 		try {
-			result = check(script, "req", graph, events);
+			result = check(script, "req", graph, events, timestamps, startCheckTime);
 		} catch (IOException e) {
-			e.printStackTrace();
-			System.out.println("Error during checking the requirement: " );
+			if(logger != null) logger.println(monitorName + ": " + e);
+			if(logger != null) logger.println(monitorName + ": " + "Error during checking the requirement");
 		}
 		
-		System.out.println("result: " + result);
+		if(logger != null) logger.println(monitorName + " " + "result: " + result);
 		return result;
 	}
 	
-	private double[][][] transform(ArrayList<HashMap<String, Double>> events, int locSize, int timeLength) {
+	private double[] transformTimestampStructure(ArrayList<Double> timestamps) {
+		double[] times = new double[timestamps.size()+1]; //there exists no signal which exists only in 1 time instance
+		
+		for(int i = 1; i < times.length; i++) {
+			double timestamp = timestamps.get(i-1);
+			times[i] =  timestamp + (timestamp==0 ? 0.001 : 0); //there exists no signal which exists only in 1 time instance
+		}
+		
+		return times;
+	}
+	
+	private double[][][] transformEventStructure(ArrayList<HashMap<String, Double>> events, int locSize, int timeLength) {
 		int nrOfSignals = script.getVariables().length;
 		double[][][] result = new double[locSize][timeLength][nrOfSignals]; 
 		
@@ -68,24 +86,25 @@ public class jSSTLMonitor {
 		return result;
 	}
 
-	public double check(jSSTLScript script, String formula, GraphModel graph, ArrayList<HashMap<String, Double>> events) throws IOException {
-		double[] times = new double[events.size()+1]; //there exists no signal which exists only in 1 time instance
-		for(int i = 0; i < times.length; i++) {
-			times[i] = i*1.0;
-		}
-		double[][][] data = transform(events, graph.getNumberOfLocations(), times.length);
+	public double check(jSSTLScript script, String formula, GraphModel graph, ArrayList<HashMap<String, Double>> events, ArrayList<Double> timestamps, double startCheckTime) throws IOException {
+		if(logger != null) logger.println(monitorName + ": " + "checking requirement in progress");
+		
+		double[] times = transformTimestampStructure(timestamps);
+		double[][][] data = transformEventStructure(events, graph.getNumberOfLocations(), times.length);
 		Signal s = new Signal(graph, times, data);
-		HashMap<String,Double> parValues = null;
-		SpatialBooleanSignal b = script.booleanCheck(parValues, formula, graph, s);
+		HashMap<String,Double> intervalParValues = null;
+		SpatialBooleanSignal b = script.booleanCheck(intervalParValues, formula, graph, s);
 		
-		//TODO: get value from different locations
-		BooleanSignal bt = b.spatialBoleanSignal.get(graph.getLocation(0));
 		boolean result = false;
-		if(!bt.signal.isEmpty()) //signal is false from start to end --> signal is empty --> interval is empty?
-			result = bt.getValueAt(0);
-		System.out.println("Boolean signal: " + bt);
-		System.out.println("Satisfied: " + result);
+		for(int i = 0; i < graph.getLocations().size(); i++) {
+			BooleanSignal bt = b.spatialBoleanSignal.get(graph.getLocation(i));
+			if(!bt.signal.isEmpty()) //Workaround: signal is false from start to end --> signal is empty --> interval is empty (further investigation is needed)
+				result = bt.getValueAt(startCheckTime);
+			
+			if(logger != null) logger.println(monitorName + " " + "boolean signal: " + bt);
+			if(logger != null) logger.println(monitorName + " " + "satisfied: " + result);	
+		}
 		
-		return result ? 1.0 : 0.0;
+		return result ? 1.0 : -1.0;
 	}
 }

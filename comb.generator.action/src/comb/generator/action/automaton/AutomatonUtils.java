@@ -78,7 +78,7 @@ public class AutomatonUtils {
 		try {
 			String fileName = "temp_buchi.txt";
 			Bundle bundle = Platform.getBundle("comb.examples");
-			URI fileURI = FileLocator.resolve(bundle.getEntry("/")).toURI();
+			URI fileURI = FileLocator.resolve(bundle.getEntry(File.separator)).toURI();
 			String filePath = Paths.get(fileURI).toString();
 			filePath = Paths.get(filePath, fileName).toString();
 			

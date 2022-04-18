@@ -1,0 +1,2 @@
+package:the.generated.package.name
+monitor_mode:online_or_offline

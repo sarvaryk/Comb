@@ -5,31 +5,33 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Generator {
-    public static void generate(Automaton fsm, Logger logger) {
+    public static void generate(Automaton fsm, Logger logger, String packageName) {
         String dirPath = System.getProperty("user.dir") + File.separator + "Gen" + File.separator;
-        generate(fsm, logger, dirPath);
+        generate(fsm, logger, dirPath, packageName);
     }
     
-    public static void generate(Automaton fsm, Logger logger, String dirPath) {
+    public static void generate(Automaton fsm, Logger logger, String dirPath, String packageName) {
         try {
             File dir = new File(dirPath);
             dir.mkdirs();
 
-            generateMQTTSubscribersClass(dir);
-            generateAbstractMonitorClass(dir);
-            generateMonitorComponent(fsm, dir, logger);
+            generateMQTTSubscribersClass(dir, packageName);
+            generateAbstractMonitorClass(dir, packageName);
+            generateMonitorComponent(fsm, dir, packageName, logger);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void generateMQTTSubscribersClass(File dir) throws IOException {
+    private static void generateMQTTSubscribersClass(File dir, String packageName) throws IOException {
         String className = "MqttSubscribe";
         File actualFile = new File(dir, className + ".java");
         if(!actualFile.exists()) {
             FileWriter writer = new FileWriter(actualFile, false);
 
-            writer.write("import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;\n" +
+            writer.write("package " + packageName + ";\n"
+            		+ "\n"
+            		+ "import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;\n" +
                     "import org.eclipse.paho.client.mqttv3.MqttAsyncClient;\n" +
                     "import org.eclipse.paho.client.mqttv3.MqttCallback;\n" +
                     "import org.eclipse.paho.client.mqttv3.MqttConnectOptions;\n" +
@@ -89,13 +91,15 @@ public class Generator {
         }
     }
 
-    private static void generateAbstractMonitorClass(File dir) throws IOException {
+    private static void generateAbstractMonitorClass(File dir, String packageName) throws IOException {
         String className = "AbstractMonitor";
         File actualFile = new File(dir, className + ".java");
         if(!actualFile.exists()) {
             FileWriter writer = new FileWriter(actualFile, false);
 
-            writer.write("public abstract class Monitor {\n" +
+            writer.write("package " + packageName + ";\n"
+            		+ "\n"
+            		+ "public abstract class Monitor {\n" +
                     "\tprivate String name;\n" +
                     "\tprivate int requirementSatisfied;\n" +
                     "\tprivate boolean isActivated;\n" +
@@ -127,13 +131,15 @@ public class Generator {
         }
     }
 
-    private static void generateMonitorComponent(Automaton fsm, File dir, Logger logger) throws IOException {
+    private static void generateMonitorComponent(Automaton fsm, File dir, String packageName, Logger logger) throws IOException {
         boolean isMonitorable = false;
         String className =  fsm.getName();
         File actualFile = new File(dir, className + "_monitor.java");
         FileWriter writer = new FileWriter(actualFile, false);
 
-        writer.write("import java.util.Collections;\n" +
+        writer.write("package " + packageName + ";\n"
+        		+ "\n"
+        		+ "import java.util.Collections;\n" +
                 "\n" +
                 "public class " + className +" extends Monitor {\n" +
                 "\tenum State {\n");
