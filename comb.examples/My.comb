@@ -211,7 +211,7 @@
     </D>
   </element>
   <element xsi:type="comb:_or_" name="1ms Task is safe" logicGroup="MITL">
-    <subtreeInterpretations>Comb: G[0.7, 4.3](task_is_safe) || F[2.8, 3](reset U[0.3, 0.5] system_restored)</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G[0.7, 4.3](taskissafe) || F[2.8, 3](reset U[0.3, 0.5] systemrestored)</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
@@ -245,7 +245,7 @@
       </H>
     </P>
     <Q xsi:type="comb:EventuallyWithin_and_" name="EventuallyWithin_and_" logicGroup="MITL">
-      <subtreeInterpretations>Comb: F[2.8, 3](reset U[0.3, 0.5] system_restored)</subtreeInterpretations>
+      <subtreeInterpretations>Comb: F[2.8, 3](reset U[0.3, 0.5] systemrestored)</subtreeInterpretations>
       <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
       <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
@@ -302,7 +302,7 @@
     </Q>
   </element>
   <element xsi:type="comb:Always_" name="new Always_" logicGroup="MITL">
-    <subtreeInterpretations>Comb: G[0, Infinity]((G[0, 1.2](FuelIsLow)) -> (&lt;Q>))</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G[0, Infinity]((G[0, 1.2](fuelislow)) -> (&lt;Q>))</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>

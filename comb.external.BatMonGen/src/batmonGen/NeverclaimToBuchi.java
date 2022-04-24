@@ -21,12 +21,12 @@ public class NeverclaimToBuchi {
         java.io.BufferedReader br = new java.io.BufferedReader(new FileReader(new File(path)));
         while ((input = br.readLine()) != null) {
             if(rowNumber != 1)
-                input = unify(input);
+                input = input.trim();
 
             //First row in file
-            if(!(getStringFromText("(never\\s*\\{\\s*(/\\*\\s*.*\\*/)?)", input).equals(""))) {
+            if(!(getStringFromText("(never\\s*\\{\\s*(/\\*\\s*.*\\*/)?)", input.toLowerCase()).equals(""))) {
                 if(rowNumber == 1) {
-                    String name = getStringFromText("/\\*\\s*(.*)\\s*\\*/", input);
+                    String name = getStringFromText("/\\*\\s*(.*)\\s*\\*/", input.toLowerCase());
                     if(name.equals("")) name = "monitor_name";
                     
                     name = name.replace("!", "NOT");
@@ -48,9 +48,9 @@ public class NeverclaimToBuchi {
                 }
             }
             //New state
-            else if(!(getStringFromText("(.*_.*:)", input).equals(""))) {
+            else if(!(getStringFromText("(.*_.*:)", input.toLowerCase()).equals(""))) {
                 State tempState = new State();
-                String name = getStringFromText("(.*_.*):", input).trim();
+                String name = getStringFromText("(.*_.*):", input.toLowerCase()).trim();
                 if(nameAlreadyExists(buchi, name))
                     throw new ReadBuchiDescriptionException(rowNumber, input, "One name can not be used for more than one state!");
                 else if(!Pattern.compile("^[A-Za-z0-9]*_{1}[A-Za-z0-9]*$").matcher(name).find())
@@ -60,7 +60,7 @@ public class NeverclaimToBuchi {
                 else
                     tempState.setName(name);
                 //Accepting state
-                if(!(getStringFromText("(accept_.*)", input).equals(""))) {
+                if(!(getStringFromText("(accept_.*)", input.toLowerCase()).equals(""))) {
                     tempState.setAccepting(true);
                 }
                 else {
@@ -69,7 +69,7 @@ public class NeverclaimToBuchi {
                 buchi.addState(tempState);
                 
                 //Initial state
-                if(!(getStringFromText("(.*_init:)", input).equals(""))) {
+                if(!(getStringFromText("(.*_init:)", input.toLowerCase()).equals(""))) {
                     if(buchi.getStates().size() != 0) {
                         throw new ReadBuchiDescriptionException(rowNumber, input, "Only one initial state is allowed (initial state should be definied first)!");
                     }
@@ -81,16 +81,16 @@ public class NeverclaimToBuchi {
                 	buchi.setInitState(tempState);
             }
             //The start of the transition list
-            else if(input.equals("if")) {
+            else if(input.toLowerCase().equals("if")) {
                 settingState = true;
             }
             //New transition
-            else if(!(getStringFromText("(::\\s*.*\\s*->\\s*goto\\s*.*_.*)", input).equals(""))) {
+            else if(!(getStringFromText("(::\\s*.*\\s*->\\s*goto\\s*.*_.*)", input.toLowerCase()).equals(""))) {
                 if(settingState) {
                     String[] temp_transitionArray = new String[3];
                     temp_transitionArray[0] = buchi.getStates().get(buchi.getStates().size()-1).getName();
                     temp_transitionArray[1] = getStringFromText("::\\s*(.*)\\s*->" , input).trim();
-                    temp_transitionArray[2] = getStringFromText("goto\\s*(.*)" , input).trim();
+                    temp_transitionArray[2] = getStringFromText("goto\\s*(.*)" , input.toLowerCase()).trim();
 
                     String[] tempLetters = temp_transitionArray[1].split("&&|\\|\\|");
                     for(String unstripped_letter : tempLetters) {
@@ -102,10 +102,10 @@ public class NeverclaimToBuchi {
                                 String tempString = getStringFromText("\\((.*)\\)", unstripped_letter);
                                 if(tempString.contains("!"))
                                     tempString = getStringFromText("!\\((.*)\\)", tempString);
-                                buchi.addLetter(tempString);
+                                buchi.addLetter(tempString); 
                             }
                             else
-                                buchi.addLetter(getStringFromText("([a-zA-Z]+[a-zA-Z0-9]*)", unstripped_letter));
+                                buchi.addLetter(getStringFromText("([_]*[a-zA-Z]+[_a-zA-Z0-9]*)", unstripped_letter));
 
                             if(temp_transitionArray[1].matches(".*!\\s*[^(].*")) {
                                 throw new ReadBuchiDescriptionException(rowNumber, input, "Illegal negation in transition label! The negated expression should be in form of: \"(!(<expression>))\"");
@@ -120,7 +120,7 @@ public class NeverclaimToBuchi {
                 }
             }
             //Skip
-            else if(!(getStringFromText("(skip)", input).equals(""))) {
+            else if(!(getStringFromText("(skip)", input.toLowerCase()).equals(""))) {
                 String[] temp_transitionArray = new String[3];
                 temp_transitionArray[0] = buchi.getStates().get(buchi.getStates().size()-1).getName();
                 temp_transitionArray[1] = Label.TRUE;
@@ -128,15 +128,15 @@ public class NeverclaimToBuchi {
                 transitionArrayList.add(temp_transitionArray);
             }
             //The end of the transition list
-            else if(input.equals("fi;")) {
+            else if(input.toLowerCase().equals("fi;")) {
                 settingState = false;
             }
             //The end of the description
-            else if(!(getStringFromText("(\\}|)", input).equals(""))) { 
+            else if(!(getStringFromText("(\\}|)", input.toLowerCase()).equals(""))) { 
                 if(buchi.getStates().size() == 0)
                     throw new ReadBuchiDescriptionException(rowNumber, input, "The automaton should have at least 1 state");
             }
-            else if(input.equals("Empty")) {
+            else if(input.toLowerCase().equals("empty")) {
             	State emptyState = new State();
             	emptyState.setAccepting(false);
             	emptyState.setName("empty_buchi");
@@ -215,12 +215,5 @@ public class NeverclaimToBuchi {
         }
 
         return result;
-    }
-
-    private static String unify(String string) {
-        string = string.toLowerCase();
-        string = string.trim();
-
-        return string;
     }
 }

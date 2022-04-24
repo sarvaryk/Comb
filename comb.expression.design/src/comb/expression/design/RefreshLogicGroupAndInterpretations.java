@@ -83,7 +83,7 @@ public class RefreshLogicGroupAndInterpretations {
     	
     	if(element instanceof LiteralImpl) {
     		for(int i = 0; i < SupportedOutput.values().length; i++) {
-    			elementInterpretations.add(element.getName().replaceAll("_", "").toLowerCase());
+    			elementInterpretations.add(element.getName());
     		}
     	}
     	else {  		
