@@ -5,7 +5,7 @@
       <metamodel href="http://www.example.org/comb#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="ElementNode" domainClass="comb::Element">
-          <conditionnalStyles predicateExpression="[oclIsTypeOf(Literal) and self.name.matches('([0-9]*[.])?[0-9]+')/]">
+          <conditionnalStyles predicateExpression="[oclIsTypeOf(Literal) and self.name.matches('([0-9]*[.])?[0-9]+') or self.name.matches('Infinity') or self.name.matches('infinity')/]">
             <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

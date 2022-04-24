@@ -51,13 +51,12 @@ public class RefreshLogicGroupAndInterpretations {
 	    interpretations = generateSubtreeInterpretation(element.getH(), "<high>", interpretations);
 	    interpretations = generateSubtreeInterpretation(element.getD(), "<dist>", interpretations);
 	    
-	    //TODO: could be format dependent
 	    for(int i = 0; i < interpretations.size(); i++) {
 	    	if(interpretations.get(i).contains(NOT_SUPPORTED_OPERATOR_MESSAGE))
 	    		interpretations.set(i, NOT_SUPPORTED_OPERATOR_MESSAGE);
 	    	else {
 		    	interpretations.set(i, interpretations.get(i).replace("<low>", "0"));
-		    	interpretations.set(i, interpretations.get(i).replace("<high>", "-1"));
+		    	interpretations.set(i, interpretations.get(i).replace("<high>", "Infinity"));
 	    	}
 	    }
 		
@@ -84,7 +83,7 @@ public class RefreshLogicGroupAndInterpretations {
     	
     	if(element instanceof LiteralImpl) {
     		for(int i = 0; i < SupportedOutput.values().length; i++) {
-    			elementInterpretations.add(element.getName().toLowerCase());
+    			elementInterpretations.add(element.getName().replaceAll("_", "").toLowerCase());
     		}
     	}
     	else {  		

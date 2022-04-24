@@ -233,7 +233,7 @@ public class GenerateMonitorJSSTL {
 				parameter = "0";
 		}
 		else {
-			if(element.getName().equals("-1"))
+			if(element.getName().toLowerCase().equals("infinity"))
 				parameter = "Double.POSITIVE_INFINITY";
 			else
 				parameter = element.getName();

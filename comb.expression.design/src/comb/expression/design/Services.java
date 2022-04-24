@@ -1,5 +1,6 @@
 package comb.expression.design;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
@@ -7,6 +8,8 @@ import java.net.URISyntaxException;
 import java.nio.file.Paths;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Optional;
 import java.util.Queue;
 
@@ -29,14 +32,12 @@ public class Services {
 	public float evaluateSatisfactionNotBefore(final Element element) {
 		float limit = 0;
 		
-		if(element != null) {
-			if(element.getL() != null) {
-				if(element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
-					limit += Float.parseFloat(element.getH().getName());
-				else
-					limit += Float.parseFloat(element.getL().getName());
-			}
-			
+		if(element != null && !(element instanceof BasicElements)) {
+			if(element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
+				limit += Float.parseFloat(element.getH().getName());
+			else if(element.getL() != null)
+				limit += Float.parseFloat(element.getL().getName());
+
 			float limitP = evaluateSatisfactionNotBefore(element.getP());
 			float limitQ = evaluateSatisfactionNotBefore(element.getQ());
 			float limitR = evaluateSatisfactionNotBefore(element.getR());
@@ -44,13 +45,22 @@ public class Services {
 			
 			if(element instanceof _or_)
 				limit += Math.min(limitP, limitQ);
-			else if(element instanceof _implies_) {
-				limit = 0; //TODO: The result would be more accurate, if it would represent the value, when the first parameter could become false at the earliest
+			else if(element instanceof _and_)
+				limit += Math.max(limitP, limitQ);
+			else if(element instanceof _implies_)
+				//TODO: The result would be more accurate, if it would represent the value, when the first parameter could become false at the earliest instead of 0
+				//limit += Math.min(firstParamEarliestFalse, limitQ);
+				limit += Math.min(0, limitQ);
+			else {
+				if (element.getS() != null)
+					limit += Collections.max(Arrays.asList(limitP, limitQ, limitR, limitS));
+				else if (element.getR() != null)
+					limit += Collections.max(Arrays.asList(limitP, limitQ, limitR));
+				else if (element.getQ() != null)
+					limit += Collections.max(Arrays.asList(limitP, limitQ));
+				else if(element.getP() != null)
+					limit += limitP;
 			}
-			else if(element instanceof _until_ || element instanceof _untilWithin_ || element instanceof _untilWithin_and_)
-				limit += limitQ;
-			else
-				limit += limitP + limitQ + limitR + limitS;
 		}
 		
 		return limit;
@@ -59,12 +69,12 @@ public class Services {
 	public float evaluateSatisfactionNotAfter(final Element element) {
 		float limit = 0;
 		
-		if(element != null) {	
-			if(!(element instanceof BasicElements || element instanceof BooleanOperators || element instanceof Relation || element instanceof Spatial)) {
+		if(element != null && !(element instanceof BasicElements)) {
+			if(!(element instanceof BooleanOperators || element instanceof Relation || element instanceof Spatial)) {
 				if(element.getH() != null)
 					limit += Float.parseFloat(element.getH().getName());
 				else
-					limit = -1;
+					limit = Float.POSITIVE_INFINITY;
 			}
 			else {
 				float limitP = evaluateSatisfactionNotAfter(element.getP());
@@ -74,8 +84,26 @@ public class Services {
 				
 				if(element instanceof _or_)
 					limit += Math.max(limitP, limitQ);
-				else
-					limit += limitP + limitQ + limitR + limitS;
+				else if (element instanceof _and_)
+					limit += Math.min(limitP, limitQ);
+				else if (element instanceof _implies_) {
+					//TODO: The result would be more accurate, if it would represent the value, when the first parameter could become false at the latest instead of infinity
+					//if(firstParamLatestFalse > limitQ)
+					if(Float.POSITIVE_INFINITY > limitQ)
+						limit = Float.POSITIVE_INFINITY;
+					else
+						limit += limitQ; 
+				}
+				else {
+					if (element.getS() != null)
+						limit += Collections.min(Arrays.asList(limitP, limitQ, limitR, limitS));
+					else if (element.getR() != null)
+						limit += Collections.min(Arrays.asList(limitP, limitQ, limitR));
+					else if (element.getQ() != null)
+						limit += Collections.min(Arrays.asList(limitP, limitQ));
+					else if(element.getP() != null)
+						limit += limitP;
+				}
 			}
 		}
 		
@@ -86,10 +114,7 @@ public class Services {
 		float highLimit = evaluateSatisfactionNotAfter(element);
 		float lowLimit = evaluateSatisfactionNotBefore(element);
 		
-		if(highLimit == -1)
-			return false;
-		else
-			return lowLimit > highLimit;
+		return lowLimit > highLimit;
 	}
 	
 	public boolean canEvaluationsBePerformed(final Element element) {
@@ -293,7 +318,7 @@ public class Services {
 			trace = String.join(traceElementSeparator, traceElements);
 			
 			Bundle bundle = Platform.getBundle("comb.examples");
-			URI fileURI = FileLocator.resolve(bundle.getEntry("/")).toURI();
+			URI fileURI = FileLocator.resolve(bundle.getEntry(File.separator)).toURI();
 			String filePath = Paths.get(fileURI).toString();
 			filePath = Paths.get(filePath, fileName).toString();
 			
