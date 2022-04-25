@@ -12,16 +12,16 @@ import comb.expression.metamodel.comb.impl.*;
 public class GenerateMonitorJSSTL {
 	private static List<String> events;
 	
-	public static void generate(ElementImpl element, String filePath, String packageName) throws IOException, Exception {
+	public static void generate(Element element, String filePath, String packageName) throws IOException, Exception {
         File dir = new File(filePath);
         dir.mkdirs();
 
 		generate_formulaScript(element, filePath, packageName);
-		generate_monitorComponent(element, filePath, packageName);
+		generate_monitorComponent(filePath, packageName);
 		generate_defaultGraph(filePath);
 	}
 
-	private static void generate_formulaScript(ElementImpl element, String filePath, String packageName) throws IOException, Exception {
+	private static void generate_formulaScript(Element element, String filePath, String packageName) throws IOException, Exception {
 		String className = "formulaScript";
         File actualFile = new File(filePath, className + ".java");
         if(!actualFile.exists()) {
@@ -69,157 +69,167 @@ public class GenerateMonitorJSSTL {
 	private static String getOperatorCode(Element element, boolean isIntervalParameter) throws Exception {
 		String result = "";
 		
-		if(element instanceof LiteralImpl) {
-    		if(isIntervalParameter) {
-    			result = element.getName();
-    		}
-    		else {
-    			String eventName = element.getName();
-    			addEvent(eventName);
-    			
-    			result =  "new AtomicFormula(\n"
-    					+ "new ParametricExpression() {\n"
-    					+ "public SignalExpression eval( final Map<String,Double> parameters ) {\n"
-    					+ "return new SignalExpression() {\n"
-    					+ "public double eval( double ... variables ) {\n"
-    					+ "return variables[getIndex("+events.indexOf(eventName)+")];\n"
-    					+ "}\n"
-    					+ "};\n"
-    					+ "}\n"
-    					+ "}, false)\n";
-    		}
-    	}
-    	else if(element instanceof Always_Impl || element instanceof AlwaysWithin_Impl || element instanceof AlwaysWithin_and_Impl) {
-    		result =  "new GloballyFormula(\n"
-    				+ "new ParametricInterval(\n"
-    				+ getIntervalParameterCode(element.getL(), false)
-    				+ ",\n"
-    				+ getIntervalParameterCode(element.getH(), true)
-    				+ "),\n"
-    				+ getOperatorCode(element.getP(), false)+"\n"
-    			
-    				+ ")\n";
-    	}
-    	else if(element instanceof Eventually_Impl || element instanceof EventuallyWithin_Impl || element instanceof EventuallyWithin_and_Impl) {
-    		result =  "new EventuallyFormula(\n"
-    				+ "new ParametricInterval(\n"
-    				+ getIntervalParameterCode(element.getL(), false)
-    				+ ",\n"
-    				+ getIntervalParameterCode(element.getH(), true)
-    				+ "),\n"
-    				+ getOperatorCode(element.getP(), false)+"\n"
-    			
-    				+ ")\n";
-    	}
-    	else if(element instanceof Somewhere_InADistanceWithin_Impl) {
-    		result =  "new SomewhereFormula(\n"
-    				+ "new ParametricInterval(\n"
-    				+ 0
-    				+ ",\n"
-    				+ getIntervalParameterCode(element.getD(), true)
-    				+ "),\n"
-    				+ getOperatorCode(element.getP(), false)+"\n"
-    			
-    				+ ")\n";
-    	}
-    	else if(element instanceof Everywhere_InADistanceWithin_Impl) {
-    		result =  "new EverywhereFormula(\n"
-    				+ "new ParametricInterval(\n"
-    				+ 0
-    				+ ",\n"
-    				+ getIntervalParameterCode(element.getD(), true)
-    				+ "),\n"
-    				+ getOperatorCode(element.getP(), false)+"\n"
-    			
-    				+ ")\n";
-    	}
-    	else if(element instanceof _until_Impl || element instanceof _untilWithin_Impl || element instanceof _untilWithin_and_Impl) {
-    		result =  "new UntilFormula(\n"
-    				+ "new ParametricInterval(\n"
-    				+ getIntervalParameterCode(element.getL(), false)
-    				+ ",\n"
-    				+ getIntervalParameterCode(element.getH(), true)
-    				+ "),\n"
-    				+ getOperatorCode(element.getP(), false)+",\n"
-    				+ getOperatorCode(element.getQ(), false)+"\n"
-    				+ ")\n";
-    	}
-    	else if(element instanceof Not_Impl) {
-    		result =  "new NotFormula(\n"
-    				+ getOperatorCode(element.getP(), false)+"\n"
-    				+ ")\n";
-    	}
-    	else if(element instanceof _and_Impl) {
-    		result =  "new AndFormula(\n"
-    				+ getOperatorCode(element.getP(), false)+",\n"
-    				+ getOperatorCode(element.getQ(), false)+"\n"
-    				+ ")\n";
-    	}
-    	else if(element instanceof _or_Impl) {
-    		result =  "new OrFormula(\n"
-    				+ getOperatorCode(element.getP(), false)+",\n"
-    				+ getOperatorCode(element.getQ(), false)+"\n"
-    				+ ")\n";
-    	}
-    	else if(element instanceof _implies_Impl) {
-    		result =  "new OrFormula(\n"
-    				+ "new NotFormula(\n"
-    	    		+ getOperatorCode(element.getP(), false)+"\n"
-    	    		+ "),\n"
-    				+ getOperatorCode(element.getQ(), false)+"\n"
-    				+ ")\n";
-    	}
-		else if(element instanceof RelationImpl) {
-			String operator;			
-			if(element instanceof _lessThan_Impl) {
-				operator = "<";
-			}
-			else if(element instanceof _lessThanOrEqual_Impl) {
-				operator = "<=";
+		if(element != null) {
+			if(element instanceof LiteralImpl) {
+	    		if(isIntervalParameter) {
+	    			result = element.getName();
+	    		}
+	    		else {
+	    			String eventName = element.getName();
+	    			addEvent(eventName);
+	    			
+	    			result =  "new AtomicFormula(\n"
+	    					+ "new ParametricExpression() {\n"
+	    					+ "public SignalExpression eval( final Map<String,Double> parameters ) {\n"
+	    					+ "return new SignalExpression() {\n"
+	    					+ "public double eval( double ... variables ) {\n"
+	    					+ "return variables[getIndex("+events.indexOf(eventName)+")];\n"
+	    					+ "}\n"
+	    					+ "};\n"
+	    					+ "}\n"
+	    					+ "}, false)\n";
+	    		}
 	    	}
-	    	else if(element instanceof _greaterThan_Impl) {
-	    		operator = ">";
+	    	else if(element instanceof Always_Impl || element instanceof AlwaysWithin_Impl || element instanceof AlwaysWithin_and_Impl) {
+	    		result =  "new GloballyFormula(\n"
+	    				+ "new ParametricInterval(\n"
+	    				+ getIntervalParameterCode(element.getL(), false)
+	    				+ ",\n"
+	    				+ getIntervalParameterCode(element.getH(), true)
+	    				+ "),\n"
+	    				+ getOperatorCode(element.getP(), false)+"\n"
+	    			
+	    				+ ")\n";
 	    	}
-	    	else if(element instanceof _greaterThanOrEqual_Impl) {
-	    		operator = ">=";
+	    	else if(element instanceof Eventually_Impl || element instanceof EventuallyWithin_Impl || element instanceof EventuallyWithin_and_Impl) {
+	    		result =  "new EventuallyFormula(\n"
+	    				+ "new ParametricInterval(\n"
+	    				+ getIntervalParameterCode(element.getL(), false)
+	    				+ ",\n"
+	    				+ getIntervalParameterCode(element.getH(), true)
+	    				+ "),\n"
+	    				+ getOperatorCode(element.getP(), false)+"\n"
+	    			
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof Somewhere_InADistanceWithin_Impl) {
+	    		result =  "new SomewhereFormula(\n"
+	    				+ "new ParametricInterval(\n"
+	    				+ getIntervalParameterCode(null, false)
+	    				+ ",\n"
+	    				+ getIntervalParameterCode(element.getD(), true)
+	    				+ "),\n"
+	    				+ getOperatorCode(element.getP(), false)+"\n"
+	    			
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof Everywhere_InADistanceWithin_Impl) {
+	    		result =  "new EverywhereFormula(\n"
+	    				+ "new ParametricInterval(\n"
+	    				+ getIntervalParameterCode(null, false)
+	    				+ ",\n"
+	    				+ getIntervalParameterCode(element.getD(), true)
+	    				+ "),\n"
+	    				+ getOperatorCode(element.getP(), false)+"\n"
+	    			
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof _until_Impl || element instanceof _untilWithin_Impl || element instanceof _untilWithin_and_Impl) {
+	    		result =  "new UntilFormula(\n"
+	    				+ "new ParametricInterval(\n"
+	    				+ getIntervalParameterCode(element.getL(), false)
+	    				+ ",\n"
+	    				+ getIntervalParameterCode(element.getH(), true)
+	    				+ "),\n"
+	    				+ getOperatorCode(element.getP(), false)+",\n"
+	    				+ getOperatorCode(element.getQ(), false)+"\n"
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof Not_Impl) {
+	    		result =  "new NotFormula(\n"
+	    				+ getOperatorCode(element.getP(), false)+"\n"
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof _and_Impl) {
+	    		result =  "new AndFormula(\n"
+	    				+ getOperatorCode(element.getP(), false)+",\n"
+	    				+ getOperatorCode(element.getQ(), false)+"\n"
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof _or_Impl) {
+	    		result =  "new OrFormula(\n"
+	    				+ getOperatorCode(element.getP(), false)+",\n"
+	    				+ getOperatorCode(element.getQ(), false)+"\n"
+	    				+ ")\n";
+	    	}
+	    	else if(element instanceof _implies_Impl) {
+	    		result =  "new OrFormula(\n"
+	    				+ "new NotFormula(\n"
+	    	    		+ getOperatorCode(element.getP(), false)+"\n"
+	    	    		+ "),\n"
+	    				+ getOperatorCode(element.getQ(), false)+"\n"
+	    				+ ")\n";
+	    	}
+			else if(element instanceof RelationImpl) {
+				String operator;			
+				if(element instanceof _lessThan_Impl) {
+					operator = "<";
+				}
+				else if(element instanceof _lessThanOrEqual_Impl) {
+					operator = "<=";
+		    	}
+		    	else if(element instanceof _greaterThan_Impl) {
+		    		operator = ">";
+		    	}
+		    	else if(element instanceof _greaterThanOrEqual_Impl) {
+		    		operator = ">=";
+		    	}
+		    	else {
+		    		operator = "==";
+		    	}
+				
+				String p = "", q = "";
+				try{
+					String paramName = "";
+					if(element.getP() != null) {
+						paramName = element.getP().getName();
+						Double.parseDouble(paramName);
+						p = paramName;
+					}
+		        }
+		        catch (NumberFormatException ex){
+	    			addEvent(element.getP().getName());
+		            p = "variables[getIndex("+events.indexOf(element.getP().getName())+")]";
+		        }
+				
+				try{
+					String paramName = "";
+					if(element.getQ() != null) {
+						paramName = element.getQ().getName();
+						Double.parseDouble(paramName);
+						q = paramName;
+					}
+		        }
+		        catch (NumberFormatException ex){
+		        	addEvent(element.getQ().getName());
+		        	q = "variables[getIndex("+events.indexOf(element.getQ().getName())+")]";
+		        }
+				
+				result =  "new AtomicFormula(\n"
+						+ "new ParametricExpression() {\n"
+						+ "public SignalExpression eval( final Map<String,Double> parameters ) {\n"
+						+ "return new SignalExpression() {\n"
+						+ "public double eval( double ... variables ) {\n"
+						+ "return ("+ p + " " + operator + " " + q +") ? 1.0 : -1.0;\n"
+						+ "}\n"
+						+ "};\n"
+						+ "}\n"
+						+ "}, false)\n";
 	    	}
 	    	else {
-	    		operator = "==";
+	    		throw new Exception("Operator not supported: " + element.getClass());
 	    	}
-			
-			String p, q;
-			try{
-				Double.parseDouble(element.getP().getName());
-				p = element.getP().getName();
-	        }
-	        catch (NumberFormatException ex){
-    			addEvent(element.getP().getName());
-	            p = "variables[getIndex("+events.indexOf(element.getP().getName())+")]";
-	        }
-			
-			try{
-				Double.parseDouble(element.getQ().getName());
-				q = element.getQ().getName();
-	        }
-	        catch (NumberFormatException ex){
-	        	addEvent(element.getQ().getName());
-	        	q = "variables[getIndex("+events.indexOf(element.getQ().getName())+")]";
-	        }
-			
-			result =  "new AtomicFormula(\n"
-					+ "new ParametricExpression() {\n"
-					+ "public SignalExpression eval( final Map<String,Double> parameters ) {\n"
-					+ "return new SignalExpression() {\n"
-					+ "public double eval( double ... variables ) {\n"
-					+ "return ("+ p + " " + operator + " " + q +") ? 1.0 : -1.0;\n"
-					+ "}\n"
-					+ "};\n"
-					+ "}\n"
-					+ "}, false)\n";
-    	}
-    	else {
-    		throw new Exception("Operator not supported: " + element.getClass());
-    	}
+		}
 		
 		return result;
 	}
@@ -257,7 +267,7 @@ public class GenerateMonitorJSSTL {
 			events.add(event);
 	}
 	
-	private static void generate_monitorComponent(Element element, String filePath, String packageName) throws IOException {
+	private static void generate_monitorComponent(String filePath, String packageName) throws IOException {
 		String className = "jSSTLMonitor";
         File actualFile = new File(filePath, className + ".java");
         if(!actualFile.exists()) {

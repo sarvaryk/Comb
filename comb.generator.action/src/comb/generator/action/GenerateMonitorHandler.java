@@ -30,9 +30,9 @@ import comb.expression.metamodel.comb.impl.ElementImpl;
 import comb.generator.action.automaton.AutomatonUtils;
 
 public class GenerateMonitorHandler extends AbstractHandler {
-	private static int TIMEOUT = 60;
-	private static String MONITOR_MODE_SETTING = "monitor_mode";
 	private static String PACKAGE_NAME_SETTING = "package";
+	private static String MONITOR_MODE_SETTING = "monitor_mode";
+	private static String MONITOR_GEN_TIMEOUT_SETTING = "monitor_gen_timeout";
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -52,7 +52,8 @@ public class GenerateMonitorHandler extends AbstractHandler {
 				if(nfa_original_optional.isPresent() && nfa_negated_optional.isPresent()) {
 					String filePath = InfoUtils.getTargetFilePath("Save monitor to (directory):");
 					
-					CompletableFuture.supplyAsync(() -> generate_BatMon_Monitor(nfa_original_optional, nfa_negated_optional, filePath, configs.get(PACKAGE_NAME_SETTING))).get(TIMEOUT, TimeUnit.SECONDS);
+					int timeout = Integer.parseInt(configs.get(MONITOR_GEN_TIMEOUT_SETTING));
+					CompletableFuture.supplyAsync(() -> generate_BatMon_Monitor(nfa_original_optional, nfa_negated_optional, filePath, configs.get(PACKAGE_NAME_SETTING))).get(timeout, TimeUnit.SECONDS);
 				}
 				else
 					InfoUtils.showMessageDialog("ERROR: Monitor generation is supported only for LTL with Spin output.");
@@ -67,8 +68,18 @@ public class GenerateMonitorHandler extends AbstractHandler {
 		}
 		else if((configs.get(MONITOR_MODE_SETTING).equals("online_or_offline") || configs.get(MONITOR_MODE_SETTING).equals("offline")) && 
 				(element.getLogicGroup().equals(LogicGroup.LTL) || element.getLogicGroup().equals(LogicGroup.MITL) || element.getLogicGroup().equals(LogicGroup.STL) || element.getLogicGroup().equals(LogicGroup.SSTL))) {
-			String filePath = InfoUtils.getTargetFilePath("Save monitor to (directory):");
-			generate_jSSTL_Monitor(element, filePath, configs.get(PACKAGE_NAME_SETTING));
+			try {
+				String filePath = InfoUtils.getTargetFilePath("Save monitor to (directory):");
+				
+				int timeout = Integer.parseInt(configs.get(MONITOR_GEN_TIMEOUT_SETTING));
+				CompletableFuture.supplyAsync(() -> generate_jSSTL_Monitor(element, filePath, configs.get(PACKAGE_NAME_SETTING))).get(timeout, TimeUnit.SECONDS);
+			} catch (TimeoutException e) {
+				e.printStackTrace();
+				InfoUtils.showMessageDialog("Generation terminated, timeout reached while generating monitor!\n" + e);
+			} catch (Exception e) {
+				e.printStackTrace();
+				InfoUtils.showMessageDialog("ERROR while generating monitor!\n" + e);
+			}
 		}
 		else {
 			InfoUtils.showMessageDialog("The monitor generation feature for the logic group " + element.getLogicGroup() + " is not supported in " + configs.get(MONITOR_MODE_SETTING) + " mode");
@@ -118,8 +129,8 @@ public class GenerateMonitorHandler extends AbstractHandler {
 		HashMap<String, String> configs = new HashMap<>();
 		try {
 			String fileName = "generator_config.txt";
-			Bundle bundle = Platform.getBundle("comb.generator.action");
-			URI fileURI = FileLocator.resolve(bundle.getEntry(File.separatorChar+"")).toURI();
+			Bundle bundle = Platform.getBundle("comb.expression.design");
+			URI fileURI = FileLocator.resolve(bundle.getEntry(File.separator)).toURI();
 			String filePath = Paths.get(fileURI).toString();
 			filePath = Paths.get(filePath, fileName).toString();
 			
