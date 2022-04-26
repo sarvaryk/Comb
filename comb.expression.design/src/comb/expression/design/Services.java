@@ -33,6 +33,8 @@ public class Services {
 		float limit = 0;
 		
 		if(element != null && !(element instanceof BasicElements)) {
+			if(element instanceof Always_)
+				limit = Float.POSITIVE_INFINITY;
 			if(element instanceof AlwaysWithin_ || element instanceof AlwaysWithin_and_)
 				limit += Float.parseFloat(element.getH().getName());
 			else if(element.getL() != null)
@@ -82,10 +84,8 @@ public class Services {
 				float limitR = evaluateSatisfactionNotAfter(element.getR());
 				float limitS = evaluateSatisfactionNotAfter(element.getS());
 				
-				if(element instanceof _or_)
+				if(element instanceof _or_ || element instanceof _and_)
 					limit += Math.max(limitP, limitQ);
-				else if (element instanceof _and_)
-					limit += Math.min(limitP, limitQ);
 				else if (element instanceof _implies_) {
 					//TODO: The result would be more accurate, if it would represent the value, when the first parameter could become false at the latest instead of infinity
 					//if(firstParamLatestFalse > limitQ)
@@ -96,11 +96,11 @@ public class Services {
 				}
 				else {
 					if (element.getS() != null)
-						limit += Collections.min(Arrays.asList(limitP, limitQ, limitR, limitS));
+						limit += Collections.max(Arrays.asList(limitP, limitQ, limitR, limitS));
 					else if (element.getR() != null)
-						limit += Collections.min(Arrays.asList(limitP, limitQ, limitR));
+						limit += Collections.max(Arrays.asList(limitP, limitQ, limitR));
 					else if (element.getQ() != null)
-						limit += Collections.min(Arrays.asList(limitP, limitQ));
+						limit += Collections.max(Arrays.asList(limitP, limitQ));
 					else if(element.getP() != null)
 						limit += limitP;
 				}
