@@ -2,59 +2,38 @@ package hu.bme.mit.gamma.tutorial.extra.monitor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 
-public class Glue implements GlueInterface {
-	private static final int MAX_COUNTER = 100;
-	private int counter = 0;
-	
-	private Queue<String> eventQueue = new LinkedList<String>();
+import hu.bme.mit.gamma.tutorial.extra.Event;
+
+public class Glue {
+	private ArrayList<HashMap<String, Double>> events = new ArrayList<>();
+	private ArrayList<Double> timestamps = new ArrayList<>();
+	private double relativeTimestamp = 0.0;
 	private boolean isRaisedError = false;
 	
+	private jSSTLMonitor jSSTLMonitor = new jSSTLMonitor("Monitor1", "models/spatialModel.tra", new Eventually_within_time_interval_displayYellow_FormulaScript(), System.out);
 	
-	
-	@Override
-	public void runCheck(Queue<String> newEvents) {
-		System.out.println("events: " + eventQueue + " + " + newEvents);
-		
-		ArrayList<HashMap<String, Double>> events = new ArrayList<>();
-		for(String event : newEvents) {
-			events.add((HashMap<String, Double>) Map.of(event, 1.0));
+	public void runCheck(Queue<Event> newEvents) {
+		HashMap<String, Double> tempEvent = new HashMap<>();
+		for(Event event : newEvents) {
+			tempEvent.put(event.getEvent(), 1.0);
 		}
-		//Online to Offline monitoring
-		//if(counter >= MAX_COUNTER) {		
-		try {
-			isRaisedError = jSSTLMonitor.runCheck(events) > 0.5;
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			reset();
-		}		
-		/*}
-		else {
-			eventQueue.addAll(newEvents);
-			counter++;
-		}*/
+		events.add(tempEvent);
+		timestamps.add(relativeTimestamp++);
+	
+		isRaisedError = jSSTLMonitor.runCheck(events, timestamps, 0) < 0.0;	
 	}
 
-	@Override
 	public void reset() {
-		eventQueue.clear();
+		events.clear();
+		timestamps.clear();
+		relativeTimestamp = 0.0;
 		isRaisedError = false;
-		counter = 0;
-		try {
-			jSSTLMonitor.reset();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		jSSTLMonitor.reset();
 	}
 
-	@Override
 	public boolean isRequirementMet() {
-		//TODO: robustness?
-		//TODO: satisfied, error, inconclusive?
-		return isRaisedError;
+		return !isRaisedError;
 	}
 }

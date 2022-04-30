@@ -4,8 +4,8 @@ import java.util.Map;
 import eu.quanticol.jsstl.core.formula.*;
 
 
-public class formulaScript extends jSSTLScript {
-public formulaScript() {
+public class Eventually_within_time_interval_displayYellow_FormulaScript extends jSSTLScript {
+public Eventually_within_time_interval_displayYellow_FormulaScript() {
 super( 
 new String[] {
 "LightInputs.DisplayYellow"

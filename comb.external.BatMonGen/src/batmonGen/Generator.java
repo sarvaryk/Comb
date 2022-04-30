@@ -11,13 +11,17 @@ public class Generator {
     }
     
     public static void generate(Automaton fsm, Logger logger, String dirPath, String packageName) {
+    	generate(fsm.getName(), fsm, logger, dirPath, packageName);
+    }
+    
+    public static void generate(String name, Automaton fsm, Logger logger, String dirPath, String packageName) {
         try {
             File dir = new File(dirPath);
             dir.mkdirs();
 
             generateMQTTSubscribersClass(dir, packageName);
             generateAbstractMonitorClass(dir, packageName);
-            generateMonitorComponent(fsm, dir, packageName, logger);
+            generateMonitorComponent(name, fsm, dir, packageName, logger);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,7 +103,7 @@ public class Generator {
 
             writer.write("package " + packageName + ";\n"
             		+ "\n"
-            		+ "public abstract class Monitor {\n" +
+            		+ "public abstract class AbstractMonitor {\n" +
                     "\tprivate String name;\n" +
                     "\tprivate int requirementSatisfied;\n" +
                     "\tprivate boolean isActivated;\n" +
@@ -130,18 +134,18 @@ public class Generator {
             writer.close();
         }
     }
-
-    private static void generateMonitorComponent(Automaton fsm, File dir, String packageName, Logger logger) throws IOException {
+    
+    private static void generateMonitorComponent(String name, Automaton fsm, File dir, String packageName, Logger logger) throws IOException {
         boolean isMonitorable = false;
-        String className =  fsm.getName();
-        File actualFile = new File(dir, className + "_monitor.java");
+        String className = name + "_monitor";
+        File actualFile = new File(dir, className + ".java");
         FileWriter writer = new FileWriter(actualFile, false);
 
         writer.write("package " + packageName + ";\n"
         		+ "\n"
         		+ "import java.util.Collections;\n" +
                 "\n" +
-                "public class " + className +" extends Monitor {\n" +
+                "public class " + className +" extends AbstractMonitor {\n" +
                 "\tenum State {\n");
         for(int i = 0; i < fsm.getStates().size(); i++) {
             writer.write("\t\tState_" + i + (i < fsm.getStates().size() - 1 ? "," : "") + "\n");
@@ -190,7 +194,7 @@ public class Generator {
         writer.write("\t@Override\n" +
                 "\tpublic int update(String signal_sequence) {\n" +
                 "\t\tjava.util.List<String> signals = new java.util.ArrayList<>();\n" +
-                "\t\tCollections.addAll(signals, signal_sequence.toLowerCase().split(\"\\\\s*;\\\\s*\"));\n" +
+                "\t\tCollections.addAll(signals, signal_sequence.split(\"\\\\s*;\\\\s*\"));\n" +
                 "\n" +
                 "\t\tboolean[] letters = new boolean[" + fsm.getAbc().size() + "];\n" +
                 "\t\tSystem.out.println(getMessagePrefix() + \"State before update: \" + currentState);\n" +

@@ -1,150 +1,38 @@
 package hu.bme.mit.gamma.tutorial.extra.monitor;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
-
-import hu.bme.mit.gamma.tutorial.extra.interfaces.ErrorInterface;
-import hu.bme.mit.gamma.tutorial.extra.interfaces.LightCommandsInterface;
-
-public class Monitor implements MonitorInterface {
-	private Queue<String> eventQueue = new LinkedList<String>();
-	private LightInputs lightInputs = new LightInputs();
-	private Error error = new Error();
-	private Glue glue = new Glue();
-	
-	public Monitor() { reset(); }
-	
-	@Override
-	public void runCycle() {
-		System.out.println("runCycle()");
-		
-		glue.runCheck(eventQueue);
-		
-		eventQueue.clear();
-	}
-
-	@Override
-	public void reset() {
-		System.out.println("reset()");
-		
-		eventQueue.clear();
-		lightInputs = new LightInputs();
-		error = new Error();
-		//notifyListeners();
-		glue.reset();
-	}
-
-	public class LightInputs implements LightCommandsInterface.Required {
-		private List<LightCommandsInterface.Listener.Required> listeners = new LinkedList<LightCommandsInterface.Listener.Required>();
-		@Override
-		public void raiseDisplayNone() {
-			System.out.println("raiseDisplayNone()");
-			eventQueue.add("LightInputs.displayNone");
-		}
-		@Override
-		public void raiseDisplayRed() {
-			System.out.println("raiseDisplayRed()");
-			eventQueue.add("LightInputs.displayRed");
-		}
-		@Override
-		public void raiseDisplayYellow() {
-			System.out.println("raiseDisplayYellow()");
-			eventQueue.add("LightInputs.displayYellow");
-		}
-		@Override
-		public void raiseDisplayGreen() {
-			System.out.println("raiseDisplayGreen()");
-			eventQueue.add("LightInputs.displayGreen");
-		}
-		@Override
-		public void registerListener(LightCommandsInterface.Listener.Required listener) {
-			listeners.add(listener);
-		}
-		@Override
-		public List<LightCommandsInterface.Listener.Required> getRegisteredListeners() {
-			return listeners;
-		}
-	}
-	
-	public LightInputs getLightInputs() {
-		return lightInputs;
-	}
-	
-	public class Error implements ErrorInterface.Provided {
-		private List<ErrorInterface.Listener.Provided> listeners = new LinkedList<ErrorInterface.Listener.Provided>();
-		@Override
-		public boolean isRaisedError() {
-			System.out.println("glue.isRequirementMet():" + glue.isRequirementMet());
-			return glue.isRequirementMet();
-		}
-		@Override
-		public void registerListener(ErrorInterface.Listener.Provided listener) {
-			listeners.add(listener);
-		}
-		@Override
-		public List<ErrorInterface.Listener.Provided> getRegisteredListeners() {
-			return listeners;
-		}
-	}
-	
-	@Override
-	public Error getError() {
-		return error;
-	}
-	
-	public void notifyAllListeners() {
-		notifyListeners();
-	}
-	
-	public void notifyListeners() {
-		if (error.isRaisedError()) {
-			for (ErrorInterface.Listener.Provided listener : error.getRegisteredListeners()) {
-				listener.raiseError();
-			}
-		}
-	}
-
-	public boolean isStateActive(String region, String state) {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	public void runComponent() {
-		runCycle();
-	}
-
-}
-
-/*package hu.bme.mit.gamma.tutorial.extra.monitor;
-
 import java.util.List;
-import java.util.Queue;
 import java.util.LinkedList;
-import hu.bme.mit.gamma.tutorial.extra.*;
-import hu.bme.mit.gamma.tutorial.extra.TimerInterface.*;
+
 import hu.bme.mit.gamma.tutorial.extra.interfaces.*;
-import hu.bme.mit.gamma.tutorial.extra.monitor.MonitorStatemachine.*;
+// Yakindu listeners
+//import hu.bme.mit.gamma.tutorial.extra.monitor.IMonitorStatemachine.*;
+import hu.bme.mit.gamma.tutorial.extra.*;
+//import hu.bme.mit.gamma.tutorial.extra.monitor.MonitorStatemachine.State;
 
 public class Monitor implements MonitorInterface {
+	// The wrapped Yakindu statemachine
+	//private MonitorStatemachine monitorStatemachine;
+	private Glue glue;
 	// Port instances
-	private LightInputs lightInputs = new LightInputs();
-	private Error error = new Error();
-	// Wrapped statemachine
-	private MonitorStatemachine monitor;
+	private LightInputs lightInputs;
+	private Error error;
 	// Indicates which queue is active in a cycle
 	private boolean insertQueue = true;
 	private boolean processQueue = false;
 	// Event queues for the synchronization of statecharts
 	private Queue<Event> eventQueue1 = new LinkedList<Event>();
 	private Queue<Event> eventQueue2 = new LinkedList<Event>();
-	// Clocks
-	private TimerInterface timer = new OneThreadedTimer();
 	
 	public Monitor() {
-		monitor = new MonitorStatemachine();
+		//monitorStatemachine = new MonitorStatemachine();
+		glue = new Glue();
+		lightInputs = new LightInputs();
+		error = new Error();
 	}
 	
+	/** Resets the statemachine. Must be called to initialize the component. */
+	@Override
 	public void reset() {
 		// Clearing the in events
 		insertQueue = true;
@@ -152,24 +40,29 @@ public class Monitor implements MonitorInterface {
 		eventQueue1.clear();
 		eventQueue2.clear();
 		//
-		monitor.reset();
-		timer.saveTime(this);
+		//monitorStatemachine.init();
+		//monitorStatemachine.enter();
+		glue.reset();
 		notifyListeners();
 	}
-
+	
+	/** Changes the event queues of the component instance. Should be used only be the container (composite system) class. */
 	public void changeEventQueues() {
 		insertQueue = !insertQueue;
 		processQueue = !processQueue;
 	}
 	
+	/** Changes the event queues to which the events are put. Should be used only be a cascade container (composite system) class. */
 	public void changeInsertQueue() {
 		insertQueue = !insertQueue;
 	}
 	
+	/** Returns whether the eventQueue containing incoming messages is empty. Should be used only be the container (composite system) class. */
 	public boolean isEventQueueEmpty() {
 		return getInsertQueue().isEmpty();
 	}
 	
+	/** Returns the event queue into which events should be put in the particular cycle. */
 	private Queue<Event> getInsertQueue() {
 		if (insertQueue) {
 			return eventQueue1;
@@ -177,6 +70,7 @@ public class Monitor implements MonitorInterface {
 		return eventQueue2;
 	}
 	
+	/** Returns the event queue from which events should be inspected in the particular cycle. */
 	private Queue<Event> getProcessQueue() {
 		if (processQueue) {
 			return eventQueue1;
@@ -184,119 +78,167 @@ public class Monitor implements MonitorInterface {
 		return eventQueue2;
 	}
 	
-	public class LightInputs implements LightCommandsInterface.Required {
-		private List<LightCommandsInterface.Listener.Required> listeners = new LinkedList<LightCommandsInterface.Listener.Required>();
-		@Override
-		public void raiseDisplayNone() {
-			getInsertQueue().add(new Event("LightInputs.displayNone"));
-		}
-		@Override
-		public void raiseDisplayRed() {
-			getInsertQueue().add(new Event("LightInputs.displayRed"));
-		}
-		@Override
-		public void raiseDisplayYellow() {
-			getInsertQueue().add(new Event("LightInputs.displayYellow"));
-		}
-		@Override
-		public void raiseDisplayGreen() {
-			getInsertQueue().add(new Event("LightInputs.displayGreen"));
-		}
-		@Override
-		public void registerListener(LightCommandsInterface.Listener.Required listener) {
-			listeners.add(listener);
-		}
-		@Override
-		public List<LightCommandsInterface.Listener.Required> getRegisteredListeners() {
-			return listeners;
-		}
-	}
-	
-	public LightInputs getLightInputs() {
-		return lightInputs;
-	}
-	
-	public class Error implements ErrorInterface.Provided {
-		private List<ErrorInterface.Listener.Provided> listeners = new LinkedList<ErrorInterface.Listener.Provided>();
-		@Override
-		public boolean isRaisedError() {
-			return monitor.getError_error_Out();
-		}
-		@Override
-		public void registerListener(ErrorInterface.Listener.Provided listener) {
-			listeners.add(listener);
-		}
-		@Override
-		public List<ErrorInterface.Listener.Provided> getRegisteredListeners() {
-			return listeners;
-		}
-	}
-	
-	public Error getError() {
-		return error;
-	}
-	
+	/** Changes event queues and initiating a cycle run. */
+	@Override
 	public void runCycle() {
 		changeEventQueues();
 		runComponent();
 	}
 	
-	public void runComponent() {
-		Queue<Event> eventQueue = getProcessQueue();
-		while (!eventQueue.isEmpty()) {
-			Event event = eventQueue.remove();
-			switch (event.getEvent()) {
-				case "LightInputs.displayNone": 
-					monitor.setLightInputs_displayNone_In(true);
-				break;
-				case "LightInputs.displayRed": 
-					monitor.setLightInputs_displayRed_In(true);
-				break;
-				case "LightInputs.displayYellow": 
-					monitor.setLightInputs_displayYellow_In(true);
-				break;
-				case "LightInputs.displayGreen": 
-					monitor.setLightInputs_displayGreen_In(true);
-				break;
-				default:
-					throw new IllegalArgumentException("No such event: " + event);
-			}
-		}
-		executeStep();
+	/** Changes the insert queue and initiates a run. */
+	public void runAndRechangeInsertQueue() {
+		// First the insert queue is changed back, so self-event sending can work
+		changeInsertQueue();
+		runComponent();
 	}
 	
-	private void executeStep() {
-		monitor.runCycle();
+	/** Initiates a cycle run without changing the event queues. It is needed if this component is contained (wrapped) by another component.
+	Should be used only be the container (composite system) class. */
+	public void runComponent() {
+		/*Queue<Event> eventQueue = getProcessQueue();
+		while (!eventQueue.isEmpty()) {
+				Event event = eventQueue.remove();
+				switch (event.getEvent()) {
+					case "LightInputs.DisplayNone": 
+						monitorStatemachine.getSCILightInputs().raiseDisplayNone();
+					break;
+					case "LightInputs.DisplayYellow": 
+						monitorStatemachine.getSCILightInputs().raiseDisplayYellow();
+					break;
+					case "LightInputs.DisplayRed": 
+						monitorStatemachine.getSCILightInputs().raiseDisplayRed();
+					break;
+					case "LightInputs.DisplayGreen": 
+						monitorStatemachine.getSCILightInputs().raiseDisplayGreen();
+					break;
+					default:
+						throw new IllegalArgumentException("No such event!");
+				}
+		}
+		monitorStatemachine.runCycle();*/
+		glue.runCheck(getInsertQueue());
+		getInsertQueue().clear();
+
 		notifyListeners();
 	}
 	
+	// Inner classes representing Ports
+	public class LightInputs implements LightCommandsInterface.Required {
+		private List<LightCommandsInterface.Listener.Required> registeredListeners = new LinkedList<LightCommandsInterface.Listener.Required>();
+
+		@Override
+		public void raiseDisplayNone() {
+			getInsertQueue().add(new Event("LightInputs.DisplayNone"));
+		}
+		
+		@Override
+		public void raiseDisplayYellow() {
+			getInsertQueue().add(new Event("LightInputs.DisplayYellow"));
+		}
+		
+		@Override
+		public void raiseDisplayRed() {
+			getInsertQueue().add(new Event("LightInputs.DisplayRed"));
+		}
+		
+		@Override
+		public void raiseDisplayGreen() {
+			getInsertQueue().add(new Event("LightInputs.DisplayGreen"));
+		}
+
+		@Override
+		public void registerListener(final LightCommandsInterface.Listener.Required listener) {
+			registeredListeners.add(listener);
+		}
+		
+		@Override
+		public List<LightCommandsInterface.Listener.Required> getRegisteredListeners() {
+			return registeredListeners;
+		}
+		
+		/** Notifying the registered listeners. */
+		public void notifyListeners() {
+		}
+
+	}
+	
+	@Override
+	public LightInputs getLightInputs() {
+		return lightInputs;
+	}
+	
+	public class Error implements ErrorInterface.Provided {
+		private List<ErrorInterface.Listener.Provided> registeredListeners = new LinkedList<ErrorInterface.Listener.Provided>();
+
+
+		@Override
+		public boolean isRaisedError() {
+			//return monitorStatemachine.getSCIError().isRaisedError();
+			return !glue.isRequirementMet();
+		}
+		@Override
+		public void registerListener(final ErrorInterface.Listener.Provided listener) {
+			registeredListeners.add(listener);
+		}
+		
+		@Override
+		public List<ErrorInterface.Listener.Provided> getRegisteredListeners() {
+			return registeredListeners;
+		}
+		
+		/** Notifying the registered listeners. */
+		public void notifyListeners() {
+			if (isRaisedError()) {
+				for (ErrorInterface.Listener.Provided listener : registeredListeners) {
+					listener.raiseError();
+				}
+			}
+		}
+
+	}
+	
+	@Override
+	public Error getError() {
+		return error;
+	}
+	
+	/** Interface method, needed for composite component initialization chain. */
 	public void notifyAllListeners() {
 		notifyListeners();
 	}
 	
+	/** Notifies all registered listeners in each contained port. */
 	public void notifyListeners() {
-		if (error.isRaisedError()) {
-			for (ErrorInterface.Listener.Provided listener : error.getRegisteredListeners()) {
-				listener.raiseError();
-			}
-		}
+		getLightInputs().notifyListeners();
+		getError().notifyListeners();
 	}
 	
-	public void setTimer(TimerInterface timer) {
-		this.timer = timer;
-	}
+	
+	/** Checks whether the wrapped statemachine is in the given state. */
+	/*public boolean isStateActive(State state) {
+		//return monitorStatemachine.isStateActive(state);
+		return true;
+	}*/
 	
 	public boolean isStateActive(String region, String state) {
-		switch (region) {
+		/*switch (region) {
 			case "main_region":
-				return monitor.getMain_region() == Main_region.valueOf(state);
+				switch (state) {
+					case "Green":
+						return isStateActive(State.main_region_Green);
+					case "Error":
+						return isStateActive(State.main_region_Error);
+					case "Other":
+						return isStateActive(State.main_region_Other);
+					case "Red":
+						return isStateActive(State.main_region_Red);
+				}
 		}
-		return false;
+		return false;*/
+		return true;
 	}
+
 	
 	
-	@Override
-	public String toString() {
-		return monitor.toString();
-	}
-}*/
+	
+}

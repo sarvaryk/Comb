@@ -148,11 +148,11 @@
     </P>
   </element>
   <element xsi:type="comb:Next_" name="new Next_" logicGroup="LTL">
-    <subtreeInterpretations>Comb: X(X(p))</subtreeInterpretations>
-    <subtreeInterpretations>Spot: X(X(p))</subtreeInterpretations>
+    <subtreeInterpretations>Comb: X(X(P))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: X(X(P))</subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
-    <subtreeInterpretations>NuSMV: X(X(p))</subtreeInterpretations>
-    <subtreeInterpretations>Spin: X(X(p))</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: X(X(P))</subtreeInterpretations>
+    <subtreeInterpretations>Spin: X(X(P))</subtreeInterpretations>
     <P xsi:type="comb:Next_" name="new Next_" logicGroup="LTL">
       <subtreeInterpretations>Comb: X(p)</subtreeInterpretations>
       <subtreeInterpretations>Spot: X(p)</subtreeInterpretations>
@@ -511,7 +511,7 @@
       <subtreeInterpretations>Spin: P</subtreeInterpretations>
     </P>
   </element>
-  <element xsi:type="comb:EventuallyWithin_and_" name="Eventually displayYellow" logicGroup="MITL">
+  <element xsi:type="comb:EventuallyWithin_and_" name="Eventually within time interval displayYellow" logicGroup="MITL">
     <subtreeInterpretations>Comb: F[0, 2](LightInputs.DisplayYellow)</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
@@ -538,5 +538,19 @@
       <subtreeInterpretations>NuSMV: 2</subtreeInterpretations>
       <subtreeInterpretations>Spin: 2</subtreeInterpretations>
     </H>
+  </element>
+  <element xsi:type="comb:Eventually_" name="Eventually displayYellow" logicGroup="LTL">
+    <subtreeInterpretations>Comb: F(LightInputs_DisplayYellow)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: F(LightInputs_DisplayYellow)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;>(LightInputs_DisplayYellow)</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: F(LightInputs_DisplayYellow)</subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;>(LightInputs_DisplayYellow)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="LightInputs_DisplayYellow">
+      <subtreeInterpretations>Comb: LightInputs_DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>Spot: LightInputs_DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: LightInputs_DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: LightInputs_DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>Spin: LightInputs_DisplayYellow</subtreeInterpretations>
+    </P>
   </element>
 </comb:Comb>

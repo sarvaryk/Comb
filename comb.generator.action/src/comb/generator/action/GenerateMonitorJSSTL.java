@@ -12,17 +12,17 @@ import comb.expression.metamodel.comb.impl.*;
 public class GenerateMonitorJSSTL {
 	private static List<String> events;
 	
-	public static void generate(Element element, String filePath, String packageName) throws IOException, Exception {
+	public static void generate(String monitorName, Element element, String filePath, String packageName) throws IOException, Exception {
         File dir = new File(filePath);
         dir.mkdirs();
-
-		generate_formulaScript(element, filePath, packageName);
+        
+		generate_formulaScript(monitorName, element, filePath, packageName);
 		generate_monitorComponent(filePath, packageName);
 		generate_defaultGraph(filePath);
 	}
 
-	private static void generate_formulaScript(Element element, String filePath, String packageName) throws IOException, Exception {
-		String className = "formulaScript";
+	private static void generate_formulaScript(String monitorName, Element element, String filePath, String packageName) throws IOException, Exception {
+		String className = monitorName+"_FormulaScript";
         File actualFile = new File(filePath, className + ".java");
         if(!actualFile.exists()) {
         	events = new ArrayList<>();
@@ -43,8 +43,8 @@ public class GenerateMonitorJSSTL {
             		+ "import eu.quanticol.jsstl.core.formula.*;\n"
             		+ "\n"
             		+ "\n"
-            		+ "public class formulaScript extends jSSTLScript {\n"
-            		+ "public formulaScript() {\n");
+            		+ "public class " + className + " extends jSSTLScript {\n"
+            		+ "public " + className + "() {\n");
             
             //EVENTS
             writer.write("super( \n"
@@ -294,9 +294,10 @@ public class GenerateMonitorJSSTL {
             		+ "\tprivate String graphPath;\n"
             		+ "\tprivate PrintStream logger;\n"
             		+ "\n"
-            		+ "\tpublic jSSTLMonitor(String monitorName, String graphPath, PrintStream logger) {\n"
+            		+ "\tpublic jSSTLMonitor(String monitorName, String graphPath, jSSTLScript script, PrintStream logger) {\n"
             		+ "\t\tthis.monitorName = monitorName;\n"
             		+ "\t\tthis.graphPath = graphPath;\n"
+            		+ "\t\tthis.script = script;\n"
             		+ "\t\tthis.logger = logger;\n"
             		+ "\t\treset();\n"
             		+ "\t}\n"
@@ -308,7 +309,6 @@ public class GenerateMonitorJSSTL {
             		+ "\t\t\tTraGraphModelReader graphReader = new TraGraphModelReader();\n"
             		+ "\t\t\tgraph = graphReader.read(graphPath);\n"
             		+ "\t\t\tgraph.dMcomputation();\n"
-            		+ "\t\t\tscript = new formulaScript();\n"
             		+ "\t\t} catch (IOException | SyntaxErrorExpection e) {\n"
             		+ "\t\t\tlog(monitorName + \": \" + e, true);\n"
             		+ "\t\t\tlog(monitorName + \": Error during reading the spatial model (\" + graphPath + \")!\", true);\n"

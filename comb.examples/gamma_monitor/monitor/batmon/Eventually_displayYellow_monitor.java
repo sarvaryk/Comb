@@ -1,20 +1,21 @@
 package hu.bme.mit.gamma.tutorial.extra.monitor;
+
 import java.util.Collections;
 
-public class not_red extends AbstractMonitor {
+public class Eventually_displayYellow_monitor extends AbstractMonitor {
 	enum State {
 		State_0,
 		State_1
 	}
 	private State currentState;
 
-	not_red() { resetMonitor(); }
+	Eventually_displayYellow_monitor() { resetMonitor(); }
 
 	@Override
 	public int resetMonitor() {
 		this.setRequirementSatisfied(0);
 		this.setActivated(false);
-		this.setName("not_red");
+		this.setName("Eventually_displayYellow");
 
 		currentState = State.State_0;
 		if(currentState.equals(State.State_1)) {
@@ -40,15 +41,15 @@ public class not_red extends AbstractMonitor {
 	@Override
 	public int update(String signal_sequence) {
 		java.util.List<String> signals = new java.util.ArrayList<>();
-		Collections.addAll(signals, signal_sequence.toLowerCase().split("\\s*;\\s*"));
+		Collections.addAll(signals, signal_sequence.split("\\s*;\\s*"));
 
 		boolean[] letters = new boolean[1];
 		System.out.println(getMessagePrefix() + "State before update: " + currentState);
 
 		java.util.List<String> signals_used = new java.util.ArrayList<>();
-		if(signals.contains("displayred")) {
+		if(signals.contains("LightInputs_DisplayYellow")) {
 			letters[0] = true;
-			signals_used.add("displayred");
+			signals_used.add("LightInputs_DisplayYellow");
 		}
 		System.out.println(getMessagePrefix() + "Signals sent: " + String.join("; ", signals));
 		System.out.println(getMessagePrefix() + "Signals used: " + String.join("; ", signals_used));
@@ -68,12 +69,12 @@ public class not_red extends AbstractMonitor {
 	}
 
 	private int State_0(boolean[] letters, String signal_sequence) {
-		if((!(letters[0]))) {
+		if((!(letters[0])))
+			currentState = State.State_0;
+		else if((letters[0])) {
 			currentState = State.State_1;
 			return goodStateReached();
 		}
-		else if((letters[0]))
-			currentState = State.State_0;
 
 		return 0;
 	}
