@@ -372,7 +372,7 @@
     </H>
   </element>
   <element xsi:type="comb:Always_" name="new Always_" logicGroup="MITL">
-    <subtreeInterpretations>Comb: G[0, -1]((G[0.2, 1.2](request)) -> (F[1, 4](response)))</subtreeInterpretations>
+    <subtreeInterpretations>Comb: G[0, Infinity]((G[0.2, 1.2](request)) -> (F[1, 4](response)))</subtreeInterpretations>
     <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
     <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
@@ -496,5 +496,47 @@
       <subtreeInterpretations>NuSMV: 1.4</subtreeInterpretations>
       <subtreeInterpretations>Spin: 1.4</subtreeInterpretations>
     </D>
+  </element>
+  <element xsi:type="comb:Always_" name="new Always_" logicGroup="LTL">
+    <subtreeInterpretations>Comb: G(P)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: G(P)</subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: [](P)</subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: G(P)</subtreeInterpretations>
+    <subtreeInterpretations>Spin: [](P)</subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="P">
+      <subtreeInterpretations>Comb: P</subtreeInterpretations>
+      <subtreeInterpretations>Spot: P</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: P</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: P</subtreeInterpretations>
+      <subtreeInterpretations>Spin: P</subtreeInterpretations>
+    </P>
+  </element>
+  <element xsi:type="comb:EventuallyWithin_and_" name="Eventually displayYellow" logicGroup="MITL">
+    <subtreeInterpretations>Comb: F[0, 2](LightInputs.DisplayYellow)</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:Literal" name="LightInputs.DisplayYellow">
+      <subtreeInterpretations>Comb: LightInputs.DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>Spot: LightInputs.DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: LightInputs.DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: LightInputs.DisplayYellow</subtreeInterpretations>
+      <subtreeInterpretations>Spin: LightInputs.DisplayYellow</subtreeInterpretations>
+    </P>
+    <L name="0">
+      <subtreeInterpretations>Comb: 0</subtreeInterpretations>
+      <subtreeInterpretations>Spot: 0</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: 0</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: 0</subtreeInterpretations>
+      <subtreeInterpretations>Spin: 0</subtreeInterpretations>
+    </L>
+    <H name="2">
+      <subtreeInterpretations>Comb: 2</subtreeInterpretations>
+      <subtreeInterpretations>Spot: 2</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: 2</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: 2</subtreeInterpretations>
+      <subtreeInterpretations>Spin: 2</subtreeInterpretations>
+    </H>
   </element>
 </comb:Comb>

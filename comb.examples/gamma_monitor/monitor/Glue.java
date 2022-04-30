@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Queue;
 
-public class Glue implements GlueInterface {
+import hu.bme.mit.gamma.tutorial.extra.Event;
+
+public class Glue {
 	private ArrayList<HashMap<String, Double>> events = new ArrayList<>();
 	private ArrayList<Double> timestamps = new ArrayList<>();
 	private double relativeTimestamp = 0.0;
@@ -12,13 +14,10 @@ public class Glue implements GlueInterface {
 	
 	private jSSTLMonitor jSSTLMonitor = new jSSTLMonitor("Monitor1", "models/spatialModel.tra", System.out);
 	
-	@Override
-	public void runCheck(Queue<String> newEvents) {
-		System.out.println("events: " + events + " + " + newEvents);
-		
+	public void runCheck(Queue<Event> newEvents) {
 		HashMap<String, Double> tempEvent = new HashMap<>();
-		for(String event : newEvents) {
-			tempEvent.put(event, 1.0);
+		for(Event event : newEvents) {
+			tempEvent.put(event.getEvent(), 1.0);
 		}
 		events.add(tempEvent);
 		timestamps.add(relativeTimestamp++);
@@ -26,7 +25,6 @@ public class Glue implements GlueInterface {
 		isRaisedError = jSSTLMonitor.runCheck(events, timestamps, 0) < 0.0;	
 	}
 
-	@Override
 	public void reset() {
 		events.clear();
 		timestamps.clear();
@@ -35,8 +33,7 @@ public class Glue implements GlueInterface {
 		jSSTLMonitor.reset();
 	}
 
-	@Override
 	public boolean isRequirementMet() {
-		return isRaisedError;
+		return !isRaisedError;
 	}
 }

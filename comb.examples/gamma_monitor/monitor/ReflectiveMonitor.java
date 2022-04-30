@@ -90,7 +90,6 @@ public class ReflectiveMonitor implements ReflectiveComponentInterface {
 	}
 	
 	public void schedule(String instance) {
-		System.out.println("schedule: ReflectiveMonitor");
 		wrappedComponent.runCycle();
 	}
 	
