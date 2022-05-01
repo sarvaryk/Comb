@@ -55,7 +55,6 @@ public class jSSTLMonitor {
 			log(monitorName + ": Error during checking the requirement", true);
 		}
 
-		log(monitorName + " result: " + result, true);
 		return result;
 	}
 

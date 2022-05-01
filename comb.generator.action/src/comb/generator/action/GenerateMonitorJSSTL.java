@@ -330,7 +330,6 @@ public class GenerateMonitorJSSTL {
             		+ "\t\t\tlog(monitorName + \": Error during checking the requirement\", true);\n"
             		+ "\t\t}\n"
             		+ "\n"
-            		+ "\t\tlog(monitorName + \" result: \" + result, true);\n"
             		+ "\t\treturn result;\n"
             		+ "\t}\n"
             		+ "\n"
