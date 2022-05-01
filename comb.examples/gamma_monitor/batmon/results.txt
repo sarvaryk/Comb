@@ -1,0 +1,16 @@
+	Eventually_displayYellow: State before update: State_0
+	Eventually_displayYellow: Signals sent: LightInputs_DisplayRed; LightInputs_DisplayGreen
+	Eventually_displayYellow: Signals used: 
+	Eventually_displayYellow: State after update: State_0
+
+	Eventually_displayYellow: State before update: State_0
+	Eventually_displayYellow: Signals sent: LightInputs_DisplayYellow
+	Eventually_displayYellow: Signals used: LightInputs_DisplayYellow
+	Eventually_displayYellow: Good state reached!
+	Eventually_displayYellow: State after update: State_1
+
+	Eventually_displayYellow: State before update: State_1
+	Eventually_displayYellow: Signals sent: LightInputs_DisplayRed
+	Eventually_displayYellow: Signals used: 
+	Eventually_displayYellow: Good state reached!
+	Eventually_displayYellow: State after update: State_1

@@ -1,0 +1,36 @@
+Eventually_displayYellow: reset monitor
+No_Red_and_Green: reset monitor
+Eventually_displayYellow: reset monitor
+No_Red_and_Green: reset monitor
+Eventually_displayYellow: reset monitor
+No_Red_and_Green: reset monitor
+Eventually_displayYellow events: {LightInputs.DisplayRed=1.0, LightInputs.DisplayGreen=1.0} 
+Eventually_displayYellow: checking requirement in progress
+Eventually_displayYellow boolean signal: (0.00) (0.00) 
+Eventually_displayYellow satisfied: false
+Eventually_displayYellow result: -1.0
+No_Red_and_Green events: {LightInputs.DisplayRed=1.0, LightInputs.DisplayGreen=1.0} 
+No_Red_and_Green: checking requirement in progress
+No_Red_and_Green boolean signal: (0.00) [0.00---0.00];(0.00) 
+No_Red_and_Green satisfied: false
+No_Red_and_Green result: -1.0
+Eventually_displayYellow events: {LightInputs.DisplayRed=1.0, LightInputs.DisplayGreen=1.0} {LightInputs.DisplayYellow=1.0} 
+Eventually_displayYellow: checking requirement in progress
+Eventually_displayYellow boolean signal: (0.00) [0.00+++1.00];(1.00) 
+Eventually_displayYellow satisfied: true
+Eventually_displayYellow result: 1.0
+No_Red_and_Green events: {LightInputs.DisplayRed=1.0, LightInputs.DisplayGreen=1.0} {LightInputs.DisplayYellow=1.0} 
+No_Red_and_Green: checking requirement in progress
+No_Red_and_Green boolean signal: (0.00) [0.00---0.00[;(0.00) 
+No_Red_and_Green satisfied: false
+No_Red_and_Green result: -1.0
+Eventually_displayYellow events: {LightInputs.DisplayRed=1.0, LightInputs.DisplayGreen=1.0} {LightInputs.DisplayYellow=1.0} {LightInputs.DisplayRed=1.0} 
+Eventually_displayYellow: checking requirement in progress
+Eventually_displayYellow boolean signal: (0.00) [0.00+++1.00[;(1.00) 
+Eventually_displayYellow satisfied: true
+Eventually_displayYellow result: 1.0
+No_Red_and_Green events: {LightInputs.DisplayRed=1.0, LightInputs.DisplayGreen=1.0} {LightInputs.DisplayYellow=1.0} {LightInputs.DisplayRed=1.0} 
+No_Red_and_Green: checking requirement in progress
+No_Red_and_Green boolean signal: (0.00) [0.00---0.00[;(0.00) 
+No_Red_and_Green satisfied: false
+No_Red_and_Green result: -1.0
