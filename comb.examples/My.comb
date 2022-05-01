@@ -553,4 +553,46 @@
       <subtreeInterpretations>Spin: LightInputs_DisplayYellow</subtreeInterpretations>
     </P>
   </element>
+  <element xsi:type="comb:AlwaysWithin_" name="No Red and Green at the same time" logicGroup="MITL">
+    <subtreeInterpretations>Comb: G[0, Infinity]((LightInputs.DisplayRed) -> (!(LightInputs.DisplayGreen)))</subtreeInterpretations>
+    <subtreeInterpretations>Spot: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Uppaal: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>NuSMV: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <subtreeInterpretations>Spin: &lt;Not all operands are supported for this output type></subtreeInterpretations>
+    <P xsi:type="comb:_implies_" name="_implies_" logicGroup="LTL">
+      <subtreeInterpretations>Comb: (LightInputs.DisplayRed) -> (!(LightInputs.DisplayGreen))</subtreeInterpretations>
+      <subtreeInterpretations>Spot: (LightInputs.DisplayRed) -> (!(LightInputs.DisplayGreen))</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: (LightInputs.DisplayRed) imply (not(LightInputs.DisplayGreen))</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: (LightInputs.DisplayRed) -> (!(LightInputs.DisplayGreen))</subtreeInterpretations>
+      <subtreeInterpretations>Spin: (LightInputs.DisplayRed) -> (!(LightInputs.DisplayGreen))</subtreeInterpretations>
+      <P xsi:type="comb:Literal" name="LightInputs.DisplayRed">
+        <subtreeInterpretations>Comb: LightInputs.DisplayRed</subtreeInterpretations>
+        <subtreeInterpretations>Spot: LightInputs.DisplayRed</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: LightInputs.DisplayRed</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: LightInputs.DisplayRed</subtreeInterpretations>
+        <subtreeInterpretations>Spin: LightInputs.DisplayRed</subtreeInterpretations>
+      </P>
+      <Q xsi:type="comb:Not_" name="Not_" logicGroup="LTL">
+        <subtreeInterpretations>Comb: !(LightInputs.DisplayGreen)</subtreeInterpretations>
+        <subtreeInterpretations>Spot: !(LightInputs.DisplayGreen)</subtreeInterpretations>
+        <subtreeInterpretations>Uppaal: not(LightInputs.DisplayGreen)</subtreeInterpretations>
+        <subtreeInterpretations>NuSMV: !(LightInputs.DisplayGreen)</subtreeInterpretations>
+        <subtreeInterpretations>Spin: !(LightInputs.DisplayGreen)</subtreeInterpretations>
+        <P xsi:type="comb:Literal" name="LightInputs.DisplayGreen">
+          <subtreeInterpretations>Comb: LightInputs.DisplayGreen</subtreeInterpretations>
+          <subtreeInterpretations>Spot: LightInputs.DisplayGreen</subtreeInterpretations>
+          <subtreeInterpretations>Uppaal: LightInputs.DisplayGreen</subtreeInterpretations>
+          <subtreeInterpretations>NuSMV: LightInputs.DisplayGreen</subtreeInterpretations>
+          <subtreeInterpretations>Spin: LightInputs.DisplayGreen</subtreeInterpretations>
+        </P>
+      </Q>
+    </P>
+    <H name="Infinity">
+      <subtreeInterpretations>Comb: Infinity</subtreeInterpretations>
+      <subtreeInterpretations>Spot: Infinity</subtreeInterpretations>
+      <subtreeInterpretations>Uppaal: Infinity</subtreeInterpretations>
+      <subtreeInterpretations>NuSMV: Infinity</subtreeInterpretations>
+      <subtreeInterpretations>Spin: Infinity</subtreeInterpretations>
+    </H>
+  </element>
 </comb:Comb>

@@ -174,7 +174,7 @@ public class Monitor implements MonitorInterface {
 		@Override
 		public boolean isRaisedError() {
 			//return monitorStatemachine.getSCIError().isRaisedError();
-			return !glue.isRequirementMet();
+			return glue.isRaisedError();
 		}
 		@Override
 		public void registerListener(final ErrorInterface.Listener.Provided listener) {
