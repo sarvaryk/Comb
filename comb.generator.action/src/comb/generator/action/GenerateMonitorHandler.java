@@ -58,7 +58,7 @@ public class GenerateMonitorHandler extends AbstractHandler {
 						CompletableFuture.supplyAsync(() -> generate_BatMon_Monitor(name, nfa_original_optional, nfa_negated_optional, filePath, configs.get(PACKAGE_NAME_SETTING))).get(timeout, TimeUnit.SECONDS);
 					}
 					else
-						InfoUtils.showMessageDialog("ERROR: Monitor generation is supported only for LTL with Spin output.");
+						InfoUtils.showMessageDialog("ERROR: Monitor generation is supported only for LTL with Spin output\n(special characters are not allowed in terminal names)");
 						
 				} catch (TimeoutException e) {
 					e.printStackTrace();
