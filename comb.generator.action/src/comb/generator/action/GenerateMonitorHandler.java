@@ -146,7 +146,7 @@ public class GenerateMonitorHandler extends AbstractHandler {
 			String input;
 			java.io.BufferedReader br = new java.io.BufferedReader(new FileReader(new File(filePath)));
 	        while ((input = br.readLine()) != null) {
-	        	String[] inputPair = input.split(":");
+	        	String[] inputPair = input.split("\s*:\s*");
 	        	configs.put(inputPair[0], inputPair[1]);
 	        }
 		}
