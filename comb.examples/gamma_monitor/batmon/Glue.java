@@ -25,10 +25,9 @@ public class Glue {
 			if(newEvents.size() > 0)
 				event_sequence += "; ";
 		}
-		if (monitor.update(event_sequence) == -1)
-			isRaisedError = true;
-		else
-			isRaisedError = false;
+		
+		monitor.update(event_sequence);
+		isRaisedError = (monitor.getRequirementSatisfied() == -1);
 	}
 
 	public void reset() {
