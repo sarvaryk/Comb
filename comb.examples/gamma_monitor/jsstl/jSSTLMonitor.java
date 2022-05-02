@@ -40,8 +40,8 @@ public class jSSTLMonitor {
 		}
 	}
 
-	public double runCheck(ArrayList<HashMap<String, Double>> events, ArrayList<Double> timestamps, double startCheckTime) {
-		double result = 0.0;
+	public boolean runCheck(ArrayList<HashMap<String, Double>> events, ArrayList<Double> timestamps, double startCheckTime) {
+		boolean result = false;
 		try {
 			log(monitorName + " events: ", false);
 			for(HashMap<String, Double> eventMaps : events) {
@@ -91,7 +91,7 @@ public class jSSTLMonitor {
 		return result;
 	}
 
-	public double check(jSSTLScript script, String formula, GraphModel graph, ArrayList<HashMap<String, Double>> events, ArrayList<Double> timestamps, double startCheckTime) throws IOException {
+	private boolean check(jSSTLScript script, String formula, GraphModel graph, ArrayList<HashMap<String, Double>> events, ArrayList<Double> timestamps, double startCheckTime) throws IOException {
 		log(monitorName + ": checking requirement in progress", true);
 
 		double[] times = transformTimestampStructure(timestamps);
@@ -110,7 +110,7 @@ public class jSSTLMonitor {
 			log(monitorName + " satisfied: " + result, true);	
 		}
 
-		return result ? 1.0 : -1.0;
+		return result;
 	}
 
 	private void log(String text, boolean newLine) {

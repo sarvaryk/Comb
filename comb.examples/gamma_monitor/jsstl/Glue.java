@@ -24,8 +24,8 @@ public class Glue {
 		events.add(tempEvent);
 		timestamps.add(relativeTimestamp++);
 	
-		Eventually_displayYellow_isRaisedError = Eventually_displayYellow.runCheck(events, timestamps, 0) < 0.0;
-		No_Red_and_Green_isRaisedError = No_Red_and_Green.runCheck(events, timestamps, 0) < 0.0;
+		Eventually_displayYellow_isRaisedError = Eventually_displayYellow.runCheck(events, timestamps, 0);
+		No_Red_and_Green_isRaisedError = No_Red_and_Green.runCheck(events, timestamps, 0);
 	}
 
 	public void reset() {
