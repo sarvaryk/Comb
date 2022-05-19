@@ -1,5 +1,5 @@
 digraph {
 	rankdir="LR";
-	"0"[label=""]
+	"0"[label="init"]
 	0
 }
